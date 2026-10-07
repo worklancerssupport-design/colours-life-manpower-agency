@@ -10,8 +10,8 @@ import FAQSection from '@/components/FAQSection';
 import FAQSchema from '@/components/FAQSchema';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 import ServicesTicker from '@/components/ServicesTicker';
+import Hero from '@/components/Hero';
 import { 
-  Phone, 
   MessageCircle, 
   MapPin, 
   HeartHandshake, 
@@ -55,62 +55,8 @@ export default function HomePage() {
     <>
       <FAQSchema faqs={generalFaqs} />
 
-      {/* 1. HERO — full-bleed image, single headline, one primary action */}
-      <section className="hero" aria-label="Trusted domestic help in Chennai">
-        <Image
-          src="https://res.cloudinary.com/akjmqvws/image/upload/v1791353138/hero-right.png"
-          alt="Cook, maid, baby-care attendant, driver and cleaner — Colours Life Manpower Agency, Chennai"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="hero-bg-image"
-        />
-        <div className="hero-overlay" aria-hidden="true" />
-
-        <div className="container hero-inner">
-          <div className="hero-content">
-            <span className="hero-eyebrow">
-              <span className="hero-eyebrow-dot" aria-hidden="true" />
-              Chennai · OMR · Thoraipakkam
-            </span>
-
-            <h1 className="hero-headline">
-              Home Care.<br />
-              <span className="hero-headline-italic">Trusted in<br/>Chennai.</span>
-            </h1>
-
-            <p className="hero-subline">
-              Cooks, maids, baby-care attendants, patient-care, elderly companions and drivers — verified, introduced directly by the agency, ready when you are.
-            </p>
-
-            <div className="hero-actions">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-btn-primary"
-              >
-                <MessageCircle size={19} />
-                <span>WhatsApp us</span>
-              </a>
-
-              <a
-                href={`tel:${agencyInfo.phone1}`}
-                className="hero-btn-secondary"
-              >
-                <Phone size={18} />
-                <span>Call {agencyInfo.phoneDisplay1}</span>
-              </a>
-            </div>
-
-            <p className="hero-trust">
-              <span className="hero-trust-dot" aria-hidden="true" />
-              Direct reply from Thomas R · no bots, no call routing
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* 1. HERO — two elevated cards: text content (warm) + image (cool) */}
+      <Hero />
 
       {/* 1b. QUIET SCOPE STRIP — grounds the hero with service breadth, no animation */}
       <ServicesTicker />
