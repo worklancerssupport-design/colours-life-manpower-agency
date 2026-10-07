@@ -2,42 +2,24 @@
 
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
-import { Phone, MessageCircle, CalendarCheck } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 
-export default function MobileStickyBar({ customWhatsAppMessage }) {
-  const whatsappUrl = getWhatsAppUrl(customWhatsAppMessage || agencyInfo.defaultWhatsAppMessage);
-
+export default function MobileStickyBar() {
+  const whatsappUrl = getWhatsAppUrl(agencyInfo.defaultWhatsAppMessage);
   return (
-    <div className="mobile-action-bar-fixed" aria-label="Quick mobile action bar">
-      <a 
-        href={`tel:${agencyInfo.phone1}`} 
-        className="mobile-action-item mobile-action-call"
-        title="Call agency phone"
-      >
-        <Phone size={16} color="var(--brand-primary)" />
-        <span>Call</span>
+    <div className="mobile-sticky" aria-label="Quick mobile actions">
+      <a href={`tel:${agencyInfo.phone1}`} className="mobile-sticky-item mobile-sticky-call">
+        <Phone size={16} aria-hidden="true" />
+        Call
       </a>
-
-      <a 
-        href={whatsappUrl} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="mobile-action-item mobile-action-whatsapp"
-        title="Chat on WhatsApp"
-      >
-        <MessageCircle size={17} color="#ffffff" />
-        <span>WhatsApp</span>
-      </a>
-
-      <a 
+      <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mobile-action-item mobile-action-book"
-        title="Book domestic help"
+        className="mobile-sticky-item mobile-sticky-whatsapp"
       >
-        <CalendarCheck size={16} color="#ffffff" />
-        <span>Book</span>
+        <MessageCircle size={16} aria-hidden="true" />
+        WhatsApp
       </a>
     </div>
   );

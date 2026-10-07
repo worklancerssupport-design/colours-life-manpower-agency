@@ -7,16 +7,11 @@ import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
 import servicesData from '@/data/services.json';
 import Logo from '@/components/Logo';
-import { 
-  MessageCircle, 
-  Phone,
-  Menu, 
-  X, 
-  ChevronDown
-} from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 
-const defaultMsg = "Hello Colours Life Manpower Agency, I would like to enquire about booking a domestic service.";
+const defaultMsg = "Hello Colours Life Manpower Agency, I'd like to enquire about your home services.";
 const whatsappUrl = getWhatsAppUrl(defaultMsg);
+const callUrl = `tel:${agencyInfo.phone1}`;
 
 const primaryNav = [
   { href: '/', label: 'Home' },
@@ -26,56 +21,64 @@ const primaryNav = [
 ];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    setMobileMenuOpen(false);
-    setServicesDropdownOpen(false);
+    setMobileOpen(false);
+    setServicesOpen(false);
     setMobileServicesOpen(false);
   }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
-  }, [mobileMenuOpen]);
+  }, [mobileOpen]);
 
   const isServicesActive = pathname?.startsWith('/services/');
 
   return (
     <>
-      <header className="header" role="banner">
-        <div className="container header-inner">
+      <header className="site-header" role="banner">
+        <div className="container site-header-row">
           <Logo />
 
-          <nav className="nav" aria-label="Primary Navigation">
-            <Link 
-              href="/" 
-              className={`nav-item ${pathname === '/' ? 'is-active' : ''}`}
+          <nav className="primary-nav" aria-label="Primary">
+            <Link
+              href="/"
+              className={`nav-link ${pathname === '/' ? 'is-active' : ''}`}
+              aria-current={pathname === '/' ? 'page' : undefined}
             >
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--lime-500)', display: 'inline-block' }} />
               Home
             </Link>
+            <Link
+              href="/about/"
+              className={`nav-link ${pathname === '/about/' ? 'is-active' : ''}`}
+            >
+              About
+            </Link>
 
-            <div 
-              className="nav-dropdown"
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
+            <div
+              className={`nav-dropdown ${servicesOpen ? 'is-open' : ''}`}
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
             >
               <button
                 type="button"
-                className={`nav-item nav-dropdown-toggle ${isServicesActive ? 'is-active' : ''}`}
-                aria-expanded={servicesDropdownOpen}
+                className={`nav-link nav-dropdown-toggle ${isServicesActive ? 'is-active' : ''}`}
+                aria-expanded={servicesOpen}
                 aria-haspopup="true"
-                onClick={() => setServicesDropdownOpen(v => !v)}
+                onClick={() => setServicesOpen(v => !v)}
               >
                 Services
-                <ChevronDown size={14} className="nav-dropdown-caret" aria-hidden="true" />
+                <ChevronDown size={14} className="nav-caret" aria-hidden="true" />
               </button>
 
-              <div 
-                className={`nav-dropdown-panel ${servicesDropdownOpen ? 'is-open' : ''}`}
+              <div
+                className={`nav-dropdown-panel ${servicesOpen ? 'is-open' : ''}`}
                 role="menu"
               >
                 {servicesData.map((svc) => (
@@ -85,106 +88,70 @@ export default function Header() {
                     className={`nav-dropdown-link ${pathname === svc.path ? 'is-active' : ''}`}
                     role="menuitem"
                   >
-                    {svc.navTitle}
+                    {svc.shortName}
                   </Link>
                 ))}
               </div>
             </div>
 
-            {primaryNav.slice(1).map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-item ${pathname === item.href ? 'is-active' : ''}`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            <Link
+              href="/reviews/"
+              className={`nav-link ${pathname === '/reviews/' ? 'is-active' : ''}`}
+            >
+              Reviews
+            </Link>
+            <Link
+              href="/contact/"
+              className={`nav-link ${pathname === '/contact/' ? 'is-active' : ''}`}
+            >
+              Contact
+            </Link>
           </nav>
 
           <div className="header-actions">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="header-whatsapp"
-              aria-label="Chat with us on WhatsApp"
-              title="Chat on WhatsApp"
-            >
-              <MessageCircle size={18} />
+            <a href={callUrl} className="header-phone" aria-label={`Call ${agencyInfo.phoneDisplay1}`}>
+              <Phone size={15} aria-hidden="true" />
+              {agencyInfo.phoneDisplay1}
             </a>
-
             <button
               type="button"
-              className="header-menu-toggle"
-              onClick={() => setMobileMenuOpen(v => !v)}
-              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={mobileMenuOpen}
+              className="header-burger"
+              onClick={() => setMobileOpen(v => !v)}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileOpen}
             >
-              {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </header>
 
-      <div 
-        className={`mobile-backdrop ${mobileMenuOpen ? 'is-open' : ''}`}
-        onClick={() => setMobileMenuOpen(false)}
+      <div
+        className={`mobile-backdrop ${mobileOpen ? 'is-open' : ''}`}
+        onClick={() => setMobileOpen(false)}
         aria-hidden="true"
       />
-      <div 
-        className={`mobile-drawer ${mobileMenuOpen ? 'is-open' : ''}`}
+
+      <div
+        className={`mobile-drawer ${mobileOpen ? 'is-open' : ''}`}
         role="dialog"
         aria-modal="true"
-        aria-label="Mobile Navigation"
+        aria-label="Mobile navigation"
       >
         <div className="mobile-drawer-top">
           <Logo />
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => setMobileOpen(false)}
             className="mobile-drawer-close"
             aria-label="Close menu"
           >
-            <X size={18} />
+            <X size={20} />
           </button>
         </div>
 
-        <nav className="mobile-nav" aria-label="Mobile Navigation">
-          <Link 
-            href="/" 
-            className={`mobile-link ${pathname === '/' ? 'is-active' : ''}`}
-          >
-            Home
-          </Link>
-
-          <button
-            type="button"
-            className={`mobile-link mobile-link-toggle ${isServicesActive ? 'is-active' : ''}`}
-            onClick={() => setMobileServicesOpen(v => !v)}
-            aria-expanded={mobileServicesOpen}
-          >
-            <span>Services</span>
-            <ChevronDown 
-              size={14} 
-              className={`mobile-link-caret ${mobileServicesOpen ? 'is-open' : ''}`}
-              aria-hidden="true"
-            />
-          </button>
-
-          <div className={`mobile-subnav ${mobileServicesOpen ? 'is-open' : ''}`}>
-            {servicesData.map((svc) => (
-              <Link
-                key={svc.id}
-                href={svc.path}
-                className={`mobile-sublink ${pathname === svc.path ? 'is-active' : ''}`}
-              >
-                {svc.navTitle}
-              </Link>
-            ))}
-          </div>
-
-          {primaryNav.slice(1).map((item) => (
+        <nav className="mobile-nav" aria-label="Mobile primary">
+          {primaryNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -194,30 +161,47 @@ export default function Header() {
             </Link>
           ))}
 
-          <Link 
-            href="/faq/" 
+          <button
+            type="button"
+            className={`mobile-link ${isServicesActive ? 'is-active' : ''}`}
+            onClick={() => setMobileServicesOpen(v => !v)}
+            aria-expanded={mobileServicesOpen}
+          >
+            <span>Services</span>
+            <ChevronDown
+              size={16}
+              style={{ transform: mobileServicesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
+              aria-hidden="true"
+            />
+          </button>
+          {mobileServicesOpen && (
+            <div className="mobile-subnav">
+              {servicesData.map((svc) => (
+                <Link
+                  key={svc.id}
+                  href={svc.path}
+                  className={`mobile-sublink ${pathname === svc.path ? 'is-active' : ''}`}
+                >
+                  {svc.shortName}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <Link
+            href="/faq/"
             className={`mobile-link ${pathname === '/faq/' ? 'is-active' : ''}`}
           >
             FAQ
           </Link>
         </nav>
 
-        <div className="mobile-drawer-bottom">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mobile-btn mobile-btn-whatsapp"
-          >
-            <MessageCircle size={16} />
-            <span>WhatsApp us</span>
+        <div className="mobile-drawer-foot">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-lime">
+            WhatsApp Thomas R
           </a>
-          <a
-            href={`tel:${agencyInfo.phone1}`}
-            className="mobile-btn mobile-btn-call"
-          >
-            <Phone size={16} />
-            <span>Call {agencyInfo.phoneDisplay1}</span>
+          <a href={callUrl} className="btn-ghost-dark">
+            <Phone size={15} /> {agencyInfo.phoneDisplay1}
           </a>
         </div>
       </div>
