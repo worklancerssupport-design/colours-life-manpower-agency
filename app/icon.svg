@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+  <defs>
+    <linearGradient id="fav_grad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+  </defs>
+  <rect width="44" height="44" rx="12" fill="#fff7ed" />
+  <circle cx="22" cy="22" r="19" stroke="url(#fav_grad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="95 30" />
+  <path d="M26 12C26 14.2091 24.2091 16 22 16C19.7909 16 18 14.2091 18 12C18 9.79086 19.7909 8 22 8C24.2091 8 26 9.79086 26 12Z" fill="#ea580c" />
+  <path d="M13 18C13 19.6569 11.6569 21 10 21C8.34315 21 7 19.6569 7 18C7 16.3431 8.34315 15 10 15C11.6569 15 13 16.3431 13 18Z" fill="#0d9488" />
+  <path d="M37 18C37 19.6569 35.6569 21 34 21C32.3431 21 31 19.6569 31 18C31 16.3431 32.3431 15 34 15C35.6569 15 37 16.3431 37 18Z" fill="#ea580c" />
+  <path d="M8 32C8 26.4772 12.4772 22 18 22H26C31.5228 22 36 26.4772 36 32C36 34.5 33.5 36 30 36H14C10.5 36 8 34.5 8 32Z" fill="url(#fav_grad)" opacity="0.9" />
+  <path d="M22 24.5C20.5 22.5 17.5 23 17.5 25.5C17.5 28 22 31 22 31C22 31 26.5 28 26.5 25.5C26.5 23 23.5 22.5 22 24.5Z" fill="#ffffff" />
+</svg>

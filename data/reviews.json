@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "author": "S. Swaminathan",
+    "location": "Nehru Nagar, Okkiyam Thoraipakkam",
+    "service": "Cooking / Cook Service",
+    "rating": 5,
+    "date": "Recent Feedback",
+    "comment": "We hired a morning cook for our family through Colours Life Manpower Agency. Thomas R was very responsive on WhatsApp and coordinated a prompt introduction. The cook prepares authentic South Indian breakfast and lunch on time every day.",
+    "isVerified": true
+  },
+  {
+    "id": 2,
+    "author": "Divya & Rajesh K.",
+    "location": "OMR Tech Corridor, Chennai",
+    "service": "Newborn Baby Care",
+    "rating": 5,
+    "date": "Recent Feedback",
+    "comment": "Post-delivery care was very challenging for us without family nearby. The newborn caretaker arranged by Colours Life Manpower Agency was patient, gentle with the baby's bath and sleep routine, and extremely helpful to the mother.",
+    "isVerified": true
+  },
+  {
+    "id": 3,
+    "author": "R. Venkatesh",
+    "location": "Perungudi, Chennai",
+    "service": "Elderly Care",
+    "rating": 5,
+    "date": "Recent Feedback",
+    "comment": "We needed a respectful attendant for my 82-year-old father who has limited mobility. The agency provided a patient caretaker who assists with walking, timely medicines, and compassionate companionship.",
+    "isVerified": true
+  },
+  {
+    "id": 4,
+    "author": "Anitha M.",
+    "location": "Sholinganallur, Chennai",
+    "service": "Maid Work / Domestic Help",
+    "rating": 5,
+    "date": "Recent Feedback",
+    "comment": "Dependable maid service is hard to find in OMR. Colours Life Manpower Agency helped us find a daily helper for cleaning, mopping, and vessel washing. Punctual, honest, and well-behaved.",
+    "isVerified": true
+  },
+  {
+    "id": 5,
+    "author": "Narayanan S.",
+    "location": "Velachery, Chennai",
+    "service": "Brahmin Cook",
+    "rating": 5,
+    "date": "Recent Feedback",
+    "comment": "Found an experienced Brahmin cook for traditional pure vegetarian family meals. Sambar, rasam, and tiffin taste just like home. Very happy with the agency's quick service.",
+    "isVerified": true
+  },
+  {
+    "id": 6,
+    "author": "Dr. Arun Kumar",
+    "location": "Adyar, Chennai",
+    "service": "Patient Care",
+    "rating": 5,
+    "date": "Recent Feedback",
+    "comment": "After my uncle's hip surgery, we required an attendant for home bedside assistance. The helper assisted with wheelchair transfers, hygiene, and daily care with great diligence.",
+    "isVerified": true
+  }
+]

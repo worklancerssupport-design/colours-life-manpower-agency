@@ -1,0 +1,47 @@
+{
+  "name": "Colours Life Manpower Agency",
+  "tagline": "Trusted Manpower & Domestic Help Services in Chennai",
+  "owner": "Thomas R",
+  "phone1": "9884404444",
+  "phone2": "9884555533",
+  "phoneDisplay1": "+91 98844 04444",
+  "phoneDisplay2": "+91 98845 55533",
+  "whatsappNumber": "9884555533",
+  "whatsappInternational": "919884555533",
+  "email": "colourslifemanpoweragency@gmail.com",
+  "address": {
+    "street": "5/685, 1st Floor, Nehru Nagar, 13th Cross Street",
+    "locality": "Okkiyam Thoraipakkam",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "postalCode": "600097",
+    "country": "India",
+    "countryCode": "IN",
+    "landmark": "Back Side Cognizant",
+    "fullAddress": "5/685, 1st Floor, Nehru Nagar, 13th Cross Street, Okkiyam Thoraipakkam, Chennai - 600097, Tamil Nadu, India (Landmark: Back Side Cognizant)"
+  },
+  "geo": {
+    "latitude": "12.9360",
+    "longitude": "80.2355"
+  },
+  "serviceAreas": [
+    "Okkiyam Thoraipakkam",
+    "Thoraipakkam",
+    "OMR (Old Mahabalipuram Road)",
+    "Nehru Nagar",
+    "Perungudi",
+    "Sholinganallur",
+    "Velachery",
+    "Adyar",
+    "Semmancheri",
+    "Navalur",
+    "Siruseri",
+    "Pallavaram",
+    "Tambaram",
+    "Medavakkam",
+    "Chennai 600097"
+  ],
+  "priceRange": "$$",
+  "siteUrl": "https://colourslifemanpower.com",
+  "defaultWhatsAppMessage": "Hello Colours Life Manpower Agency, I would like to enquire about your manpower services."
+}

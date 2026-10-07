@@ -1,0 +1,113 @@
+{
+  "aboutPage": {
+    "mission": {
+      "heading": "Our Mission & Purpose",
+      "intro": "In today's fast-moving urban environment, running a comfortable, peaceful household requires support. Between long commutes on the IT corridor, demanding careers, caring for young babies, and looking after aging parents, families often feel stretched thin.",
+      "story": "<strong>Colours Life Manpower Agency</strong> was established to provide Chennai residents with reliable, honest, and hardworking household staffing solutions. Rather than operating as an impersonal online directory or automated platform, we believe in hands-on matchmaking, understanding personal household preferences, and fostering long-term relationships between families and domestic staff."
+    },
+    "leadership": {
+      "heading": "Leadership & Direct Communication: Thomas R",
+      "p1": "The agency is personally directed by <strong>Thomas R</strong>, who oversees client enquiries, candidate interviews, and post-placement coordination. When you reach out to Colours Life Manpower Agency, you speak directly with decision-makers who understand local Chennai communities, language considerations, and domestic expectations.",
+      "p2": "We do not use impersonal call routing. Whether you message us on WhatsApp (+91 98845 55533) or call our phone lines, Thomas R and our team address your requirements with prompt attention, honesty regarding candidate availability, and practical guidance."
+    },
+    "verification": {
+      "heading": "Our Ethical Standards & Verification Approach",
+      "intro": "We take safety and integrity seriously. When registering domestic helpers, cooks, and caretakers, we implement practical, verified procedures:",
+      "steps": [
+        {
+          "title": "Government Identity Checks",
+          "description": "Verification of Aadhaar cards and official government identity proofs for every registered worker."
+        },
+        {
+          "title": "Past Work References",
+          "description": "Discussion of prior household experience and domestic skillsets."
+        },
+        {
+          "title": "Clarity on Roles & Duties",
+          "description": "Ensuring workers understand expected hours, daily tasks, hygiene expectations, and family guidelines."
+        },
+        {
+          "title": "Fair Treatment & Dignity",
+          "description": "Promoting mutual respect, fair compensation, and safe work environments for domestic personnel."
+        }
+      ]
+    },
+    "coverage": {
+      "heading": "Our Deep Roots in Okkiyam Thoraipakkam & OMR",
+      "intro": "Our office is conveniently located at:",
+      "outro": "Being stationed right on the OMR tech corridor enables us to quickly assist households living in high-rise apartments, gated villa communities, and surrounding neighbourhoods like Perungudi, Sholinganallur, Velachery, and Adyar."
+    }
+  },
+  "homePage": {
+    "whyChooseUs": {
+      "eyebrow": "The Colours Life Difference",
+      "heading": "Because the right help makes everyday life easier.",
+      "subtext": "We treat household staffing as a relationship of trust. Here is why families across Chennai and Okkiyam Thoraipakkam count on our guidance:",
+      "items": [
+        {
+          "icon": "MapPin",
+          "iconBg": "#fff7ed",
+          "iconColor": "#ea580c",
+          "title": "Local Chennai Presence",
+          "description": "Physically situated in Nehru Nagar, Okkiyam Thoraipakkam (Back Side Cognizant), giving us hands-on reach across the entire OMR tech corridor."
+        },
+        {
+          "icon": "HeartHandshake",
+          "iconBg": "#f0fdfa",
+          "iconColor": "#0d9488",
+          "title": "Diverse Household Staff",
+          "description": "From morning cooks and full-day maids to specialized 24-hour infant nannies, elderly attendants, and family drivers — all under one trusted agency."
+        },
+        {
+          "icon": "ShieldCheck",
+          "iconBg": "#fdf2f8",
+          "iconColor": "#db2777",
+          "title": "Identity & Record Checks",
+          "description": "Every domestic worker's government identification (Aadhaar) and residential background are reviewed before being recommended to your household."
+        },
+        {
+          "icon": "MessageCircle",
+          "iconBg": "#ecfdf5",
+          "iconColor": "#15803d",
+          "title": "Direct WhatsApp Support",
+          "description": "No automated IVR bots. You connect directly with Thomas R on WhatsApp to discuss your exact timings, dietary preferences, and expectations."
+        }
+      ]
+    },
+    "howItWorks": {
+      "eyebrow": "Clear & Straightforward",
+      "heading": "How To Connect With Your Ideal Domestic Helper",
+      "subtext": "Finding reliable home support should not be complicated. Our structured 4-step process connects you promptly with verified staff:",
+      "steps": [
+        {
+          "number": "01",
+          "circleBg": "#fff7ed",
+          "circleColor": "#ea580c",
+          "title": "Tell Us What You Need",
+          "description": "Share your service requirements, daily timings (part-time, day-shift, or live-in), family size, and locality in Chennai."
+        },
+        {
+          "number": "02",
+          "circleBg": "#f0fdfa",
+          "circleColor": "#0d9488",
+          "title": "Discuss Your Requirement",
+          "description": "Thomas R coordinates candidate options matching your preferences and arranges a direct phone or in-person discussion."
+        },
+        {
+          "number": "03",
+          "circleBg": "#fefce8",
+          "circleColor": "#ca8a04",
+          "title": "Choose the Right Service",
+          "description": "Finalize working hours, scope of duties, and terms with clear mutual understanding before commencement."
+        },
+        {
+          "number": "04",
+          "circleBg": "#ecfdf5",
+          "circleColor": "#15803d",
+          "title": "Get Started with Peace of Mind",
+          "description": "Your helper commences duties, with Colours Life Manpower Agency remaining available for ongoing coordination."
+        }
+      ]
+    }
+  }
+}
