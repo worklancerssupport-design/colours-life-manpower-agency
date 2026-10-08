@@ -29,13 +29,13 @@ export default function FAQSection({
             <h2 className="section-heading">{title}</h2>
             <p className="section-subline">{subtitle}</p>
             <a
-              href={getWhatsAppUrl("Hello Thomas R, I have a specific question about your manpower services.")}
+              href={getWhatsAppUrl("Hello, I have a specific question about your manpower services.")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-lime"
             >
               <MessageCircle size={16} />
-              Ask Thomas on WhatsApp
+              Ask on WhatsApp
               <ArrowRight size={15} className="btn-lime-arrow" aria-hidden="true" />
             </a>
             <a

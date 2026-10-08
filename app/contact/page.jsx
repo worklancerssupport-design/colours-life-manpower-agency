@@ -17,7 +17,7 @@ import {
 
 export const metadata = {
   title: "Contact Us | Colours Life Manpower Agency | Okkiyam Thoraipakkam, Chennai",
-  description: "Contact Thomas R at Colours Life Manpower Agency. Phone: 9884404444 / 9884555533, WhatsApp: 9884555533. Office: Nehru Nagar, Okkiyam Thoraipakkam, Chennai 600097 (Back Side Cognizant).",
+  description: "Contact Colours Life Manpower Agency directly. Phone: 9884404444 / 9884555533, WhatsApp: 9884555533. Office: Nehru Nagar, Okkiyam Thoraipakkam, Chennai 600097 (Back Side Cognizant).",
   alternates: {
     canonical: `${agencyInfo.siteUrl}/contact/`,
   }
@@ -34,7 +34,7 @@ export default function ContactPage() {
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="service-hero-editorial theme-cooking">
+      <section className="service-hero-editorial theme-cooking" style={{ paddingTop: '128px' }}>
         <div className="container">
           <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
@@ -50,7 +50,7 @@ export default function ContactPage() {
               Contact Colours Life <em>Manpower Agency</em>
             </h1>
             <p className="section-subtext">
-              Reach out directly to Thomas R to enquire about available cooks, maids, baby caretakers, elderly attendants, patient caregivers, and drivers in Chennai.
+              Reach out directly to enquire about available cooks, maids, baby caretakers, elderly attendants, patient caregivers, and drivers in Chennai.
             </p>
           </div>
         </div>
@@ -190,7 +190,7 @@ export default function ContactPage() {
                 }}>
                   <Clock size={24} color="var(--brand-teal)" style={{ flexShrink: 0 }} />
                   <div style={{ fontSize: '0.92rem', color: '#134e4a', lineHeight: '1.6' }}>
-                    <strong>Direct Agency Access:</strong> Thomas R is available daily to answer queries. Messages received on WhatsApp are typically addressed promptly within the hour.
+                    <strong>Direct Agency Access:</strong> {agencyInfo.owner} is available daily to answer queries. Messages received on WhatsApp are typically addressed promptly within the hour.
                   </div>
                 </div>
               </div>

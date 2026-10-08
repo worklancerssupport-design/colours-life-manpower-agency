@@ -96,7 +96,7 @@ export default function ServicesIndexPage() {
         <div className="container">
           <div className="local-partner-card">
             <h2 className="section-heading-serif" style={{ fontSize: '2rem', marginBottom: '14px' }}>
-              Serving Families Across Chennai's Residential Corridors
+              Serving Families Across Chennai&apos;s Residential Corridors
             </h2>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', fontSize: '1.05rem', marginBottom: '20px' }}>
               From IT corridors on OMR (Thoraipakkam, Perungudi, Sholinganallur, Karapakkam, Semmancheri, Siruseri) to South Chennai residential colonies in Velachery, Adyar, Besant Nagar, Pallavaram, and Tambaram, we coordinate domestic staff matching your preferred language, timing, and household requirements.
@@ -113,7 +113,7 @@ export default function ServicesIndexPage() {
       <div className="container" style={{ margin: '48px auto 72px' }}>
         <WhatsAppCTA 
           title="Need Help Deciding Which Service Fits Best?"
-          subtitle="Speak directly with Thomas R at Colours Life Manpower Agency. We will help assess your domestic routine and match suitable workers."
+          subtitle="Speak directly with the owner at Colours Life Manpower Agency. We will help assess your domestic routine and match suitable workers."
         />
       </div>
     </>

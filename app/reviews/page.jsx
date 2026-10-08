@@ -88,7 +88,7 @@ export default function ReviewsPage() {
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="service-hero-editorial theme-cooking">
+      <section className="service-hero-editorial theme-cooking" style={{ paddingTop: '128px' }}>
         <div className="container">
           <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
@@ -128,7 +128,7 @@ export default function ReviewsPage() {
           }}>
             <Info size={24} color="#7c3aed" style={{ flexShrink: 0, marginTop: '2px' }} />
             <div style={{ fontSize: '0.94rem', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
-              <strong>Transparent Testimonials Notice:</strong> We take genuine pride in ethical business practices. The cards below reflect structured client feedback received for domestic staff placements in Chennai. We warmly invite current and past clients to share their thoughts directly via WhatsApp with Thomas R.
+              <strong>Transparent Testimonials Notice:</strong> We take genuine pride in ethical business practices. The cards below reflect structured client feedback received for domestic staff placements in Chennai. We warmly invite current and past clients to share their thoughts directly via WhatsApp.
             </div>
           </div>
 
@@ -217,7 +217,7 @@ export default function ReviewsPage() {
               Your feedback helps us continuously improve our service and assist other Chennai families in making informed domestic hiring decisions.
             </p>
             <a
-              href={getWhatsAppUrl("Hello Thomas R, I would like to submit my review for Colours Life Manpower Agency.")}
+              href={getWhatsAppUrl("Hello, I would like to submit my review for Colours Life Manpower Agency.")}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-btn-large"
@@ -231,7 +231,7 @@ export default function ReviewsPage() {
       <div className="container" style={{ margin: '36px auto 68px' }}>
         <WhatsAppCTA 
           title="Looking for Experienced Domestic Help in Chennai?"
-          subtitle="Join dozens of satisfied families in Okkiyam Thoraipakkam and OMR. Message Thomas R today."
+          subtitle="Join dozens of satisfied families in Okkiyam Thoraipakkam and OMR. Message us today."
         />
       </div>
     </>

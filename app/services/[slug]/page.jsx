@@ -99,7 +99,7 @@ export default function ServicePage({ params }) {
       <FAQSchema faqs={service.faqs} />
 
       {/* 1. Dedicated Service Hero with Custom Pastel Background */}
-      <section className={`service-hero-editorial ${themeClass}`}>
+      <section className={`service-hero-editorial ${themeClass}`} style={{ paddingTop: '128px' }}>
         <div className="container">
           {/* Breadcrumbs Pill */}
           <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
@@ -191,7 +191,7 @@ export default function ServicePage({ params }) {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: '800', fontSize: '0.9rem', color: '#1c1917' }}>Thomas R • Agency Lead</div>
+                  <div style={{ fontWeight: '800', fontSize: '0.9rem', color: '#1c1917' }}>Owner · Agency Lead</div>
                   <div style={{ fontSize: '0.76rem', color: 'var(--text-muted)' }}>{agencyInfo.address.locality}, {agencyInfo.address.city}</div>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function ServicePage({ params }) {
               </h2>
               <p>{service.intro}</p>
               <p>
-                At Colours Life Manpower Agency, led by Thomas R, we take a personalized approach to household staffing. We recognize that every home operates with its own rhythms, family expectations, and daily meal or care routines. Whether you are living in a multi-storey apartment complex on Old Mahabalipuram Road (OMR), a villa in Perungudi, or an independent home in Velachery, our team ensures that you receive dedicated assistance suited specifically to your lifestyle.
+                At Colours Life Manpower Agency, we take a personalized approach to household staffing. We recognize that every home operates with its own rhythms, family expectations, and daily meal or care routines. Whether you are living in a multi-storey apartment complex on Old Mahabalipuram Road (OMR), a villa in Perungudi, or an independent home in Velachery, our team ensures that you receive dedicated assistance suited specifically to your lifestyle.
               </p>
             </div>
 
@@ -265,7 +265,7 @@ export default function ServicePage({ params }) {
               </h2>
               <p>{service.availableWorkers}</p>
               <p>
-                All staff registered through Colours Life Manpower Agency are interviewed personally by Thomas R. We verify government identification documents, contact previous employers or character references where available, and clarify expected work ethics, cleanliness standards, and punctual habits. We prioritize individuals with genuine willingness to assist families with patience, care, and respectful communication.
+                All staff registered through Colours Life Manpower Agency are interviewed personally by the owner. We verify government identification documents, contact previous employers or character references where available, and clarify expected work ethics, cleanliness standards, and punctual habits. We prioritize individuals with genuine willingness to assist families with patience, care, and respectful communication.
               </p>
             </div>
 
@@ -292,7 +292,7 @@ export default function ServicePage({ params }) {
             <div style={{ margin: '48px 0' }}>
               <WhatsAppCTA 
                 title={`Need a Reliable ${service.shortName} Worker in Chennai?`}
-                subtitle={`Message Thomas R directly on WhatsApp with your locality and requirements to check immediate availability.`}
+                subtitle={`Message us directly on WhatsApp with your locality and requirements to check immediate availability.`}
                 customMessage={service.whatsappMessage}
                 buttonText={`Book ${service.shortName} on WhatsApp`}
               />
@@ -306,7 +306,7 @@ export default function ServicePage({ params }) {
               </h2>
               <p>{service.localCoverage}</p>
               <p>
-                Because our agency headquarters is located right at {agencyInfo.address.street}, {agencyInfo.address.locality} (Landmark: {agencyInfo.address.landmark}), we have quick access to the major residential hubs along the IT corridor. Whether you require part-time assistance, a standard 8 to 12-hour day helper, or a 24-hour live-in attendant who resides in your home, we provide flexible arrangements to match your family's schedule.
+                Because our agency headquarters is located right at {agencyInfo.address.street}, {agencyInfo.address.locality} (Landmark: {agencyInfo.address.landmark}), we have quick access to the major residential hubs along the IT corridor. Whether you require part-time assistance, a standard 8 to 12-hour day helper, or a 24-hour live-in attendant who resides in your home, we provide flexible arrangements to match your family&apos;s schedule.
               </p>
               <div className="local-tag-cloud" style={{ marginTop: '20px' }}>
                 {agencyInfo.serviceAreas.map((area, idx) => (
@@ -378,7 +378,7 @@ export default function ServicePage({ params }) {
       <div className="container" style={{ margin: '48px auto 72px' }}>
         <WhatsAppCTA 
           title={`Ready to Book Your ${service.shortName} Worker?`}
-          subtitle={`Contact Thomas R at Colours Life Manpower Agency in Okkiyam Thoraipakkam, Chennai. We are ready to assist you today with prompt, courteous service.`}
+          subtitle={`Contact Colours Life Manpower Agency in Okkiyam Thoraipakkam, Chennai. We are ready to assist you today with prompt, courteous service.`}
           customMessage={service.whatsappMessage}
           buttonText={`Enquire for ${service.shortName} on WhatsApp`}
         />

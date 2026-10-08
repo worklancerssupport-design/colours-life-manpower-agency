@@ -20,7 +20,7 @@ Match Chennai households with vetted, identity-checked domestic staff and stay p
 
 ## Positioning
 
-A neighbourhood manpower agency on the OMR tech corridor, run directly by Thomas R. No IVR, no call-centre routing — every enquiry reaches a person who has met the staff being recommended. That direct relationship is the offer competitors with larger footprints cannot truthfully copy.
+A neighbourhood manpower agency on the OMR tech corridor, run directly by its owner. No IVR, no call-centre routing — every enquiry reaches a person who has met the staff being recommended. That direct relationship is the offer competitors with larger footprints cannot truthfully copy.
 
 ## Operating Context
 
@@ -48,7 +48,7 @@ No invented customer counts, ratings, or certifications. The 6 testimonials in `
 
 1. WhatsApp is the conversion event. Every page section exists to get a family to a WhatsApp message.
 2. Specificity earns trust. Names, addresses, languages spoken, and case-study localities stay concrete.
-3. Founder-direct. The site must always make clear that the person answering is Thomas R, not a bot.
+3. Owner-direct, not name-plastered. The site must make clear a real person answers — never a bot. The owner's name appears only where identity matters (the contact page) and is read from a single source (`data/agency.json`), never repeated across copy. Copy speaks about what the customer gets, not about the owner.
 4. Service breadth over service novelty. Cover the eight established services well before adding any new category.
 
 ## Accessibility & Inclusion

@@ -33,7 +33,7 @@ export const metadata = {
     'domestic workers in Chennai',
     'home care services in Chennai',
   ],
-  authors: [{ name: 'Thomas R', url: agencyInfo.siteUrl }],
+  authors: [{ name: agencyInfo.owner, url: agencyInfo.siteUrl }],
   creator: 'Colours Life Manpower Agency',
   publisher: 'Colours Life Manpower Agency',
   robots: {

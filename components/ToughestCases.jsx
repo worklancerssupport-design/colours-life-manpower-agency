@@ -45,13 +45,13 @@ export default function ToughestCases() {
         <div style={{ maxWidth: 760 }}>
           <span className="section-eyebrow">
             <span className="section-eyebrow-mark" />
-            Toughest placements
+            Complicated home situations
           </span>
           <h2 className="section-heading">
-            We Handle The <em>Toughest Home Placements.</em>
+            Your Situation Is Probably <em>One We&apos;ve Handled.</em>
           </h2>
           <p className="section-subline">
-            Dementia? Post-ICU? A first-time grandparent? A strict Brahmin kitchen with onion-and-garlic-free rules? A family that has tried two helpers already this year. We take the calls other agencies return.
+            Dementia? Post-ICU? A first-time grandparent? A strict Brahmin kitchen with onion-and-garlic-free rules? A family that has already tried two helpers this year. We take the calls other agencies return.
           </p>
           <Link href="/contact/" className="btn-lime" style={{ marginTop: 24 }}>
             See All Placements

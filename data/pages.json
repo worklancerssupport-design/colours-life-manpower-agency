@@ -6,9 +6,9 @@
       "story": "<strong>Colours Life Manpower Agency</strong> was established to provide Chennai residents with reliable, honest, and hardworking household staffing solutions. Rather than operating as an impersonal online directory or automated platform, we believe in hands-on matchmaking, understanding personal household preferences, and fostering long-term relationships between families and domestic staff."
     },
     "leadership": {
-      "heading": "Leadership & Direct Communication: Thomas R",
-      "p1": "The agency is personally directed by <strong>Thomas R</strong>, who oversees client enquiries, candidate interviews, and post-placement coordination. When you reach out to Colours Life Manpower Agency, you speak directly with decision-makers who understand local Chennai communities, language considerations, and domestic expectations.",
-      "p2": "We do not use impersonal call routing. Whether you message us on WhatsApp (+91 98845 55533) or call our phone lines, Thomas R and our team address your requirements with prompt attention, honesty regarding candidate availability, and practical guidance."
+      "heading": "You Always Reach the Person in Charge",
+      "p1": "The agency is personally directed by its owner, who oversees client enquiries, candidate interviews, and post-placement coordination. When you reach out to Colours Life Manpower Agency, you speak directly with decision-makers who understand local Chennai communities, language considerations, and domestic expectations.",
+      "p2": "We do not use impersonal call routing. Whether you message us on WhatsApp (+91 98845 55533) or call our phone lines, you reach a real person who addresses your requirements with prompt attention, honesty regarding candidate availability, and practical guidance."
     },
     "verification": {
       "heading": "Our Ethical Standards & Verification Approach",
@@ -70,14 +70,15 @@
           "iconBg": "#ecfdf5",
           "iconColor": "#15803d",
           "title": "Direct WhatsApp Support",
-          "description": "No automated IVR bots. You connect directly with Thomas R on WhatsApp to discuss your exact timings, dietary preferences, and expectations."
+          "description": "No automated IVR bots. You connect directly with the owner on WhatsApp to discuss your exact timings, dietary preferences, and expectations."
         }
       ]
     },
     "howItWorks": {
-      "eyebrow": "Clear & Straightforward",
-      "heading": "How To Connect With Your Ideal Domestic Helper",
-      "subtext": "Finding reliable home support should not be complicated. Our structured 4-step process connects you promptly with verified staff:",
+      "eyebrow": "How it works",
+      "heading": "From First Message",
+      "headingEm": "To a Helper at Home.",
+      "subtext": "Most placements are confirmed within a week, not within a month. Four short steps — share what you need, meet a few verified candidates, settle terms, and start.",
       "steps": [
         {
           "number": "01",
@@ -91,7 +92,7 @@
           "circleBg": "#f0fdfa",
           "circleColor": "#0d9488",
           "title": "Discuss Your Requirement",
-          "description": "Thomas R coordinates candidate options matching your preferences and arranges a direct phone or in-person discussion."
+          "description": "We coordinate candidate options matching your preferences and arrange a direct phone or in-person discussion."
         },
         {
           "number": "03",

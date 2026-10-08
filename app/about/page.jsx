@@ -22,7 +22,7 @@ const { aboutPage } = pagesData;
 
 export const metadata = {
   title: "About Us | Colours Life Manpower Agency | Chennai & Thoraipakkam",
-  description: "Learn about Colours Life Manpower Agency, led by Thomas R in Okkiyam Thoraipakkam, Chennai. Dedicated to connecting Chennai families with trusted domestic staff and care attendants.",
+  description: "Learn about Colours Life Manpower Agency in Okkiyam Thoraipakkam, Chennai. Dedicated to connecting Chennai families with trusted domestic staff and care attendants.",
   alternates: {
     canonical: `${agencyInfo.siteUrl}/about/`,
   }
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="service-hero-editorial theme-cooking">
+      <section className="service-hero-editorial theme-cooking" style={{ paddingTop: '128px' }}>
         <div className="container">
           <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
@@ -67,12 +67,12 @@ export default function AboutPage() {
 
               <div className="hero-button-group">
                 <a
-                  href={getWhatsAppUrl("Hello Thomas R, I would like to learn more about Colours Life Manpower Agency.")}
+                  href={getWhatsAppUrl("Hello, I would like to learn more about Colours Life Manpower Agency.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-btn-large"
                 >
-                  <MessageCircle size={18} /> WhatsApp Thomas R
+                  <MessageCircle size={18} /> Chat on WhatsApp
                 </a>
                 <a
                   href={`tel:${agencyInfo.phone1}`}
@@ -190,7 +190,7 @@ export default function AboutPage() {
       <div className="container" style={{ margin: '32px auto 64px' }}>
         <WhatsAppCTA 
           title="Looking to Connect with Colours Life Manpower Agency?"
-          subtitle="Call or message Thomas R today to discuss your household helper needs in Chennai."
+          subtitle="Call or message us today to discuss your household helper needs in Chennai."
         />
       </div>
     </>

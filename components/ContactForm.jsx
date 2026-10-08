@@ -54,7 +54,7 @@ Details: ${formData.notes || 'None'}`;
           Send a Service Enquiry
         </h3>
         <p style={{ color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: '1.6' }}>
-          Fill in your details below to directly connect with Thomas R on WhatsApp with your requirements pre-filled.
+          Fill in your details below to connect directly on WhatsApp with your requirements pre-filled.
         </p>
       </div>
 
@@ -205,7 +205,7 @@ Details: ${formData.notes || 'None'}`;
       </button>
 
       <div style={{ marginTop: '14px', fontSize: '0.82rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-        🔒 Directly connects to Thomas R (+91 {agencyInfo.whatsappNumber}). No spam.
+        🔒 Connects you straight to the owner (+91 {agencyInfo.whatsappNumber}). No spam.
       </div>
     </form>
   );

@@ -3,18 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\"",
+    "predev": "node -e \"require('fs').rmSync('.next-dev',{recursive:true,force:true})\"",
     "dev": "next dev",
     "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true});require('fs').rmSync('node_modules/.cache',{recursive:true,force:true})\"",
+    "verify:clean": "node -e \"require('fs').rmSync('.next-verify',{recursive:true,force:true})\"",
+    "verify": "npm run verify:clean && cross-env NEXT_DIST_DIR=.next-verify next build",
     "prebuild": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.453.0",
     "next": "14.2.15",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "lucide-react": "^0.453.0"
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.15"
   }
 }

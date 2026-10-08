@@ -39,7 +39,7 @@ async function validateSEO() {
   console.log('  - Phone 9884404444 tel link:', home.data.includes('tel:9884404444'));
   console.log('  - Phone 9884555533 tel link:', home.data.includes('tel:9884555533'));
   console.log('  - Email mailto link:', home.data.includes('mailto:colourslifemanpoweragency@gmail.com'));
-  console.log('  - Thomas R mentioned:', home.data.includes('Thomas R'));
+  console.log('  - Owner name kept off homepage copy (expected: true):', !home.data.includes('Thomas R'));
   console.log('  - Okkiyam Thoraipakkam mentioned:', home.data.includes('Okkiyam Thoraipakkam'));
   console.log('  - Landmark (Back Side Cognizant):', home.data.includes('Back Side Cognizant'));
 

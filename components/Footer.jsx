@@ -22,16 +22,16 @@ export default function Footer() {
           <div>
             <Logo />
             <p className="footer-brand-line">
-              A neighbourhood manpower agency on the OMR tech corridor. Cooks, nannies, elderly attendants, maids, and drivers — matched to your home by Thomas R.
+              A neighbourhood manpower agency on the OMR tech corridor. Cooks, nannies, elderly attendants, maids, and drivers — matched to your home and the way you run it.
             </p>
             <a
-              href={getWhatsAppUrl("Hello Thomas R, I'd like to talk about hiring domestic help.")}
+              href={getWhatsAppUrl("Hello, I'd like to talk about hiring domestic help.")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-lime"
               style={{ marginTop: 22 }}
             >
-              <MessageCircle size={16} /> WhatsApp Thomas R
+              <MessageCircle size={16} /> Chat on WhatsApp
             </a>
           </div>
 
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div>{currentYear ? `© ${currentYear} ` : '© ' }Colours Life Manpower Agency · Directed by Thomas R · Okkiyam Thoraipakkam</div>
+          <div>{currentYear ? `© ${currentYear} ` : '© ' }Colours Life Manpower Agency · Okkiyam Thoraipakkam</div>
           <div>Serving {agencyInfo.serviceAreas.length} Chennai localities along the OMR corridor.</div>
         </div>
       </div>

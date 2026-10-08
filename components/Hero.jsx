@@ -33,7 +33,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero-subline">
-              Compassionate, ID-verified cooks, nannies, elderly attendants, maids and drivers — chosen for your family by Thomas R and placed within days, not weeks.
+              Compassionate, ID-verified cooks, nannies, elderly attendants, maids and drivers — chosen for your family and placed within days, not weeks.
             </p>
 
             <div className="hero-cta-row">
@@ -55,7 +55,7 @@ export default function Hero() {
 
         <div className="hero-media">
           <Image
-            src="https://res.cloudinary.com/akjmqvws/image/upload/v1791353138/hero-right.png"
+            src="https://res.cloudinary.com/akjmqvws/image/upload/v1791447169/hero-hopefully.png"
             alt="Colours Life domestic caregivers in Chennai"
             fill
             priority

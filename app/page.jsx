@@ -2,10 +2,10 @@ import agencyInfo from '@/data/agency.json';
 import FAQSchema from '@/components/FAQSchema';
 import generalFaqs from '@/data/faqs.json';
 import Hero from '@/components/Hero';
+import TrustStrip from '@/components/TrustStrip';
 import AboutSection from '@/components/AboutSection';
 import ServiceRows from '@/components/ServiceRows';
-import CareTabs from '@/components/CareTabs';
-import PromiseSection from '@/components/PromiseSection';
+import HowItWorks from '@/components/HowItWorks';
 import ToughestCases from '@/components/ToughestCases';
 import ReviewSection from '@/components/ReviewSection';
 import FAQSection from '@/components/FAQSection';
@@ -25,10 +25,10 @@ export default function HomePage() {
     <>
       <FAQSchema faqs={generalFaqs} />
       <Hero />
-      <AboutSection />
+      <TrustStrip />
       <ServiceRows />
-      <CareTabs />
-      <PromiseSection />
+      <HowItWorks />
+      <AboutSection />
       <ToughestCases />
       <ReviewSection limit={6} />
       <FAQSection
@@ -38,7 +38,7 @@ export default function HomePage() {
       />
       <WhatsAppCTA
         title="Need a hand at home this week?"
-        subtitle="Tell us what you need. Thomas R is one WhatsApp away — usually replying inside an hour, founder-direct, no IVR."
+        subtitle="Tell us what you need. The owner replies within the hour on WhatsApp — direct, no IVR, no bots."
       />
     </>
   );

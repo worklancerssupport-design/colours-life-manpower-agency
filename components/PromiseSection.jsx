@@ -46,7 +46,7 @@ export default function PromiseSection() {
               Daughters, Mothers, Aides. <em>Trust Included.</em>
             </h2>
             <p className="section-subline section-subline-light">
-              Every placement is Aadhaar-verified, locally referenced, and introduced by Thomas R personally. Same smiling helper every morning, police-verified.
+              Every placement is Aadhaar-verified, locally referenced, and introduced in person. Same smiling helper every morning, police-verified.
             </p>
           </div>
 

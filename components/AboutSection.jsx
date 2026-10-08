@@ -1,25 +1,22 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+import { getWhatsAppUrl } from '@/lib/utils';
+import agencyInfo from '@/data/agency.json';
 
-const days = [
-  { num: '09', day: 'Sun' },
-  { num: '10', day: 'Mon' },
-  { num: '11', day: 'Wed' },
-  { num: '12', day: 'Thu' },
-  { num: '13', day: 'Fri' },
-  { num: '14', day: 'Sat' },
+const vetting = [
+  'Aadhaar government ID verified',
+  'Residential background checked',
+  'Prior-work references reviewed',
+  'Introduced in person by the owner',
+  'Replacement support if the fit is not right',
+  'Fees explained upfront, by category and shift type',
 ];
 
-const slots = ['10:00 AM', '9:30 AM', '8:00 AM', '9:00 AM', '8:30 AM', '9:30 AM'];
+const defaultMsg =
+  "Hello Colours Life Manpower Agency, I would like to enquire about your manpower services.";
+const whatsappUrl = getWhatsAppUrl(defaultMsg);
 
 export default function AboutSection() {
-  const [activeDay, setActiveDay] = useState(3);
-  const [activeSlot, setActiveSlot] = useState(1);
-  const [activeTab, setActiveTab] = useState(0);
-
   return (
     <section className="section-light" id="about">
       <div className="container">
@@ -27,91 +24,47 @@ export default function AboutSection() {
           <div>
             <span className="section-eyebrow">
               <span className="section-eyebrow-mark" />
-              About Colours Life
+              What you can expect
             </span>
             <h2 className="section-heading">
               Where Helpers <em>Become Family.</em>
             </h2>
             <div className="about-lead">
               <p>
-                For years the Colours Life family has been turning domestic placements into relationships. 6 verified reviews, 8 service categories, and one founder who answers his own phone — that is the entire agency.
+                The right helper changes the whole shape of your day — meals on time, a parent who is not alone, a kitchen that runs the way yours does. Every placement is matched to your timings, your tasks, your food habits and your language.
               </p>
               <p>
-                Every helper we place is Aadhaar-verified, locally referenced, and matched to your home's rhythm by Thomas R personally. No bots, no call centres.
+                And if the fit is not right at any point, one message starts the replacement. No bots, no call centres — a real person on WhatsApp who already knows your placement.
               </p>
             </div>
 
-            <div className="scheduler" aria-label="Schedule a placement call">
-              <div className="scheduler-coach">
-                <div className="scheduler-coach-avatar" aria-hidden="true">T</div>
-                <div>
-                  <div className="scheduler-coach-name">Thomas R</div>
-                  <div className="scheduler-coach-role">Placement Coordinator · Colours Life</div>
-                </div>
+            <div className="vetting-card" aria-label="What we check before any placement">
+              <div className="vetting-card-head">
+                <span className="vetting-card-eyebrow">Before anyone enters your home</span>
+                <h3 className="vetting-card-title">Verified. Matched. Yours.</h3>
               </div>
-
-              <div className="scheduler-tabs" role="tablist" aria-label="Schedule steps">
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={activeTab === 0}
-                  className={`scheduler-tab ${activeTab === 0 ? 'is-active' : ''}`}
-                  onClick={() => setActiveTab(0)}
-                >
-                  Schedule
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={activeTab === 1}
-                  className={`scheduler-tab ${activeTab === 1 ? 'is-active' : ''}`}
-                  onClick={() => setActiveTab(1)}
-                >
-                  Call me back
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={activeTab === 2}
-                  className={`scheduler-tab ${activeTab === 2 ? 'is-active' : ''}`}
-                  onClick={() => setActiveTab(2)}
-                >
-                  Walk-in
-                </button>
-              </div>
-
-              <div className="scheduler-label">Pick a day</div>
-              <div className="scheduler-dates" role="radiogroup" aria-label="Available dates">
-                {days.map((d, i) => (
-                  <button
-                    key={d.num}
-                    type="button"
-                    role="radio"
-                    aria-checked={activeDay === i}
-                    className={`scheduler-date ${activeDay === i ? 'is-active' : ''}`}
-                    onClick={() => setActiveDay(i)}
-                  >
-                    <span className="scheduler-date-num">{d.num}</span>
-                    <span className="scheduler-date-day">{d.day}</span>
-                  </button>
+              <ul className="vetting-card-list">
+                {vetting.map((item) => (
+                  <li className="vetting-card-item" key={item}>
+                    <span className="vetting-card-check" aria-hidden="true">
+                      <Check size={14} strokeWidth={3} />
+                    </span>
+                    <span>{item}</span>
+                  </li>
                 ))}
-              </div>
-
-              <div className="scheduler-label">Pick a time</div>
-              <div className="scheduler-slots" role="radiogroup" aria-label="Available time slots">
-                {slots.map((s, i) => (
-                  <button
-                    key={s + i}
-                    type="button"
-                    role="radio"
-                    aria-checked={activeSlot === i}
-                    className={`scheduler-slot ${activeSlot === i ? 'is-active' : ''}`}
-                    onClick={() => setActiveSlot(i)}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
+              </ul>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vetting-card-cta"
+              >
+                Chat on WhatsApp
+                <ArrowRight size={15} aria-hidden="true" />
+              </a>
+              <p className="vetting-card-foot">
+                {agencyInfo.address.locality} · {agencyInfo.address.city}
+              </p>
             </div>
           </div>
 

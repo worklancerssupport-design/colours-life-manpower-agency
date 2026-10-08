@@ -106,8 +106,8 @@ export default function FAQPage() {
       <div className="container" style={{ margin: '48px auto 72px' }}>
         <WhatsAppCTA 
           title="Have a Question Not Answered Here?"
-          subtitle="Thomas R is available on WhatsApp to answer any specific queries about timings, rates, or candidate profiles."
-          buttonText="Ask Thomas R on WhatsApp"
+          subtitle="The owner is available on WhatsApp to answer any specific queries about timings, rates, or candidate profiles."
+          buttonText="Ask on WhatsApp"
         />
       </div>
     </>

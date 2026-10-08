@@ -198,7 +198,7 @@ export default function Header() {
 
         <div className="mobile-drawer-foot">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-lime">
-            WhatsApp Thomas R
+            Chat on WhatsApp
           </a>
           <a href={callUrl} className="btn-ghost-dark">
             <Phone size={15} /> {agencyInfo.phoneDisplay1}

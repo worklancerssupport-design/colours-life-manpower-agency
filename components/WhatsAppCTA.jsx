@@ -4,7 +4,7 @@ import { MessageCircle, Phone, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function WhatsAppCTA({
   title = 'Need a hand at home this week?',
-  subtitle = 'Tell us what you need. Thomas R is one WhatsApp away — usually replying inside an hour, founder-direct, no IVR.',
+  subtitle = 'Tell us what you need. The owner replies within the hour on WhatsApp — direct, no IVR, no bots.',
   customMessage,
   buttonText = 'Chat on WhatsApp',
 }) {
