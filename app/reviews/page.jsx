@@ -20,7 +20,7 @@ function serviceLabel(name) {
   return svc ? svc.shortName : name;
 }
 
-const areaList = agencyInfo.serviceAreas.slice(0, 4);
+const areaList = agencyInfo.serviceAreas.slice(0, 1);
 const areaPhrase = `${areaList.slice(0, -1).join(', ')} and ${areaList[areaList.length - 1]}`;
 
 function initials(name) {
@@ -70,7 +70,7 @@ export default function ReviewsPage() {
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><MapPin size={13} /></span>
-              {agencyInfo.serviceAreas.slice(0, 3).join(' · ')}
+              {agencyInfo.serviceAreas.slice(0, 1).join(' · ')}
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><ShieldCheck size={13} /></span>

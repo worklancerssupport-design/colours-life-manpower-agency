@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import Link from 'next/link';
 import { getAllServices } from '@/lib/services';
 import { ArrowUpRight } from 'lucide-react';
@@ -47,7 +47,7 @@ export default function CareTabs() {
           </div>
 
           <div className="care-tab-image">
-            <Image
+            <SmartImage
               src={active.image}
               alt={active.alt}
               fill

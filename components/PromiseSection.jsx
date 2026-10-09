@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import { ArrowUpRight } from 'lucide-react';
 import agencyInfo from '@/data/agency.json';
 import { getServiceMeta } from '@/lib/services';
@@ -62,7 +62,7 @@ export default function PromiseSection() {
                 aria-label={`Explore ${p.title}`}
               >
                 <div className="helper-row-image">
-                  <Image
+                  <SmartImage
                     src={p.img}
                     alt={p.alt}
                     fill

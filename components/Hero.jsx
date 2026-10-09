@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
@@ -42,7 +42,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-media">
-          <Image
+          <SmartImage
             src="https://res.cloudinary.com/akjmqvws/image/upload/v1791447169/hero-hopefully.png"
             alt={`${agencyInfo.name} domestic caregivers in ${agencyInfo.address.city}`}
             fill

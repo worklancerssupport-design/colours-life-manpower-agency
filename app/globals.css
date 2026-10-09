@@ -1418,19 +1418,6 @@ button {
   text-transform: uppercase;
 }
 .case-card-title { font-weight: 700; font-size: 1.05rem; line-height: 1.3; color: #fff; }
-.case-card-play {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--lime-500);
-  color: var(--ink-900);
-  display: grid;
-  place-items: center;
-  z-index: 2;
-}
 
 /* ============================================================
    WHY CHOOSE US — hairline ledger grid on light ground

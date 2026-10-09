@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
 import { getAllServices, getServiceListText } from '@/lib/services';
@@ -71,7 +71,7 @@ export default function ServiceRows() {
             ref={panelRef}
           >
             <div className="service-rows-figure" key={active.id}>
-              <Image
+              <SmartImage
                 src={active.image}
                 alt={active.alt}
                 fill

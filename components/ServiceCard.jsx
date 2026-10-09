@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
@@ -9,7 +9,7 @@ export default function ServiceCard({ service }) {
   return (
     <div className="service-card">
       <div className="service-card-media">
-        <Image
+        <SmartImage
           src={service.image}
           alt={service.alt}
           fill

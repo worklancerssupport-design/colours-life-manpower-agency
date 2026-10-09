@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import agencyInfo from '@/data/agency.json';
 import { getAllServices } from '@/lib/services';
 import { ArrowRight, Sparkles } from 'lucide-react';
@@ -31,7 +31,7 @@ export default function OtherServices({ currentServiceSlug }) {
               style={{ '--svc-accent': service.accentColor }}
             >
               <div className="other-service-card-media">
-                <Image
+                <SmartImage
                   src={service.image}
                   alt={service.alt}
                   fill

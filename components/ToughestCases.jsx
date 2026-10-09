@@ -4,7 +4,7 @@ import reviewsData from '@/data/reviews.json';
 import casesData from '@/data/cases.json';
 import agencyInfo from '@/data/agency.json';
 import { fillPlaceholders } from '@/lib/utils';
-import { ArrowRight, Play, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export default function ToughestCases() {
   const [headingLead, headingEmPart] = fillPlaceholders(casesData.section.heading).split('<em>');
@@ -25,10 +25,6 @@ export default function ToughestCases() {
           <p className="section-subline">
             {fillPlaceholders(casesData.section.subline)}
           </p>
-          <Link href={casesData.section.ctaHref} className="btn-lime" style={{ marginTop: 24 }}>
-            {fillPlaceholders(casesData.section.ctaText)}
-            <ArrowRight size={16} className="btn-lime-arrow" aria-hidden="true" />
-          </Link>
         </div>
 
         <div className="cases-grid">
@@ -49,9 +45,6 @@ export default function ToughestCases() {
                 />
               </div>
               <div className="case-card-overlay" />
-              <span className="case-card-play" aria-hidden="true">
-                <Play size={16} fill="currentColor" />
-              </span>
               <div className="case-card-body">
                 <span className="case-card-tag">{c.tag}</span>
                 <span className="case-card-title">{c.title}</span>

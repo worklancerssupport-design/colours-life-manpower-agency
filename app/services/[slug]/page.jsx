@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
 import { getAllServiceSlugs } from '@/lib/services';
@@ -146,7 +146,7 @@ export default async function ServicePage({ params }) {
         </div>
 
         <div className="svc-hero-media">
-          <Image
+          <SmartImage
             src={service.image}
             alt={service.alt}
             fill

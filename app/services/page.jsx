@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import { getAllServices, getServiceListText } from '@/lib/services';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
@@ -55,7 +55,7 @@ export default function ServicesIndexPage() {
             {getAllServices().map((svc) => (
               <div key={svc.id} className="bento-card bento-span-6">
                 <div className="bento-card-media height-std">
-                  <Image
+                  <SmartImage
                     src={svc.image}
                     alt={svc.alt}
                     fill

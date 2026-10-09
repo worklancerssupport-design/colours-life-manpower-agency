@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { getServiceListText } from '@/lib/services';
@@ -80,7 +80,7 @@ export default function ContactPage() {
         </div>
 
         <div className="svc-hero-media">
-          <Image
+          <SmartImage
             src="https://res.cloudinary.com/akjmqvws/image/upload/v1791540373/contact.png"
             alt={`Contact ${agencyInfo.name} - ${agencyInfo.address.locality}, ${agencyInfo.address.city}`}
             fill

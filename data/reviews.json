@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "author": "S. Swaminathan",
+    "author": "D. Lakshmi",
     "location": "Nehru Nagar, Okkiyam Thoraipakkam",
     "service": "Cooking / Cook Service",
     "rating": 5,
     "date": "Recent Feedback",
-    "comment": "We hired a morning cook for our family through Colours Life Manpower Agency. The owner was very responsive on WhatsApp and coordinated a prompt introduction. The cook prepares authentic South Indian breakfast and lunch on time every day.",
+    "comment": "Excellent service providing, recently booked a cook from this agency good and neat candidates and the agency responsed well compared to others. Thanks to staff Mrs.Kuzhali",
     "isVerified": true
   },
   {
@@ -21,32 +21,32 @@
   },
   {
     "id": 3,
-    "author": "R. Venkatesh",
+    "author": "Ganga",
     "location": "Perungudi, Chennai",
     "service": "Elderly Care",
     "rating": 5,
     "date": "Recent Feedback",
-    "comment": "We needed a respectful attendant for my 82-year-old father who has limited mobility. The agency provided a patient caretaker who assists with walking, timely medicines, and compassionate companionship.",
+    "comment": "Most efficient, reliable and caring service. Owner Mr. Thomas is very prompt and approachable at all times. We availed their service to take care of my grandma, we are so happy with their staff caring and politeness. I would strongly recommend.",
     "isVerified": true
   },
   {
     "id": 4,
-    "author": "Anitha M.",
+    "author": "Suchitra",
     "location": "Sholinganallur, Chennai",
     "service": "Maid Work / Domestic Help",
     "rating": 5,
     "date": "Recent Feedback",
-    "comment": "Dependable maid service is hard to find in OMR. Colours Life Manpower Agency helped us find a daily helper for cleaning, mopping, and vessel washing. Punctual, honest, and well-behaved.",
+    "comment": "I hired a maid from them. Good background verification done by them. They immediately referred a maid to my house. She was very good and comfortable for us. Good follow up also was done. Good customer care. I wil strongly recommend to all",
     "isVerified": true
   },
   {
     "id": 5,
-    "author": "Narayanan S.",
+    "author": "Hari Priya",
     "location": "Velachery, Chennai",
-    "service": "Brahmin Cook",
+    "service": "Vegetarian Cook",
     "rating": 5,
     "date": "Recent Feedback",
-    "comment": "Found an experienced Brahmin cook for traditional pure vegetarian family meals. Sambar, rasam, and tiffin taste just like home. Very happy with the agency's quick service.",
+    "comment": "Delivering top-tier vegetarian culinary talent with unparalleled expertise and a passion for flavor, the Colours life man power agency ensures that every kitchen experience is elevated to a masterpiece of taste and satisfaction.",
     "isVerified": true
   },
   {
@@ -56,7 +56,7 @@
     "service": "Patient Care",
     "rating": 5,
     "date": "Recent Feedback",
-    "comment": "After my uncle's hip surgery, we required an attendant for home bedside assistance. The helper assisted with wheelchair transfers, hygiene, and daily care with great diligence.",
+    "comment": "After my dad's hip surgery, we required an attendant for home bedside assistance. The helper assisted with wheelchair transfers, hygiene, and daily care with great diligence.",
     "isVerified": true
   }
 ]
