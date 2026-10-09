@@ -1,7 +1,11 @@
 import Image from 'next/image';
+import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
-import { getServiceBySlug, getAllServiceSlugs, getWhatsAppUrl } from '@/lib/utils';
+import { getAllServiceSlugs } from '@/lib/services';
+import { getServiceBySlug } from '@/lib/services-detail';
+import { getWhatsAppUrl, fillPlaceholders } from '@/lib/utils';
 import agencyInfo from '@/data/agency.json';
+import pagesData from '@/data/pages.json';
 import OtherServices from '@/components/OtherServices';
 import FAQSection from '@/components/FAQSection';
 import FAQSchema from '@/components/FAQSchema';
@@ -30,7 +34,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const service = getServiceBySlug(params.slug);
+  const service = fillPlaceholders(await getServiceBySlug(params.slug));
   if (!service) return {};
 
   const canonicalUrl = `${agencyInfo.siteUrl}${service.path}`;
@@ -63,27 +67,16 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const ctaNounMap = {
-  'cooking': 'a cook',
-  'newborn-baby-care': 'newborn care',
-  'baby-care': 'a baby care helper',
-  'elderly-care': 'an elderly attendant',
-  'maid-work': 'domestic help',
-  'brahmin-cook': 'a Brahmin cook',
-  'patient-care': 'a patient attendant',
-  'drivers': 'a driver'
-};
-
-export default function ServicePage({ params }) {
-  const service = getServiceBySlug(params.slug);
+export default async function ServicePage({ params }) {
+  const service = fillPlaceholders(await getServiceBySlug(params.slug));
 
   if (!service) {
     notFound();
   }
 
   const whatsappUrl = getWhatsAppUrl(service.whatsappMessage);
-  const ctaNoun = ctaNounMap[service.slug] || service.shortName.toLowerCase();
-  const idCheckFact = service.slug === 'drivers' ? 'Licence + Aadhaar checked' : 'Aadhaar + references checked';
+  const ctaNoun = service.ctaNoun;
+  const idCheckFact = service.slug === 'drivers' ? agencyInfo.claims.idCheckDrivers : agencyInfo.claims.idCheck;
 
   const breadcrumbs = [
     { name: 'Home', url: '/' },
@@ -117,7 +110,7 @@ export default function ServicePage({ params }) {
           <div className="hero-facts-bar">
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
-              Usually placed in days
+              {agencyInfo.claims.placementSpeedMicro}
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><Check size={13} strokeWidth={3} /></span>
@@ -148,7 +141,7 @@ export default function ServicePage({ params }) {
           </div>
 
           <p className="hero-cta-micro">
-            WhatsApp answered 8am–9pm, usually within the hour
+            WhatsApp answered {agencyInfo.hours}, {agencyInfo.responseTime}
           </p>
         </div>
 
@@ -166,7 +159,7 @@ export default function ServicePage({ params }) {
 
       {/* 2. What You Get — scope split */}
       <ScopeSplit
-        title={<>What you get with {ctaNoun} in Chennai</>}
+        title={<>What you get with {ctaNoun} in {agencyInfo.address.city}</>}
         included={service.scopeIncluded}
         excluded={service.scopeExcluded}
         note={service.disclaimer}
@@ -199,38 +192,27 @@ export default function ServicePage({ params }) {
           <h2 className="section-heading">How hiring <em>works</em></h2>
 
           <ol className="hiring-steps">
-            <li className="hiring-step">
-              <div className="hiring-step-num" aria-hidden="true">1</div>
-              <h3 className="hiring-step-title">Tell us what you need</h3>
-              <p className="hiring-step-desc">
-                WhatsApp your locality, your shift and the duties that matter. Thirty seconds of typing is the whole first step.
-              </p>
-            </li>
-            <li className="hiring-step">
-              <div className="hiring-step-num" aria-hidden="true">2</div>
-              <h3 className="hiring-step-title">See matched profiles</h3>
-              <p className="hiring-step-desc">
-                You get verified candidates whose experience and locality fit your home. You talk to them before deciding — never a blind assignment.
-              </p>
-            </li>
-            <li className="hiring-step">
-              <div className="hiring-step-num" aria-hidden="true">3</div>
-              <h3 className="hiring-step-title">Start with an introduction</h3>
-              <p className="hiring-step-desc">
-                Once you choose, the person starts. You keep one number for anything that comes after.
-              </p>
-            </li>
+            {pagesData.servicePage.hiringSteps.steps.map((step) => (
+              <li className="hiring-step" key={step.num}>
+                <div className="hiring-step-num" aria-hidden="true">{step.num}</div>
+                <h3 className="hiring-step-title">{step.title}</h3>
+                <p className="hiring-step-desc">
+                  {step.desc}
+                </p>
+              </li>
+            ))}
           </ol>
 
           <div className="hiring-strip">
-            <span>You send your locality + shift</span>
-            <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
-            <span>hear back within the hour</span>
-            <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
-            <span>see verified profiles</span>
-            <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
-            <span>you choose</span>
-            <span className="hiring-strip-muted">No office visit needed.</span>
+            {fillPlaceholders(pagesData.servicePage.hiringSteps.strip).map((item, idx) => (
+              <Fragment key={item}>
+                <span>{item}</span>
+                {idx < pagesData.servicePage.hiringSteps.strip.length - 1 && (
+                  <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
+                )}
+              </Fragment>
+            ))}
+            <span className="hiring-strip-muted">{agencyInfo.claims.noOfficeVisit}</span>
           </div>
         </div>
       </section>
@@ -238,9 +220,9 @@ export default function ServicePage({ params }) {
       {/* 6. What's Checked & What If It Goes Wrong — dark band */}
       <section className="section-dark verify-band">
         <div className="container">
-          <h2 className="section-heading verify-heading">What&apos;s checked before anyone enters your home</h2>
+          <h2 className="section-heading verify-heading">{pagesData.servicePage.verifyBand.heading}</h2>
           <p className="verify-subline">
-            Whoever is placed with you has had their ID checked, references spoken to, and duties clarified with you before day one. You see the verification details before they start.
+            {pagesData.servicePage.verifyBand.subline}
           </p>
 
           <div className="verify-grid">
@@ -298,8 +280,8 @@ export default function ServicePage({ params }) {
       {/* 10. Service FAQ */}
       <FAQSection
         faqs={service.faqs}
-        title={`Questions about ${service.shortName.toLowerCase()} in Chennai`}
-        subtitle="Practical answers on shifts, duties, verification, and what happens after you message."
+        title={`Questions about ${service.shortName.toLowerCase()} in ${agencyInfo.address.city}`}
+        subtitle={pagesData.servicePage.faqSubtitle}
       />
 
       {/* 11. Related Services */}
@@ -307,11 +289,11 @@ export default function ServicePage({ params }) {
 
       {/* 12. Final CTA */}
       <WhatsAppCTA
-        eyebrow="Replies within the hour"
-        title={`Need ${ctaNoun} this week?`}
-        subtitle="Tell us your area and shift. You'll hear back within the hour — a real person, no bots."
+        eyebrow={fillPlaceholders(pagesData.servicePage.finalCta.eyebrow)}
+        title={`${pagesData.servicePage.finalCta.titlePrefix} ${ctaNoun} ${pagesData.servicePage.finalCta.titleSuffix}`}
+        subtitle={fillPlaceholders(pagesData.servicePage.finalCta.subtitle)}
         customMessage={service.whatsappMessage}
-        buttonText="Enquire on WhatsApp"
+        buttonText={pagesData.servicePage.finalCta.buttonText}
       />
     </div>
   );

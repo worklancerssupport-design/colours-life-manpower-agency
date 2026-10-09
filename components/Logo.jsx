@@ -1,12 +1,16 @@
 import Link from 'next/link';
+import agencyInfo from '@/data/agency.json';
+
+const brandNameHead = agencyInfo.name.split(' ').slice(0, 2);
+const brandNameTail = agencyInfo.name.split(' ').slice(2).join(' ');
 
 export default function Logo({ variant = 'default' }) {
   return (
     <Link
       href="/"
       className="brand-link"
-      aria-label="Colours Life Manpower Agency home"
-      title="Colours Life Manpower Agency"
+      aria-label={`${agencyInfo.name} home`}
+      title={agencyInfo.name}
     >
       <span className="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,9 +28,9 @@ export default function Logo({ variant = 'default' }) {
       </span>
       <span className="brand-wordmark">
         <span className="brand-wordmark-name">
-          Colours <span className="brand-wordmark-life">Life</span>
+          {brandNameHead[0]} <span className="brand-wordmark-life">{brandNameHead[1]}</span>
         </span>
-        <span className="brand-wordmark-tag">Manpower Agency</span>
+        <span className="brand-wordmark-tag">{brandNameTail}</span>
       </span>
     </Link>
   );

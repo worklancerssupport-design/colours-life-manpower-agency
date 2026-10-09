@@ -4,26 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
-import servicesData from '@/data/services.json';
+import { getAllServices } from '@/lib/services';
 import { ArrowRight } from 'lucide-react';
 
-const shortLabels = {
-  'Cooking': 'Cook',
-  'Newborn Care': 'Newborn',
-  'Baby Care': 'Baby',
-  'Elderly Care': 'Elderly',
-  'Maid Work': 'Maid',
-  'Patient Care': 'Patient',
-  'Brahmin Cook': 'Brahmin Cook',
-  'Drivers': 'Drivers',
-};
-
-const defaultMsg = "Hello Colours Life Manpower Agency, I'd like to find a caregiver matched to my family.";
-const whatsappUrl = getWhatsAppUrl(defaultMsg);
+const whatsappUrl = getWhatsAppUrl(agencyInfo.defaultWhatsAppMessage);
 
 export default function Hero() {
   return (
-    <section className="hero" aria-label="Trusted home help and caregivers in Chennai">
+    <section className="hero" aria-label={`Trusted home help and caregivers in ${agencyInfo.address.city}`}>
       <div className="hero-row">
         <div className="hero-content-wrap">
           <div className="hero-content">
@@ -33,7 +21,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero-subline">
-              Compassionate, ID-verified cooks, nannies, elderly attendants, maids and drivers — chosen for your family and placed within days, not weeks.
+              Compassionate, {agencyInfo.claims.idCheckMicro} cooks, nannies, elderly attendants, maids and drivers — chosen for your family and {agencyInfo.claims.placementSpeed.toLowerCase()}, not weeks.
             </p>
 
             <div className="hero-cta-row">
@@ -56,7 +44,7 @@ export default function Hero() {
         <div className="hero-media">
           <Image
             src="https://res.cloudinary.com/akjmqvws/image/upload/v1791447169/hero-hopefully.png"
-            alt="Colours Life domestic caregivers in Chennai"
+            alt={`${agencyInfo.name} domestic caregivers in ${agencyInfo.address.city}`}
             fill
             priority
             fetchPriority="high"
@@ -70,8 +58,8 @@ export default function Hero() {
       <div className="logo-strip">
         <div className="container">
           <div className="logo-strip-row" aria-label="Services offered">
-            {servicesData.map((svc) => (
-              <Link key={svc.id} href={svc.path}>{shortLabels[svc.shortName] || svc.shortName}</Link>
+            {getAllServices().map((svc) => (
+              <Link key={svc.id} href={svc.path}>{svc.tabLabel}</Link>
             ))}
           </div>
         </div>

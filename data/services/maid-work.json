@@ -1,0 +1,123 @@
+{
+  "h1": "Maid & Domestic Help Services in Chennai",
+  "h1Scope": "— cleaning, laundry and daily upkeep",
+  "metaTitle": "Maid & Domestic Help Services in Chennai & Thoraipakkam | House Cleaning | {{name}}",
+  "metaDescription": "Reliable maid and domestic help services in Okkiyam Thoraipakkam, OMR, and Chennai. Professional sweeping, mopping, dusting, dishwashing, laundry, and home upkeep.",
+  "eyebrowText": "Domestic Help · Part-time & Live-in · OMR & Chennai",
+  "heroSubtitle": "A domestic helper who keeps the flat the way you'd keep it — floors done before the dust settles, vessels never pile up. Message your area and shift; you'll hear back today.",
+  "heroFactAreas": "Thoraipakkam · Sholinganallur · Pallavaram",
+  "whoIsItFor": [
+    "You leave at 8 and come back at 8 — the flat looks it by Sunday.",
+    "You've just shifted into a 3BHK on the corridor and the move-in dust is still settling.",
+    "There's a baby in the house now, and the washing alone is a second job.",
+    "Your parents' home needs daily upkeep but they can't do the bending anymore."
+  ],
+  "availableWorkers": "The helpers you'll meet work in private homes — sweeping and mopping the way your household does it, using your washing machine properly, handling your vessels with care. They're identity-checked and their previous families are called. You meet them before they start; the first week tells you both plenty.",
+  "scopeIncluded": [
+    "Sweeping and wet mopping of every room, balcony and kitchen floor",
+    "Dusting — furniture, shelves, fans, window sills, the TV unit",
+    "Washing the day's vessels and leaving the sink clear",
+    "Laundry: washing, drying, folding, and ironing where agreed",
+    "Bathroom and WC scrubbing — the part everyone postpones",
+    "Kitchen wipe-down: counters, stove, chimney exterior",
+    "Bins emptied and waste segregated for collection"
+  ],
+  "scopeExcluded": [
+    "Brooms, mops, cleaning liquids and detergents — you provide them in the brands you trust",
+    "Deep cleaning, sofa shampooing and post-renovation work — separate, arranged by discussion",
+    "Electrical, plumbing or any repair work"
+  ],
+  "shiftOptions": [
+    {
+      "type": "Part-time",
+      "hours": "2–4 hrs · morning or evening",
+      "description": "The non-negotiable half: morning freshening or the evening reset.",
+      "bestFor": "Working couples, 1BHK and 2BHK flats"
+    },
+    {
+      "type": "Full-time",
+      "hours": "8–12 hrs · day shift",
+      "description": "Full house upkeep through the day, including laundry cycles and the kitchen clean.",
+      "bestFor": "Families with kids or elders at home"
+    },
+    {
+      "type": "Live-in",
+      "hours": "Stays in your home · structured rest hours",
+      "description": "Continuous household upkeep with a real weekend rhythm — not 24 hours on call.",
+      "bestFor": "Large homes, villas, joint families"
+    }
+  ],
+  "keyResponsibilities": [
+    "Daily sweeping and wet mopping of all living rooms, bedrooms, balconies, and kitchen floors.",
+    "Dusting furniture, TV units, book shelves, window sills, fans, and home decor items.",
+    "Washing daily cooking vessels, dining plates, cutlery, and kitchen sinks thoroughly.",
+    "Washing, sun-drying, folding, and organizing clothes, with ironing support where agreed upon.",
+    "Regular scrubbing and sanitizing of bathrooms, toilets, washbasins, and tiles.",
+    "Kitchen cleaning support: wiping countertops, gas stoves, chimney hoods, and refrigerator exteriors.",
+    "Waste collection and disposal in apartment refuse bins in compliance with local municipal guidelines."
+  ],
+  "verificationFacts": [
+    "Aadhaar government identity check",
+    "Residential background verification",
+    "Prior-work references spoken to, where available"
+  ],
+  "riskPolicies": [
+    "Replacement support if the helper isn't right for your home",
+    "You meet the helper before day one",
+    "Timings, days-off and exact duties agreed before she starts"
+  ],
+  "localCoverage": "Maids across Okkiyam Thoraipakkam, Nehru Nagar, Kandhanchavadi, Perungudi, Sholinganallur, Velachery, Semmancheri, Navalur, Siruseri, Pallavaram and greater Chennai — morning shifts before 10am are the most requested on the corridor.",
+  "disclaimer": "Domestic helpers carry out routine cleaning, washing, and tidying. Specialized deep restoration, hazardous electrical repairs, or exterior window scaling at heights are not included.",
+  "unaskedQAs": [
+    {
+      "question": "Morning shift or evening — which do most families take?",
+      "answer": "On OMR, morning is the common choice: the house is fresh before the day starts. Evening shifts work when someone's home by 6. Tell us your timing and we'll only show people actually free in that window."
+    },
+    {
+      "question": "Will she use my washing machine and dishwasher?",
+      "answer": "Yes, if she already knows how — and if she doesn't, she'll be shown once on day one. Mention the appliances in the first message; it's a real filter."
+    },
+    {
+      "question": "Do I have to be home the whole time?",
+      "answer": "No. Most families give a key and a list. The identity check, the reference call and the introduction happen first — after that, trust is built by the work."
+    },
+    {
+      "question": "What if something breaks or goes missing?",
+      "answer": "Set the ground rules before she starts — what she may move, what's off-limits. Household boundaries written on day one prevent almost every later disagreement."
+    },
+    {
+      "question": "Can she also chop vegetables for dinner?",
+      "answer": "The common 'all-rounder' scope: cleaning plus evening kitchen prep. If that's what you need, say so — the shift is built around it."
+    },
+    {
+      "question": "What about weekly offs?",
+      "answer": "Weekly off days are agreed between your family and her before she starts — most work six days. Plan the coverage for that day in advance so it doesn't become a scramble."
+    },
+    {
+      "question": "What do you need from us in the first message?",
+      "answer": "Your locality, flat size, morning or evening, and the tasks that matter most. That's enough to check availability today."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you provide part-time morning and evening maids in Thoraipakkam?",
+      "answer": "Yes — morning shifts (commonly 7–10am), evening shifts, full-day 8-hour help and live-in maids. Message your timing; you'll hear back {{responseTime}} with who's actually free."
+    },
+    {
+      "question": "How do you verify the maids?",
+      "answer": "Government Aadhaar identity is verified, residential address is confirmed, and previous employers are called as references before a profile ever reaches you."
+    },
+    {
+      "question": "Can the maid also help with light kitchen chopping?",
+      "answer": "Yes — vegetable peeling, chopping and dough kneading are common add-ons to a cleaning shift. Agree it in writing at the start so the scope is clear."
+    },
+    {
+      "question": "What if the helper stops coming or takes unscheduled leaves?",
+      "answer": "Tell us the same day. Replacement support is available where possible; planned leave with notice is far easier to cover, which is why leave expectations are agreed before the placement."
+    },
+    {
+      "question": "Are cleaning supplies provided by the agency?",
+      "answer": "No — brooms, mops, detergents and cleaning liquids are provided by you, in the brands you prefer. That way nothing in your home gets used that you wouldn't buy yourself."
+    }
+  ]
+}

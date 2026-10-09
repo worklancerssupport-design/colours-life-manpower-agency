@@ -1,7 +1,8 @@
 import pagesData from '@/data/pages.json';
+import { fillPlaceholders } from '@/lib/utils';
 import { MapPin, HeartHandshake, ShieldCheck, MessageCircle } from 'lucide-react';
 
-const { whyChooseUs } = pagesData.homePage;
+const { whyChooseUs } = fillPlaceholders(pagesData.homePage);
 
 const uspIcons = {
   MapPin,
@@ -11,18 +12,19 @@ const uspIcons = {
 };
 
 export default function WhyChooseUs() {
+  const headingWords = fillPlaceholders(whyChooseUs.heading).split(' ');
   return (
     <section className="section-light" id="why-choose-us" aria-label="Why families choose us">
       <div className="container">
         <div style={{ maxWidth: 720 }}>
           <span className="section-eyebrow">
             <span className="section-eyebrow-mark" />
-            {whyChooseUs.eyebrow}
+            {fillPlaceholders(whyChooseUs.eyebrow)}
           </span>
           <h2 className="section-heading">
-            Because the right help makes <em>everyday life easier.</em>
+            {headingWords.slice(0, -3).join(' ')} <em>{headingWords.slice(-3).join(' ')}</em>
           </h2>
-          <p className="section-subline">{whyChooseUs.subtext}</p>
+          <p className="section-subline">{fillPlaceholders(whyChooseUs.subtext)}</p>
         </div>
 
         <div className="usp-grid">
@@ -34,8 +36,8 @@ export default function WhyChooseUs() {
                   <Icon size={20} strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h3 className="usp-title">{item.title}</h3>
-                  <p className="usp-desc">{item.description}</p>
+                  <h3 className="usp-title">{fillPlaceholders(item.title)}</h3>
+                  <p className="usp-desc">{fillPlaceholders(item.description)}</p>
                 </div>
               </div>
             );

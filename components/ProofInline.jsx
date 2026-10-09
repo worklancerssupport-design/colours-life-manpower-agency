@@ -1,14 +1,7 @@
 import reviewsData from '@/data/reviews.json';
+import agencyInfo from '@/data/agency.json';
+import { getServiceByReviewName } from '@/lib/services';
 import { Star, BadgeCheck } from 'lucide-react';
-
-const reviewServiceMap = {
-  cooking: 'Cooking / Cook Service',
-  'newborn-baby-care': 'Newborn Baby Care',
-  'elderly-care': 'Elderly Care',
-  'maid-work': 'Maid Work / Domestic Help',
-  'brahmin-cook': 'Brahmin Cook',
-  'patient-care': 'Patient Care',
-};
 
 function initials(name) {
   return name
@@ -22,16 +15,16 @@ function initials(name) {
 }
 
 export default function ProofInline({ serviceSlug }) {
-  const serviceName = reviewServiceMap[serviceSlug];
-  if (!serviceName) return null;
-
-  const reviews = reviewsData.filter((r) => r.service === serviceName && r.isVerified);
+  const reviews = reviewsData.filter((r) => {
+    const svc = getServiceByReviewName(r.service);
+    return svc?.slug === serviceSlug && r.isVerified;
+  });
   if (!reviews.length) return null;
 
   return (
     <section className="section-light proof-section">
       <div className="container">
-        <h2 className="section-heading">What Chennai families say</h2>
+        <h2 className="section-heading">What {agencyInfo.address.city} families say</h2>
 
         <div className="proof-inline-grid">
           {reviews.map((review) => (

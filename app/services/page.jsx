@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import servicesData from '@/data/services.json';
+import { getAllServices, getServiceListText } from '@/lib/services';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
@@ -8,8 +8,8 @@ import WhatsAppCTA from '@/components/WhatsAppCTA';
 import { Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: "Domestic Help & Manpower Services in Chennai | Colours Life Manpower Agency",
-  description: "Explore all domestic manpower services in Chennai: cooks, newborn baby care, baby caretakers, elderly attendants, maids, Brahmin cooks, patient caregivers, and drivers.",
+  title: `Domestic Help & Manpower Services in ${agencyInfo.address.city} | ${agencyInfo.name}`,
+  description: `Explore all domestic manpower services in ${agencyInfo.address.city}: ${getServiceListText().toLowerCase()}.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/services/`,
   }
@@ -39,10 +39,10 @@ export default function ServicesIndexPage() {
               <Sparkles size={14} /> Complete Domestic Staffing
             </span>
             <h1 className="hero-headline-serif" style={{ fontSize: '3rem' }}>
-              Household & Manpower Services in <em>Chennai</em>
+              Household &amp; Manpower Services in <em>{agencyInfo.address.city}</em>
             </h1>
             <p className="section-subtext">
-              Colours Life Manpower Agency connects families in Okkiyam Thoraipakkam, OMR, and Chennai with reliable, experienced domestic helpers tailored to your specific family requirements.
+              {agencyInfo.name} connects families in {agencyInfo.address.locality}, OMR, and {agencyInfo.address.city} with reliable, experienced domestic helpers tailored to your specific family requirements.
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function ServicesIndexPage() {
       <section className="section section-peach">
         <div className="container">
           <div className="bento-services-grid">
-            {servicesData.map((svc) => (
+            {getAllServices().map((svc) => (
               <div key={svc.id} className="bento-card bento-span-6">
                 <div className="bento-card-media height-std">
                   <Image
@@ -96,10 +96,10 @@ export default function ServicesIndexPage() {
         <div className="container">
           <div className="local-partner-card">
             <h2 className="section-heading-serif" style={{ fontSize: '2rem', marginBottom: '14px' }}>
-              Serving Families Across Chennai&apos;s Residential Corridors
+              Serving Families Across {agencyInfo.address.city}&apos;s Residential Corridors
             </h2>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', fontSize: '1.05rem', marginBottom: '20px' }}>
-              From IT corridors on OMR (Thoraipakkam, Perungudi, Sholinganallur, Karapakkam, Semmancheri, Siruseri) to South Chennai residential colonies in Velachery, Adyar, Besant Nagar, Pallavaram, and Tambaram, we coordinate domestic staff matching your preferred language, timing, and household requirements.
+              From IT corridors on OMR to South {agencyInfo.address.city} residential colonies, we coordinate domestic staff matching your preferred language, timing, and household requirements. We serve {agencyInfo.serviceAreas.join(', ')}, {agencyInfo.coverageOutro}.
             </p>
             <div className="local-tag-cloud">
               {agencyInfo.serviceAreas.map((area, idx) => (
@@ -113,7 +113,7 @@ export default function ServicesIndexPage() {
       <div className="container" style={{ margin: '48px auto 72px' }}>
         <WhatsAppCTA 
           title="Need Help Deciding Which Service Fits Best?"
-          subtitle="Speak directly with the owner at Colours Life Manpower Agency. We will help assess your domestic routine and match suitable workers."
+          subtitle={`Speak directly with the owner at ${agencyInfo.name}. We will help assess your domestic routine and match suitable workers.`}
         />
       </div>
     </>

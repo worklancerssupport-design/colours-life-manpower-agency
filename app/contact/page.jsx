@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
+import { getServiceListText } from '@/lib/services';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import ContactForm from '@/components/ContactForm';
 import {
@@ -15,8 +16,8 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: "Contact Us | Colours Life Manpower Agency | Okkiyam Thoraipakkam, Chennai",
-  description: "Contact Colours Life Manpower Agency directly. Phone: 9884404444 / 9884555533, WhatsApp: 9884555533. Office: Nehru Nagar, Okkiyam Thoraipakkam, Chennai 600097 (Back Side Cognizant).",
+  title: `Contact Us | ${agencyInfo.name} | ${agencyInfo.address.locality}, ${agencyInfo.address.city}`,
+  description: `Contact ${agencyInfo.name} directly. Phone: ${agencyInfo.phone1} / ${agencyInfo.phone2}, WhatsApp: ${agencyInfo.whatsappNumber}. Office: ${agencyInfo.address.street}, ${agencyInfo.address.locality}, ${agencyInfo.address.city} ${agencyInfo.address.postalCode} (${agencyInfo.address.landmark}).`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/contact/`,
   }
@@ -33,7 +34,7 @@ export default function ContactPage() {
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="service-hero-editorial svc-hero svc-hero-split" aria-label="Contact Colours Life Manpower Agency">
+      <section className="service-hero-editorial svc-hero svc-hero-split" aria-label={`Contact ${agencyInfo.name}`}>
         <div className="svc-hero-content">
           <span className="hero-eyebrow">
             <span className="hero-eyebrow-mark" aria-hidden="true" />
@@ -45,7 +46,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="hero-body-text">
-            Tell us what you need. Speak directly to {agencyInfo.owner} — no IVR, no call centre. We&apos;ll help you shortlist vetted cooks, maids, baby caretakers, elderly attendants, patient caregivers or drivers.
+            Tell us what you need. Speak directly to {agencyInfo.owner} — {agencyInfo.claims.noIvr}. We&apos;ll help you shortlist vetted {getServiceListText()}.
           </p>
 
           <div className="hero-facts-bar">
@@ -55,11 +56,11 @@ export default function ContactPage() {
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
-              Replies within the hour (8am–9pm)
+              Replies {agencyInfo.responseTime} ({agencyInfo.hours})
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><MapPin size={13} /></span>
-              Okkiyam Thoraipakkam, Chennai
+              {agencyInfo.address.locality}, {agencyInfo.address.city}
             </span>
           </div>
 
@@ -81,7 +82,7 @@ export default function ContactPage() {
         <div className="svc-hero-media">
           <Image
             src="https://res.cloudinary.com/akjmqvws/image/upload/v1791540373/contact.png"
-            alt="Contact Colours Life Manpower Agency - Okkiyam Thoraipakkam, Chennai"
+            alt={`Contact ${agencyInfo.name} - ${agencyInfo.address.locality}, ${agencyInfo.address.city}`}
             fill
             priority
             sizes="(max-width: 991px) 100vw, 50vw"
@@ -198,7 +199,7 @@ export default function ContactPage() {
                   }}>
                     <Clock size={18} style={{ flexShrink: 0, color: 'var(--ink-700)', marginTop: '2px' }} />
                     <p style={{ fontSize: '0.92rem', color: 'var(--ink-on-light-muted)', lineHeight: '1.7', margin: 0 }}>
-                      <strong style={{ color: 'var(--ink-on-light)' }}>Direct reply.</strong> {agencyInfo.owner} replies promptly on WhatsApp and over the phone during working hours.
+                      <strong style={{ color: 'var(--ink-on-light)' }}>Direct reply.</strong> {agencyInfo.owner} replies promptly on WhatsApp and over the phone during {agencyInfo.hours}.
                     </p>
                   </div>
                 </div>
@@ -218,7 +219,7 @@ export default function ContactPage() {
                   Visit our office
                 </span>
                 <h3 className="section-heading" style={{ fontSize: '1.6rem', marginBottom: '8px' }}>
-                  Okkiyam Thoraipakkam, Chennai
+                  {agencyInfo.address.locality}, {agencyInfo.address.city}
                 </h3>
                 <p style={{ color: 'var(--ink-on-light-muted)', maxWidth: '52ch' }}>
                   {agencyInfo.address.street}, {agencyInfo.address.locality} ({agencyInfo.address.landmark})
@@ -235,8 +236,8 @@ export default function ContactPage() {
                 position: 'relative'
               }}>
                 <iframe
-                  title="Colours Life Manpower Agency Location Map in Okkiyam Thoraipakkam Chennai"
-                  src="https://maps.google.com/maps?q=Nehru+Nagar+13th+Cross+Street+Okkiyam+Thoraipakkam+Chennai+600097&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  title={`${agencyInfo.name} Location Map in ${agencyInfo.address.locality} ${agencyInfo.address.city}`}
+                  src={agencyInfo.maps.embedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

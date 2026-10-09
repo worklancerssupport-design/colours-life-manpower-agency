@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
-import servicesData from '@/data/services.json';
+import { getAllServices } from '@/lib/services';
 import Logo from '@/components/Logo';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 
-const defaultMsg = "Hello Colours Life Manpower Agency, I'd like to enquire about your home services.";
+const defaultMsg = agencyInfo.defaultWhatsAppMessage;
 const whatsappUrl = getWhatsAppUrl(defaultMsg);
 const callUrl = `tel:${agencyInfo.phone1}`;
 
@@ -76,7 +76,7 @@ export default function Header() {
                 className={`nav-dropdown-panel ${servicesOpen ? 'is-open' : ''}`}
                 role="menu"
               >
-                {servicesData.map((svc) => (
+                {getAllServices().map((svc) => (
                   <Link
                     key={svc.id}
                     href={svc.path}
@@ -183,7 +183,7 @@ export default function Header() {
           </button>
           {mobileServicesOpen && (
             <div className="mobile-subnav">
-              {servicesData.map((svc) => (
+              {getAllServices().map((svc) => (
                 <Link
                   key={svc.id}
                   href={svc.path}

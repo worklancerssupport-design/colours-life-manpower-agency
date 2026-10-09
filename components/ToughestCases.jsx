@@ -1,69 +1,41 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import reviewsData from '@/data/reviews.json';
+import casesData from '@/data/cases.json';
+import agencyInfo from '@/data/agency.json';
+import { fillPlaceholders } from '@/lib/utils';
 import { ArrowRight, Play, Star } from 'lucide-react';
 
-const caseStories = [
-  {
-    id: 'cooking',
-    tag: 'Cook · 5 yrs',
-    title: "A Mother's First Day Home, Fed By Team",
-    img: '/images/cooking-service-chennai.jpg',
-    alt: 'A home cook preparing a warm South Indian meal',
-    href: '/services/cooking/',
-  },
-  {
-    id: 'newborn',
-    tag: 'Newborn · 12 hr',
-    title: 'From NICU To Garden Smiles Again',
-    img: '/images/newborn-baby-care-chennai.jpg',
-    alt: 'A newborn baby sleeping peacefully under care',
-    href: '/services/newborn-baby-care/',
-  },
-  {
-    id: 'elderly',
-    tag: 'Elderly · Live-in',
-    title: "Richard's 80th, Our Hands",
-    img: '/images/elderly-care-service-chennai.jpg',
-    alt: 'An elderly gentleman smiling with his caregiver',
-    href: '/services/elderly-care/',
-  },
-  {
-    id: 'patient',
-    tag: 'Patient · Recovery',
-    title: "A Hip Surgery, Home Safe",
-    img: '/images/patient-care-service-chennai.jpg',
-    alt: 'A patient being assisted during recovery',
-    href: '/services/patient-care/',
-  },
-];
-
 export default function ToughestCases() {
+  const [headingLead, headingEmPart] = fillPlaceholders(casesData.section.heading).split('<em>');
+  const headingEm = (headingEmPart || '').replace('</em>', '').replace(/&apos;/g, "'");
+
   return (
     <section className="section-light" id="toughest" aria-label="Toughest placements we handle">
       <div className="container">
         <div style={{ maxWidth: 760 }}>
           <span className="section-eyebrow">
             <span className="section-eyebrow-mark" />
-            Complicated home situations
+            {fillPlaceholders(casesData.section.eyebrow)}
           </span>
           <h2 className="section-heading">
-            Your Situation Is Probably <em>One We&apos;ve Handled.</em>
+            {headingLead}
+            <em>{headingEm}</em>
           </h2>
           <p className="section-subline">
-            Dementia? Post-ICU? A first-time grandparent? A strict Brahmin kitchen with onion-and-garlic-free rules? A family that has already tried two helpers this year. We take the calls other agencies return.
+            {fillPlaceholders(casesData.section.subline)}
           </p>
-          <Link href="/contact/" className="btn-lime" style={{ marginTop: 24 }}>
-            See All Placements
+          <Link href={casesData.section.ctaHref} className="btn-lime" style={{ marginTop: 24 }}>
+            {fillPlaceholders(casesData.section.ctaText)}
             <ArrowRight size={16} className="btn-lime-arrow" aria-hidden="true" />
           </Link>
         </div>
 
         <div className="cases-grid">
-          {caseStories.map((c) => (
+          {casesData.stories.map((c) => (
             <Link
               key={c.id}
-              href={c.href}
+              href={`/services/${c.slug}/`}
               className="case-card"
               aria-label={`Read about ${c.title}`}
             >
@@ -103,7 +75,7 @@ export default function ToughestCases() {
               <Star key={i} size={18} />
             ))}
             <span style={{ marginLeft: 10, color: 'var(--ink-on-light)', fontWeight: 700 }}>
-              4.9/5 from {reviewsData.length} verified Chennai families
+              {agencyInfo.stats.ratingLabel} from {reviewsData.length} verified {agencyInfo.address.city} families
             </span>
           </div>
           <Link

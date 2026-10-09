@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import servicesData from '@/data/services.json';
 import agencyInfo from '@/data/agency.json';
+import { getAllServices } from '@/lib/services';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { MessageCircle, ArrowRight } from 'lucide-react';
 
@@ -10,8 +10,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    service: 'Cooking / Cook Service',
-    timing: 'Day Shift (8-10 Hours)',
+    service: getAllServices()[0].navTitle,
+    timing: agencyInfo.shiftCatalog[1],
     locality: agencyInfo.address.locality,
     notes: ''
   });
@@ -23,7 +23,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formattedMessage = `Hello Colours Life Manpower Agency,
+    const formattedMessage = `Hello ${agencyInfo.name},
 My Name: ${formData.name}
 Phone: ${formData.phone}
 Service Required: ${formData.service}
@@ -122,7 +122,7 @@ Details: ${formData.notes || 'None'}`;
               fontFamily: 'var(--font-sans)'
             }}
           >
-            {servicesData.map((svc) => (
+            {getAllServices().map((svc) => (
               <option key={svc.id} value={svc.navTitle}>
                 {svc.navTitle}
               </option>
@@ -148,16 +148,15 @@ Details: ${formData.notes || 'None'}`;
               fontFamily: 'var(--font-sans)'
             }}
           >
-            <option value="Part-Time (Morning / Evening)">Part-Time (Morning / Evening)</option>
-            <option value="Day Shift (8-10 Hours)">Day Shift (8-10 Hours)</option>
-            <option value="Full Day (10-12 Hours)">Full Day (10-12 Hours)</option>
-            <option value="24 Hours Live-In Attendant">24 Hours Live-In Attendant</option>
+            {agencyInfo.shiftCatalog.map((shift) => (
+              <option key={shift} value={shift}>{shift}</option>
+            ))}
           </select>
         </div>
 
         <div>
           <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
-            Your Locality in Chennai *
+            Your Locality in {agencyInfo.address.city} *
           </label>
           <input
             type="text"
@@ -165,7 +164,7 @@ Details: ${formData.notes || 'None'}`;
             required
             value={formData.locality}
             onChange={handleChange}
-            placeholder="e.g. Okkiyam Thoraipakkam, Perungudi, Sholinganallur..."
+            placeholder={`e.g. ${agencyInfo.serviceAreas.slice(0, 3).join(', ')}...`}
             style={{
               width: '100%',
               padding: '12px 16px',

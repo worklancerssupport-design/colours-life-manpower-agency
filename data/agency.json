@@ -43,5 +43,97 @@
   ],
   "priceRange": "$$",
   "siteUrl": "https://colourslifemanpower.com",
-  "defaultWhatsAppMessage": "Hello Colours Life Manpower Agency, I would like to enquire about your manpower services."
+  "defaultWhatsAppMessage": "Hello Colours Life Manpower Agency, I would like to enquire about your manpower services.",
+  "alternateName": "Colours Life Manpower Services Chennai",
+  "about": "A neighbourhood manpower agency on the OMR tech corridor. Cooks, nannies, elderly attendants, maids, and drivers — matched to your home.",
+  "hours": "8am–9pm",
+  "responseTime": "usually within the hour",
+  "claims": {
+    "idCheck": "Aadhaar + references checked",
+    "idCheckDrivers": "Licence + Aadhaar checked",
+    "idCheckVerified": "Aadhaar-verified",
+    "idCheckLong": "ID, residential background and references checked for every helper.",
+    "idCheckMicro": "ID-verified",
+    "founderDirect": "Founder-direct",
+    "founderDirectLong": "No IVR, no bots — you reach the owner directly on WhatsApp.",
+    "noIvr": "no IVR, no bots",
+    "placementSpeed": "Placed in days",
+    "placementSpeedMicro": "Usually placed in days",
+    "placementSpeedLong": "Most placements confirmed within a week, not within a month.",
+    "noOfficeVisit": "No office visit needed.",
+    "directLine": "You reach the owner, not a bot",
+    "vetting": [
+      "Aadhaar government ID verified",
+      "Residential background checked",
+      "Prior-work references reviewed",
+      "Introduced in person by the owner",
+      "Replacement support if the fit is not right",
+      "Fees explained upfront, by category and shift type"
+    ]
+  },
+  "stats": {
+    "yearsOfExperience": "8+",
+    "yearsExperienceLabel": "Years of placing cooks, nannies and attendants into Chennai homes.",
+    "rating": "4.9",
+    "ratingLabel": "4.9/5"
+  },
+  "seo": {
+    "defaultTitle": "Manpower Agency in Thoraipakkam, Chennai | {{name}}",
+    "titleTemplate": "%s | {{name}}",
+    "defaultDescription": "{{name}} provides trusted cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks, and drivers in Okkiyam Thoraipakkam, OMR, and Chennai.",
+    "ogTitle": "Manpower Agency in Thoraipakkam | {{name}}",
+    "ogDescription": "{{name}} provides cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks and drivers in Thoraipakkam and Chennai.",
+    "twitterTitle": "{{name}} — Domestic Help in Chennai",
+    "twitterDescription": "Cooks, maids, baby care, newborn care, elderly caregivers, patient care, Brahmin cooks and drivers in Chennai & Thoraipakkam.",
+    "schemaDescription": "{{name}} provides reliable home cooks, newborn baby caretakers, baby care, elderly caregivers, maids, Brahmin cooks, patient care attendants, and personal drivers in Okkiyam Thoraipakkam, OMR, and Chennai.",
+    "ogImageAlt": "{{name}} — domestic staff and caregivers in Chennai",
+    "keywords": [
+      "manpower agency near me",
+      "manpower agency in Thoraipakkam",
+      "manpower agency in Okkiyam Thoraipakkam",
+      "manpower agency in Chennai",
+      "manpower agency near OMR",
+      "domestic help agency in Chennai",
+      "maid agency in Thoraipakkam",
+      "maid service in Thoraipakkam",
+      "cook agency in Chennai",
+      "cook service in Thoraipakkam",
+      "Brahmin cook service in Chennai",
+      "baby care service in Chennai",
+      "newborn baby care in Chennai",
+      "elderly care service in Chennai",
+      "patient care service in Chennai",
+      "driver service in Chennai",
+      "domestic workers in Chennai",
+      "home care services in Chennai"
+    ],
+    "knowsAbout": [
+      "Domestic help agency in Chennai",
+      "Cook service in Thoraipakkam",
+      "Newborn baby care in Chennai",
+      "Baby care services in Chennai",
+      "Elderly care services in Chennai",
+      "Maid service in Thoraipakkam",
+      "Brahmin cook service in Chennai",
+      "Patient care service in Chennai",
+      "Driver service in Chennai",
+      "Manpower agency in Okkiyam Thoraipakkam"
+    ]
+  },
+  "socials": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
+    "linkedin": ""
+  },
+  "maps": {
+    "embedUrl": "https://maps.google.com/maps?q=Nehru+Nagar+13th+Cross+Street+Okkiyam+Thoraipakkam+Chennai+600097&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  },
+  "shiftCatalog": [
+    "Part-Time (Morning / Evening)",
+    "Day Shift (8-10 Hours)",
+    "Full Day (10-12 Hours)",
+    "24 Hours Live-In Attendant"
+  ],
+  "coverageOutro": "and greater Chennai residential areas"
 }

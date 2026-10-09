@@ -1,0 +1,123 @@
+{
+  "h1": "Elderly Care Services in Chennai",
+  "h1Scope": "— mobility, medication and company at home",
+  "metaTitle": "Elderly Care Services in Chennai | Senior Home Care | {{name}}",
+  "metaDescription": "Compassionate elderly care services in Chennai, Thoraipakkam, and OMR. Dignified senior home assistance, companionship, mobility support, and daily routine care.",
+  "eyebrowText": "Elderly Attendant · Day & Live-in · OMR & Chennai",
+  "heroSubtitle": "A patient attendant so your parents keep their routines — their walk, their 8am tablet, their evening newspaper — safely at home. Message your parent's age and mobility level; you'll hear back {{responseTime}}.",
+  "heroFactAreas": "Thoraipakkam · OMR · Adyar",
+  "whoIsItFor": [
+    "Your father is 82, walks with a stick, and you're 800km away in Bangalore on weekdays.",
+    "The knee surgery went well, but the three months of recovery at home need someone steady.",
+    "Ma's been quieter since Pa passed — she needs someone present more than she'll admit.",
+    "Both of you work late, and someone needs to make sure the evening medicines aren't skipped."
+  ],
+  "availableWorkers": "The attendants you'll meet are chosen for patience first — helping someone walk to the bathroom takes fifteen minutes and zero impatience. They speak Tamil and understand everyday English, keep to the medication chart your family sets, and know the line between helping and taking over. You meet them before they start.",
+  "scopeIncluded": [
+    "Walking support — arm held, walker guided, tripping hazards cleared, bathroom escorted",
+    "Personal grooming: seated showers or sponge baths, hair, dressing — dignity preserved",
+    "Warm meals served on time, feeding assistance if hands are unsteady, hydration encouraged",
+    "Medication reminders at the hours your doctor prescribed, with water",
+    "Company — conversation, newspapers, devotional music, evening veranda walks",
+    "Restroom support, commode chair assistance and careful hygiene help",
+    "Accompanying to doctor appointments when asked"
+  ],
+  "scopeExcluded": [
+    "Anything medical — injections, IV, catheters, wound care and diagnosis belong to nurses and doctors",
+    "The family's medical decisions and prescription changes",
+    "Night awake-duty beyond what's agreed — live-in includes night bathroom help, not continuous vigilance"
+  ],
+  "shiftOptions": [
+    {
+      "type": "Part-time",
+      "hours": "2–4 hrs · morning or evening",
+      "description": "Meals, medicines and the evening routine handled in a fixed window.",
+      "bestFor": "Working children, a second attendant alongside family"
+    },
+    {
+      "type": "Full-time",
+      "hours": "8–12 hrs · day shift",
+      "description": "The whole working day at home: meals, walks, grooming, company.",
+      "bestFor": "Seniors living alone during the day"
+    },
+    {
+      "type": "Live-in",
+      "hours": "Stays in your home · structured rest",
+      "description": "Nights included — bathroom walks and reassurance at 3am, with rest hours for her too.",
+      "bestFor": "Post-surgery recovery, limited mobility, children abroad"
+    }
+  ],
+  "keyResponsibilities": [
+    "Assisting seniors with gentle mobility, walking support, cane or walker coordination, and preventing falls inside the home.",
+    "Help with daily personal grooming, gentle sponge baths or seated shower assistance, hair combing, and dressing.",
+    "Serving warm, timely meals, feeding assistance if the senior experiences hand weakness, and encouraging adequate hydration.",
+    "Providing timely medication reminders according to the schedule set by the doctor and family members.",
+    "Warm conversation, reading Tamil or English daily newspapers, listening to devotional music, and engaging companionship to alleviate loneliness.",
+    "Assisting with restroom visits, commode chair support, diaper changing if bed-bound, and personal hygiene maintenance.",
+    "Accompanying the elder on gentle evening veranda or garden walks and doctor clinic appointments if requested."
+  ],
+  "verificationFacts": [
+    "Aadhaar government identity check",
+    "Residential background verification",
+    "Prior-work references spoken to, where available"
+  ],
+  "riskPolicies": [
+    "Replacement support if the attendant and your parent don't click",
+    "Your parents meet the attendant before day one — trust is built in their home",
+    "Duties, night expectations and leave agreed in advance"
+  ],
+  "localCoverage": "Elderly care across Okkiyam Thoraipakkam, Nehru Nagar, OMR, Perungudi, Velachery, Adyar, Sholinganallur, Semmancheri, Medavakkam and Chennai — day shifts and 24-hour live-in both placed regularly.",
+  "disclaimer": "Elderly care workers provide non-medical personal assistance, home caregiving, and companionship. They are domestic attendants and do not provide medical nursing treatments, injections, IV administration, catheter insertion, or clinical diagnostics.",
+  "unaskedQAs": [
+    {
+      "question": "My parents are in Chennai, I'm abroad — how does this even work?",
+      "answer": "Everything on WhatsApp: you see profiles, speak to the attendant, and your parents meet her before day one. You keep one number for anything after — no office visit, no local trip needed."
+    },
+    {
+      "question": "Will she help my father to the bathroom at night?",
+      "answer": "Yes, in live-in arrangements. Night bathroom assistance with a steady arm is the single most common reason families choose live-in — it's also the biggest fall risk, so it's written into her duties."
+    },
+    {
+      "question": "What if my mother refuses help from a stranger?",
+      "answer": "Introductions are unhurried — your mother meets her and talks to her before anything is decided. Many families start with a day shift and move to live-in once the comfort is there."
+    },
+    {
+      "question": "Can she take Ma to the hospital for a check-up?",
+      "answer": "Accompanying to clinic appointments is common. For hospital admissions or procedures, the family or a relative accompanies — she's support, not a substitute for kin."
+    },
+    {
+      "question": "How are medicines managed?",
+      "answer": "You give her the chart your doctor set — tablets, hours, with water. She gives reminders at those hours. She does not change doses or decide anything medical."
+    },
+    {
+      "question": "Does she cook for my father too?",
+      "answer": "Only if the shift says so. Attendant duties and kitchen duties are different shifts; some families take both, some have a separate cook. Agree it in the first message."
+    },
+    {
+      "question": "What do you need from us in the first message?",
+      "answer": "Your parent's age, mobility level — walks alone, with a stick, or with support — day or live-in, and any medical equipment at home (walker, commode chair, oxygen). That's enough to check who's free."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can the elderly care attendant stay 24 hours with my parents in Chennai?",
+      "answer": "Yes — live-in attendants stay in the home with structured rest hours, covering night bathroom walks and reassurance. It's the arrangement most families abroad choose."
+    },
+    {
+      "question": "How do you help seniors who have difficulty walking?",
+      "answer": "A steady arm at all times, walker or cane guided properly, floors kept clear of trip hazards, and escort to the bathroom — the highest-risk walk of the day."
+    },
+    {
+      "question": "Can the attendant remind my father to take his blood pressure and diabetes medicines?",
+      "answer": "Yes. She follows the chart your family provides, gives reminders with water at the prescribed hours, and tells you if a dose is missed. She doesn't adjust anything herself."
+    },
+    {
+      "question": "What language do the elderly caregivers speak?",
+      "answer": "Tamil, fluently, and everyday English — so conversation with South Indian parents is comfortable, not translated. Your parents meet her before deciding."
+    },
+    {
+      "question": "How do we get started with elderly care?",
+      "answer": "Message on WhatsApp ({{whatsapp}}) with your parent's age, mobility level, daily routine and whether you want day care or live-in. You'll hear back {{responseTime}} with matching attendants."
+    }
+  ]
+}

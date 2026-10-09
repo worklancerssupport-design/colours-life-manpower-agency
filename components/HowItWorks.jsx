@@ -1,6 +1,7 @@
 import pagesData from '@/data/pages.json';
+import { fillPlaceholders } from '@/lib/utils';
 
-const { howItWorks } = pagesData.homePage;
+const { howItWorks } = fillPlaceholders(pagesData.homePage);
 
 export default function HowItWorks() {
   return (

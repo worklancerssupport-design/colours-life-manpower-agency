@@ -1,0 +1,43 @@
+{
+  "section": {
+    "eyebrow": "Complicated home situations",
+    "heading": "Your Situation Is Probably <em>One We&apos;ve Handled.</em>",
+    "subline": "Dementia? Post-ICU? A first-time grandparent? A strict Brahmin kitchen with onion-and-garlic-free rules? A family that has already tried two helpers this year. We take the calls other agencies return.",
+    "ctaText": "See All Placements",
+    "ctaHref": "/contact/"
+  },
+  "stories": [
+    {
+      "id": "cooking",
+      "slug": "cooking",
+      "tag": "Cook · 5 yrs",
+      "title": "A Mother's First Day Home, Fed By Team",
+      "img": "/images/cooking-service-chennai.jpg",
+      "alt": "A home cook preparing a warm South Indian meal"
+    },
+    {
+      "id": "newborn",
+      "slug": "newborn-baby-care",
+      "tag": "Newborn · 12 hr",
+      "title": "From NICU To Garden Smiles Again",
+      "img": "/images/newborn-baby-care-chennai.jpg",
+      "alt": "A newborn baby sleeping peacefully under care"
+    },
+    {
+      "id": "elderly",
+      "slug": "elderly-care",
+      "tag": "Elderly · Live-in",
+      "title": "Richard's 80th, Our Hands",
+      "img": "/images/elderly-care-service-chennai.jpg",
+      "alt": "An elderly gentleman smiling with his caregiver"
+    },
+    {
+      "id": "patient",
+      "slug": "patient-care",
+      "tag": "Patient · Recovery",
+      "title": "A Hip Surgery, Home Safe",
+      "img": "/images/patient-care-service-chennai.jpg",
+      "alt": "A patient being assisted during recovery"
+    }
+  ]
+}

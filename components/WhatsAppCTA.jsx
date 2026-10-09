@@ -4,10 +4,10 @@ import { MessageCircle, Phone, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function WhatsAppCTA({
   title = 'Need a hand at home this week?',
-  subtitle = 'Tell us what you need. The owner replies within the hour on WhatsApp — direct, no IVR, no bots.',
+  subtitle = `Tell us what you need. ${agencyInfo.owner} replies ${agencyInfo.responseTime} on WhatsApp — direct, ${agencyInfo.claims.noIvr}.`,
   customMessage,
   buttonText = 'Chat on WhatsApp',
-  eyebrow = 'Founder-direct',
+  eyebrow = agencyInfo.claims.founderDirect,
 }) {
   const whatsappUrl = getWhatsAppUrl(customMessage || agencyInfo.defaultWhatsAppMessage);
   return (

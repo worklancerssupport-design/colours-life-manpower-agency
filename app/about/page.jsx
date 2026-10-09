@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import agencyInfo from '@/data/agency.json';
-import { getWhatsAppUrl } from '@/lib/utils';
+import { getWhatsAppUrl, fillPlaceholders } from '@/lib/utils';
 import pagesData from '@/data/pages.json';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import ReviewSection from '@/components/ReviewSection';
@@ -17,8 +17,8 @@ import {
 const { aboutPage } = pagesData;
 
 export const metadata = {
-  title: "About Us | Colours Life Manpower Agency | Chennai & Thoraipakkam",
-  description: "Learn about Colours Life Manpower Agency in Okkiyam Thoraipakkam, Chennai. Dedicated to connecting Chennai families with trusted domestic staff and care attendants.",
+  title: `About Us | ${agencyInfo.name} | ${agencyInfo.address.city} & ${agencyInfo.address.locality}`,
+  description: `Learn about ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}. Dedicated to connecting ${agencyInfo.address.city} families with trusted domestic staff and care attendants.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/about/`,
   }
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="svc-hero-content">
           <span className="hero-eyebrow">
             <span className="hero-eyebrow-mark" aria-hidden="true" />
-            Manpower agency · OMR, Chennai
+            Manpower agency · {agencyInfo.address.locality}, {agencyInfo.address.city}
           </span>
 
           <h1 className="hero-headline-serif">
@@ -47,29 +47,28 @@ export default function AboutPage() {
           </h1>
 
           <p className="hero-body-text">
-            We match Chennai families with cooks, maids, nannies, attendants and drivers whose
-            ID and references are checked before they enter your home. No listings, no call
-            centre — you reach the owner directly on WhatsApp.
+            We match {agencyInfo.address.city} families with cooks, maids, nannies, attendants and drivers.{' '}
+            {agencyInfo.claims.idCheckLong} {agencyInfo.claims.founderDirectLong}
           </p>
 
           <div className="hero-facts-bar">
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><ShieldCheck size={13} /></span>
-              Aadhaar + references checked
+              {agencyInfo.claims.idCheck}
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><MessageCircle size={13} /></span>
-              You reach the owner, not a bot
+              {agencyInfo.claims.directLine}
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
-              Placed in days
+              {agencyInfo.claims.placementSpeed}
             </span>
           </div>
 
           <div className="hero-button-group">
             <a
-              href={getWhatsAppUrl("Hello Colours Life Manpower Agency, I'd like to know how you can help my home.")}
+              href={getWhatsAppUrl(`Hello ${agencyInfo.name}, I'd like to know how you can help my home.`)}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-btn-large"
@@ -82,14 +81,14 @@ export default function AboutPage() {
           </div>
 
           <p className="hero-cta-micro">
-            WhatsApp answered 8am–9pm, usually within the hour
+            WhatsApp answered {agencyInfo.hours}, {agencyInfo.responseTime}
           </p>
         </div>
 
         <div className="svc-hero-media">
           <Image
             src="/images/about-agency-chennai.jpg"
-            alt="Colours Life Manpower Agency office and team in Okkiyam Thoraipakkam, Chennai"
+            alt={`${agencyInfo.name} office and team in ${agencyInfo.address.locality}, ${agencyInfo.address.city}`}
             fill
             priority
             sizes="(max-width: 991px) 100vw, 50vw"
@@ -103,12 +102,12 @@ export default function AboutPage() {
         <div className="container">
           <div className="about-story-grid">
             <div className="about-story-head">
-              <h2 className="section-heading">{aboutPage.mission.heading}</h2>
+              <h2 className="section-heading">{fillPlaceholders(aboutPage.mission.heading)}</h2>
             </div>
 
             <div className="about-story-body">
-              <p>{aboutPage.mission.intro}</p>
-              <p dangerouslySetInnerHTML={{ __html: aboutPage.mission.story }} />
+              <p>{fillPlaceholders(aboutPage.mission.intro)}</p>
+              <p dangerouslySetInnerHTML={{ __html: fillPlaceholders(aboutPage.mission.story) }} />
             </div>
           </div>
         </div>
@@ -118,9 +117,9 @@ export default function AboutPage() {
       <section className="section-dark verify-band">
         <div className="container">
           <h2 className="section-heading verify-heading">
-            {aboutPage.verification.heading}
+            {fillPlaceholders(aboutPage.verification.heading)}
           </h2>
-          <p className="verify-subline">{aboutPage.verification.intro}</p>
+          <p className="verify-subline">{fillPlaceholders(aboutPage.verification.intro)}</p>
 
           <div className="about-verify-grid">
             {aboutPage.verification.steps.map((step) => (
@@ -129,8 +128,8 @@ export default function AboutPage() {
                   <Check size={14} strokeWidth={3} />
                 </span>
                 <div>
-                  <h3 className="about-verify-title">{step.title}</h3>
-                  <p className="about-verify-desc">{step.description}</p>
+                  <h3 className="about-verify-title">{fillPlaceholders(step.title)}</h3>
+                  <p className="about-verify-desc">{fillPlaceholders(step.description)}</p>
                 </div>
               </div>
             ))}
@@ -143,9 +142,9 @@ export default function AboutPage() {
         <div className="container">
           <div className="about-reach-grid">
             <div>
-              <h2 className="section-heading">{aboutPage.leadership.heading}</h2>
-              <p className="section-subline" dangerouslySetInnerHTML={{ __html: aboutPage.leadership.p1 }} />
-              <p className="section-subline" dangerouslySetInnerHTML={{ __html: aboutPage.leadership.p2 }} />
+              <h2 className="section-heading">{fillPlaceholders(aboutPage.leadership.heading)}</h2>
+              <p className="section-subline" dangerouslySetInnerHTML={{ __html: fillPlaceholders(aboutPage.leadership.p1) }} />
+              <p className="section-subline" dangerouslySetInnerHTML={{ __html: fillPlaceholders(aboutPage.leadership.p2) }} />
             </div>
 
             <aside className="about-contact-card" aria-label="Talk to the agency directly">
@@ -177,7 +176,7 @@ export default function AboutPage() {
                 <Clock size={18} aria-hidden="true" />
                 <span>
                   <strong>When you&apos;ll hear back</strong>
-                  <em>8am–9pm, usually within the hour</em>
+                  <em>{agencyInfo.hours}, {agencyInfo.responseTime}</em>
                 </span>
               </div>
             </aside>
@@ -188,7 +187,7 @@ export default function AboutPage() {
       {/* 5. Coverage — where we work */}
       <section className="section-light coverage-section about-coverage-section">
         <div className="container">
-          <h2 className="section-heading">{aboutPage.coverage.heading}</h2>
+          <h2 className="section-heading">{fillPlaceholders(aboutPage.coverage.heading)}</h2>
 
           <div className="local-tag-cloud coverage-tags">
             {agencyInfo.serviceAreas.map((area) => (
@@ -200,7 +199,7 @@ export default function AboutPage() {
             <MapPin size={18} aria-hidden="true" />
             <div>
               <strong>{agencyInfo.name}</strong>
-              <span>{aboutPage.coverage.intro}</span>
+              <span>{fillPlaceholders(aboutPage.coverage.intro)}</span>
               <span>
                 {agencyInfo.address.street}, {agencyInfo.address.locality}, {agencyInfo.address.city} - {agencyInfo.address.postalCode}
               </span>
@@ -208,18 +207,18 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <p className="section-subline">{aboutPage.coverage.outro}</p>
+          <p className="section-subline">{fillPlaceholders(aboutPage.coverage.outro)}</p>
         </div>
       </section>
 
-      {/* 6. Proof — verified Chennai families */}
+      {/* 6. Proof — verified client families */}
       <ReviewSection limit={3} />
 
       {/* 7. Final CTA */}
       <WhatsAppCTA
-        eyebrow="Replies within the hour"
+        eyebrow={`Replies ${agencyInfo.responseTime}`}
         title="Tell us what your home needs."
-        subtitle="Share your area and shift on WhatsApp. You reach the owner directly — no IVR, no bots."
+        subtitle={`Share your area and shift on WhatsApp. You reach the owner directly — ${agencyInfo.claims.noIvr}.`}
       />
     </div>
   );

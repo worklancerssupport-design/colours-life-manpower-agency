@@ -2,15 +2,17 @@
 
 import { useState } from 'react';
 import reviewsData from '@/data/reviews.json';
+import agencyInfo from '@/data/agency.json';
+import { getServiceByReviewName } from '@/lib/services';
 import { Star } from 'lucide-react';
 
 const palette = [
-  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212', tagText: 'NEWBORN' },
-  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212', tagText: 'COOK' },
-  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212', tagText: 'ELDERLY' },
-  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212', tagText: 'MAID' },
-  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212', tagText: 'BRAHMIN COOK' },
-  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212', tagText: 'PATIENT CARE' },
+  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
+  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
+  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
+  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
+  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
+  { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
 ];
 
 export default function ReviewSection({ limit = 6 }) {
@@ -26,7 +28,7 @@ export default function ReviewSection({ limit = 6 }) {
             Real families
           </span>
           <h2 className="section-heading">
-            What Chennai Families <em>Are Saying.</em>
+            What {agencyInfo.address.city} Families <em>Are Saying.</em>
           </h2>
           <p className="section-subline">
             Every voice below is verified. Real names, real localities, real placements.
@@ -36,6 +38,7 @@ export default function ReviewSection({ limit = 6 }) {
         <div className="testimonials-grid">
           {reviews.map((rev, i) => {
             const tag = palette[i % palette.length];
+            const svc = getServiceByReviewName(rev.service);
             return (
               <article className="testimonial-card" key={rev.id}>
                 <header className="testimonial-card-head">
@@ -43,10 +46,10 @@ export default function ReviewSection({ limit = 6 }) {
                     className="testimonial-card-service"
                     style={{ background: tag?.tag, color: tag?.tagColor }}
                   >
-                    {tag?.tagText || rev.service}
+                    {svc ? svc.tabLabel.toUpperCase() : rev.service}
                   </span>
-                  <span className="testimonial-card-stars" aria-label="5 out of 5 stars">
-                    {[...Array(5)].map((_, s) => (
+                  <span className="testimonial-card-stars" aria-label={`${rev.rating} out of 5 stars`}>
+                    {[...Array(rev.rating)].map((_, s) => (
                       <Star key={s} size={14} fill="currentColor" />
                     ))}
                   </span>

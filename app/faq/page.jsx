@@ -1,18 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
-import { getWhatsAppUrl } from '@/lib/utils';
+import { getWhatsAppUrl, fillPlaceholders } from '@/lib/utils';
+import { getAllServices, getServiceListText } from '@/lib/services';
 import generalFaqs from '@/data/faqs.json';
-import servicesData from '@/data/services.json';
 import FAQSection from '@/components/FAQSection';
 import FAQSchema from '@/components/FAQSchema';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 import { MessageCircle, Phone, ArrowRight, Clock, ShieldCheck, User } from 'lucide-react';
 
+const faqs = fillPlaceholders(generalFaqs);
+
 export const metadata = {
-  title: "Frequently Asked Questions (FAQ) | Colours Life Manpower Agency Chennai",
-  description: "Common questions and clear answers about hiring cooks, maids, baby caretakers, elderly attendants, patient care, and drivers from Colours Life Manpower Agency in Chennai.",
+  title: `Frequently Asked Questions (FAQ) | ${agencyInfo.name} ${agencyInfo.address.city}`,
+  description: `Common questions and clear answers about hiring ${getServiceListText()} from ${agencyInfo.name} in ${agencyInfo.address.city}.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/faq/`,
   }
@@ -27,7 +29,7 @@ export default function FAQPage() {
   return (
     <div className="svc-page faq-page" style={{ '--svc-accent': 'var(--lime-500)' }}>
       <BreadcrumbSchema items={breadcrumbs} />
-      <FAQSchema faqs={generalFaqs} />
+      <FAQSchema faqs={faqs} />
 
       {/* Hero — split: answers first, image fills the right half */}
       <section className="service-hero-editorial svc-hero svc-hero-split">
@@ -43,21 +45,21 @@ export default function FAQPage() {
 
           <p className="hero-body-text">
             Everything you need to know about our domestic staffing process, service coverage
-            across Chennai, worker verification, and agency support.
+            across {agencyInfo.address.city}, worker verification, and agency support.
           </p>
 
           <div className="hero-facts-bar">
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><ShieldCheck size={13} /></span>
-              Aadhaar + references checked
+              {agencyInfo.claims.idCheck}
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><User size={13} /></span>
-              You reach a person, not a bot
+              {agencyInfo.claims.directLine}
             </span>
             <span className="hero-fact">
               <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
-              Replies within the hour (8am–9pm)
+              Replies {agencyInfo.responseTime} ({agencyInfo.hours})
             </span>
           </div>
 
@@ -91,9 +93,9 @@ export default function FAQPage() {
 
       {/* FAQ accordion — light surface */}
       <FAQSection
-        faqs={generalFaqs}
+        faqs={faqs}
         title="Questions? We've got answers."
-        subtitle="Answers regarding hiring terms, placement procedures, and customer support in Chennai."
+        subtitle={`Answers regarding hiring terms, placement procedures, and customer support in ${agencyInfo.address.city}.`}
       />
 
       {/* Service-specific questions */}
@@ -109,7 +111,7 @@ export default function FAQPage() {
           </div>
 
           <div className="faq-service-links">
-            {servicesData.map((svc) => (
+            {getAllServices().map((svc) => (
               <Link key={svc.id} href={svc.path} className="faq-service-link">
                 <span>{svc.navTitle} FAQs</span>
                 <ArrowRight size={16} aria-hidden="true" />

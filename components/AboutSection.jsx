@@ -3,18 +3,12 @@ import { Check, ArrowRight } from 'lucide-react';
 import { getWhatsAppUrl } from '@/lib/utils';
 import agencyInfo from '@/data/agency.json';
 
-const vetting = [
-  'Aadhaar government ID verified',
-  'Residential background checked',
-  'Prior-work references reviewed',
-  'Introduced in person by the owner',
-  'Replacement support if the fit is not right',
-  'Fees explained upfront, by category and shift type',
-];
+const vetting = agencyInfo.claims.vetting;
 
-const defaultMsg =
-  "Hello Colours Life Manpower Agency, I would like to enquire about your manpower services.";
-const whatsappUrl = getWhatsAppUrl(defaultMsg);
+const whatsappUrl = getWhatsAppUrl(agencyInfo.defaultWhatsAppMessage);
+
+const noIvrClaim =
+  agencyInfo.claims.noIvr.charAt(0).toUpperCase() + agencyInfo.claims.noIvr.slice(1);
 
 export default function AboutSection() {
   return (
@@ -34,7 +28,7 @@ export default function AboutSection() {
                 The right helper changes the whole shape of your day — meals on time, a parent who is not alone, a kitchen that runs the way yours does. Every placement is matched to your timings, your tasks, your food habits and your language.
               </p>
               <p>
-                And if the fit is not right at any point, one message starts the replacement. No bots, no call centres — a real person on WhatsApp who already knows your placement.
+                And if the fit is not right at any point, one message starts the replacement. {noIvrClaim} — a real person on WhatsApp who already knows your placement.
               </p>
             </div>
 
@@ -72,7 +66,7 @@ export default function AboutSection() {
             <div className="about-image-primary">
               <Image
                 src="/images/cooking-service-chennai.jpg"
-                alt="A Colours Life home cook preparing a South Indian meal in a Chennai kitchen"
+                alt={`A ${agencyInfo.name} home cook preparing a South Indian meal in a ${agencyInfo.address.city} kitchen`}
                 fill
                 sizes="(max-width: 992px) 100vw, 35vw"
                 style={{ objectFit: 'cover' }}
@@ -89,9 +83,9 @@ export default function AboutSection() {
                 />
               </div>
               <div className="about-experience-card">
-                <div className="about-experience-num">8+</div>
+                <div className="about-experience-num">{agencyInfo.stats.yearsOfExperience}</div>
                 <div className="about-experience-label">
-                  Years of placing cooks, nannies and attendants into Chennai homes.
+                  {agencyInfo.stats.yearsExperienceLabel}
                 </div>
               </div>
             </div>

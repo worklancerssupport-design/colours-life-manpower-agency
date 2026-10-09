@@ -1,32 +1,33 @@
-import servicesData from '@/data/services.json';
 import { Users, ShieldCheck, Clock, BadgeCheck } from 'lucide-react';
+import agencyInfo from '@/data/agency.json';
+import { getAllServices } from '@/lib/services';
 
 const stats = [
   {
     icon: Users,
-    value: `${servicesData.length} services`,
-    label: 'Cooks, nannies, attendants, maids and drivers — one roof.',
+    value: `${getAllServices().length} services`,
+    label: agencyInfo.about,
   },
   {
     icon: BadgeCheck,
-    value: 'Aadhaar-verified',
-    label: 'ID, residential background and references checked for every helper.',
+    value: agencyInfo.claims.idCheckVerified,
+    label: agencyInfo.claims.idCheckLong,
   },
   {
     icon: ShieldCheck,
-    value: 'Founder-direct',
-    label: 'No IVR, no bots — you reach the owner directly on WhatsApp.',
+    value: agencyInfo.claims.founderDirect,
+    label: agencyInfo.claims.founderDirectLong,
   },
   {
     icon: Clock,
-    value: 'Placed in days',
-    label: 'Most placements confirmed within a week, not within a month.',
+    value: agencyInfo.claims.placementSpeed,
+    label: agencyInfo.claims.placementSpeedLong,
   },
 ];
 
 export default function TrustStrip() {
   return (
-    <section className="trust-strip" aria-label="Why families trust Colours Life">
+    <section className="trust-strip" aria-label={`Why families trust ${agencyInfo.name}`}>
       <div className="container">
         <div className="trust-strip-row">
           {stats.map((stat) => {

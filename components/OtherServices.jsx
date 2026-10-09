@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import servicesData from '@/data/services.json';
+import agencyInfo from '@/data/agency.json';
+import { getAllServices } from '@/lib/services';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function OtherServices({ currentServiceSlug }) {
   // Exclude current service from the list
-  const otherServices = servicesData.filter((svc) => svc.slug !== currentServiceSlug);
+  const otherServices = getAllServices().filter((svc) => svc.slug !== currentServiceSlug);
 
   return (
     <section className="section section-cream" style={{ borderTop: '1px solid var(--border-subtle)' }}>
@@ -18,7 +19,7 @@ export default function OtherServices({ currentServiceSlug }) {
             Looking for Other Home Services?
           </h2>
           <p className="section-subtext">
-            Looking for additional household assistance in Chennai? Discover our other dedicated home care and domestic support categories:
+            Looking for additional household assistance in {agencyInfo.address.city}? Discover our other dedicated home care and domestic support categories:
           </p>
         </div>
 

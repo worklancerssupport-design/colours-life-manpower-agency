@@ -1,0 +1,127 @@
+{
+  "h1": "Cook Services in Chennai",
+  "h1Scope": "— daily meals, part-time or live-in",
+  "metaTitle": "Cook Services in Chennai & Thoraipakkam | Home Cooks | {{name}}",
+  "metaDescription": "Reliable cook services in Chennai, Okkiyam Thoraipakkam, and OMR. Skilled home cooks for daily family meals, vegetarian dishes, traditional South Indian and North Indian cooking.",
+  "eyebrowText": "Home Cook · Part-time & Live-in · OMR & Chennai",
+  "heroSubtitle": "A home cook who learns your family's sambar, your oil limits, your 8am tiffin — and keeps the kitchen running whether you're home or not. Tell us your area and shift on WhatsApp; you'll usually hear back {{responseTime}}.",
+  "heroFactAreas": "OMR · Perungudi · Velachery",
+  "whoIsItFor": [
+    "Both of you leave for work by 8am and the dinner question is still open at 6pm.",
+    "Your toddler needs a fixed 7pm dinner and you're stuck in OMR traffic until 8.",
+    "Your parents live with you, but standing at the stove for two meals a day is getting harder for them.",
+    "You've just moved into a flat on the corridor and the kitchen still feels like a hotel-kitchen problem.",
+    "Weekends mean guests — and cooking for ten on top of a full working week isn't sustainable."
+  ],
+  "availableWorkers": "Whoever is placed with you cooks in private home kitchens, not canteens or events. They work to your recipes and your spice level, adapt to low-oil or no-onion instructions without fuss, and clean the cooking area before they leave. You'll see their experience and locality on each profile before you talk to them.",
+  "scopeIncluded": [
+    "Breakfast — idli, dosa, upma, poori, parathas, filter coffee, your morning tiffin routine",
+    "Lunch — rice, sambar, rasam, kootu, poriyal, dal, chapatis and fresh curries",
+    "Dinner — lighter family meals: phulkas, subzis, khichdi, soups",
+    "Vegetable washing, peeling, chopping, and fresh masala or batter preparation",
+    "Cleaning the stove, countertops and cooking vessels after the meal",
+    "Telling you what's running low so next week's menu isn't a surprise"
+  ],
+  "scopeExcluded": [
+    "Groceries and vegetables — you buy them, or send a list and someone picks them up",
+    "The menu decision — you set it, and they cook to it",
+    "Cooking vessels and storage containers — these stay yours",
+    "Heavy kitchen deep-cleaning and fridge defrosting"
+  ],
+  "shiftOptions": [
+    {
+      "type": "Part-time",
+      "hours": "2–4 hrs · morning or evening",
+      "description": "One meal block handled — breakfast tiffin or evening dinner — in a fixed window.",
+      "bestFor": "Working couples, small families with simple evenings"
+    },
+    {
+      "type": "Full-time",
+      "hours": "8–12 hrs · day shift",
+      "description": "Breakfast, lunch and the evening tiffin, with the kitchen left tidy at the end of it.",
+      "bestFor": "Homes with kids or elders who eat through the day"
+    },
+    {
+      "type": "Live-in",
+      "hours": "Stays in your home · structured hours with rest",
+      "description": "End-to-end kitchen duties — all meals, plus festival cooking when asked. Not 24 hours on call.",
+      "bestFor": "Large households, joint families, homes that host often"
+    }
+  ],
+  "keyResponsibilities": [
+    "Daily breakfast preparation including fresh idlis, dosas, upma, poori, poha, parathas, and morning tea or filter coffee.",
+    "Full lunch preparation comprising freshly steamed rice, sambar, rasam, kootu, poriyal, dal, chapatis, and fresh curries.",
+    "Dinner preparation tailored to light family dining such as phulkas, subzis, khichdi, soups, or simple warm meals.",
+    "Vegetable washing, peeling, chopping, and preparation of fresh masalas and batters.",
+    "Basic kitchen cleaning post-cooking, including wiping countertops, cleaning cooking stoves, and keeping the cooking area tidy.",
+    "Coordinating grocery and vegetable requirements with the family to plan upcoming weekly meals."
+  ],
+  "verificationFacts": [
+    "Aadhaar government identity check",
+    "Residential background verification",
+    "Prior-work references spoken to, where available"
+  ],
+  "riskPolicies": [
+    "Replacement support if the cook and your kitchen don't click",
+    "You speak with the person before day one — no stranger at the stove",
+    "Duties, timings and leave expectations agreed before they start"
+  ],
+  "localCoverage": "Placements across Okkiyam Thoraipakkam, Perungudi, Sholinganallur, Karapakkam, Velachery, Semmancheri, Navalur, Adyar and greater Chennai — morning and evening shifts along the OMR corridor are the most common, with live-in cooks in family homes across the city.",
+  "disclaimer": "Cook services are provided as private home assistance for domestic meal preparation. Menu planning, ingredients, and cooking vessels are provided by the client household.",
+  "unaskedQAs": [
+    {
+      "question": "Will she cook her food or ours?",
+      "answer": "Yours. The first few days are your recipes: you show the sambar, the spice level, the oil limit. Cooks are hired to follow your kitchen's way, not theirs."
+    },
+    {
+      "question": "What happens if we're travelling for a week?",
+      "answer": "Tell us in advance. Planned absences are easier to cover with notice — replacement support is available where possible, but a week's warning helps far more than a day's."
+    },
+    {
+      "question": "Can she cook for guests or a small function at home?",
+      "answer": "Say so before you confirm the shift. Extra-quantity cooking works when it's part of the agreement from day one, not an assumption later."
+    },
+    {
+      "question": "My father's doctor has put him on a no-salt diet. Is that followed?",
+      "answer": "Medical diets are followed exactly as written. Give the instructions in writing if it helps — low-oil, no-onion and diabetic-friendly meals are routine asks."
+    },
+    {
+      "question": "Do I have to be home while she cooks?",
+      "answer": "No. Most families hand over the kitchen and leave for work. Trust is built on the profile, the introduction and the first week — not on you standing in the kitchen."
+    },
+    {
+      "question": "What languages will she speak with my mother?",
+      "answer": "Tell us your language preference in the first message — you'll see it on each profile, and your mother will meet her before anything is confirmed."
+    },
+    {
+      "question": "Can the same person also do evening snack prep?",
+      "answer": "Duties are what you agree. If the shift includes evening prep, say so — the scope is set before she starts, not renegotiated daily."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How can I book a home cook in Chennai through {{name}}?",
+      "answer": "Message on WhatsApp with your locality, which meals you need (breakfast, lunch or dinner), and your shift preference. You'll hear back {{responseTime}} with matching cooks, and the next step is an introduction — you talk to the person before deciding."
+    },
+    {
+      "question": "Do you provide cook services in Okkiyam Thoraipakkam and OMR?",
+      "answer": "Yes. Morning and evening shifts along OMR — Perungudi, Sholinganallur, Karapakkam, Thoraipakkam — are the most requested. Message your exact apartment or street and we'll confirm coverage immediately."
+    },
+    {
+      "question": "Can the cook prepare both South Indian and North Indian food?",
+      "answer": "Many cooks are strong in South Indian home-style meals — tiffins, sambar, rasam, poriyal — and several also make North Indian rotis, dals and subzis. State your cuisine in the first message so the profiles you see actually match."
+    },
+    {
+      "question": "Are live-in (full-time) and part-time cooks available?",
+      "answer": "Both. Part-time covers one meal block, full-day covers all meals, and live-in cooks stay in your home with structured hours and rest — not 24 hours on call."
+    },
+    {
+      "question": "What hygiene practices do the cooks follow?",
+      "answer": "Handwashing before cooking, vegetables washed properly, the stove and counters wiped down after the meal, vessels cleaned. If your household has specific rules — separate knives, no onion on certain days — say them on day one."
+    },
+    {
+      "question": "What happens if our assigned cook needs to take leave?",
+      "answer": "Tell us as soon as you know. With notice, we look for cover or replacement support; sudden multi-day absences are harder, which is why leave expectations are agreed before the placement starts."
+    }
+  ]
+}

@@ -3,12 +3,12 @@
     "mission": {
       "heading": "Our Mission & Purpose",
       "intro": "In today's fast-moving urban environment, running a comfortable, peaceful household requires support. Between long commutes on the IT corridor, demanding careers, caring for young babies, and looking after aging parents, families often feel stretched thin.",
-      "story": "<strong>Colours Life Manpower Agency</strong> was established to provide Chennai residents with reliable, honest, and hardworking household staffing solutions. Rather than operating as an impersonal online directory or automated platform, we believe in hands-on matchmaking, understanding personal household preferences, and fostering long-term relationships between families and domestic staff."
+      "story": "<strong>{{name}}</strong> was established to provide Chennai residents with reliable, honest, and hardworking household staffing solutions. Rather than operating as an impersonal online directory or automated platform, we believe in hands-on matchmaking, understanding personal household preferences, and fostering long-term relationships between families and domestic staff."
     },
     "leadership": {
       "heading": "You Always Reach the Person in Charge",
-      "p1": "The agency is personally directed by its owner, who oversees client enquiries, candidate interviews, and post-placement coordination. When you reach out to Colours Life Manpower Agency, you speak directly with decision-makers who understand local Chennai communities, language considerations, and domestic expectations.",
-      "p2": "We do not use impersonal call routing. Whether you message us on WhatsApp (+91 98845 55533) or call our phone lines, you reach a real person who addresses your requirements with prompt attention, honesty regarding candidate availability, and practical guidance."
+      "p1": "The agency is personally directed by its owner, who oversees client enquiries, candidate interviews, and post-placement coordination. When you reach out to {{name}}, you speak directly with decision-makers who understand local Chennai communities, language considerations, and domestic expectations.",
+      "p2": "We do not use impersonal call routing. Whether you message us on WhatsApp ({{whatsappDisplay}}) or call our phone lines, you reach a real person who addresses your requirements with prompt attention, honesty regarding candidate availability, and practical guidance."
     },
     "verification": {
       "heading": "Our Ethical Standards & Verification Approach",
@@ -40,7 +40,7 @@
   },
   "homePage": {
     "whyChooseUs": {
-      "eyebrow": "The Colours Life Difference",
+      "eyebrow": "The {{name}} Difference",
       "heading": "Because the right help makes everyday life easier.",
       "subtext": "We treat household staffing as a relationship of trust. Here is why families across Chennai and Okkiyam Thoraipakkam count on our guidance:",
       "items": [
@@ -106,9 +106,52 @@
           "circleBg": "#ecfdf5",
           "circleColor": "#15803d",
           "title": "Get Started with Peace of Mind",
-          "description": "Your helper commences duties, with Colours Life Manpower Agency remaining available for ongoing coordination."
+          "description": "Your helper commences duties, with {{name}} remaining available for ongoing coordination."
         }
       ]
     }
+  },
+  "servicePage": {
+    "hiringSteps": {
+      "steps": [
+        {
+          "num": "1",
+          "title": "Tell us what you need",
+          "desc": "WhatsApp your locality, your shift and the duties that matter. Thirty seconds of typing is the whole first step."
+        },
+        {
+          "num": "2",
+          "title": "See matched profiles",
+          "desc": "You get verified candidates whose experience and locality fit your home. You talk to them before deciding — never a blind assignment."
+        },
+        {
+          "num": "3",
+          "title": "Start with an introduction",
+          "desc": "Once you choose, the person starts. You keep one number for anything that comes after."
+        }
+      ],
+      "strip": [
+        "You send your locality + shift",
+        "hear back {{responseTime}}",
+        "see verified profiles",
+        "you choose"
+      ]
+    },
+    "verifyBand": {
+      "heading": "What's checked before anyone enters your home",
+      "subline": "Whoever is placed with you has had their ID checked, references spoken to, and duties clarified with you before day one. You see the verification details before they start."
+    },
+    "scopeTitleSuffix": "in {{city}}",
+    "faqTitlePrefix": "Questions about",
+    "faqTitleSuffix": "in {{city}}",
+    "faqSubtitle": "Practical answers on shifts, duties, verification, and what happens after you message.",
+    "finalCta": {
+      "eyebrow": "Replies {{responseTime}}",
+      "titleSuffix": "this week?",
+      "titlePrefix": "Need",
+      "subtitle": "Tell us your area and shift. You'll hear back {{responseTime}} — a real person, {{noIvr}}.",
+      "buttonText": "Enquire on WhatsApp"
+    },
+    "shiftHeading": "Part-time, full-time or live-in — choose your shift"
   }
 }

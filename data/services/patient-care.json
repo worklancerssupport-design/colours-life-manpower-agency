@@ -1,0 +1,125 @@
+{
+  "h1": "Patient Care Services in Chennai",
+  "h1Scope": "— bedside help after surgery or illness",
+  "metaTitle": "Patient Care Services in Chennai | Post-Operative & Bedside Home Care | {{name}}",
+  "metaDescription": "Reliable patient care services in Chennai, Okkiyam Thoraipakkam, and OMR. Bedside assistance, post-hospitalization home care, mobility support, and daily patient routine aid.",
+  "eyebrowText": "Patient Attendant · Day, Night & Live-in · Chennai",
+  "heroSubtitle": "A trained bedside attendant for the weeks after discharge — transfers, baths, medicines on time — so recovery happens at home, not in a corridor. Message the discharge date and condition; you'll hear back {{responseTime}}.",
+  "heroFactAreas": "OMR · Tambaram · Medavakkam",
+  "whoIsItFor": [
+    "Your uncle came home Tuesday after hip surgery and can't be lifted by one person.",
+    "Discharge is tomorrow and the ward nurse said 'someone at home full-time' — and that someone isn't you.",
+    "Your mother is bed-bound after the stroke and the sores are starting.",
+    "You can do the medications but not the bathing — and not alone."
+  ],
+  "availableWorkers": "The attendants you'll meet have done post-surgery and bed-bound care in homes: bed-to-wheelchair transfers with proper posture, bed baths with dignity, two-hourly turning to prevent sores. They are domestic caregivers — they do not perform medical procedures, and they'll tell you plainly when something needs a doctor. You meet them before day one.",
+  "scopeIncluded": [
+    "Bed-to-chair and chair-to-bed transfers with safe posture and grips",
+    "Dignified bed baths, hair washing, oral care, skin moisturising",
+    "Commode and bedpan routines, adult diaper changes, thorough hygiene care",
+    "Two-hourly repositioning for bed-bound patients to prevent pressure sores",
+    "Doctor-prescribed diet served, spoon-feeding and fluid intake tracked",
+    "Medication reminders on schedule, with a simple log of food and water",
+    "Clean recovery space: bedsheets changed, bedside table disinfected, within reach",
+    "Reassuring company — and telling the family immediately if anything changes"
+  ],
+  "scopeExcluded": [
+    "IV lines, injections, wound dressing, catheters — nursing work, done by nurses",
+    "Medical decisions, prescriptions and physiotherapy plans — your doctors'",
+    "Hospital paperwork and arranging readmission — the family's task"
+  ],
+  "shiftOptions": [
+    {
+      "type": "Part-time",
+      "hours": "4–8 hrs · day window",
+      "description": "The stretch you can't cover alone — baths, meals, mobility.",
+      "bestFor": "Families with one caregiver at home"
+    },
+    {
+      "type": "Full-time",
+      "hours": "12 hrs · day or night shift",
+      "description": "A full shift of bedside care — one 12-hour block, family covers the rest.",
+      "bestFor": "Post-operative first weeks"
+    },
+    {
+      "type": "Live-in",
+      "hours": "Stays in your home · structured rest",
+      "description": "Around-the-clock presence: night turns, late meds, 3am reassurance. Rest hours agreed.",
+      "bestFor": "Bed-bound patients, stroke recovery, family out of station"
+    }
+  ],
+  "keyResponsibilities": [
+    "Assisting patients with gentle bed-to-chair and chair-to-bed transfers using proper posture and safety grips.",
+    "Providing dignified bed sponge baths, hair washing, oral hygiene, and skin moisturization.",
+    "Helping with bedpans, commode chairs, diaper changes, and thorough sanitary cleansing.",
+    "Regular position turning for immobile or bed-bound patients every two hours to prevent bed sores.",
+    "Serving doctor-prescribed diets, assisting with spoon-feeding or fluid intake, and monitoring hydration.",
+    "Verbal reminders for timely medication schedules and keeping a simple log of water and food intake.",
+    "Maintaining a clean, sanitized patient environment: changing bedsheets, disinfecting bedside tables, and keeping items within easy reach.",
+    "Warm emotional companionship, reassuring communication, and alerting family members immediately of any changes in condition."
+  ],
+  "verificationFacts": [
+    "Aadhaar government identity check",
+    "Residential background verification",
+    "Prior-work references spoken to, where available"
+  ],
+  "riskPolicies": [
+    "Replacement support if the attendant isn't right for the patient's needs",
+    "You meet the attendant before day one — often the patient meets them too",
+    "Shift type, night duties and dietary responsibilities agreed before start"
+  ],
+  "localCoverage": "Patient care across Okkiyam Thoraipakkam, OMR, Perungudi, Adyar, Velachery, Sholinganallur, Tambaram, Medavakkam, Chromepet and greater Chennai — 12-hour day and night shifts and live-in arrangements both placed regularly.",
+  "disclaimer": "CRITICAL MEDICAL NOTICE: Patient care workers provide caregiving, non-clinical bedside support, and daily personal assistance. They DO NOT replace doctors, licensed professional nurses, or emergency medical services. They do not administer IV lines, prescribe medications, or perform medical surgical procedures.",
+  "unaskedQAs": [
+    {
+      "question": "Attendant or nurse — which does my father actually need?",
+      "answer": "If he needs IV, injections or wound dressing, he needs a nurse. If he needs bathing, transfers, medicines reminded and someone through the night, he needs an attendant. Share the discharge summary and we'll say honestly which one the situation calls for."
+    },
+    {
+      "question": "Can she lift my uncle by herself?",
+      "answer": "Transfers are done with technique, not strength — posture, grips, and a transfer walk-through on day one. Where a patient genuinely needs two people, say so; some beds and some conditions need two."
+    },
+    {
+      "question": "Night shift and day shift — can one attendant do both?",
+      "answer": "No, and you shouldn't want that. Nights are a separate 12-hour arrangement or a live-in with rest hours. An exhausted attendant is a fall risk."
+    },
+    {
+      "question": "Will she stay awake all night?",
+      "answer": "In live-in arrangements she sleeps when the patient sleeps and is up for scheduled turns, medication and bathroom needs. Continuous clinical monitoring is a nurse's job, not an attendant's."
+    },
+    {
+      "question": "Male or female attendant for my mother?",
+      "answer": "Say it in the first message. Matching attendant gender to patient gender for personal care is normal and expected — a female patient gets a female attendant unless the family asks otherwise."
+    },
+    {
+      "question": "How soon after discharge can someone start?",
+      "answer": "Same-day or next-day is often possible when you message from the hospital ward with the date, condition and shift needed. The earlier you call, the calmer the first night at home."
+    },
+    {
+      "question": "What do you need from us in the first message?",
+      "answer": "The patient's age, condition, mobility level, the discharge date, and day/night/live-in. If the doctor has left written instructions, a photo of those helps more than any description."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between a patient care attendant and a registered nurse?",
+      "answer": "An attendant handles non-medical daily living: bathing, feeding, mobility, diapers, positioning. A nurse performs clinical procedures — IV, injections, wound dressing. Placements here are attendants; nursing is arranged separately by the family if needed."
+    },
+    {
+      "question": "Can we hire a 24-hour live-in patient care attendant in Chennai?",
+      "answer": "Yes — live-in attendants reside at the home with structured rest hours, covering night turns, bathroom needs and medication reminders around the clock."
+    },
+    {
+      "question": "Can the attendant assist a bed-ridden patient?",
+      "answer": "Yes — bed baths, two-hourly repositioning to prevent pressure sores, adult diaper care and feeding assistance are all part of bed-bound care."
+    },
+    {
+      "question": "Do you provide female attendants for female patients and male attendants for male patients?",
+      "answer": "Yes — gender-matched attendants for personal care are the default. State the preference in your first message and the profiles you see will respect it."
+    },
+    {
+      "question": "How do I request patient care support?",
+      "answer": "Message on WhatsApp ({{whatsapp}}) with the patient's age, condition, mobility level and discharge instructions. You'll hear back {{responseTime}} with available attendants."
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 [
   {
     "question": "What are your agency consultation charges?",
-    "answer": "Agency charges are competitive and transparent, depending on the service category (live-in vs. day shift) and duration. Please message us on WhatsApp at 9884555533 or call 9884404444 for a clear quotation."
+    "answer": "Agency charges are competitive and transparent, depending on the service category (live-in vs. day shift) and duration. Please message us on WhatsApp at {{whatsapp}} or call {{phone1}} for a clear quotation."
   },
   {
     "question": "What happens if a helper or cook is not suitable for our family?",
-    "answer": "We understand that family rapport and domestic preferences vary. If a placed worker is not a comfortable match or needs replacement due to personal reasons, Colours Life Manpower Agency assists you with suitable replacement support."
+    "answer": "We understand that family rapport and domestic preferences vary. If a placed worker is not a comfortable match or needs replacement due to personal reasons, {{name}} assists you with suitable replacement support."
   },
   {
     "question": "How do you check workers before placement?",
@@ -13,7 +13,7 @@
   },
   {
     "question": "How do I book a cook, maid, or caretaker?",
-    "answer": "Booking is simple and fast. Click any 'Book Now' or 'WhatsApp Us' button on our website to message us directly at +91 98845 55533, or call us at 9884404444 / 9884555533. Share your required service, timings, locality, and family needs. We will guide you through available candidate options."
+    "answer": "Booking is simple and fast. Click any 'Book Now' or 'WhatsApp Us' button on our website to message us directly at {{whatsappDisplay}}, or call us at {{phone1}} / {{whatsapp}}. Share your required service, timings, locality, and family needs. We will guide you through available candidate options."
   },
   {
     "question": "Are live-in (24 hours) workers available?",
@@ -21,14 +21,14 @@
   },
   {
     "question": "What domestic services do you provide?",
-    "answer": "We specialize in 8 core domestic services: Home Cooking / Cook Service, Newborn Baby Care, Baby Care & Babysitting, Elderly Care, Maid Work / Domestic Housekeeping, Brahmin Cooks, Patient Care Attendants, and Personal Drivers."
+    "answer": "We specialize in {{serviceCount}} core domestic services: {{serviceList}}."
   },
   {
-    "question": "What areas in Chennai does Colours Life Manpower Agency serve?",
-    "answer": "We primarily serve Okkiyam Thoraipakkam, Nehru Nagar, OMR (Old Mahabalipuram Road), Perungudi, Sholinganallur, Karapakkam, Kandhanchavadi, Velachery, Adyar, Semmancheri, Navalur, Siruseri, Pallavaram, Tambaram, and greater Chennai residential areas."
+    "question": "What areas in Chennai does {{name}} serve?",
+    "answer": "We primarily serve {{serviceAreas}}."
   },
   {
-    "question": "Where is Colours Life Manpower Agency located?",
-    "answer": "Our office is located at 5/685, 1st Floor, Nehru Nagar, 13th Cross Street, Okkiyam Thoraipakkam, Chennai - 600097, Tamil Nadu, India. Our landmark is Back Side Cognizant on the OMR corridor."
+    "question": "Where is {{name}} located?",
+    "answer": "Our office is located at {{addressLine}} Our landmark is {{landmark}} on the OMR corridor."
   }
 ]

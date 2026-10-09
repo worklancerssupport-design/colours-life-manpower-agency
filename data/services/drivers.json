@@ -1,0 +1,121 @@
+{
+  "h1": "Driver Services in Chennai",
+  "h1Scope": "— commutes, school runs and outstation trips",
+  "metaTitle": "Driver Services in Chennai & Thoraipakkam | Personal & Family Drivers | {{name}}",
+  "metaDescription": "Reliable personal and family driver services in Chennai, Okkiyam Thoraipakkam, and OMR. Professional drivers for daily office commutes, school runs, family travel, and errands.",
+  "eyebrowText": "Personal Driver · Daily, Full-time & Outstation · Chennai",
+  "heroSubtitle": "A licence-verified driver who knows the OMR-to-Guindy cut at 8:30 and gets your children to school calm. Message your route and hours; you'll hear back {{responseTime}}.",
+  "heroFactAreas": "OMR · Guindy · Pallavaram",
+  "whoIsItFor": [
+    "Your 8:20 drop and 9:30 stand-up can't both be driven by you.",
+    "The GST Road crawl is where your phone calls die — you want that hour back.",
+    "Your father shouldn't drive to T. Nagar anymore, but he still needs to get there.",
+    "Weekend Mahabalipuram trips with the family, driver included, sorted in advance."
+  ],
+  "availableWorkers": "The drivers you'll meet are licence-verified Chennai drivers — manual and automatic, hatchback to SUV — who know the arterial roads, the bypasses and the shortcuts Google doesn't. Polite with your family, careful with your car, punctual to the minute. You meet them before they drive your first trip.",
+  "scopeIncluded": [
+    "Punctual daily reporting for office commutes and family travel",
+    "School runs — children delivered safely, speed limits respected, no phone behind the wheel",
+    "Basic vehicle checks: engine oil, coolant, tyre pressure, interiors kept clean",
+    "Daily dusting and wiping so the car is comfortable when you get in",
+    "Household errands — parcels, groceries, the trip to the service centre",
+    "GPS-route planning that avoids the worst of Chennai's traffic"
+  ],
+  "scopeExcluded": [
+    "Fuel, tolls and parking — paid by the vehicle owner",
+    "Insurance, papers and legal responsibility for the vehicle — stay with you",
+    "Driving duties outside the agreed shift hours without prior arrangement"
+  ],
+  "shiftOptions": [
+    {
+      "type": "Part-time",
+      "hours": "2–4 hrs · fixed runs",
+      "description": "One or two routes a day — school drop, office drop, the evening return.",
+      "bestFor": "Schools on a route, single office commute"
+    },
+    {
+      "type": "Full-time",
+      "hours": "8–10 hrs · daily, typically 6 days",
+      "description": "The full day: office, errands, school pickups, evening family travel.",
+      "bestFor": "Families with multiple daily trips"
+    },
+    {
+      "type": "Outstation & travel",
+      "hours": "By the day · trips and functions",
+      "description": "Highway days and multi-day travel, with allowances agreed before the trip.",
+      "bestFor": "Family trips, temple tours, weekend getaways"
+    }
+  ],
+  "keyResponsibilities": [
+    "Punctual morning reporting and safe daily driving for office commutes and family travel.",
+    "Safe school transportation for children, adhering strictly to speed limits and school safety guidelines.",
+    "Basic daily vehicle maintenance checks: checking engine oil levels, coolant, tire pressure, and ensuring clean interiors.",
+    "Daily vehicle dusting, washing, and wiping to maintain a clean, comfortable vehicle for the family.",
+    "Running household errands such as picking up groceries, delivering packages, and taking the vehicle for routine servicing.",
+    "Familiarity with GPS navigation tools (Google Maps) to choose efficient, traffic-free routes across Chennai."
+  ],
+  "verificationFacts": [
+    "Aadhaar government identity check",
+    "LMV driving licence verified",
+    "Residential background verification"
+  ],
+  "riskPolicies": [
+    "Replacement support if the driver and your family don't click",
+    "You meet the driver before he drives your car",
+    "Shift hours, routes and outstation terms agreed before day one"
+  ],
+  "localCoverage": "Drivers across Okkiyam Thoraipakkam, OMR, Perungudi, Sholinganallur, Karapakkam, Velachery, Adyar, Semmancheri, Navalur, Siruseri, Pallavaram, Guindy and all of Chennai.",
+  "disclaimer": "Drivers operate the client's privately owned vehicles. Vehicle insurance, fuel, toll charges, and vehicle roadworthiness remain the legal responsibility of the vehicle owner.",
+  "unaskedQAs": [
+    {
+      "question": "Manual or automatic — does it matter?",
+      "answer": "Yes, say it in the first message. A driver who's only driven hatchbacks shouldn't start with your SUV on a Saturday morning. The car's make and transmission go into the match."
+    },
+    {
+      "question": "Will he drive my wife and children?",
+      "answer": "That's the most common use. Polite conduct with family — especially women and children — is checked in references, and you meet him before he ever does the school run."
+    },
+    {
+      "question": "Does he wash the car?",
+      "answer": "Daily dusting and interior tidying are standard. A full wash is usually an evening routine agreed between you and him — say it if you want it included."
+    },
+    {
+      "question": "What if he's late one morning?",
+      "answer": "Shift hours and reporting time are agreed on day one. Chronic lateness is a replacement matter; a single bad OMR morning is a Chennai matter — you'll have his number to call ahead."
+    },
+    {
+      "question": "Outstation trips — how do allowances work?",
+      "answer": "Travel and food allowances for trips are agreed between your family and the driver before the trip, not after. Terms set in advance are the reason outstation drives stay easy."
+    },
+    {
+      "question": "Can he take the car for servicing?",
+      "answer": "Yes — dropping and collecting the car from the service centre is a common errand. Insurance and repair decisions remain yours; the logistics are his."
+    },
+    {
+      "question": "What do you need from us in the first message?",
+      "answer": "Your locality, the car's make and transmission, daily route or full-time, and the hours. For outstation, the destination and duration. That's enough to check who's free."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I hire a monthly personal driver in Chennai?",
+      "answer": "Yes — full-time personal and family drivers, typically 8 to 10-hour daily shifts, are placed monthly. Message your route and timing; you'll hear back {{responseTime}}."
+    },
+    {
+      "question": "Can the driver handle automatic luxury cars and SUVs?",
+      "answer": "Yes, manual and automatic across hatchbacks, sedans, SUVs and luxury vehicles. State your car's make and transmission in the first message so the match fits."
+    },
+    {
+      "question": "Does the driver also wash the car?",
+      "answer": "Daily dusting, wiping and interior tidying are standard. Full washing is an evening routine agreed directly with the driver."
+    },
+    {
+      "question": "What documents do you verify for drivers?",
+      "answer": "LMV driving licence, Aadhaar government identity, and residential background references — checked before a profile reaches you. You meet the driver before he drives."
+    },
+    {
+      "question": "Can the driver go on occasional outstation trips outside Chennai?",
+      "answer": "Yes, with prior agreement and travel and food allowances settled before the trip. Weekend trips across Tamil Nadu are common."
+    }
+  ]
+}

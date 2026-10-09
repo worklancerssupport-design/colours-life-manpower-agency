@@ -1,5 +1,5 @@
 import agencyInfo from '@/data/agency.json';
-import servicesData from '@/data/services.json';
+import { getAllServices } from '@/lib/services';
 
 export default function sitemap() {
   const baseUrl = agencyInfo.siteUrl;
@@ -46,7 +46,7 @@ export default function sitemap() {
   ];
 
   // Dedicated service pages
-  const serviceRoutes = servicesData.map((svc) => ({
+  const serviceRoutes = getAllServices().map((svc) => ({
     url: `${baseUrl}${svc.path}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',

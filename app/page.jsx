@@ -1,6 +1,7 @@
 import agencyInfo from '@/data/agency.json';
 import FAQSchema from '@/components/FAQSchema';
 import generalFaqs from '@/data/faqs.json';
+import { fillPlaceholders, getServiceListText } from '@/lib/utils';
 import Hero from '@/components/Hero';
 import TrustStrip from '@/components/TrustStrip';
 import AboutSection from '@/components/AboutSection';
@@ -12,18 +13,20 @@ import FAQSection from '@/components/FAQSection';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 
 export const metadata = {
-  title: 'Manpower Agency in Thoraipakkam | Colours Life Manpower Agency',
+  title: `Manpower Agency in ${agencyInfo.address.locality} | ${agencyInfo.name}`,
   description:
-    'Colours Life Manpower Agency provides cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks and drivers in Thoraipakkam and Chennai.',
+    `${agencyInfo.name} provides ${getServiceListText()} in ${agencyInfo.address.locality}, OMR, and ${agencyInfo.address.city}.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/`,
   },
 };
 
 export default function HomePage() {
+  const faqs = fillPlaceholders(generalFaqs);
+
   return (
     <>
-      <FAQSchema faqs={generalFaqs} />
+      <FAQSchema faqs={faqs} />
       <Hero />
       <TrustStrip />
       <ServiceRows />
@@ -32,13 +35,13 @@ export default function HomePage() {
       <ToughestCases />
       <ReviewSection limit={6} />
       <FAQSection
-        faqs={generalFaqs}
+        faqs={faqs}
         title="Questions? We have answers."
-        subtitle="Practical answers on hiring domestic help in Chennai, background checks, live-in options, and agency policies."
+        subtitle={`Practical answers on hiring domestic help in ${agencyInfo.address.city}, background checks, live-in options, and agency policies.`}
       />
       <WhatsAppCTA
         title="Need a hand at home this week?"
-        subtitle="Tell us what you need. The owner replies within the hour on WhatsApp — direct, no IVR, no bots."
+        subtitle={`Tell us what you need. The owner replies ${agencyInfo.responseTime} on WhatsApp — direct, ${agencyInfo.claims.noIvr}.`}
       />
     </>
   );

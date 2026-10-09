@@ -3,12 +3,13 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import servicesData from '@/data/services.json';
+import { getAllServices } from '@/lib/services';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function CareTabs() {
-  const [activeIndex, setActiveIndex] = useState(2); // highlight Elderly Care by default
-  const active = servicesData[activeIndex] || servicesData[0];
+  const [activeIndex, setActiveIndex] = useState(2);
+  const services = getAllServices();
+  const active = services[activeIndex] || services[0];
 
   return (
     <section className="section-dark" id="care-tabs" aria-label="Browse services">
@@ -24,7 +25,7 @@ export default function CareTabs() {
             </h2>
 
             <div className="care-tabs-list" role="tablist" aria-label="Service categories">
-              {servicesData.map((svc, i) => {
+              {services.map((svc, i) => {
                 const isActive = i === activeIndex;
                 return (
                   <button

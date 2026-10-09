@@ -3,13 +3,16 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import servicesData from '@/data/services.json';
+import agencyInfo from '@/data/agency.json';
+import { getAllServices, getServiceListText } from '@/lib/services';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function ServiceRows() {
+  const services = getAllServices();
   const [activeIndex, setActiveIndex] = useState(0);
   const panelRef = useRef(null);
-  const active = servicesData[activeIndex] || servicesData[0];
+  const active = services[activeIndex] || services[0];
+  const serviceCount = services.length;
 
   const selectRow = (idx) => {
     setActiveIndex(idx);
@@ -28,16 +31,16 @@ export default function ServiceRows() {
             What we place
           </span>
           <h2 className="section-heading">
-            Eight Services. <em>One Promise.</em>
+            {serviceCount} Services. <em>One Promise.</em>
           </h2>
           <p className="section-subline">
-            Cooks, nannies, attendants, maids and drivers — matched by the founder, placed in days.
+            {getServiceListText()} — matched by the founder, {agencyInfo.claims.placementSpeed.toLowerCase()}.
           </p>
         </div>
 
         <div className="service-rows-grid">
           <div className="service-rows-list" role="tablist" aria-label="Service categories">
-            {servicesData.map((svc, idx) => {
+            {services.map((svc, idx) => {
               const isActive = idx === activeIndex;
               return (
                 <button

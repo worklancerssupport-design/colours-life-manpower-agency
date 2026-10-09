@@ -1,12 +1,13 @@
 import agencyInfo from '@/data/agency.json';
+import { fillPlaceholders } from '@/lib/utils';
 
 export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "EmploymentAgency",
     "name": agencyInfo.name,
-    "alternateName": "Colours Life Manpower Services Chennai",
-    "description": "Colours Life Manpower Agency provides reliable home cooks, newborn baby caretakers, baby care, elderly caregivers, maids, Brahmin cooks, patient care attendants, and personal drivers in Okkiyam Thoraipakkam, OMR, and Chennai.",
+    "alternateName": agencyInfo.alternateName,
+    "description": fillPlaceholders(agencyInfo.seo.schemaDescription),
     "url": agencyInfo.siteUrl,
     "telephone": [
       `+91-${agencyInfo.phone1}`,
@@ -35,18 +36,7 @@ export default function LocalBusinessSchema() {
       "name": area
     })),
     "priceRange": agencyInfo.priceRange,
-    "knowsAbout": [
-      "Domestic help agency in Chennai",
-      "Cook service in Thoraipakkam",
-      "Newborn baby care in Chennai",
-      "Baby care services in Chennai",
-      "Elderly care services in Chennai",
-      "Maid service in Thoraipakkam",
-      "Brahmin cook service in Chennai",
-      "Patient care service in Chennai",
-      "Driver service in Chennai",
-      "Manpower agency in Okkiyam Thoraipakkam"
-    ]
+    "knowsAbout": agencyInfo.seo.knowsAbout
   };
 
   return (

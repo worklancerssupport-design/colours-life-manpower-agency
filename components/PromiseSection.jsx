@@ -1,36 +1,39 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import agencyInfo from '@/data/agency.json';
+import { getServiceMeta } from '@/lib/services';
 
-const promises = [
-  {
-    num: '01',
-    title: 'Elderly Attendant',
+const promiseCopy = {
+  'elderly-care': {
     desc: 'Patient companions for mobility, medicines, and unhurried conversation.',
-    img: '/images/elderly-care-service-chennai.jpg',
-    alt: 'A caregiver gently supporting a senior at home',
     tag: 'Daily · Live-in',
-    href: '/services/elderly-care/',
   },
-  {
-    num: '02',
-    title: 'Newborn Caretaker',
+  'newborn-baby-care': {
     desc: 'Calm, gentle hands for bathing, swaddling and night feeds.',
-    img: '/images/newborn-baby-care-chennai.jpg',
-    alt: 'A caretaker holding a sleeping newborn baby',
     tag: '24/7 · Day shift',
-    href: '/services/newborn-baby-care/',
   },
-  {
-    num: '03',
-    title: 'Patient Care Attendant',
+  'patient-care': {
     desc: 'Bedside assistance, transfers and dignified hygiene post-surgery.',
-    img: '/images/patient-care-service-chennai.jpg',
-    alt: 'A patient care assistant supporting recovery at home',
     tag: 'Recovery · Live-in',
-    href: '/services/patient-care/',
   },
-];
+};
+
+const promises = ['elderly-care', 'newborn-baby-care', 'patient-care']
+  .map((slug, idx) => {
+    const svc = getServiceMeta(slug);
+    if (!svc) return null;
+    return {
+      num: String(idx + 1).padStart(2, '0'),
+      title: svc.navTitle,
+      desc: promiseCopy[slug].desc,
+      img: svc.image,
+      alt: svc.alt,
+      tag: promiseCopy[slug].tag,
+      href: svc.path,
+    };
+  })
+  .filter(Boolean);
 
 export default function PromiseSection() {
   return (
@@ -46,7 +49,7 @@ export default function PromiseSection() {
               Daughters, Mothers, Aides. <em>Trust Included.</em>
             </h2>
             <p className="section-subline section-subline-light">
-              Every placement is Aadhaar-verified, locally referenced, and introduced in person. Same smiling helper every morning, police-verified.
+              Every placement is {agencyInfo.claims.idCheckVerified}, locally referenced, and introduced in person. Same smiling helper every morning.
             </p>
           </div>
 

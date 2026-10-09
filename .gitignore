@@ -16,9 +16,11 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # Environment
+.env
 .env*.local
 
 # OS
 .DS_Store
 Thumbs.db
 .impeccable/
+EDIT_CONSOLE.md

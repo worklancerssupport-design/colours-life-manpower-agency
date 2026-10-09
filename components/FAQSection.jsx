@@ -3,13 +3,13 @@
 import { useState } from 'react';
 import generalFaqs from '@/data/faqs.json';
 import agencyInfo from '@/data/agency.json';
-import { getWhatsAppUrl } from '@/lib/utils';
+import { getWhatsAppUrl, fillPlaceholders } from '@/lib/utils';
 import { Plus, MessageCircle, Phone, ArrowRight } from 'lucide-react';
 
 export default function FAQSection({
   faqs = generalFaqs,
   title = 'Questions? We have answers.',
-  subtitle = 'Practical answers on hiring domestic help in Chennai, background checks, live-in options, and agency policies.',
+  subtitle = `Practical answers on hiring domestic help in ${agencyInfo.address.city}, background checks, live-in options, and agency policies.`,
 }) {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -57,13 +57,13 @@ export default function FAQSection({
                   aria-expanded={openIndex === idx}
                   onClick={() => toggle(idx)}
                 >
-                  <span>{faq.question}</span>
+                  <span>{fillPlaceholders(faq.question)}</span>
                   <span className="faq-trigger-icon" aria-hidden="true">
                     <Plus size={14} />
                   </span>
                 </button>
                 {openIndex === idx && (
-                  <div className="faq-body">{faq.answer}</div>
+                  <div className="faq-body">{fillPlaceholders(faq.answer)}</div>
                 )}
               </div>
             ))}

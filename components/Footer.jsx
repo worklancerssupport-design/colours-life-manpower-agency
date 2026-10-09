@@ -4,9 +4,18 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
-import servicesData from '@/data/services.json';
+import { getAllServices } from '@/lib/services';
 import Logo from '@/components/Logo';
-import { MessageCircle, Phone, MapPin, Mail } from 'lucide-react';
+import { MessageCircle, Phone, MapPin, Mail, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
+
+const socialIcons = {
+  facebook: Facebook,
+  instagram: Instagram,
+  youtube: Youtube,
+  linkedin: Linkedin,
+};
+
+const socialLinks = Object.entries(agencyInfo.socials).filter(([, url]) => url);
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(null);
@@ -22,10 +31,10 @@ export default function Footer() {
           <div>
             <Logo />
             <p className="footer-brand-line">
-              A neighbourhood manpower agency on the OMR tech corridor. Cooks, nannies, elderly attendants, maids, and drivers — matched to your home and the way you run it.
+              {agencyInfo.about}
             </p>
             <a
-              href={getWhatsAppUrl("Hello, I'd like to talk about hiring domestic help.")}
+              href={getWhatsAppUrl(agencyInfo.defaultWhatsAppMessage)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-lime"
@@ -33,6 +42,25 @@ export default function Footer() {
             >
               <MessageCircle size={16} /> Chat on WhatsApp
             </a>
+            {socialLinks.length > 0 && (
+              <div className="footer-socials">
+                {socialLinks.map(([name, url]) => {
+                  const Icon = socialIcons[name];
+                  return (
+                    <a
+                      key={name}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="footer-link"
+                      aria-label={name}
+                    >
+                      <Icon size={16} />
+                    </a>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           <div>
@@ -49,10 +77,10 @@ export default function Footer() {
           <div>
             <h4 className="footer-col-title">Services</h4>
             <ul className="footer-link-list">
-              {servicesData.map((svc) => (
-                <li key={svc.id}>
+              {getAllServices().map((svc) => (
+                <li key={svc.slug}>
                   <Link href={svc.path} className="footer-link">
-                    {svc.shortName}
+                    {svc.navTitle}
                   </Link>
                 </li>
               ))}
@@ -94,8 +122,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div>{currentYear ? `© ${currentYear} ` : '© ' }Colours Life Manpower Agency · Okkiyam Thoraipakkam</div>
-          <div>Serving {agencyInfo.serviceAreas.length} Chennai localities along the OMR corridor.</div>
+          <div>{currentYear ? `© ${currentYear} ` : '© ' }{agencyInfo.name} · {agencyInfo.address.locality}</div>
+          <div>Serving {agencyInfo.serviceAreas.length} {agencyInfo.address.city} localities along the OMR corridor.</div>
         </div>
       </div>
     </footer>
