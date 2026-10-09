@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-labelledby="faqArtTitle">
+  <title id="faqArtTitle">A rising thread of questions answered — messaging bubbles in the brand palette</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#0F3936"/>
+      <stop offset="1" stop-color="#09201E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.8">
+      <stop offset="0" stop-color="#CCF26A" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#CCF26A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.1" cy="0.95" r="0.7">
+      <stop offset="0" stop-color="#CCF26A" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#CCF26A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9F98C"/>
+      <stop offset="1" stop-color="#C6EF5E"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect width="900" height="1200" fill="url(#glow)"/>
+  <rect width="900" height="1200" fill="url(#glow2)"/>
+
+  <!-- faint oversized question mark -->
+  <text x="470" y="900" font-family="Georgia, 'Times New Roman', serif" font-style="italic"
+        font-size="820" font-weight="700" fill="#CCF26A" fill-opacity="0.07"
+        text-anchor="middle">?</text>
+
+  <!-- question bubble 1 -->
+  <g filter="url(#soft)">
+    <rect x="96" y="286" width="392" height="128" rx="30" fill="#123B37" stroke="#2C5B54" stroke-width="1.5"/>
+  </g>
+  <circle cx="150" cy="350" r="23" fill="url(#lime)"/>
+  <text x="150" y="360" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="28" fill="#0B2A26">?</text>
+  <rect x="196" y="322" width="258" height="14" rx="7" fill="#41706A"/>
+  <rect x="196" y="348" width="198" height="14" rx="7" fill="#315C56"/>
+  <rect x="196" y="374" width="222" height="14" rx="7" fill="#315C56"/>
+
+  <!-- answer bubble 1 -->
+  <g filter="url(#soft)">
+    <rect x="412" y="452" width="392" height="128" rx="30" fill="url(#lime)"/>
+  </g>
+  <circle cx="756" cy="516" r="23" fill="#0B2A26"/>
+  <path d="M745 516 l8 9 l15 -18" fill="none" stroke="#CCF26A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="452" y="488" width="258" height="14" rx="7" fill="#0B2A26" opacity="0.55"/>
+  <rect x="452" y="514" width="198" height="14" rx="7" fill="#0B2A26" opacity="0.40"/>
+  <rect x="452" y="540" width="222" height="14" rx="7" fill="#0B2A26" opacity="0.40"/>
+
+  <!-- question bubble 2 -->
+  <g filter="url(#soft)">
+    <rect x="140" y="618" width="372" height="128" rx="30" fill="#123B37" stroke="#2C5B54" stroke-width="1.5"/>
+  </g>
+  <circle cx="194" cy="682" r="23" fill="url(#lime)"/>
+  <text x="194" y="692" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="28" fill="#0B2A26">?</text>
+  <rect x="240" y="654" width="240" height="14" rx="7" fill="#41706A"/>
+  <rect x="240" y="680" width="184" height="14" rx="7" fill="#315C56"/>
+  <rect x="240" y="706" width="208" height="14" rx="7" fill="#315C56"/>
+
+  <!-- answer bubble 2 -->
+  <g filter="url(#soft)">
+    <rect x="368" y="784" width="392" height="128" rx="30" fill="url(#lime)"/>
+  </g>
+  <circle cx="712" cy="848" r="23" fill="#0B2A26"/>
+  <path d="M701 848 l8 9 l15 -18" fill="none" stroke="#CCF26A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="408" y="820" width="258" height="14" rx="7" fill="#0B2A26" opacity="0.55"/>
+  <rect x="408" y="846" width="198" height="14" rx="7" fill="#0B2A26" opacity="0.40"/>
+  <rect x="408" y="872" width="222" height="14" rx="7" fill="#0B2A26" opacity="0.40"/>
+
+  <!-- accent dots -->
+  <circle cx="806" cy="356" r="6" fill="#CCF26A" fill-opacity="0.55"/>
+  <circle cx="846" cy="396" r="4" fill="#CCF26A" fill-opacity="0.35"/>
+  <circle cx="104" cy="1000" r="6" fill="#CCF26A" fill-opacity="0.45"/>
+  <circle cx="64"  cy="1038" r="4" fill="#CCF26A" fill-opacity="0.28"/>
+</svg>

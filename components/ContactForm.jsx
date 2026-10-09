@@ -4,7 +4,7 @@ import { useState } from 'react';
 import servicesData from '@/data/services.json';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
-import { MessageCircle, Send, CheckCircle2, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -37,30 +37,29 @@ Details: ${formData.notes || 'None'}`;
 
   return (
     <form onSubmit={handleSubmit} style={{
-      backgroundColor: '#ffffff',
-      border: '1px solid var(--border-subtle)',
-      borderRadius: 'var(--radius-xl)',
+      background: 'var(--paper-200)',
+      border: '1px solid var(--line-light)',
+      borderRadius: 'var(--r-xl)',
       padding: '40px 32px',
-      boxShadow: 'var(--shadow-md)',
-      position: 'relative',
-      overflow: 'hidden'
+      boxShadow: 'var(--shadow-sm)',
+      position: 'relative'
     }}>
       <div style={{ marginBottom: '24px' }}>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(135deg, #D4541A 0%, #F07240 50%, #E8892A 100%)' }} />
-        <div className="eyebrow-pill eyebrow-warm" style={{ marginBottom: '10px' }}>
-          <Sparkles size={12} /> Direct Enquiry
-        </div>
-        <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.65rem', marginBottom: '8px', color: 'var(--text-primary)' }}>
-          Send a Service Enquiry
+        <span className="section-eyebrow" style={{ marginBottom: '10px' }}>
+          <MessageCircle size={13} />
+          WhatsApp Enquiry
+        </span>
+        <h3 style={{ fontSize: '1.8rem', marginBottom: '6px' }}>
+          Tell us what you need
         </h3>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.94rem', lineHeight: '1.6' }}>
-          Fill in your details below to connect directly on WhatsApp with your requirements pre-filled.
+        <p style={{ color: 'var(--ink-on-light-muted)', lineHeight: '1.7' }}>
+          Fill the form — it pre-fills a WhatsApp message and goes straight to {agencyInfo.owner}.
         </p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '18px', marginBottom: '22px' }}>
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: '700', marginBottom: '6px', color: 'var(--text-primary)' }}>
+          <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
             Your Name *
           </label>
           <input
@@ -72,17 +71,18 @@ Details: ${formData.notes || 'None'}`;
             placeholder="e.g. S. Ramanathan"
             style={{
               width: '100%',
-              padding: '12px 18px',
-              borderRadius: 'var(--radius-md)',
-              border: '1.5px solid var(--border-medium)',
-              fontSize: '0.96rem',
-              backgroundColor: 'var(--bg-subtle)'
+              padding: '12px 16px',
+              borderRadius: 'var(--r-md)',
+              border: '1px solid var(--line-light-strong)',
+              fontSize: '0.98rem',
+              backgroundColor: 'var(--paper-100)',
+              fontFamily: 'var(--font-sans)'
             }}
           />
         </div>
 
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: '700', marginBottom: '6px', color: '#1c1917' }}>
+          <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
             Your Phone Number *
           </label>
           <input
@@ -94,17 +94,18 @@ Details: ${formData.notes || 'None'}`;
             placeholder="e.g. 98840 12345"
             style={{
               width: '100%',
-              padding: '12px 18px',
-              borderRadius: 'var(--radius-md)',
-              border: '1.5px solid var(--border-medium)',
-              fontSize: '0.96rem',
-              backgroundColor: 'var(--bg-subtle)'
+              padding: '12px 16px',
+              borderRadius: 'var(--r-md)',
+              border: '1px solid var(--line-light-strong)',
+              fontSize: '0.98rem',
+              backgroundColor: 'var(--paper-100)',
+              fontFamily: 'var(--font-sans)'
             }}
           />
         </div>
 
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: '700', marginBottom: '6px', color: '#1c1917' }}>
+          <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
             Service Needed *
           </label>
           <select
@@ -113,11 +114,12 @@ Details: ${formData.notes || 'None'}`;
             onChange={handleChange}
             style={{
               width: '100%',
-              padding: '12px 18px',
-              borderRadius: 'var(--radius-md)',
-              border: '1.5px solid var(--border-medium)',
-              fontSize: '0.96rem',
-              backgroundColor: '#ffffff'
+              padding: '12px 16px',
+              borderRadius: 'var(--r-md)',
+              border: '1px solid var(--line-light-strong)',
+              fontSize: '0.98rem',
+              backgroundColor: 'var(--paper-200)',
+              fontFamily: 'var(--font-sans)'
             }}
           >
             {servicesData.map((svc) => (
@@ -129,7 +131,7 @@ Details: ${formData.notes || 'None'}`;
         </div>
 
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: '700', marginBottom: '6px', color: '#1c1917' }}>
+          <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
             Timing Requirement
           </label>
           <select
@@ -138,11 +140,12 @@ Details: ${formData.notes || 'None'}`;
             onChange={handleChange}
             style={{
               width: '100%',
-              padding: '12px 18px',
-              borderRadius: 'var(--radius-md)',
-              border: '1.5px solid var(--border-medium)',
-              fontSize: '0.96rem',
-              backgroundColor: '#ffffff'
+              padding: '12px 16px',
+              borderRadius: 'var(--r-md)',
+              border: '1px solid var(--line-light-strong)',
+              fontSize: '0.98rem',
+              backgroundColor: 'var(--paper-200)',
+              fontFamily: 'var(--font-sans)'
             }}
           >
             <option value="Part-Time (Morning / Evening)">Part-Time (Morning / Evening)</option>
@@ -153,7 +156,7 @@ Details: ${formData.notes || 'None'}`;
         </div>
 
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: '700', marginBottom: '6px', color: '#1c1917' }}>
+          <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
             Your Locality in Chennai *
           </label>
           <input
@@ -165,32 +168,35 @@ Details: ${formData.notes || 'None'}`;
             placeholder="e.g. Okkiyam Thoraipakkam, Perungudi, Sholinganallur..."
             style={{
               width: '100%',
-              padding: '12px 18px',
-              borderRadius: 'var(--radius-md)',
-              border: '1.5px solid var(--border-medium)',
-              fontSize: '0.96rem',
-              backgroundColor: 'var(--bg-subtle)'
+              padding: '12px 16px',
+              borderRadius: 'var(--r-md)',
+              border: '1px solid var(--line-light-strong)',
+              fontSize: '0.98rem',
+              backgroundColor: 'var(--paper-100)',
+              fontFamily: 'var(--font-sans)'
             }}
           />
         </div>
 
         <div>
-          <label style={{ display: 'block', fontSize: '0.86rem', fontWeight: '700', marginBottom: '6px', color: '#1c1917' }}>
+          <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: '600', marginBottom: '6px', color: 'var(--ink-on-light)' }}>
             Additional Requirements (Optional)
           </label>
           <textarea
             name="notes"
-            rows="3"
+            rows="4"
             value={formData.notes}
             onChange={handleChange}
             placeholder="e.g. Vegetarian cooking only, infant experience needed, live-in room available..."
             style={{
               width: '100%',
-              padding: '12px 18px',
-              borderRadius: 'var(--radius-md)',
-              border: '1.5px solid var(--border-medium)',
-              fontSize: '0.96rem',
-              backgroundColor: 'var(--bg-subtle)'
+              padding: '12px 16px',
+              borderRadius: 'var(--r-md)',
+              border: '1px solid var(--line-light-strong)',
+              fontSize: '0.98rem',
+              backgroundColor: 'var(--paper-100)',
+              fontFamily: 'var(--font-sans)',
+              resize: 'vertical'
             }}
           />
         </div>
@@ -198,15 +204,16 @@ Details: ${formData.notes || 'None'}`;
 
       <button
         type="submit"
-        className="whatsapp-btn-large"
-        style={{ width: '100%', justifyContent: 'center' }}
+        className="btn-lime"
+        style={{ width: '100%', justifyContent: 'center', padding: '14px 22px' }}
       >
-        <MessageCircle size={20} /> Send Enquiry via WhatsApp
+        <MessageCircle size={18} /> Send Enquiry via WhatsApp
+        <ArrowRight size={16} className="btn-lime-arrow" />
       </button>
 
-      <div style={{ marginTop: '14px', fontSize: '0.82rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-        🔒 Connects you straight to the owner (+91 {agencyInfo.whatsappNumber}). No spam.
-      </div>
+      <p style={{ marginTop: '12px', fontSize: '0.86rem', color: 'var(--ink-on-light-muted)', textAlign: 'center' }}>
+        Connects directly to {agencyInfo.owner} (+91 {agencyInfo.whatsappNumber})
+      </p>
     </form>
   );
 }

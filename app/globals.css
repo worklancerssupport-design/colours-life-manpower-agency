@@ -1565,8 +1565,9 @@ button {
     gap: 56px;
     align-items: start;
   }
+  .faq-side { position: sticky; top: 110px; }
 }
-.faq-side { position: sticky; top: 110px; }
+.faq-side { position: static; }
 .faq-side .btn-lime { margin-top: 24px; }
 
 .faq-list {
@@ -1619,6 +1620,42 @@ button {
   font-size: 0.96rem;
   line-height: 1.7;
 }
+
+/* Service-specific FAQ link cards */
+.faq-service-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .faq-service-links { grid-template-columns: repeat(2, 1fr); }
+}
+.faq-service-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--paper-200);
+  border: 1px solid var(--line-light);
+  border-radius: var(--r-md);
+  font-weight: 700;
+  color: var(--ink-on-light);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s var(--ease-snap), transform 0.2s var(--ease-snap), box-shadow 0.2s var(--ease-snap);
+}
+.faq-service-link:hover {
+  border-color: var(--line-light-strong);
+  box-shadow: var(--shadow-md, var(--shadow-sm));
+  transform: translateY(-2px);
+}
+.faq-service-link svg {
+  flex-shrink: 0;
+  color: var(--svc-accent, var(--ink-700));
+}
+.faq-service-link:hover svg { color: var(--ink-900); }
 
 /* ============================================================
    CTA — final
@@ -1989,15 +2026,16 @@ button {
   .svc-hero-split {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
+    align-items: center;
   }
   .svc-hero-split .svc-hero-content {
-    padding: 160px max(40px, calc((100vw - var(--container)) / 2 + 40px)) 56px;
+    padding: 120px max(40px, calc((100vw - var(--container)) / 2 + 40px)) 56px;
     min-width: 0;
+    justify-content: center;
   }
   .svc-hero-split .svc-hero-media {
     min-height: 100vh;
-    align-self: start;
+    align-self: stretch;
   }
 }
 
@@ -2044,6 +2082,10 @@ button {
 }
 .hero-button-group { display: flex; flex-wrap: nowrap; gap: 8px; align-items: center; margin-bottom: 24px; }
 .hero-button-group > * { white-space: nowrap; }
+@media (max-width: 480px) {
+  .hero-button-group { flex-wrap: wrap; }
+  .hero-button-group > * { flex: 1 1 100%; justify-content: center; }
+}
 
 .hero-composition { position: relative; width: 100%; }
 .composition-main-card {
@@ -2398,15 +2440,15 @@ button {
 
 .hero-facts-bar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 28px;
 }
 .hero-fact {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 0;
   background: none;
   border: none;
@@ -2884,3 +2926,331 @@ button {
 
 /* ── Final CTA spacing on service pages ── */
 .svc-page .cta-block { margin: 24px 0 80px; }
+
+/* ============================================================
+   ABOUT PAGE — inherits the CareHaven world and the service-page
+   decision-document composition; copy speaks to the household.
+   ============================================================ */
+
+/* ── Story ── */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .about-story-grid { grid-template-columns: 0.9fr 1.1fr; gap: 64px; }
+}
+.about-story-head .section-subline { margin-top: 16px; max-width: 40ch; }
+.about-story-body { max-width: 68ch; }
+.about-story-body p {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: var(--ink-on-light-muted);
+  margin: 0 0 18px;
+}
+.about-story-body p:last-child { margin-bottom: 0; }
+.about-story-body strong { color: var(--ink-on-light); font-weight: 700; }
+
+/* ── Verification band — 2×2 grid of checks on dark ── */
+.about-verify-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 56px;
+}
+@media (min-width: 800px) {
+  .about-verify-grid { grid-template-columns: 1fr 1fr; }
+}
+.about-verify-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line-dark);
+}
+.about-verify-title {
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--ink-on-dark);
+  margin: 2px 0 8px;
+}
+.about-verify-desc {
+  font-size: 0.94rem;
+  line-height: 1.62;
+  color: var(--ink-on-dark-muted);
+  margin: 0;
+}
+
+/* ── Reachability ── */
+.about-reach-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .about-reach-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; }
+}
+.about-reach-grid .section-subline { margin-top: 18px; }
+.about-reach-grid .section-subline + .section-subline { margin-top: 16px; }
+
+.about-contact-card {
+  background: var(--paper-200);
+  border: 1px solid var(--line-light);
+  border-radius: var(--r-2xl);
+  padding: 34px;
+  box-shadow: var(--shadow-md);
+}
+@media (min-width: 900px) {
+  .about-contact-card { position: sticky; top: 104px; }
+}
+.about-contact-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-700);
+}
+.about-contact-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-on-light);
+  margin: 10px 0 18px;
+  max-width: 18ch;
+}
+.about-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line-light);
+  color: inherit;
+  text-decoration: none;
+}
+.about-contact-row:last-child { padding-bottom: 0; }
+.about-contact-row svg { color: var(--ink-700); flex-shrink: 0; }
+.about-contact-row strong {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--ink-on-light);
+  transition: color 0.18s var(--ease-snap);
+}
+.about-contact-row em {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-on-light-muted);
+}
+a.about-contact-row:hover strong { color: var(--ink-700); }
+
+/* ── Coverage ── */
+.about-coverage-section .section-subline { margin-top: 16px; max-width: 58ch; }
+.about-address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: var(--paper-200);
+  border: 1px solid var(--line-light);
+  border-radius: var(--r-lg);
+  padding: 24px 26px;
+  margin-top: 40px;
+  max-width: 720px;
+  box-shadow: var(--shadow-sm);
+}
+.about-address-card svg { color: var(--ink-700); flex-shrink: 0; margin-top: 2px; }
+.about-address-card strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink-on-light);
+  margin-bottom: 8px;
+}
+.about-address-card span {
+  display: block;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--ink-on-light-muted);
+}
+.about-address-card span + span { margin-top: 4px; }
+
+/* ============================================================
+   REVIEWS PAGE — inherits the CareHaven world; one lead review
+   on dark, the rest in the shared testimonial grid.
+   ============================================================ */
+
+.reviews-section { padding-top: 72px; }
+.about-story-section { padding-top: 96px; }
+@media (max-width: 767px) { .about-story-section { padding-top: 72px; } }
+
+/* ── Lead review — dark anchor for the proof wall ── */
+.reviews-lead {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-900);
+  color: var(--ink-on-dark);
+  border-radius: var(--r-2xl);
+  padding: 38px 32px;
+  box-shadow: var(--shadow-lg);
+}
+.reviews-lead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(80% 120% at 0% 0%, rgba(204, 242, 106, 0.16) 0%, transparent 62%);
+  pointer-events: none;
+}
+.reviews-lead > * { position: relative; z-index: 1; }
+@media (min-width: 900px) {
+  .reviews-lead {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    gap: 56px;
+    padding: 52px 56px;
+  }
+}
+
+.reviews-lead-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.reviews-quote-lead {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.6vw, 1.85rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--ink-on-dark);
+  margin: 0;
+  max-width: 42ch;
+}
+
+.reviews-lead-aside {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--line-dark);
+  padding-top: 24px;
+}
+@media (min-width: 900px) {
+  .reviews-lead-aside {
+    border-top: 0;
+    border-left: 1px solid var(--line-dark-strong);
+    padding-top: 0;
+    padding-left: 48px;
+  }
+}
+.reviews-lead-author { display: flex; align-items: center; gap: 14px; }
+
+/* ── Shared review atoms ── */
+.reviews-stars { display: inline-flex; gap: 3px; color: var(--lime-400); }
+
+.reviews-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(204, 242, 106, 0.14);
+  color: var(--lime-400);
+  border: 1px solid rgba(204, 242, 106, 0.28);
+}
+.reviews-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: var(--lime-500);
+  color: var(--ink-900);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+}
+.reviews-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--ink-on-light);
+}
+.reviews-name svg { color: var(--ink-700); flex-shrink: 0; }
+.reviews-name-dark { color: var(--ink-on-dark); }
+.reviews-name-dark svg { color: var(--lime-400); }
+.reviews-loc {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: var(--ink-on-light-muted);
+  margin-top: 3px;
+}
+.reviews-loc svg { color: var(--ink-700); flex-shrink: 0; }
+.reviews-loc-dark { color: var(--ink-on-dark-muted); }
+.reviews-loc-dark svg { color: var(--lime-400); }
+
+.reviews-grid { margin-top: 22px; }
+@media (min-width: 1100px) { .reviews-grid { margin-top: 26px; } }
+
+.reviews-note { margin: 44px auto 0; }
+
+/* ── Review invite — existing clients ── */
+.reviews-invite-section {
+  background: var(--paper-200);
+  border-top: 1px solid var(--line-light);
+}
+.reviews-invite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 32px;
+}
+.reviews-invite-copy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.reviews-invite-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: var(--ink-900);
+  color: var(--lime-400);
+}
+.reviews-invite-title {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-on-light);
+  margin: 0 0 6px;
+}
+.reviews-invite p {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--ink-on-light-muted);
+  margin: 0;
+  max-width: 46ch;
+}

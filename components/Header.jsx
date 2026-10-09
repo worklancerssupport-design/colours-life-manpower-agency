@@ -15,8 +15,9 @@ const callUrl = `tel:${agencyInfo.phone1}`;
 
 const primaryNav = [
   { href: '/', label: 'Home' },
-  { href: '/about/', label: 'About' },
+  { href: '/faq/', label: 'FAQs' },
   { href: '/reviews/', label: 'Reviews' },
+  { href: '/about/', label: 'About' },
   { href: '/contact/', label: 'Contact' },
 ];
 
@@ -52,14 +53,7 @@ export default function Header() {
               className={`nav-link ${pathname === '/' ? 'is-active' : ''}`}
               aria-current={pathname === '/' ? 'page' : undefined}
             >
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--lime-500)', display: 'inline-block' }} />
               Home
-            </Link>
-            <Link
-              href="/about/"
-              className={`nav-link ${pathname === '/about/' ? 'is-active' : ''}`}
-            >
-              About
             </Link>
 
             <div
@@ -96,10 +90,22 @@ export default function Header() {
             </div>
 
             <Link
+              href="/faq/"
+              className={`nav-link ${pathname === '/faq/' ? 'is-active' : ''}`}
+            >
+              FAQs
+            </Link>
+            <Link
               href="/reviews/"
               className={`nav-link ${pathname === '/reviews/' ? 'is-active' : ''}`}
             >
               Reviews
+            </Link>
+            <Link
+              href="/about/"
+              className={`nav-link ${pathname === '/about/' ? 'is-active' : ''}`}
+            >
+              About
             </Link>
             <Link
               href="/contact/"
@@ -189,12 +195,7 @@ export default function Header() {
             </div>
           )}
 
-          <Link
-            href="/faq/"
-            className={`mobile-link ${pathname === '/faq/' ? 'is-active' : ''}`}
-          >
-            FAQ
-          </Link>
+
         </nav>
 
         <div className="mobile-drawer-foot">

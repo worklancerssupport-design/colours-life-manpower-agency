@@ -1,18 +1,17 @@
-import Link from 'next/link';
+import Image from 'next/image';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import ContactForm from '@/components/ContactForm';
-import { 
-  Phone, 
-  MessageCircle, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  User, 
+import {
+  Phone,
+  MessageCircle,
+  Mail,
+  MapPin,
+  Clock,
+  User,
   Building2,
-  Navigation,
-  Sparkles
+  Navigation
 } from 'lucide-react';
 
 export const metadata = {
@@ -34,101 +33,134 @@ export default function ContactPage() {
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* Hero Section */}
-      <section className="service-hero-editorial theme-cooking" style={{ paddingTop: '128px' }}>
-        <div className="container">
-          <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span style={{ color: 'var(--text-light)' }}>/</span>
-            <span style={{ color: 'var(--text-primary)', fontWeight: '700' }}>Contact Us</span>
-          </nav>
+      <section className="service-hero-editorial svc-hero svc-hero-split" aria-label="Contact Colours Life Manpower Agency">
+        <div className="svc-hero-content">
+          <span className="hero-eyebrow">
+            <span className="hero-eyebrow-mark" aria-hidden="true" />
+            Speak directly to the person who runs it
+          </span>
 
-          <div className="section-intro-header" style={{ marginBottom: '20px' }}>
-            <span className="eyebrow-pill eyebrow-warm">
-              <Sparkles size={14} /> Get In Touch
+          <h1 className="hero-headline-serif">
+            Find the right help. <em>Start with one message.</em>
+          </h1>
+
+          <p className="hero-body-text">
+            Tell us what you need. Speak directly to {agencyInfo.owner} — no IVR, no call centre. We&apos;ll help you shortlist vetted cooks, maids, baby caretakers, elderly attendants, patient caregivers or drivers.
+          </p>
+
+          <div className="hero-facts-bar">
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><User size={13} /></span>
+              You reach {agencyInfo.owner}, not a bot
             </span>
-            <h1 className="hero-headline-serif" style={{ fontSize: '3rem' }}>
-              Contact Colours Life <em>Manpower Agency</em>
-            </h1>
-            <p className="section-subtext">
-              Reach out directly to enquire about available cooks, maids, baby caretakers, elderly attendants, patient caregivers, and drivers in Chennai.
-            </p>
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
+              Replies within the hour (8am–9pm)
+            </span>
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><MapPin size={13} /></span>
+              Okkiyam Thoraipakkam, Chennai
+            </span>
           </div>
+
+          <div className="hero-button-group">
+            <a
+              href={getWhatsAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-btn-large"
+            >
+              <MessageCircle size={20} /> Chat on WhatsApp
+            </a>
+            <a href={`tel:${agencyInfo.phone1}`} className="btn-secondary-pill">
+              <Phone size={16} /> Call {agencyInfo.phoneDisplay1}
+            </a>
+          </div>
+        </div>
+
+        <div className="svc-hero-media">
+          <Image
+            src="https://res.cloudinary.com/akjmqvws/image/upload/v1791540373/contact.png"
+            alt="Contact Colours Life Manpower Agency - Okkiyam Thoraipakkam, Chennai"
+            fill
+            priority
+            sizes="(max-width: 991px) 100vw, 50vw"
+            style={{ objectFit: 'cover', objectPosition: '100% 50%' }}
+          />
         </div>
       </section>
 
-      {/* Contact Content Grid (Pastel Cream Background) */}
-      <section className="section section-cream">
+      {/* Contact Content */}
+      <section className="section-light" style={{ background: 'var(--paper-100)' }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr',
-            gap: '36px',
-            alignItems: 'start'
-          }}>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '36px'
-            }}>
-              {/* Col 1: Business Details & Contact Cards */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div className="grid" style={{ alignItems: 'start' }}>
+            <div className="col-span-full">
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                gap: '24px'
+              }}>
+                {/* Office details */}
                 <div style={{
-                  backgroundColor: '#ffffff',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-xl)',
+                  background: 'var(--paper-200)',
+                  border: '1px solid var(--line-light)',
+                  borderRadius: 'var(--r-xl)',
                   padding: '36px',
-                  boxShadow: 'var(--shadow-md)',
-                  position: 'relative',
-                  overflow: 'hidden'
+                  boxShadow: 'var(--shadow-sm)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '24px'
                 }}>
-                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(135deg, #D4541A 0%, #F07240 50%, #E8892A 100%)' }} />
-                  <div className="eyebrow-pill eyebrow-warm" style={{ marginBottom: '14px' }}>
-                    <Building2 size={14} /> Official Agency Office
-                  </div>
-                  <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.65rem', marginBottom: '8px', color: 'var(--text-primary)' }}>
-                    {agencyInfo.name}
-                  </h2>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--brand-primary)', fontWeight: '800', fontSize: '0.98rem', marginBottom: '24px' }}>
-                    <User size={16} /> Founder & In-Charge: {agencyInfo.owner}
+                  <div>
+                    <span className="hero-eyebrow" style={{ marginBottom: '10px' }}>
+                      <span className="hero-eyebrow-mark" aria-hidden="true" />
+                      Direct access
+                    </span>
+                    <h2 className="section-heading" style={{ fontSize: '1.6rem', marginBottom: '8px' }}>
+                      {agencyInfo.name}
+                    </h2>
+                    <p style={{ color: 'var(--ink-on-light-muted)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <User size={16} /> {agencyInfo.owner}
+                    </p>
                   </div>
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-                      <MapPin size={22} color="#ea580c" style={{ flexShrink: 0, marginTop: '3px' }} />
-                      <div style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.65' }}>
-                        <strong style={{ color: 'var(--text-primary)' }}>Office Address:</strong><br />
+                      <MapPin size={20} style={{ flexShrink: 0, marginTop: '3px', color: 'var(--ink-700)' }} />
+                      <div style={{ color: 'var(--ink-on-light-muted)', lineHeight: '1.8' }}>
+                        <strong style={{ color: 'var(--ink-on-light)' }}>Office Address</strong><br />
                         {agencyInfo.address.street},<br />
                         {agencyInfo.address.locality},<br />
                         {agencyInfo.address.city} - {agencyInfo.address.postalCode}, {agencyInfo.address.state}, {agencyInfo.address.country}.<br />
-                        <span style={{ color: 'var(--brand-primary)', fontWeight: '800' }}>
+                        <span style={{ color: 'var(--ink-700)', fontWeight: '600' }}>
                           Landmark: {agencyInfo.address.landmark}
                         </span>
                       </div>
                     </div>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                      <Phone size={20} color="#ea580c" style={{ flexShrink: 0 }} />
-                      <div style={{ fontSize: '0.95rem' }}>
-                        <strong style={{ color: 'var(--text-primary)' }}>Phone Numbers:</strong><br />
-                        <a href={`tel:${agencyInfo.phone1}`} style={{ color: 'var(--brand-primary)', fontWeight: '800' }}>
+                      <Phone size={20} style={{ flexShrink: 0, color: 'var(--ink-700)' }} />
+                      <div>
+                        <strong style={{ color: 'var(--ink-on-light)' }}>Phone</strong><br />
+                        <a href={`tel:${agencyInfo.phone1}`} style={{ color: 'var(--ink-700)', fontWeight: '600' }}>
                           {agencyInfo.phoneDisplay1}
                         </a>
                         {' / '}
-                        <a href={`tel:${agencyInfo.phone2}`} style={{ color: 'var(--brand-primary)', fontWeight: '800' }}>
+                        <a href={`tel:${agencyInfo.phone2}`} style={{ color: 'var(--ink-700)', fontWeight: '600' }}>
                           {agencyInfo.phoneDisplay2}
                         </a>
                       </div>
                     </div>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                      <MessageCircle size={20} color="#22c55e" style={{ flexShrink: 0 }} />
-                      <div style={{ fontSize: '0.95rem' }}>
-                        <strong style={{ color: 'var(--text-primary)' }}>WhatsApp (Direct):</strong><br />
+                      <MessageCircle size={20} style={{ flexShrink: 0, color: 'var(--ink-700)' }} />
+                      <div>
+                        <strong style={{ color: 'var(--ink-on-light)' }}>WhatsApp</strong><br />
                         <a 
                           href={getWhatsAppUrl()}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{ color: '#0D7A43', fontWeight: '800' }}
+                          style={{ color: 'var(--ink-700)', fontWeight: '600' }}
                         >
                           +91 {agencyInfo.whatsappNumber}
                         </a>
@@ -136,89 +168,69 @@ export default function ContactPage() {
                     </div>
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                      <Mail size={20} color="#0d9488" style={{ flexShrink: 0 }} />
-                      <div style={{ fontSize: '0.95rem' }}>
-                        <strong style={{ color: 'var(--text-primary)' }}>Email Address:</strong><br />
-                        <a href={`mailto:${agencyInfo.email}`} style={{ color: 'var(--brand-teal)', fontWeight: '700' }}>
+                      <Mail size={20} style={{ flexShrink: 0, color: 'var(--ink-700)' }} />
+                      <div>
+                        <strong style={{ color: 'var(--ink-on-light)' }}>Email</strong><br />
+                        <a href={`mailto:${agencyInfo.email}`} style={{ color: 'var(--ink-700)', fontWeight: '600' }}>
                           {agencyInfo.email}
                         </a>
                       </div>
                     </div>
                   </div>
 
-                  {/* Fast Action Buttons */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginTop: '28px', paddingTop: '20px', borderTop: '1px solid var(--border-subtle)' }}>
-                    <a
-                      href={`tel:${agencyInfo.phone1}`}
-                      style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '6px',
-                        padding: '11px',
-                        borderRadius: 'var(--radius-full)',
-                        backgroundColor: '#ffffff',
-                        border: '1.5px solid var(--border-medium)',
-                        color: 'var(--text-primary)',
-                        fontWeight: '700',
-                        fontSize: '0.88rem'
-                      }}
-                    >
-                      <Phone size={15} color="#ea580c" /> Call Office
-                    </a>
-                    <a
-                      href={getWhatsAppUrl()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-whatsapp-pill"
-                      style={{ justifyContent: 'center', fontSize: '0.88rem' }}
-                    >
-                      <MessageCircle size={15} /> WhatsApp
-                    </a>
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', paddingTop: '12px', borderTop: '1px solid var(--line-light)' }}>
+                     <a href={`tel:${agencyInfo.phone1}`} className="btn-secondary-pill" style={{ padding: '11px 18px', fontSize: '0.95rem' }}>
+                       <Phone size={16} /> Call
+                     </a>
+                     <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="whatsapp-btn-large" style={{ padding: '11px 18px', fontSize: '0.95rem' }}>
+                       <MessageCircle size={16} /> WhatsApp
+                     </a>
+                  </div>
+
+                  <div style={{
+                    background: 'var(--sage-50)',
+                    border: '1px solid var(--line-light)',
+                    borderRadius: 'var(--r-lg)',
+                    padding: '18px 22px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '12px'
+                  }}>
+                    <Clock size={18} style={{ flexShrink: 0, color: 'var(--ink-700)', marginTop: '2px' }} />
+                    <p style={{ fontSize: '0.92rem', color: 'var(--ink-on-light-muted)', lineHeight: '1.7', margin: 0 }}>
+                      <strong style={{ color: 'var(--ink-on-light)' }}>Direct reply.</strong> {agencyInfo.owner} replies promptly on WhatsApp and over the phone during working hours.
+                    </p>
                   </div>
                 </div>
 
-                {/* Direct Availability Notice */}
-                <div style={{
-                  background: 'linear-gradient(145deg, #F0FCF9 0%, #E8F5EB 100%)',
-                  border: '1px solid rgba(14, 140, 132, 0.2)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '24px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '14px'
-                }}>
-                  <Clock size={24} color="var(--brand-teal)" style={{ flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.92rem', color: '#134e4a', lineHeight: '1.6' }}>
-                    <strong>Direct Agency Access:</strong> {agencyInfo.owner} is available daily to answer queries. Messages received on WhatsApp are typically addressed promptly within the hour.
-                  </div>
+                {/* Form */}
+                <div>
+                  <ContactForm />
                 </div>
-              </div>
-
-              {/* Col 2: Interactive Contact Form */}
-              <div>
-                <ContactForm />
               </div>
             </div>
 
-            {/* Google Maps Embed Section */}
-            <div style={{ marginTop: '28px' }}>
-              <div style={{ marginBottom: '16px' }}>
-                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <Navigation size={22} color="#ea580c" />
-                  Agency Location Map: Okkiyam Thoraipakkam, Chennai
+            {/* Map */}
+            <div className="col-span-full" style={{ marginTop: '48px' }}>
+              <div style={{ marginBottom: '18px' }}>
+                <span className="hero-eyebrow" style={{ marginBottom: '10px' }}>
+                  <span className="hero-eyebrow-mark" aria-hidden="true" />
+                  Visit our office
+                </span>
+                <h3 className="section-heading" style={{ fontSize: '1.6rem', marginBottom: '8px' }}>
+                  Okkiyam Thoraipakkam, Chennai
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                  Visit our office at {agencyInfo.address.street}, {agencyInfo.address.locality} ({agencyInfo.address.landmark}, OMR {agencyInfo.address.city} - {agencyInfo.address.postalCode}).
+                <p style={{ color: 'var(--ink-on-light-muted)', maxWidth: '52ch' }}>
+                  {agencyInfo.address.street}, {agencyInfo.address.locality} ({agencyInfo.address.landmark})
                 </p>
               </div>
 
               <div style={{
-                borderRadius: 'var(--radius-xl)',
+                borderRadius: 'var(--r-2xl)',
                 overflow: 'hidden',
-                border: '1px solid var(--border-subtle)',
-                boxShadow: 'var(--shadow-md)',
-                height: '420px',
+                border: '1px solid var(--line-light)',
+                boxShadow: 'var(--shadow-sm)',
+                height: '440px',
                 width: '100%',
                 position: 'relative'
               }}>

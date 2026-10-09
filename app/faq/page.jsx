@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
@@ -7,7 +8,7 @@ import FAQSection from '@/components/FAQSection';
 import FAQSchema from '@/components/FAQSchema';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
-import { HelpCircle, MessageCircle, Phone, ArrowRight, Sparkles } from 'lucide-react';
+import { MessageCircle, Phone, ArrowRight, Clock, ShieldCheck, User } from 'lucide-react';
 
 export const metadata = {
   title: "Frequently Asked Questions (FAQ) | Colours Life Manpower Agency Chennai",
@@ -24,42 +25,79 @@ export default function FAQPage() {
   ];
 
   return (
-    <>
+    <div className="svc-page faq-page" style={{ '--svc-accent': 'var(--lime-500)' }}>
       <BreadcrumbSchema items={breadcrumbs} />
       <FAQSchema faqs={generalFaqs} />
 
-      {/* Hero Section */}
-      <section className="service-hero-editorial theme-cooking">
-        <div className="container">
-          <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span style={{ color: 'var(--text-light)' }}>/</span>
-            <span style={{ color: 'var(--text-primary)', fontWeight: '700' }}>FAQ</span>
-          </nav>
+      {/* Hero — split: answers first, image fills the right half */}
+      <section className="service-hero-editorial svc-hero svc-hero-split">
+        <div className="svc-hero-content">
+          <span className="hero-eyebrow">
+            <span className="hero-eyebrow-mark" aria-hidden="true" />
+            Knowledge base
+          </span>
 
-          <div className="section-intro-header" style={{ marginBottom: '20px' }}>
-            <span className="eyebrow-pill eyebrow-warm">
-              <Sparkles size={14} /> Knowledge Base
+          <h1 className="hero-headline-serif">
+            Frequently asked <em>questions.</em>
+          </h1>
+
+          <p className="hero-body-text">
+            Everything you need to know about our domestic staffing process, service coverage
+            across Chennai, worker verification, and agency support.
+          </p>
+
+          <div className="hero-facts-bar">
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><ShieldCheck size={13} /></span>
+              Aadhaar + references checked
             </span>
-            <h1 className="hero-headline-serif" style={{ fontSize: '3rem' }}>
-              Frequently Asked <em>Questions</em>
-            </h1>
-            <p className="section-subtext">
-              Everything you need to know about our domestic staffing process, service coverage across Chennai, worker verification, and agency support.
-            </p>
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><User size={13} /></span>
+              You reach a person, not a bot
+            </span>
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
+              Replies within the hour (8am–9pm)
+            </span>
           </div>
+
+          <div className="hero-button-group">
+            <a
+              href={getWhatsAppUrl("Hello, I have a specific question about your manpower services.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-btn-large"
+            >
+              <MessageCircle size={20} /> Enquire on WhatsApp
+            </a>
+            <a href={`tel:${agencyInfo.phone1}`} className="btn-secondary-pill">
+              <Phone size={16} /> Call {agencyInfo.phoneDisplay1}
+            </a>
+          </div>
+        </div>
+
+        <div className="svc-hero-media">
+          <Image
+            src="/images/faq-questions.svg"
+            alt="Illustration of common questions answered in a message thread"
+            fill
+            priority
+            unoptimized
+            sizes="(max-width: 991px) 100vw, 50vw"
+            style={{ objectFit: 'cover', objectPosition: '50% 42%' }}
+          />
         </div>
       </section>
 
-      {/* Two-Column FAQ Section */}
-      <FAQSection 
+      {/* FAQ accordion — light surface */}
+      <FAQSection
         faqs={generalFaqs}
         title="Questions? We've got answers."
         subtitle="Answers regarding hiring terms, placement procedures, and customer support in Chennai."
       />
 
-      {/* Service-Specific Links Section (Pastel Sage) */}
-      <section className="section section-sage">
+      {/* Service-specific questions */}
+      <section className="section-light faq-service-section">
         <div className="container">
           <div className="section-intro-header" style={{ marginBottom: '36px' }}>
             <h2 className="section-heading-serif" style={{ fontSize: '2.2rem' }}>
@@ -70,33 +108,11 @@ export default function FAQPage() {
             </p>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '18px',
-            maxWidth: '980px',
-            margin: '0 auto'
-          }}>
+          <div className="faq-service-links">
             {servicesData.map((svc) => (
-              <Link 
-                key={svc.id}
-                href={svc.path}
-                style={{
-                  backgroundColor: '#ffffff',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-md)',
-                  padding: '18px 22px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  fontWeight: '700',
-                  color: 'var(--text-primary)',
-                  boxShadow: 'var(--shadow-subtle)',
-                  transition: 'var(--transition-smooth)'
-                }}
-              >
+              <Link key={svc.id} href={svc.path} className="faq-service-link">
                 <span>{svc.navTitle} FAQs</span>
-                <ArrowRight size={16} color="#ea580c" />
+                <ArrowRight size={16} aria-hidden="true" />
               </Link>
             ))}
           </div>
@@ -104,12 +120,12 @@ export default function FAQPage() {
       </section>
 
       <div className="container" style={{ margin: '48px auto 72px' }}>
-        <WhatsAppCTA 
+        <WhatsAppCTA
           title="Have a Question Not Answered Here?"
           subtitle="The owner is available on WhatsApp to answer any specific queries about timings, rates, or candidate profiles."
           buttonText="Ask on WhatsApp"
         />
       </div>
-    </>
+    </div>
   );
 }
