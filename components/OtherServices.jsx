@@ -24,7 +24,11 @@ export default function OtherServices({ currentServiceSlug }) {
 
         <div className="other-services-grid">
           {otherServices.map((service) => (
-            <div key={service.id} className="other-service-card">
+            <div
+              key={service.id}
+              className="other-service-card"
+              style={{ '--svc-accent': service.accentColor }}
+            >
               <div className="other-service-card-media">
                 <Image
                   src={service.image}

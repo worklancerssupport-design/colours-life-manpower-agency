@@ -38,10 +38,11 @@ export default function Header() {
   }, [mobileOpen]);
 
   const isServicesActive = pathname?.startsWith('/services/');
+  const isHomePage = pathname === '/';
 
   return (
     <>
-      <header className="site-header" role="banner">
+      <header className={`site-header ${isHomePage ? 'site-header--on-dark' : ''}`} role="banner">
         <div className="container site-header-row">
           <Logo />
 

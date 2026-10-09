@@ -7,6 +7,7 @@ export default function WhatsAppCTA({
   subtitle = 'Tell us what you need. The owner replies within the hour on WhatsApp — direct, no IVR, no bots.',
   customMessage,
   buttonText = 'Chat on WhatsApp',
+  eyebrow = 'Founder-direct',
 }) {
   const whatsappUrl = getWhatsAppUrl(customMessage || agencyInfo.defaultWhatsAppMessage);
   return (
@@ -14,7 +15,7 @@ export default function WhatsAppCTA({
       <div className="cta-block">
         <span className="section-eyebrow section-eyebrow-dark" style={{ justifyContent: 'center' }}>
           <Sparkles size={13} />
-          Founder-direct
+          {eyebrow}
         </span>
         <h3 className="cta-block-title">{title}</h3>
         <p className="cta-block-sub">{subtitle}</p>

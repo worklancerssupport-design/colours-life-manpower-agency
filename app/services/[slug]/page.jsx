@@ -1,29 +1,26 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import servicesData from '@/data/services.json';
-import { getServiceBySlug, getAllServiceSlugs } from '@/lib/utils';
+import { getServiceBySlug, getAllServiceSlugs, getWhatsAppUrl } from '@/lib/utils';
 import agencyInfo from '@/data/agency.json';
-import { getWhatsAppUrl } from '@/lib/utils';
 import OtherServices from '@/components/OtherServices';
 import FAQSection from '@/components/FAQSection';
 import FAQSchema from '@/components/FAQSchema';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
-import { 
-  Phone, 
-  MessageCircle, 
-  CheckCircle2, 
-  MapPin, 
-  Clock, 
-  ShieldCheck, 
-  Sparkles, 
-  HeartHandshake,
-  AlertTriangle,
-  ArrowRight,
+import ScopeSplit from '@/components/ScopeSplit';
+import ShiftCards from '@/components/ShiftCards';
+import BeforeYouDecide from '@/components/BeforeYouDecide';
+import ProofInline from '@/components/ProofInline';
+import ServiceSchema from '@/components/ServiceSchema';
+import {
+  Phone,
+  MessageCircle,
+  MapPin,
+  Clock,
   Check,
-  Building,
-  UserCheck
+  ShieldCheck,
+  HeartHandshake,
+  ArrowRight
 } from 'lucide-react';
 
 export async function generateStaticParams() {
@@ -66,15 +63,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const themeClassMap = {
-  'cooking': 'theme-cooking',
-  'newborn-baby-care': 'theme-newborn',
-  'baby-care': 'theme-baby',
-  'elderly-care': 'theme-elderly',
-  'maid-work': 'theme-maid',
-  'brahmin-cook': 'theme-brahmin',
-  'patient-care': 'theme-patient',
-  'drivers': 'theme-drivers'
+const ctaNounMap = {
+  'cooking': 'a cook',
+  'newborn-baby-care': 'newborn care',
+  'baby-care': 'a baby care helper',
+  'elderly-care': 'an elderly attendant',
+  'maid-work': 'domestic help',
+  'brahmin-cook': 'a Brahmin cook',
+  'patient-care': 'a patient attendant',
+  'drivers': 'a driver'
 };
 
 export default function ServicePage({ params }) {
@@ -85,7 +82,8 @@ export default function ServicePage({ params }) {
   }
 
   const whatsappUrl = getWhatsAppUrl(service.whatsappMessage);
-  const themeClass = themeClassMap[service.slug] || 'theme-cooking';
+  const ctaNoun = ctaNounMap[service.slug] || service.shortName.toLowerCase();
+  const idCheckFact = service.slug === 'drivers' ? 'Licence + Aadhaar checked' : 'Aadhaar + references checked';
 
   const breadcrumbs = [
     { name: 'Home', url: '/' },
@@ -94,295 +92,227 @@ export default function ServicePage({ params }) {
   ];
 
   return (
-    <>
+    <div className="svc-page" style={{ '--svc-accent': service.accentColor }}>
       <BreadcrumbSchema items={breadcrumbs} />
+      <ServiceSchema service={service} />
       <FAQSchema faqs={service.faqs} />
 
-      {/* 1. Dedicated Service Hero with Custom Pastel Background */}
-      <section className={`service-hero-editorial ${themeClass}`} style={{ paddingTop: '128px' }}>
-        <div className="container">
-          {/* Breadcrumbs Pill */}
-          <nav className="breadcrumbs-pill" aria-label="Breadcrumb">
-            <Link href="/">Home</Link>
-            <span style={{ color: 'var(--text-light)' }}>/</span>
-            <Link href="/services/">Services</Link>
-            <span style={{ color: 'var(--text-light)' }}>/</span>
-            <span style={{ color: 'var(--text-primary)', fontWeight: '700' }}>{service.shortName}</span>
-          </nav>
+      {/* 1. Service Hero — full-bleed image fills the right half, mirroring the home hero */}
+      <section className="service-hero-editorial svc-hero svc-hero-split">
+        <div className="svc-hero-content">
+          <span className="hero-eyebrow">
+            <span className="hero-eyebrow-mark" aria-hidden="true" />
+            {service.eyebrowText}
+          </span>
 
-          <div className="hero-editorial-grid">
-            <div>
-              <div className="eyebrow-pill eyebrow-warm">
-                <Sparkles size={14} /> {service.badge}
-              </div>
+          <h1 className="hero-headline-serif" style={{ fontSize: '2.8rem' }}>
+            {service.h1}
+            <em className="hero-h1-scope">{service.h1Scope}</em>
+          </h1>
 
-              <h1 className="hero-headline-serif" style={{ fontSize: '2.8rem' }}>
-                {service.h1}
-              </h1>
+          <p className="hero-body-text">
+            {service.heroSubtitle}
+          </p>
 
-              <p className="hero-body-text">
-                {service.heroSubtitle}
-              </p>
-
-              <div className="hero-location-notice">
-                📍 <strong>Available across Okkiyam Thoraipakkam, OMR, and residential Chennai.</strong>
-              </div>
-
-              <div className="hero-button-group">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-btn-large"
-                >
-                  <MessageCircle size={20} /> Book {service.shortName}
-                </a>
-
-                <a
-                  href={`tel:${agencyInfo.phone1}`}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    padding: '14px 24px',
-                    borderRadius: 'var(--radius-full)',
-                    backgroundColor: '#ffffff',
-                    border: '1.5px solid var(--border-medium)',
-                    color: 'var(--text-primary)',
-                    fontWeight: '700',
-                    fontSize: '0.95rem'
-                  }}
-                >
-                  <Phone size={16} color="var(--brand-primary)" /> Call {agencyInfo.phoneDisplay1}
-                </a>
-              </div>
-
-              <div className="hero-pill-badges">
-                <div className="pill-feature">
-                  <div className="pill-check">✓</div>
-                  <span>Local Chennai Coordination</span>
-                </div>
-                <div className="pill-feature">
-                  <div className="pill-check">✓</div>
-                  <span>Aadhaar Identity Checked</span>
-                </div>
-                <div className="pill-feature">
-                  <div className="pill-check">✓</div>
-                  <span>Full-Time & Part-Time Shifts</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="hero-composition">
-              <div className="composition-main-card">
-                <Image
-                  src={service.image}
-                  alt={service.alt}
-                  width={680}
-                  height={450}
-                  priority
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
-              </div>
-
-              <div className="composition-badge-float badge-float-bottom">
-                <div style={{ backgroundColor: '#fff7ed', width: '36px', height: '36px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ea580c' }}>
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <div style={{ fontWeight: '800', fontSize: '0.9rem', color: '#1c1917' }}>Owner · Agency Lead</div>
-                  <div style={{ fontSize: '0.76rem', color: 'var(--text-muted)' }}>{agencyInfo.address.locality}, {agencyInfo.address.city}</div>
-                </div>
-              </div>
-            </div>
+          <div className="hero-facts-bar">
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><Clock size={13} /></span>
+              Usually placed in days
+            </span>
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><Check size={13} strokeWidth={3} /></span>
+              {idCheckFact}
+            </span>
+            <span className="hero-fact">
+              <span className="hero-fact-mark" aria-hidden="true"><MapPin size={13} /></span>
+              {service.heroFactAreas}
+            </span>
           </div>
+
+          <div className="hero-button-group">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-btn-large"
+            >
+              <MessageCircle size={20} /> Enquire on WhatsApp
+            </a>
+
+            <a
+              href={`tel:${agencyInfo.phone1}`}
+              className="btn-secondary-pill"
+            >
+              <Phone size={16} /> Call {agencyInfo.phoneDisplay1}
+            </a>
+          </div>
+
+          <p className="hero-cta-micro">
+            WhatsApp answered 8am–9pm, usually within the hour
+          </p>
+        </div>
+
+        <div className="svc-hero-media">
+          <Image
+            src={service.image}
+            alt={service.alt}
+            fill
+            priority
+            sizes="(max-width: 991px) 100vw, 50vw"
+            style={{ objectFit: 'cover', objectPosition: '60% 100%' }}
+          />
         </div>
       </section>
 
-      {/* 2. Visual Storytelling Narrative Section */}
-      <section className="section section-cream">
-        <div className="container">
-          <div style={{ maxWidth: '980px', margin: '0 auto' }}>
-
-            {/* Medical / Care Disclaimer Notice if applicable */}
-            {service.disclaimer && (
-              <div style={{
-                backgroundColor: '#fffbeb',
-                border: '1px solid #fde68a',
-                borderRadius: 'var(--radius-md)',
-                padding: '20px 24px',
-                marginBottom: '36px',
-                display: 'flex',
-                gap: '14px',
-                color: '#92400e',
-                fontSize: '0.94rem',
-                lineHeight: '1.6'
-              }}>
-                <AlertTriangle size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
-                <div>
-                  <strong>Important Caregiving Notice:</strong> {service.disclaimer}
-                </div>
-              </div>
-            )}
-
-            {/* Card 1: Introduction */}
-            <div className="service-narrative-card">
-              <h2>
-                <Sparkles size={24} color="#ea580c" />
-                Reliable {service.shortName} Support for Chennai Households
-              </h2>
-              <p>{service.intro}</p>
-              <p>
-                At Colours Life Manpower Agency, we take a personalized approach to household staffing. We recognize that every home operates with its own rhythms, family expectations, and daily meal or care routines. Whether you are living in a multi-storey apartment complex on Old Mahabalipuram Road (OMR), a villa in Perungudi, or an independent home in Velachery, our team ensures that you receive dedicated assistance suited specifically to your lifestyle.
-              </p>
-            </div>
-
-            {/* Card 2: Who It Is For */}
-            <div className="service-narrative-card">
-              <h2>
-                <HeartHandshake size={24} color="#0d9488" />
-                Who Can Benefit From Our {service.shortName} Services?
-              </h2>
-              <p>
-                Our clients in Chennai include families from diverse walks of life who require extra assistance to keep their households running smoothly and comfortably:
-              </p>
-              <div className="service-duties-grid">
-                {service.whoIsItFor.map((item, index) => (
-                  <div key={index} className="duty-pill-item">
-                    <Check size={18} color="#0d9488" style={{ flexShrink: 0, marginTop: '3px' }} />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Card 3: Worker Profiles & Verification */}
-            <div className="service-narrative-card">
-              <h2>
-                <ShieldCheck size={24} color="#ea580c" />
-                What Type of Workers Are Available?
-              </h2>
-              <p>{service.availableWorkers}</p>
-              <p>
-                All staff registered through Colours Life Manpower Agency are interviewed personally by the owner. We verify government identification documents, contact previous employers or character references where available, and clarify expected work ethics, cleanliness standards, and punctual habits. We prioritize individuals with genuine willingness to assist families with patience, care, and respectful communication.
-              </p>
-            </div>
-
-            {/* Card 4: Key Duties & Responsibilities */}
-            <div className="service-narrative-card">
-              <h2>
-                <CheckCircle2 size={24} color="#15803d" />
-                Key Duties & Household Responsibilities
-              </h2>
-              <p>
-                When you hire through our agency, you receive structured, dependable daily help. Typical responsibilities handled include:
-              </p>
-              <div className="service-duties-grid">
-                {service.keyResponsibilities.map((duty, index) => (
-                  <div key={index} className="duty-pill-item">
-                    <Check size={18} color="#15803d" style={{ flexShrink: 0, marginTop: '3px' }} />
-                    <span>{duty}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mid-Page WhatsApp CTA */}
-            <div style={{ margin: '48px 0' }}>
-              <WhatsAppCTA 
-                title={`Need a Reliable ${service.shortName} Worker in Chennai?`}
-                subtitle={`Message us directly on WhatsApp with your locality and requirements to check immediate availability.`}
-                customMessage={service.whatsappMessage}
-                buttonText={`Book ${service.shortName} on WhatsApp`}
-              />
-            </div>
-
-            {/* Card 5: Local Area Service Coverage */}
-            <div className="service-narrative-card">
-              <h2>
-                <MapPin size={24} color="#ea580c" />
-                Service Coverage Across Okkiyam Thoraipakkam, OMR & Chennai
-              </h2>
-              <p>{service.localCoverage}</p>
-              <p>
-                Because our agency headquarters is located right at {agencyInfo.address.street}, {agencyInfo.address.locality} (Landmark: {agencyInfo.address.landmark}), we have quick access to the major residential hubs along the IT corridor. Whether you require part-time assistance, a standard 8 to 12-hour day helper, or a 24-hour live-in attendant who resides in your home, we provide flexible arrangements to match your family&apos;s schedule.
-              </p>
-              <div className="local-tag-cloud" style={{ marginTop: '20px' }}>
-                {agencyInfo.serviceAreas.map((area, idx) => (
-                  <span key={idx} className="local-locality-tag">📍 {area}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Card 6: How Booking Works */}
-            <div className="service-narrative-card">
-              <h2>
-                <Clock size={24} color="#0d9488" />
-                How the Booking & Placement Process Works
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '14px' }}>
-                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <div className="process-number-circle" style={{ width: '40px', height: '40px', fontSize: '1rem', backgroundColor: '#fff7ed', color: '#ea580c', flexShrink: 0 }}>
-                    1
-                  </div>
-                  <div>
-                    <strong style={{ fontSize: '1.05rem', color: '#1c1917' }}>Direct Requirement Discussion:</strong>
-                    <p style={{ margin: '4px 0 0', color: 'var(--text-secondary)' }}>
-                      Contact us via WhatsApp or phone. Share your family size, timing preferences (day-time vs. live-in), preferred language, and any specific dietary or caregiving requirements.
-                    </p>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <div className="process-number-circle" style={{ width: '40px', height: '40px', fontSize: '1rem', backgroundColor: '#f0fdfa', color: '#0d9488', flexShrink: 0 }}>
-                    2
-                  </div>
-                  <div>
-                    <strong style={{ fontSize: '1.05rem', color: '#1c1917' }}>Worker Profile Matching:</strong>
-                    <p style={{ margin: '4px 0 0', color: 'var(--text-secondary)' }}>
-                      We review our database and recommend a candidate whose experience, proximity, and temperament match your needs. We arrange a phone interview or introductory meeting.
-                    </p>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                  <div className="process-number-circle" style={{ width: '40px', height: '40px', fontSize: '1rem', backgroundColor: '#ecfdf5', color: '#15803d', flexShrink: 0 }}>
-                    3
-                  </div>
-                  <div>
-                    <strong style={{ fontSize: '1.05rem', color: '#1c1917' }}>Trial & Ongoing Agency Support:</strong>
-                    <p style={{ margin: '4px 0 0', color: 'var(--text-secondary)' }}>
-                      Once terms are finalized, the helper commences duty. Colours Life Manpower Agency remains your point of contact for ongoing peace of mind and replacement assistance if needed.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Service-Specific 2-Column FAQ Section */}
-      <FAQSection 
-        faqs={service.faqs}
-        title={`Questions About ${service.shortName} in Chennai`}
-        subtitle={`Practical information on hiring, daily duties, schedules, and policies for ${service.shortName.toLowerCase()} support.`}
+      {/* 2. What You Get — scope split */}
+      <ScopeSplit
+        title={<>What you get with {ctaNoun} in Chennai</>}
+        included={service.scopeIncluded}
+        excluded={service.scopeExcluded}
+        note={service.disclaimer}
       />
 
-      {/* 4. Other Services Cross-Linking (Pastel Grid) */}
+      {/* 3. Is This For You? — self-identification */}
+      <section className="section-light situations-section">
+        <div className="container">
+          <h2 className="section-heading">Is this for <em>you</em>?</h2>
+          <ul className="situations-list">
+            {service.whoIsItFor.map((situation, i) => (
+              <li key={i}>
+                <span className="situations-check" aria-hidden="true"><Check size={14} strokeWidth={3} /></span>
+                <span>{situation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 4. Shift Options */}
+      <ShiftCards
+        title={service.shiftHeading || 'Part-time, full-time or live-in — choose your shift'}
+        options={service.shiftOptions}
+      />
+
+      {/* 5. How Hiring Works */}
+      <section className="section-light hiring-section">
+        <div className="container">
+          <h2 className="section-heading">How hiring <em>works</em></h2>
+
+          <ol className="hiring-steps">
+            <li className="hiring-step">
+              <div className="hiring-step-num" aria-hidden="true">1</div>
+              <h3 className="hiring-step-title">Tell us what you need</h3>
+              <p className="hiring-step-desc">
+                WhatsApp your locality, your shift and the duties that matter. Thirty seconds of typing is the whole first step.
+              </p>
+            </li>
+            <li className="hiring-step">
+              <div className="hiring-step-num" aria-hidden="true">2</div>
+              <h3 className="hiring-step-title">See matched profiles</h3>
+              <p className="hiring-step-desc">
+                You get verified candidates whose experience and locality fit your home. You talk to them before deciding — never a blind assignment.
+              </p>
+            </li>
+            <li className="hiring-step">
+              <div className="hiring-step-num" aria-hidden="true">3</div>
+              <h3 className="hiring-step-title">Start with an introduction</h3>
+              <p className="hiring-step-desc">
+                Once you choose, the person starts. You keep one number for anything that comes after.
+              </p>
+            </li>
+          </ol>
+
+          <div className="hiring-strip">
+            <span>You send your locality + shift</span>
+            <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
+            <span>hear back within the hour</span>
+            <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
+            <span>see verified profiles</span>
+            <ArrowRight className="hiring-strip-sep" size={16} aria-hidden="true" />
+            <span>you choose</span>
+            <span className="hiring-strip-muted">No office visit needed.</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. What's Checked & What If It Goes Wrong — dark band */}
+      <section className="section-dark verify-band">
+        <div className="container">
+          <h2 className="section-heading verify-heading">What&apos;s checked before anyone enters your home</h2>
+          <p className="verify-subline">
+            Whoever is placed with you has had their ID checked, references spoken to, and duties clarified with you before day one. You see the verification details before they start.
+          </p>
+
+          <div className="verify-grid">
+            <div className="verify-col">
+              <h3 className="verify-col-title">
+                <ShieldCheck size={17} aria-hidden="true" />
+                Checked before day one
+              </h3>
+              <ul className="verify-list">
+                {service.verificationFacts.map((fact, i) => (
+                  <li key={i} className="verify-item">
+                    <span className="verify-item-mark" aria-hidden="true"><Check size={14} strokeWidth={3} /></span>
+                    <span>{fact}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="verify-col">
+              <h3 className="verify-col-title">
+                <HeartHandshake size={17} aria-hidden="true" />
+                If it isn&apos;t working out
+              </h3>
+              <ul className="verify-list">
+                {service.riskPolicies.map((policy, i) => (
+                  <li key={i} className="verify-item">
+                    <span className="verify-item-mark" aria-hidden="true"><Check size={14} strokeWidth={3} /></span>
+                    <span>{policy}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Proof — real family reviews */}
+      <ProofInline serviceSlug={service.slug} />
+
+      {/* 8. Before You Decide — unasked questions */}
+      <BeforeYouDecide qas={service.unaskedQAs} />
+
+      {/* 9. Coverage */}
+      <section className="section-light coverage-section">
+        <div className="container">
+          <h2 className="section-heading">Areas we <em>cover</em></h2>
+          <div className="local-tag-cloud coverage-tags">
+            {agencyInfo.serviceAreas.map((area, idx) => (
+              <span key={idx} className="local-locality-tag">{area}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. Service FAQ */}
+      <FAQSection
+        faqs={service.faqs}
+        title={`Questions about ${service.shortName.toLowerCase()} in Chennai`}
+        subtitle="Practical answers on shifts, duties, verification, and what happens after you message."
+      />
+
+      {/* 11. Related Services */}
       <OtherServices currentServiceSlug={service.slug} />
 
-      {/* 5. Final Bottom WhatsApp CTA */}
-      <div className="container" style={{ margin: '48px auto 72px' }}>
-        <WhatsAppCTA 
-          title={`Ready to Book Your ${service.shortName} Worker?`}
-          subtitle={`Contact Colours Life Manpower Agency in Okkiyam Thoraipakkam, Chennai. We are ready to assist you today with prompt, courteous service.`}
-          customMessage={service.whatsappMessage}
-          buttonText={`Enquire for ${service.shortName} on WhatsApp`}
-        />
-      </div>
-    </>
+      {/* 12. Final CTA */}
+      <WhatsAppCTA
+        eyebrow="Replies within the hour"
+        title={`Need ${ctaNoun} this week?`}
+        subtitle="Tell us your area and shift. You'll hear back within the hour — a real person, no bots."
+        customMessage={service.whatsappMessage}
+        buttonText="Enquire on WhatsApp"
+      />
+    </div>
   );
 }

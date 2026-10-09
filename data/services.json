@@ -6,24 +6,60 @@
     "navTitle": "Cooking / Cook Service",
     "shortName": "Cooking",
     "h1": "Cook Services in Chennai",
+    "h1Scope": "— daily meals, part-time or live-in",
     "metaTitle": "Cook Services in Chennai & Thoraipakkam | Home Cooks | Colours Life Manpower Agency",
     "metaDescription": "Reliable cook services in Chennai, Okkiyam Thoraipakkam, and OMR. Skilled home cooks for daily family meals, vegetarian dishes, traditional South Indian and North Indian cooking.",
-    "heroSubtitle": "Wholesome, hygienic home cooking tailored to your family's taste, dietary preferences, and daily meal schedule in Chennai and OMR.",
-    "image": "/images/cooking-service-chennai.jpg",
+    "eyebrowText": "Home Cook · Part-time & Live-in · OMR & Chennai",
+    "heroSubtitle": "A home cook who learns your family's sambar, your oil limits, your 8am tiffin — and keeps the kitchen running whether you're home or not. Tell us your area and shift on WhatsApp; you'll usually hear back within the hour.",
+    "heroFactAreas": "OMR · Perungudi · Velachery",
+    "image": "https://res.cloudinary.com/akjmqvws/image/upload/v1791351823/home-cook.png",
     "alt": "Professional Indian home cook preparing traditional vegetarian meals and dosa in Chennai kitchen",
     "badge": "Daily Meals & Live-in Cooks",
-    "accentColor": "#ea580c",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Cook Service.",
+    "accentColor": "#EA580C",
+    "whatsappMessage": "Hi, I need a cook in [your area] — [morning/evening shift], around [hours] a day. Please share availability and next steps.",
     "shortDescription": "Experienced home cooks for daily family cooking, vegetarian & non-vegetarian dishes, breakfast, lunch, dinner, and kitchen hygiene.",
-    "intro": "Finding a dependable, clean, and skilled cook in Chennai is one of the most essential requirements for busy families, working IT professionals on OMR, elderly parents, and households needing regular nutrition. Colours Life Manpower Agency connects households across Okkiyam Thoraipakkam, Nehru Nagar, Perungudi, Sholinganallur, Velachery, and greater Chennai with reliable domestic cooks who understand the importance of fresh ingredients, hygienic preparation, and home-style flavours.",
     "whoIsItFor": [
-      "Working couples and IT professionals along the OMR tech corridor who lack time to cook after demanding workdays.",
-      "Families with school-going children requiring timely, nutritious breakfast, packed tiffins, and wholesome evening dinners.",
-      "Elderly residents who prefer light, low-oil, medically mindful home meals prepared comfortably in their own home.",
-      "Joint families requiring dedicated kitchen assistance to manage large-scale daily lunch, dinner, and snacks.",
-      "Households hosting guests, family gatherings, or weekend get-togethers requiring supplemental culinary support."
+      "Both of you leave for work by 8am and the dinner question is still open at 6pm.",
+      "Your toddler needs a fixed 7pm dinner and you're stuck in OMR traffic until 8.",
+      "Your parents live with you, but standing at the stove for two meals a day is getting harder for them.",
+      "You've just moved into a flat on the corridor and the kitchen still feels like a hotel-kitchen problem.",
+      "Weekends mean guests — and cooking for ten on top of a full working week isn't sustainable."
     ],
-    "availableWorkers": "Our cooking staff include experienced home cooks and domestic kitchen helpers who specialize in family meal preparation. Workers are accustomed to private home kitchens and follow your household's unique recipes, spice preferences, dietary guidelines (such as low salt or minimal oil), and hygiene standards. Rather than commercial catering staff, these are dedicated domestic cooks focused on healthy, everyday family meals.",
+    "availableWorkers": "Whoever is placed with you cooks in private home kitchens, not canteens or events. They work to your recipes and your spice level, adapt to low-oil or no-onion instructions without fuss, and clean the cooking area before they leave. You'll see their experience and locality on each profile before you talk to them.",
+    "scopeIncluded": [
+      "Breakfast — idli, dosa, upma, poori, parathas, filter coffee, your morning tiffin routine",
+      "Lunch — rice, sambar, rasam, kootu, poriyal, dal, chapatis and fresh curries",
+      "Dinner — lighter family meals: phulkas, subzis, khichdi, soups",
+      "Vegetable washing, peeling, chopping, and fresh masala or batter preparation",
+      "Cleaning the stove, countertops and cooking vessels after the meal",
+      "Telling you what's running low so next week's menu isn't a surprise"
+    ],
+    "scopeExcluded": [
+      "Groceries and vegetables — you buy them, or send a list and someone picks them up",
+      "The menu decision — you set it, and they cook to it",
+      "Cooking vessels and storage containers — these stay yours",
+      "Heavy kitchen deep-cleaning and fridge defrosting"
+    ],
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "2–4 hrs · morning or evening",
+        "description": "One meal block handled — breakfast tiffin or evening dinner — in a fixed window.",
+        "bestFor": "Working couples, small families with simple evenings"
+      },
+      {
+        "type": "Full-time",
+        "hours": "8–12 hrs · day shift",
+        "description": "Breakfast, lunch and the evening tiffin, with the kitchen left tidy at the end of it.",
+        "bestFor": "Homes with kids or elders who eat through the day"
+      },
+      {
+        "type": "Live-in",
+        "hours": "Stays in your home · structured hours with rest",
+        "description": "End-to-end kitchen duties — all meals, plus festival cooking when asked. Not 24 hours on call.",
+        "bestFor": "Large households, joint families, homes that host often"
+      }
+    ],
     "keyResponsibilities": [
       "Daily breakfast preparation including fresh idlis, dosas, upma, poori, poha, parathas, and morning tea or filter coffee.",
       "Full lunch preparation comprising freshly steamed rice, sambar, rasam, kootu, poriyal, dal, chapatis, and fresh curries.",
@@ -32,32 +68,72 @@
       "Basic kitchen cleaning post-cooking, including wiping countertops, cleaning cooking stoves, and keeping the cooking area tidy.",
       "Coordinating grocery and vegetable requirements with the family to plan upcoming weekly meals."
     ],
-    "localCoverage": "Colours Life Manpower Agency is based right in Nehru Nagar, Okkiyam Thoraipakkam (landmark: Back Side Cognizant). We actively support residential apartments, gated communities, and individual homes along Old Mahabalipuram Road (OMR), Perungudi, Kandhanchavadi, Sholinganallur, Karapakkam, Semmancheri, Navalur, Velachery, Medavakkam, and central Chennai neighbourhoods.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the cook and your kitchen don't click",
+      "You speak with the person before day one — no stranger at the stove",
+      "Duties, timings and leave expectations agreed before they start"
+    ],
+    "localCoverage": "Placements across Okkiyam Thoraipakkam, Perungudi, Sholinganallur, Karapakkam, Velachery, Semmancheri, Navalur, Adyar and greater Chennai — morning and evening shifts along the OMR corridor are the most common, with live-in cooks in family homes across the city.",
     "disclaimer": "Cook services are provided as private home assistance for domestic meal preparation. Menu planning, ingredients, and cooking vessels are provided by the client household.",
+    "unaskedQAs": [
+      {
+        "question": "Will she cook her food or ours?",
+        "answer": "Yours. The first few days are your recipes: you show the sambar, the spice level, the oil limit. Cooks are hired to follow your kitchen's way, not theirs."
+      },
+      {
+        "question": "What happens if we're travelling for a week?",
+        "answer": "Tell us in advance. Planned absences are easier to cover with notice — replacement support is available where possible, but a week's warning helps far more than a day's."
+      },
+      {
+        "question": "Can she cook for guests or a small function at home?",
+        "answer": "Say so before you confirm the shift. Extra-quantity cooking works when it's part of the agreement from day one, not an assumption later."
+      },
+      {
+        "question": "My father's doctor has put him on a no-salt diet. Is that followed?",
+        "answer": "Medical diets are followed exactly as written. Give the instructions in writing if it helps — low-oil, no-onion and diabetic-friendly meals are routine asks."
+      },
+      {
+        "question": "Do I have to be home while she cooks?",
+        "answer": "No. Most families hand over the kitchen and leave for work. Trust is built on the profile, the introduction and the first week — not on you standing in the kitchen."
+      },
+      {
+        "question": "What languages will she speak with my mother?",
+        "answer": "Tell us your language preference in the first message — you'll see it on each profile, and your mother will meet her before anything is confirmed."
+      },
+      {
+        "question": "Can the same person also do evening snack prep?",
+        "answer": "Duties are what you agree. If the shift includes evening prep, say so — the scope is set before she starts, not renegotiated daily."
+      }
+    ],
     "faqs": [
       {
         "question": "How can I book a home cook in Chennai through Colours Life Manpower Agency?",
-        "answer": "Booking is straightforward. Click our 'Book Cook Service' or WhatsApp CTA, message us with your family size, meal requirements (breakfast, lunch, dinner), dietary preferences (veg / non-veg), and your exact locality in Chennai. Our team will check available cooks matching your timing and coordinate an introduction."
+        "answer": "Message on WhatsApp with your locality, which meals you need (breakfast, lunch or dinner), and your shift preference. You'll hear back within the hour with matching cooks, and the next step is an introduction — you talk to the person before deciding."
       },
       {
         "question": "Do you provide cook services in Okkiyam Thoraipakkam and OMR?",
-        "answer": "Yes, our agency office is located at Nehru Nagar, 13th Cross Street, Okkiyam Thoraipakkam (Back Side Cognizant). We serve all nearby gated communities, villas, and apartments along OMR, Perungudi, Sholinganallur, and surrounding areas."
+        "answer": "Yes. Morning and evening shifts along OMR — Perungudi, Sholinganallur, Karapakkam, Thoraipakkam — are the most requested. Message your exact apartment or street and we'll confirm coverage immediately."
       },
       {
         "question": "Can the cook prepare both South Indian and North Indian food?",
-        "answer": "Yes. Many of our domestic cooks are proficient in South Indian home-style meals (sambar, rasam, tiffin items, poriyal, curries), while others can prepare North Indian dishes like rotis, dals, and subzis. Let us know your preferred cuisine when enquiring."
+        "answer": "Many cooks are strong in South Indian home-style meals — tiffins, sambar, rasam, poriyal — and several also make North Indian rotis, dals and subzis. State your cuisine in the first message so the profiles you see actually match."
       },
       {
         "question": "Are live-in (full-time) and part-time cooks available?",
-        "answer": "Yes. Depending on your household requirements, we can assist with part-time daily cooks (morning and evening shifts) as well as full-time live-in cooks who manage end-to-end family kitchen duties."
+        "answer": "Both. Part-time covers one meal block, full-day covers all meals, and live-in cooks stay in your home with structured hours and rest — not 24 hours on call."
       },
       {
         "question": "What hygiene practices do the cooks follow?",
-        "answer": "We emphasize domestic hygiene including thorough hand washing, clean aprons, proper washing of vegetables, and cleaning cooking surfaces immediately after meal preparation."
+        "answer": "Handwashing before cooking, vegetables washed properly, the stove and counters wiped down after the meal, vessels cleaned. If your household has specific rules — separate knives, no onion on certain days — say them on day one."
       },
       {
         "question": "What happens if our assigned cook needs to take leave?",
-        "answer": "If your cook plans a scheduled absence or requires leave, please inform us in advance so Colours Life Manpower Agency can assist with replacement support where available."
+        "answer": "Tell us as soon as you know. With notice, we look for cover or replacement support; sudden multi-day absences are harder, which is why leave expectations are agreed before the placement starts."
       }
     ]
   },
@@ -68,23 +144,60 @@
     "navTitle": "Newborn Baby Care",
     "shortName": "Newborn Care",
     "h1": "Newborn Baby Care Services in Chennai",
+    "h1Scope": "— nights, feeds and the first months",
     "metaTitle": "Newborn Baby Care Services in Chennai | Postnatal Childcare | Colours Life Manpower Agency",
     "metaDescription": "Professional newborn baby care and nanny support in Chennai & Thoraipakkam. Gentle postnatal caregiving, infant feeding assistance, baby bathing, and sleep routine support.",
-    "heroSubtitle": "Compassionate, gentle caregiving assistance for delicate newborns and recovering mothers during the crucial first months of life.",
-    "image": "/images/newborn-baby-care-chennai.jpg",
+    "eyebrowText": "Newborn Caretaker · Day & Live-in · OMR & Chennai",
+    "heroSubtitle": "An experienced newborn caretaker so the baby's bath, feeds and sleep have a rhythm — and you get the rest recovery actually needs. Message us your delivery month and area; the good caretakers get reserved early.",
+    "heroFactAreas": "OMR · Adyar · Velachery",
+    "image": "https://res.cloudinary.com/akjmqvws/image/upload/v1791351822/new-born-baby-care.png",
     "alt": "Caring Indian newborn baby caretaker cradling a sleeping newborn infant in a Chennai nursery",
     "badge": "Specialized Infant Caregiving",
-    "accentColor": "#0d9488",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Newborn Baby Care.",
+    "accentColor": "#F472B6",
+    "whatsappMessage": "Hi, I need a newborn caretaker in [your area] — [day shift/live-in], from [month]. Please share availability and next steps.",
     "shortDescription": "Specialized caregiving assistance for newborns and mothers: infant hygiene, swaddling, gentle bathing, sleep soothing, and routine feeding support.",
-    "intro": "Welcoming a newborn infant into your family is a moment of immense joy, but it also brings physical exhaustion, sleepless nights, and the delicate demands of round-the-clock newborn care. Colours Life Manpower Agency provides compassionate, experienced newborn baby caretakers (often locally known as jayas, ayahs, or newborn nannies) across Okkiyam Thoraipakkam, OMR, and Chennai to support new parents during this fragile postnatal phase.",
     "whoIsItFor": [
-      "First-time parents who need gentle, experienced guidance and extra hands during the first critical 3 to 12 months.",
-      "New mothers recovering from C-section deliveries or demanding births who require rest to regain strength.",
-      "Working parents planning a smooth transition back to professional commitments while ensuring uninterrupted infant attention.",
-      "Families without immediate grandparent support living in Chennai's IT and residential hubs along OMR."
+      "Your delivery is next month and no one from family can fly in for the first six weeks.",
+      "You're recovering from a C-section and being awake all night with the baby is setting you back.",
+      "It's your first baby, and you want someone who has done this a hundred times, right beside you.",
+      "Both of you are back at work by month three, and the daytime hours need safe hands."
     ],
-    "availableWorkers": "Our newborn caretakers are mature, nurturing women with extensive practical experience handling infants. They possess calm temperaments, deep patience, and an understanding of newborn rhythms, including safe holding techniques, hygienic diaper changes, and soothing methods. They assist with daily baby routines under parental supervision and guidance.",
+    "availableWorkers": "The caretakers you'll meet have handled newborns before — holding the head, burping after feeds, bath temperature, the endless 2am wake-ups. They work under your guidance, not over it: you remain the parent making every call. You see each profile and speak with them before day one.",
+    "scopeIncluded": [
+      "Gentle newborn baths and sponge baths at the temperature you approve",
+      "Baby oil massage and swaddling, following your family's custom or the pediatrician's advice",
+      "Assisting scheduled feeds, burping after every feed, cleaning and organizing bottles",
+      "Hygienic diaper changes and rash-prevention care through the day",
+      "Soothing to sleep — rocking, lullabies, a consistent nap and night rhythm",
+      "Washing baby clothes and cot linens, sterilizing feeding accessories separately",
+      "Supporting your rest by taking the night wake-ups you need them to take"
+    ],
+    "scopeExcluded": [
+      "Medical care — feeding decisions, medications and any clinical concern stay with your pediatrician",
+      "The mother's medical recovery needs, which belong to her doctor",
+      "Vaccination visits and hospital trips — family accompanies"
+    ],
+    "shiftHeading": "Day shift or live-in — choose your nights",
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "4–8 hrs · daytime",
+        "description": "Baths, feeds, baby chores and rest support while you're home — the daytime stretch you can't do alone.",
+        "bestFor": "Recovering mothers at home, one parent free at night"
+      },
+      {
+        "type": "Full-time",
+        "hours": "10–12 hrs · day shift",
+        "description": "The entire daytime baby routine — feeds, bath, sleep, laundry — while both parents are at work.",
+        "bestFor": "Two working parents, no grandparent support at home"
+      },
+      {
+        "type": "Live-in",
+        "hours": "Stays in your home · structured rest hours",
+        "description": "Nights included: the 2am feed and diaper handled so you sleep in real stretches. Not 24 hours on call.",
+        "bestFor": "First months, C-section recovery, first-time parents"
+      }
+    ],
     "keyResponsibilities": [
       "Gentle newborn bathing and sponge baths using mother-approved baby soaps and warm water at the recommended temperature.",
       "Traditional baby oil massage (as per family customs and pediatrician recommendations) followed by calming swaddling.",
@@ -94,32 +207,72 @@
       "Washing, sterilizing, and organizing baby clothes, cot linens, and feeding accessories separately.",
       "Supporting the recovering mother with restful downtime while keeping careful watch over the sleeping baby."
     ],
-    "localCoverage": "We provide newborn baby care support across Okkiyam Thoraipakkam, OMR, Perungudi, Thiruvanmiyur, Adyar, Velachery, Sholinganallur, Semmancheri, Navalur, Tambaram, and throughout Chennai. Both 24-hour live-in newborn care and 10 to 12-hour day shifts are available.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the arrangement doesn't work out",
+      "You meet or speak with the caretaker before day one",
+      "Night expectations, rest hours and duties written down before she starts"
+    ],
+    "localCoverage": "Newborn care across Okkiyam Thoraipakkam, OMR, Perungudi, Thiruvanmiyur, Adyar, Velachery, Sholinganallur, Semmancheri, Navalur, Tambaram and greater Chennai — both day shifts and live-in arrangements.",
     "disclaimer": "Important Note: Newborn baby care workers provide domestic caregiving and non-medical household assistance. They are not registered medical doctors, NICU nurses, or pediatric specialists, and do not replace professional pediatric medical diagnosis, prescriptions, or clinical treatment.",
+    "unaskedQAs": [
+      {
+        "question": "How early should we start looking?",
+        "answer": "Two to four weeks before your due month. The experienced newborn caretakers get reserved — a March baby and a December baby don't have the same availability."
+      },
+      {
+        "question": "Will she wake us for every feed?",
+        "answer": "Agree the night split before she starts. Live-in caretakers take the scheduled night feeds and diaper changes so you sleep in real stretches; you're woken for what only you can do."
+      },
+      {
+        "question": "My mother-in-law will be here for a month — is that a problem?",
+        "answer": "It usually helps. Tell us in the first message if another senior family member will be present; duties get arranged around who does what."
+      },
+      {
+        "question": "Does she do the mother's massage too?",
+        "answer": "Many do, as an extra agreed between your family and her — with oils you choose. Ask during the introduction; it's never assumed."
+      },
+      {
+        "question": "What if the baby gets a fever at night?",
+        "answer": "She is not a nurse and cannot treat illness — she'll bring it to you immediately and stay up with the baby while you call your pediatrician. Keep your pediatrician's night number saved before day one."
+      },
+      {
+        "question": "Can she handle twins?",
+        "answer": "Say so in the first message. Twin experience is specific — some caretakers have it, many don't, and you'll only see profiles where it's stated."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "Your area, the due month or the baby's age, day shift or live-in, and anything unusual we should know. That's enough to check availability today."
+      }
+    ],
     "faqs": [
       {
         "question": "What is the difference between a newborn care worker and a general babysitter?",
-        "answer": "A newborn care worker specializes in the sensitive requirements of infants from birth to one year old, including careful head-support handling, traditional gentle baby baths, umbilical cord area cleanliness, sterilization of feeding items, and soothing techniques."
+        "answer": "A newborn caretaker specialises in the first year: head-support handling, cord-area care, sterilisation of bottles and pumps, soothing techniques. A general babysitter is for older babies and toddlers — a different skill and different instincts."
       },
       {
         "question": "Can we hire a live-in newborn caretaker for 24 hours?",
-        "answer": "Yes. Many Chennai parents opt for 24-hour live-in infant caretakers so the mother can get essential uninterrupted sleep at night, while the helper assists with nighttime burping, soothing, and diaper changing."
+        "answer": "Yes — live-in arrangements include nights, with structured rest hours for her too. It's not 24 hours of continuous wakefulness; the night duties are split and agreed before she starts."
       },
       {
         "question": "Do the caretakers help with washing baby clothes and bottles?",
-        "answer": "Yes, our newborn caretakers handle baby-related chores including washing baby clothes, baby linens, and washing and sterilizing feeding bottles and pump parts."
+        "answer": "Yes — baby clothes and linens are washed separately, and bottles, pumps and accessories are washed and sterilised after every feed."
       },
       {
         "question": "How do you select your newborn care personnel?",
-        "answer": "We screen for experience in infant care, patience, hygienic personal habits, family background references, and practical knowledge of baby handling before proposing candidates to families."
+        "answer": "Experience with infants, patience under sleepless conditions, hygienic habits and references from previous families are all checked before a profile reaches you. You still meet the person before deciding."
       },
       {
         "question": "Can the caretaker provide traditional baby massage in Chennai style?",
-        "answer": "Yes, many experienced newborn caretakers are familiar with traditional gentle massage for both the baby and the postpartum mother, carried out strictly according to the family's preferred oils and pediatrician advice."
+        "answer": "Yes — most are experienced in the traditional style, using only the oils your family or pediatrician approves. Say your preference during the introduction."
       },
       {
         "question": "How far in advance should we book newborn care in Chennai?",
-        "answer": "We recommend contacting Colours Life Manpower Agency 2 to 4 weeks before your expected delivery date so we can reserve and match a suitable caretaker for your schedule."
+        "answer": "Two to four weeks before the due date. Tell us the month in your first WhatsApp message and we'll check which caretakers are actually free then — not just today."
       }
     ]
   },
@@ -130,23 +283,59 @@
     "navTitle": "Baby Care",
     "shortName": "Baby Care",
     "h1": "Baby Care Services in Chennai",
+    "h1Scope": "— supervision, play and school runs",
     "metaTitle": "Baby Care Services in Chennai | Nannies & Babysitters | Colours Life Manpower Agency",
     "metaDescription": "Reliable baby care and nanny services in Chennai, Thoraipakkam, and OMR. Loving, attentive babysitters for toddlers, developmental playtime, feeding, and daily supervision.",
-    "heroSubtitle": "Safe, cheerful, and reliable child supervision that gives parents complete peace of mind while fostering healthy daily routines.",
+    "eyebrowText": "Baby Care · Toddlers & Young Children · OMR & Chennai",
+    "heroSubtitle": "A caretaker your toddler actually likes — meals eaten, naps taken, no screen spiral — while you're at work or asleep. Message your child's age and your area; you'll hear back today.",
+    "heroFactAreas": "OMR · Perungudi · Sholinganallur",
     "image": "/images/baby-care-service-chennai.jpg",
     "alt": "Friendly Indian baby caretaker playing educational blocks with a toddler child in a Chennai home",
     "badge": "Toddlers & Growing Children",
-    "accentColor": "#f59e0b",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Baby Care.",
+    "accentColor": "#9B6FE6",
+    "whatsappMessage": "Hi, I need a baby care helper in [your area] for a [age]-year-old — [full-day/part-time]. Please share availability and next steps.",
     "shortDescription": "Caring and reliable babysitters for toddlers and young children: engaging playtime, nutritious feeding, school prep, and attentive home supervision.",
-    "intro": "As babies grow into energetic toddlers and young children, their daily needs expand to include constant physical supervision, active playtime, sensory exploration, structured meals, and consistent nap schedules. Colours Life Manpower Agency offers trusted baby care and babysitting services across Okkiyam Thoraipakkam, OMR, Velachery, and Chennai, matching loving, responsible caregivers with families who want safe, affectionate supervision in their own home.",
     "whoIsItFor": [
-      "Working parents whose maternity or paternity leaves have concluded and who need dedicated in-home childcare.",
-      "Families with toddlers (ages 1 to 5) who need watchful supervision to prevent accidental falls, bumps, and household hazards.",
-      "Parents working from home along the OMR tech corridor who require focused work hours without interrupting their child's attention.",
-      "Families seeking help with feeding stubborn eaters, school bus drop-off/pick-up, and engaging screen-free play."
+      "Maternity leave ended last week and the daycare waitlist says three months.",
+      "Your 2-year-old is faster than the furniture, and someone needs to watch him every second.",
+      "You work from home but can't take a call without being climbed on.",
+      "School starts at 8, office at 9:30 — the 3pm pickup needs someone reliable."
     ],
-    "availableWorkers": "Our baby care workers are energetic, patient, and warm-hearted domestic helpers experienced in interacting with children. They communicate clearly, understand child safety rules, and treat children with kindness and respect. They work under the guidance of parents to maintain the family's preferred parenting values, dietary rules, and sleep habits.",
+    "availableWorkers": "The caretakers you'll meet are used to high-energy children: feeding a stubborn eater without a fight, keeping a toddler out of the balcony's reach, walking to the school gate and back. They follow your parenting rules — screen time, sweets, discipline — not their own. Each profile shows their experience with children your child's age.",
+    "scopeIncluded": [
+      "Constant supervision — safe play zones, childproofed rooms, no unattended balconies or staircases",
+      "Patient feeding: meals, fruits, snacks, and water reminders for a child who forgets to drink",
+      "Diaper changes, toilet-training support, handwashing and daily baths",
+      "Real play — blocks, books, rhymes, drawing, walks in the apartment park",
+      "Preschool prep: tiffin packed, uniform ready, school van or bus stop escort",
+      "Nap routines — bed at the same hour, without a battle",
+      "Tidying play areas and washing the child's clothes and dining items"
+    ],
+    "scopeExcluded": [
+      "Discipline, schooling and medical decisions — those stay with the parents",
+      "Homework tutoring beyond simple reading practice, unless agreed",
+      "Driving the family car for school runs — say it upfront if you need this"
+    ],
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "2–4 hrs · morning or evening",
+        "description": "The gap you can't cover: evening meals and play, or the morning rush to school.",
+        "bestFor": "Work-from-home parents, after-school hours"
+      },
+      {
+        "type": "Full-time",
+        "hours": "8–12 hrs · full day",
+        "description": "The whole working day — meals, play, naps, school runs — handled while you're at work.",
+        "bestFor": "Two working parents, no daycare seat"
+      },
+      {
+        "type": "Live-in",
+        "hours": "Stays in your home · structured hours",
+        "description": "Morning-to-bedtime coverage, including night settling if agreed. Rest hours are real, not on-call.",
+        "bestFor": "Infants from 6 months, single-parent homes, night settling support"
+      }
+    ],
     "keyResponsibilities": [
       "Attentive supervision throughout the day to ensure the child plays in a safe, childproofed environment.",
       "Feeding meals, fruits, and snacks patiently without rushing or forcing the child.",
@@ -156,28 +345,68 @@
       "Putting the child to bed for afternoon naps and maintaining predictable sleep routines.",
       "Tidying up play areas, washing the child's clothes, and keeping children's dining items sanitary."
     ],
-    "localCoverage": "Colours Life Manpower Agency provides full-day (8 to 12 hours) and 24-hour live-in baby care throughout Okkiyam Thoraipakkam, Perungudi, Sholinganallur, Karapakkam, OMR, Adyar, Besant Nagar, Velachery, Semmancheri, and South Chennai.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the caretaker isn't right for your child",
+      "Your child meets the caretaker before you decide",
+      "Timings, discipline rules and screen limits agreed before day one"
+    ],
+    "localCoverage": "Baby care across Okkiyam Thoraipakkam, Perungudi, Sholinganallur, Karapakkam, OMR, Adyar, Velachery, Semmancheri and South Chennai — full-day and live-in both common along the corridor.",
     "disclaimer": "Baby care workers provide domestic childcare and supervision within the home. Parents maintain responsibility for overarching discipline, educational curriculum, and medical healthcare decisions.",
+    "unaskedQAs": [
+      {
+        "question": "What age can she start from?",
+        "answer": "From about six months through toddlerhood to early school age. Tell us your child's exact age — the fit for an 8-month-old and a 4-year-old is completely different."
+      },
+      {
+        "question": "Will she just put my child in front of the TV?",
+        "answer": "Screen rules are yours. Write them into the agreement — many families set no screens before nap; caretakers follow the household's rule when it's stated clearly."
+      },
+      {
+        "question": "Can she cook the child's meals?",
+        "answer": "Simple child meals — khichdi, porridge, eggs, fruit purees, milk — yes. Cooking for the whole family is a separate scope; agree the split before she starts."
+      },
+      {
+        "question": "How do I know she won't leave my child alone in the flat?",
+        "answer": "Never leaving a young child unattended is a plain instruction given at placement — near balconies, kitchens, water and stairs. You also get her references, which you're welcome to check."
+      },
+      {
+        "question": "My child is shy with strangers — can she come for a trial visit?",
+        "answer": "Introductions happen before you decide. Bring her once on a weekend afternoon; your child's comfort on that day tells you more than any profile."
+      },
+      {
+        "question": "What about the 3pm school pickup?",
+        "answer": "School van and bus stop escort is part of full-day shifts. Tell us the school, the timing and the route in the first message — that's what determines who's actually available."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "Your child's age, your locality, full-day or part-time, and the school timing if there is one. Add anything unusual — allergies, a grandparent at home — and we'll match accordingly."
+      }
+    ],
     "faqs": [
       {
         "question": "At what age can a baby care helper start looking after my child?",
-        "answer": "Our baby care workers look after infants from 6 months onwards through toddlerhood and early school ages (up to 8 years)."
+        "answer": "From around six months, once the baby can hold their head steadily, through toddlerhood and into the early school years. Profiles specify the ages each caretaker has actually handled."
       },
       {
         "question": "Can the babysitter engage my child in non-screen activities?",
-        "answer": "Yes, our caregivers actively encourage physical play, building blocks, drawing, storytelling, and outdoor garden walks, helping reduce digital screen dependency."
+        "answer": "Yes — blocks, storybooks, rhymes, drawing and outdoor walks. If your house has a no-screen rule, state it on day one and it becomes part of her instructions."
       },
       {
         "question": "How do you ensure child safety?",
-        "answer": "We verify identity documents, check past references, and instruct caregivers to never leave young children unattended near balconies, kitchens, water buckets, or open windows."
+        "answer": "Identity is verified, previous families are called as references, and caretakers are told plainly: never leave a young child alone near balconies, kitchens, water or open windows. You meet her before she starts."
       },
       {
         "question": "Can the caretaker prepare simple meals for the toddler?",
-        "answer": "Yes. In addition to supervising, caretakers can prepare simple child meals such as mashed vegetables, khichdi, porridge, boiled eggs, fruit purees, and milk."
+        "answer": "Yes — khichdi, porridge, boiled eggs, fruit purees, milk and similar child meals. If you need the whole family's cooking too, that's a cooking shift and should be agreed as one."
       },
       {
         "question": "Are live-in child caretakers available in Chennai?",
-        "answer": "Yes, we provide both full-time live-in nannies (who reside in the client's home) and daily 8 to 12-hour day-care helpers."
+        "answer": "Yes — live-in nannies stay in your home with structured rest hours, alongside full-day 8-to-12-hour options. Night expectations are written down before she starts."
       }
     ]
   },
@@ -188,23 +417,59 @@
     "navTitle": "Elderly Care",
     "shortName": "Elderly Care",
     "h1": "Elderly Care Services in Chennai",
+    "h1Scope": "— mobility, medication and company at home",
     "metaTitle": "Elderly Care Services in Chennai | Senior Home Care | Colours Life Manpower Agency",
     "metaDescription": "Compassionate elderly care services in Chennai, Thoraipakkam, and OMR. Dignified senior home assistance, companionship, mobility support, and daily routine care.",
-    "heroSubtitle": "Dignified, respectful, and patient caregiving assistance ensuring the comfort, safety, and happiness of senior citizens in their familiar home surroundings.",
-    "image": "/images/elderly-care-service-chennai.jpg",
+    "eyebrowText": "Elderly Attendant · Day & Live-in · OMR & Chennai",
+    "heroSubtitle": "A patient attendant so your parents keep their routines — their walk, their 8am tablet, their evening newspaper — safely at home. Message your parent's age and mobility level; you'll hear back within the hour.",
+    "heroFactAreas": "Thoraipakkam · OMR · Adyar",
+    "image": "https://res.cloudinary.com/akjmqvws/image/upload/v1791351824/elderly-care.png",
     "alt": "Compassionate Indian elderly care assistant gently supporting a senior South Indian grandfather walking at home in Chennai",
     "badge": "Dignity & Compassion",
-    "accentColor": "#2563eb",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Elderly Care.",
+    "accentColor": "#84A332",
+    "whatsappMessage": "Hi, I need an elderly attendant in [your area] for [my father / my mother, age] — [day shift/live-in]. Please share availability and next steps.",
     "shortDescription": "Respectful and compassionate assistance for senior citizens: mobility support, personal grooming, companionship, meal assistance, and daily medication reminders.",
-    "intro": "Our parents and grandparents spent their lives caring for us, and when age reduces their physical mobility and stamina, they deserve to live comfortably and securely in their own cherished homes. Colours Life Manpower Agency provides respectful, attentive elderly care services in Chennai, Okkiyam Thoraipakkam, OMR, and surrounding areas. Our caregivers offer seniors patient physical support, warm companionship, and dignified assistance with daily life.",
     "whoIsItFor": [
-      "Senior citizens living independently whose adult children reside abroad (NRI families) or in other cities.",
-      "Elderly individuals recovering from hip surgeries, knee replacements, fractures, or general physical weakness.",
-      "Seniors with reduced balance, Parkinson's tremors, early-stage memory forgetfulness, or arthritis who need walking support.",
-      "Families whose working members are at offices during the day and need a reliable caretaker to prevent slip-and-fall accidents."
+      "Your father is 82, walks with a stick, and you're 800km away in Bangalore on weekdays.",
+      "The knee surgery went well, but the three months of recovery at home need someone steady.",
+      "Ma's been quieter since Pa passed — she needs someone present more than she'll admit.",
+      "Both of you work late, and someone needs to make sure the evening medicines aren't skipped."
     ],
-    "availableWorkers": "Our senior care attendants are respectful, mature, and patient individuals trained in understanding the physical and emotional nuances of aging. They understand the critical importance of patience, clear communication in Tamil or English, and respecting the elder's personal space and dignity while staying alert to prevent accidents.",
+    "availableWorkers": "The attendants you'll meet are chosen for patience first — helping someone walk to the bathroom takes fifteen minutes and zero impatience. They speak Tamil and understand everyday English, keep to the medication chart your family sets, and know the line between helping and taking over. You meet them before they start.",
+    "scopeIncluded": [
+      "Walking support — arm held, walker guided, tripping hazards cleared, bathroom escorted",
+      "Personal grooming: seated showers or sponge baths, hair, dressing — dignity preserved",
+      "Warm meals served on time, feeding assistance if hands are unsteady, hydration encouraged",
+      "Medication reminders at the hours your doctor prescribed, with water",
+      "Company — conversation, newspapers, devotional music, evening veranda walks",
+      "Restroom support, commode chair assistance and careful hygiene help",
+      "Accompanying to doctor appointments when asked"
+    ],
+    "scopeExcluded": [
+      "Anything medical — injections, IV, catheters, wound care and diagnosis belong to nurses and doctors",
+      "The family's medical decisions and prescription changes",
+      "Night awake-duty beyond what's agreed — live-in includes night bathroom help, not continuous vigilance"
+    ],
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "2–4 hrs · morning or evening",
+        "description": "Meals, medicines and the evening routine handled in a fixed window.",
+        "bestFor": "Working children, a second attendant alongside family"
+      },
+      {
+        "type": "Full-time",
+        "hours": "8–12 hrs · day shift",
+        "description": "The whole working day at home: meals, walks, grooming, company.",
+        "bestFor": "Seniors living alone during the day"
+      },
+      {
+        "type": "Live-in",
+        "hours": "Stays in your home · structured rest",
+        "description": "Nights included — bathroom walks and reassurance at 3am, with rest hours for her too.",
+        "bestFor": "Post-surgery recovery, limited mobility, children abroad"
+      }
+    ],
     "keyResponsibilities": [
       "Assisting seniors with gentle mobility, walking support, cane or walker coordination, and preventing falls inside the home.",
       "Help with daily personal grooming, gentle sponge baths or seated shower assistance, hair combing, and dressing.",
@@ -214,28 +479,68 @@
       "Assisting with restroom visits, commode chair support, diaper changing if bed-bound, and personal hygiene maintenance.",
       "Accompanying the elder on gentle evening veranda or garden walks and doctor clinic appointments if requested."
     ],
-    "localCoverage": "We deliver elderly care across Okkiyam Thoraipakkam, Nehru Nagar, OMR, Perungudi, Velachery, Adyar, T. Nagar, Sholinganallur, Semmancheri, Medavakkam, and Chennai metropolitan zones.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the attendant and your parent don't click",
+      "Your parents meet the attendant before day one — trust is built in their home",
+      "Duties, night expectations and leave agreed in advance"
+    ],
+    "localCoverage": "Elderly care across Okkiyam Thoraipakkam, Nehru Nagar, OMR, Perungudi, Velachery, Adyar, Sholinganallur, Semmancheri, Medavakkam and Chennai — day shifts and 24-hour live-in both placed regularly.",
     "disclaimer": "Elderly care workers provide non-medical personal assistance, home caregiving, and companionship. They are domestic attendants and do not provide medical nursing treatments, injections, IV administration, catheter insertion, or clinical diagnostics.",
+    "unaskedQAs": [
+      {
+        "question": "My parents are in Chennai, I'm abroad — how does this even work?",
+        "answer": "Everything on WhatsApp: you see profiles, speak to the attendant, and your parents meet her before day one. You keep one number for anything after — no office visit, no local trip needed."
+      },
+      {
+        "question": "Will she help my father to the bathroom at night?",
+        "answer": "Yes, in live-in arrangements. Night bathroom assistance with a steady arm is the single most common reason families choose live-in — it's also the biggest fall risk, so it's written into her duties."
+      },
+      {
+        "question": "What if my mother refuses help from a stranger?",
+        "answer": "Introductions are unhurried — your mother meets her and talks to her before anything is decided. Many families start with a day shift and move to live-in once the comfort is there."
+      },
+      {
+        "question": "Can she take Ma to the hospital for a check-up?",
+        "answer": "Accompanying to clinic appointments is common. For hospital admissions or procedures, the family or a relative accompanies — she's support, not a substitute for kin."
+      },
+      {
+        "question": "How are medicines managed?",
+        "answer": "You give her the chart your doctor set — tablets, hours, with water. She gives reminders at those hours. She does not change doses or decide anything medical."
+      },
+      {
+        "question": "Does she cook for my father too?",
+        "answer": "Only if the shift says so. Attendant duties and kitchen duties are different shifts; some families take both, some have a separate cook. Agree it in the first message."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "Your parent's age, mobility level — walks alone, with a stick, or with support — day or live-in, and any medical equipment at home (walker, commode chair, oxygen). That's enough to check who's free."
+      }
+    ],
     "faqs": [
       {
         "question": "Can the elderly care attendant stay 24 hours with my parents in Chennai?",
-        "answer": "Yes, 24-hour live-in elderly attendants are very popular among families whose children work outside Chennai or abroad. The attendant stays with your parents, assists with nighttime bathroom visits, and provides 24/7 peace of mind."
+        "answer": "Yes — live-in attendants stay in the home with structured rest hours, covering night bathroom walks and reassurance. It's the arrangement most families abroad choose."
       },
       {
         "question": "How do you help seniors who have difficulty walking?",
-        "answer": "Our attendants provide steady physical support, holding the senior's arm, guiding walker or cane movement, removing tripping obstacles, and staying by their side during bathroom visits to prevent falls."
+        "answer": "A steady arm at all times, walker or cane guided properly, floors kept clear of trip hazards, and escort to the bathroom — the highest-risk walk of the day."
       },
       {
         "question": "Can the attendant remind my father to take his blood pressure and diabetes medicines?",
-        "answer": "Yes. Attendants maintain a medication chart provided by the family and provide timely verbal reminders with a glass of water at the exact prescribed hours."
+        "answer": "Yes. She follows the chart your family provides, gives reminders with water at the prescribed hours, and tells you if a dose is missed. She doesn't adjust anything herself."
       },
       {
         "question": "What language do the elderly caregivers speak?",
-        "answer": "Most of our attendants speak fluent Tamil and understand everyday English, ensuring seamless, comforting conversation with South Indian elders."
+        "answer": "Tamil, fluently, and everyday English — so conversation with South Indian parents is comfortable, not translated. Your parents meet her before deciding."
       },
       {
         "question": "How do we get started with elderly care?",
-        "answer": "Contact Colours Life Manpower Agency via WhatsApp (9884555533) or phone. Share your elder's age, mobility level, daily routine, and whether you prefer live-in or day care."
+        "answer": "Message on WhatsApp (9884555533) with your parent's age, mobility level, daily routine and whether you want day care or live-in. You'll hear back within the hour with matching attendants."
       }
     ]
   },
@@ -246,23 +551,59 @@
     "navTitle": "Maid Work / Domestic Help",
     "shortName": "Maid Work",
     "h1": "Maid & Domestic Help Services in Chennai",
+    "h1Scope": "— cleaning, laundry and daily upkeep",
     "metaTitle": "Maid & Domestic Help Services in Chennai & Thoraipakkam | House Cleaning | Colours Life Manpower Agency",
     "metaDescription": "Reliable maid and domestic help services in Okkiyam Thoraipakkam, OMR, and Chennai. Professional sweeping, mopping, dusting, dishwashing, laundry, and home upkeep.",
-    "heroSubtitle": "Thorough, honest, and hardworking household domestic help keeping your home spotless, organized, and running smoothly every single day.",
+    "eyebrowText": "Domestic Help · Part-time & Live-in · OMR & Chennai",
+    "heroSubtitle": "A domestic helper who keeps the flat the way you'd keep it — floors done before the dust settles, vessels never pile up. Message your area and shift; you'll hear back today.",
+    "heroFactAreas": "Thoraipakkam · Sholinganallur · Pallavaram",
     "image": "/images/maid-service-chennai.jpg",
     "alt": "Dedicated Indian domestic helper cleaning and dusting a bright modern apartment in Chennai",
     "badge": "Daily Housekeeping & Live-in Help",
-    "accentColor": "#059669",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Maid / Domestic Help.",
+    "accentColor": "#10B981",
+    "whatsappMessage": "Hi, I need domestic help in [your area] — [part-time/full-time/live-in], around [hours] a day. Please share availability and next steps.",
     "shortDescription": "Complete domestic help for spotless home upkeep: sweeping, mopping, dusting, utensil cleaning, laundry, bathroom maintenance, and household organization.",
-    "intro": "Maintaining a clean, hygienic, and organized home in a bustling coastal city like Chennai requires daily diligence. Dust, humidity, and busy modern lifestyles make dependable domestic help indispensable. Colours Life Manpower Agency connects Chennai households in Okkiyam Thoraipakkam, OMR, Perungudi, Sholinganallur, and nearby areas with hardworking, honest domestic helpers and maids who take pride in keeping your living spaces immaculate.",
     "whoIsItFor": [
-      "Busy households needing daily sweeping, mopping, dusting, and kitchen vessel cleaning.",
-      "Large duplex houses and villas on OMR requiring full-time live-in domestic staff for continuous upkeep.",
-      "Working bachelors, IT professionals, and nuclear families who need quick morning or evening housekeeping shifts.",
-      "Families moving into newly constructed flats or gated communities along the Thoraipakkam-OMR corridor."
+      "You leave at 8 and come back at 8 — the flat looks it by Sunday.",
+      "You've just shifted into a 3BHK on the corridor and the move-in dust is still settling.",
+      "There's a baby in the house now, and the washing alone is a second job.",
+      "Your parents' home needs daily upkeep but they can't do the bending anymore."
     ],
-    "availableWorkers": "Our domestic helpers are industrious, verified in identity, and familiar with both traditional Indian cleaning methods and modern household appliances (washing machines, vacuum cleaners, and dishwashers). They follow household preferences regarding cleaning liquids, brooms, mops, and waste segregation.",
+    "availableWorkers": "The helpers you'll meet work in private homes — sweeping and mopping the way your household does it, using your washing machine properly, handling your vessels with care. They're identity-checked and their previous families are called. You meet them before they start; the first week tells you both plenty.",
+    "scopeIncluded": [
+      "Sweeping and wet mopping of every room, balcony and kitchen floor",
+      "Dusting — furniture, shelves, fans, window sills, the TV unit",
+      "Washing the day's vessels and leaving the sink clear",
+      "Laundry: washing, drying, folding, and ironing where agreed",
+      "Bathroom and WC scrubbing — the part everyone postpones",
+      "Kitchen wipe-down: counters, stove, chimney exterior",
+      "Bins emptied and waste segregated for collection"
+    ],
+    "scopeExcluded": [
+      "Brooms, mops, cleaning liquids and detergents — you provide them in the brands you trust",
+      "Deep cleaning, sofa shampooing and post-renovation work — separate, arranged by discussion",
+      "Electrical, plumbing or any repair work"
+    ],
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "2–4 hrs · morning or evening",
+        "description": "The non-negotiable half: morning freshening or the evening reset.",
+        "bestFor": "Working couples, 1BHK and 2BHK flats"
+      },
+      {
+        "type": "Full-time",
+        "hours": "8–12 hrs · day shift",
+        "description": "Full house upkeep through the day, including laundry cycles and the kitchen clean.",
+        "bestFor": "Families with kids or elders at home"
+      },
+      {
+        "type": "Live-in",
+        "hours": "Stays in your home · structured rest hours",
+        "description": "Continuous household upkeep with a real weekend rhythm — not 24 hours on call.",
+        "bestFor": "Large homes, villas, joint families"
+      }
+    ],
     "keyResponsibilities": [
       "Daily sweeping and wet mopping of all living rooms, bedrooms, balconies, and kitchen floors.",
       "Dusting furniture, TV units, book shelves, window sills, fans, and home decor items.",
@@ -272,28 +613,68 @@
       "Kitchen cleaning support: wiping countertops, gas stoves, chimney hoods, and refrigerator exteriors.",
       "Waste collection and disposal in apartment refuse bins in compliance with local municipal guidelines."
     ],
-    "localCoverage": "We serve Okkiyam Thoraipakkam, Nehru Nagar (Back Side Cognizant), Kandhanchavadi, Perungudi, Thoraipakkam, Sholinganallur, Velachery, Semmancheri, Navalur, Siruseri, Pallavaram, and across Chennai.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the helper isn't right for your home",
+      "You meet the helper before day one",
+      "Timings, days-off and exact duties agreed before she starts"
+    ],
+    "localCoverage": "Maids across Okkiyam Thoraipakkam, Nehru Nagar, Kandhanchavadi, Perungudi, Sholinganallur, Velachery, Semmancheri, Navalur, Siruseri, Pallavaram and greater Chennai — morning shifts before 10am are the most requested on the corridor.",
     "disclaimer": "Domestic helpers carry out routine cleaning, washing, and tidying. Specialized deep restoration, hazardous electrical repairs, or exterior window scaling at heights are not included.",
+    "unaskedQAs": [
+      {
+        "question": "Morning shift or evening — which do most families take?",
+        "answer": "On OMR, morning is the common choice: the house is fresh before the day starts. Evening shifts work when someone's home by 6. Tell us your timing and we'll only show people actually free in that window."
+      },
+      {
+        "question": "Will she use my washing machine and dishwasher?",
+        "answer": "Yes, if she already knows how — and if she doesn't, she'll be shown once on day one. Mention the appliances in the first message; it's a real filter."
+      },
+      {
+        "question": "Do I have to be home the whole time?",
+        "answer": "No. Most families give a key and a list. The identity check, the reference call and the introduction happen first — after that, trust is built by the work."
+      },
+      {
+        "question": "What if something breaks or goes missing?",
+        "answer": "Set the ground rules before she starts — what she may move, what's off-limits. Household boundaries written on day one prevent almost every later disagreement."
+      },
+      {
+        "question": "Can she also chop vegetables for dinner?",
+        "answer": "The common 'all-rounder' scope: cleaning plus evening kitchen prep. If that's what you need, say so — the shift is built around it."
+      },
+      {
+        "question": "What about weekly offs?",
+        "answer": "Weekly off days are agreed between your family and her before she starts — most work six days. Plan the coverage for that day in advance so it doesn't become a scramble."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "Your locality, flat size, morning or evening, and the tasks that matter most. That's enough to check availability today."
+      }
+    ],
     "faqs": [
       {
         "question": "Do you provide part-time morning and evening maids in Thoraipakkam?",
-        "answer": "Yes, we coordinate part-time domestic helpers for morning shifts (e.g. 7 AM to 10 AM) or evening shifts, as well as full-day (8 hours) and 24-hour live-in domestic maids."
+        "answer": "Yes — morning shifts (commonly 7–10am), evening shifts, full-day 8-hour help and live-in maids. Message your timing; you'll hear back within the hour with who's actually free."
       },
       {
         "question": "How do you verify the maids?",
-        "answer": "We verify official government identity documents (Aadhaar card), residential address proof, and contact references before registering domestic workers in our agency database."
+        "answer": "Government Aadhaar identity is verified, residential address is confirmed, and previous employers are called as references before a profile ever reaches you."
       },
       {
         "question": "Can the maid also help with light kitchen chopping?",
-        "answer": "Yes. Many families request an 'all-rounder' maid who assists with both basic household cleaning and preliminary kitchen chores like vegetable peeling, chopping, and dough kneading."
+        "answer": "Yes — vegetable peeling, chopping and dough kneading are common add-ons to a cleaning shift. Agree it in writing at the start so the scope is clear."
       },
       {
         "question": "What if the helper stops coming or takes unscheduled leaves?",
-        "answer": "Colours Life Manpower Agency values consistency. If a helper leaves or demonstrates chronic unreliability, we provide prompt replacement assistance."
+        "answer": "Tell us the same day. Replacement support is available where possible; planned leave with notice is far easier to cover, which is why leave expectations are agreed before the placement."
       },
       {
         "question": "Are cleaning supplies provided by the agency?",
-        "answer": "No, cleaning agents, brooms, mops, soaps, and detergents are provided by the homeowner according to their personal brand preferences."
+        "answer": "No — brooms, mops, detergents and cleaning liquids are provided by you, in the brands you prefer. That way nothing in your home gets used that you wouldn't buy yourself."
       }
     ]
   },
@@ -304,23 +685,60 @@
     "navTitle": "Brahmin Cook",
     "shortName": "Brahmin Cook",
     "h1": "Brahmin Cook Services in Chennai",
+    "h1Scope": "— satvik meals, tiffins and festival cooking",
     "metaTitle": "Brahmin Cook Services in Chennai | Traditional South Indian Vegetarian Cooking | Colours Life Manpower Agency",
     "metaDescription": "Authentic Brahmin cook services in Chennai, Thoraipakkam, and OMR. Traditional pure vegetarian South Indian home meals, satvik cooking, festival feasts, and pooja meal preparation.",
-    "heroSubtitle": "Pure vegetarian, satvik, and authentic South Indian Brahmin culinary traditions prepared with reverence, cleanliness, and culinary mastery in your home.",
-    "image": "/images/brahmin-cook-service-chennai.jpg",
+    "eyebrowText": "Brahmin Cook · Satvik & Festival Cooking · Chennai",
+    "heroSubtitle": "A cook who knows what arachuvitta sambar should taste like — and what a no-onion day actually means. Message your area, Iyer or Iyengar style, and the meals you need; you'll hear back within the hour.",
+    "heroFactAreas": "Mylapore · Adyar · Velachery",
+    "image": "https://res.cloudinary.com/akjmqvws/image/upload/v1791351822/brahmin-cook.png",
     "alt": "Traditional South Indian Brahmin vegetarian meal with brass vessels, sambar, rasam, and traditional curries",
     "badge": "Satvik & Traditional Vegetarian",
-    "accentColor": "#d97706",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Brahmin Cook Service.",
+    "accentColor": "#C98A0F",
+    "whatsappMessage": "Hi, I need a Brahmin cook in [your area] — [daily / festival days], [Iyer / Iyengar style]. Please share availability and next steps.",
     "shortDescription": "Specialized South Indian Brahmin cooks: satvik vegetarian meals, traditional sambar, rasam, kootu, morkuzhambu, festival delicacies, and pooja food.",
-    "intro": "Preserving authentic traditional culinary heritage is deeply important to many South Indian households. Brahmin cooking requires meticulous kitchen cleanliness, knowledge of orthodox culinary principles (such as onion-and-garlic-free satvik preparations on auspicious days), and traditional techniques for roasting and grinding fragrant masalas. Colours Life Manpower Agency helps families across Chennai, Thoraipakkam, OMR, Velachery, Mylapore, and Adyar connect with cooks skilled in South Indian Brahmin-style cuisine.",
     "whoIsItFor": [
-      "Traditional South Indian families who observe pure vegetarian or satvik dietary practices.",
-      "Elderly Brahmin couples seeking a knowledgeable cook who understands orthodox cooking rituals and hygienic discipline.",
-      "Working families wanting traditional home tastes (authentic arachuvitta sambar, mysore rasam, vatha kuzhambu, kootu, and podis) without fast food.",
-      "Households hosting traditional family functions, Sashtiabdapoorthi, Upanyasam gatherings, Navaratri prasadam, or Shraddha occasions."
+      "Your Saturday Navaratri kolam is ready by 6am, but the prasadam isn't.",
+      "Your parents observe no-onion-no-garlic on Ekadashi and the cook from the portal had no idea what that means.",
+      "Sashtiabdapoorthi at home is in three months, and you need someone who's cooked for thirty — properly.",
+      "You want Mylapore-style sambar at home in Velachery, every day, without your aunt having to teach another stranger."
     ],
-    "availableWorkers": "Our Brahmin cooks are seasoned traditional cooks who respect traditional kitchen protocols (Acharam and Madi where observed). They possess deep knowledge of Tamil Brahmin (Iyer and Iyengar) culinary nuances, authentic spice combinations, and festival specialities.",
+    "availableWorkers": "The cooks on this list are traditional cooks — they know Acharam and madi where your family observes it, the difference between Iyer and Iyengar thaligai, and how to roast and grind masala fresh instead of from a packet. You see their experience with your kind of occasions before you speak to them.",
+    "scopeIncluded": [
+      "Traditional breakfast: vadai, idli, ven pongal, upma, dosa, filter coffee, coconut chutney",
+      "Multi-course lunch: steamed rice, arachuvitta or podi sambar, mysore rasam, kootu, poriyal",
+      "Kuzhambu varieties — morkuzhambu, vatha kuzhambu, milagu kuzhambu, thayir pachadi",
+      "Strict satvik days: no onion, no garlic, pure ghee and sesame oil, as your family observes",
+      "Evening tiffins: sevai, adai avial, kozhukattai, sundal, wheat dosai",
+      "Festival cooking: payasam, kesari, mysore pak, thattai, murukku, Navaratri prasadam",
+      "Kitchen cleaned and the cooking space kept pure after every session"
+    ],
+    "scopeExcluded": [
+      "Groceries, traditional spices and grocery runs — you provide them",
+      "Pooja rituals and family procedures — directed by your family, not the cook",
+      "Cooking on your community's restricted days unless explicitly agreed"
+    ],
+    "shiftHeading": "Daily, full-day or festival days — choose the cooking",
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "2–4 hrs · morning or evening",
+        "description": "One tiffin or one lunch in a fixed window — the meal that matters most to you.",
+        "bestFor": "Working couples, elderly couples wanting a fresh tiffin"
+      },
+      {
+        "type": "Full-time",
+        "hours": "8–12 hrs · day shift",
+        "description": "Breakfast, lunch and evening tiffins, with the kitchen restored before she leaves.",
+        "bestFor": "Joint families, homes with daily pooja meals"
+      },
+      {
+        "type": "Festival & occasions",
+        "hours": "By the day · Navaratri, Pongal, poojas, functions",
+        "description": "Scales from daily prasadam to thirty-plate feasts, cooked in your kitchen.",
+        "bestFor": "Festival seasons, Sashtiabdapoorthi, family functions"
+      }
+    ],
     "keyResponsibilities": [
       "Daily preparation of traditional vegetarian breakfast items: vadai, idli, ven pongal, upma, dosa, filter coffee, and fresh coconut chutney.",
       "Crafting multi-course South Indian lunch: piping hot steamed rice, sambar (podi-based and freshly ground arachuvitta), authentic rasam (paruppu rasam, thakkali rasam, jeera-milagu rasam), kootu, and poriyal.",
@@ -330,28 +748,68 @@
       "Traditional festival sweets and savouries including payasam, kesari, mysore pak, thattai, and murukku.",
       "Maintaining high standards of cleanliness in the kitchen, washing vessels thoroughly, and keeping sacred culinary spaces pure."
     ],
-    "localCoverage": "Available across Chennai including Okkiyam Thoraipakkam, OMR, Adyar, Mylapore, Mandaveli, Velachery, Nanganallur, West Mambalam, T. Nagar, Perungudi, and Sholinganallur.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the cook and your family's practice don't align",
+      "You meet the cook before day one",
+      "Your family's Acharam, madi and dietary rules confirmed before they start"
+    ],
+    "localCoverage": "Brahmin cooks across Mylapore, Mandaveli, Adyar, Velachery, Nanganallur, West Mambalam, T. Nagar, Okkiyam Thoraipakkam, Perungudi, Sholinganallur and greater Chennai.",
     "disclaimer": "Our cooks prepare home meals according to the client's dietary choices. Specific religious rituals and custom family procedures are directed by the client household.",
+    "unaskedQAs": [
+      {
+        "question": "Iyer or Iyengar — does it matter?",
+        "answer": "If your family can tell the difference, yes. Say it in the first message — sambar style, thaligai, satrumadhu — and you'll only see cooks who've cooked in that tradition."
+      },
+      {
+        "question": "How is a satvik day handled in a kitchen that normally uses onion?",
+        "answer": "Kitchen discipline matters: separate vessels where your family requires it, no onion or garlic brought near the cooking that day. State your household's exact rule — families differ — and it's written down before day one."
+      },
+      {
+        "question": "Can she come only for festival days?",
+        "answer": "Yes — Navaratri, Pongal, Diwali and pooja days are placed as separate arrangements. Mention the festival dates in your message; festival weeks fill first."
+      },
+      {
+        "question": "Does she grind masala fresh or use store-bought?",
+        "answer": "Fresh grinding is the default for traditional cooks — arachuvitta sambar exists because of it. If your family uses a particular brand of podi, she'll work with that too."
+      },
+      {
+        "question": "Will she cook for a function at home?",
+        "answer": "Small to mid-size home functions are normal — thirty plates, proper quantity, timed to your muhurtham. Tell us the headcount and date early; larger events are agreed separately."
+      },
+      {
+        "question": "What do you provide and what do we?",
+        "answer": "She brings the skill; you provide groceries, spices, vessels and kitchen access. That split is stated before she starts so there's no mid-meal negotiation."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "Your area, Iyer or Iyengar preference if any, daily or occasion-only, and the meals you need. Add your restrictions — no onion, no garlic, no onion on Ekadashi — and we'll match precisely."
+      }
+    ],
     "faqs": [
       {
         "question": "Can the Brahmin cook prepare meals without onion and garlic?",
-        "answer": "Yes, absolutely. Our Brahmin cooks are adept at preparing strictly satvik meals without onion or garlic, adhering to your family's religious calendar and Ekadashi/Amavasya requirements."
+        "answer": "Yes — strictly satvik cooking without onion or garlic, including your Ekadashi and Amavasya observances. Your household's exact rules are confirmed before the cook starts."
       },
       {
         "question": "Do you have cooks familiar with both Iyer and Iyengar cooking traditions?",
-        "answer": "Yes, please mention your preference (e.g. Iyer sambar or Iyengar thaligai / satrumadhu styles) when you contact us, so we can suggest cooks experienced with your community's recipes."
+        "answer": "Yes. Mention your preference — Iyer sambar or Iyengar thaligai, satrumadhu styles — in your first message so you only see cooks experienced in your tradition."
       },
       {
         "question": "Can we hire a Brahmin cook for special pooja or festival days?",
-        "answer": "Yes, we coordinate cooks for daily home service as well as temporary support for festivals such as Navaratri, Pongal, Diwali, and family poojas."
+        "answer": "Yes — daily service and separate festival-day arrangements for Navaratri, Pongal, Diwali and family poojas. Festival dates given early get first pick."
       },
       {
         "question": "What items should we provide for the cook?",
-        "answer": "Clients provide kitchen access, fresh groceries, vegetables, traditional spices, and cookware. The cook handles all culinary prep, cooking, and kitchen cleanup."
+        "answer": "Kitchen access, fresh groceries, vegetables, traditional spices and cookware. She handles all preparation, cooking and the cleanup after."
       },
       {
         "question": "How do I enquire about a Brahmin cook in Chennai?",
-        "answer": "Simply click our 'Book Brahmin Cook' button to send a WhatsApp message to 9884555533, specifying your area and meal preferences."
+        "answer": "Send a WhatsApp message to 9884555533 with your area and meal preferences. You'll hear back within the hour with matching cooks and next steps."
       }
     ]
   },
@@ -362,23 +820,61 @@
     "navTitle": "Patient Care",
     "shortName": "Patient Care",
     "h1": "Patient Care Services in Chennai",
+    "h1Scope": "— bedside help after surgery or illness",
     "metaTitle": "Patient Care Services in Chennai | Post-Operative & Bedside Home Care | Colours Life Manpower Agency",
     "metaDescription": "Reliable patient care services in Chennai, Okkiyam Thoraipakkam, and OMR. Bedside assistance, post-hospitalization home care, mobility support, and daily patient routine aid.",
-    "heroSubtitle": "Supportive, dedicated bedside assistance aiding recovering patients with daily personal routines, mobility, hygiene, and comfortable home rehabilitation.",
-    "image": "/images/patient-care-service-chennai.jpg",
+    "eyebrowText": "Patient Attendant · Day, Night & Live-in · Chennai",
+    "heroSubtitle": "A trained bedside attendant for the weeks after discharge — transfers, baths, medicines on time — so recovery happens at home, not in a corridor. Message the discharge date and condition; you'll hear back within the hour.",
+    "heroFactAreas": "OMR · Tambaram · Medavakkam",
+    "image": "https://res.cloudinary.com/akjmqvws/image/upload/v1791351822/patient-care.png",
     "alt": "Dedicated patient care assistant supporting an adult patient recovering comfortably at home in Chennai",
     "badge": "Bedside & Recovery Support",
-    "accentColor": "#7c3aed",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Patient Care.",
+    "accentColor": "#0D9488",
+    "whatsappMessage": "Hi, I need a patient care attendant in [your area] — [day/night/live-in] from [date]. Please share availability and next steps.",
     "shortDescription": "Dedicated bedside and home assistance for recovering patients: mobility support, personal grooming, feeding help, hygiene management, and routine care.",
-    "intro": "Recovering from surgery, prolonged illness, or severe physical injury requires quiet comfort and attentive physical assistance. While hospitals provide critical acute treatment, healing truly happens at home. Colours Life Manpower Agency provides reliable patient care attendants in Chennai, Okkiyam Thoraipakkam, OMR, and adjoining areas to support recovering individuals with daily living activities, personal hygiene, and comfortable home convalescence.",
     "whoIsItFor": [
-      "Patients recently discharged from Chennai hospitals recovering from orthopedic surgeries (hip, knee, spine).",
-      "Individuals recovering from strokes or temporary paralysis requiring assistance with limb movement and transfers.",
-      "Bed-bound patients needing regular position adjustments to prevent painful pressure sores (bed sores).",
-      "Family members who need physical assistance to safely lift, transfer, and bathe recovering loved ones."
+      "Your uncle came home Tuesday after hip surgery and can't be lifted by one person.",
+      "Discharge is tomorrow and the ward nurse said 'someone at home full-time' — and that someone isn't you.",
+      "Your mother is bed-bound after the stroke and the sores are starting.",
+      "You can do the medications but not the bathing — and not alone."
     ],
-    "availableWorkers": "Our patient care attendants are physically capable, compassionate individuals trained in domestic bedside care. They understand how to assist with transfers from bed to wheelchair, how to perform gentle bed baths, how to handle commode routines with dignity, and how to maintain a calm, hygienic recovery space.",
+    "availableWorkers": "The attendants you'll meet have done post-surgery and bed-bound care in homes: bed-to-wheelchair transfers with proper posture, bed baths with dignity, two-hourly turning to prevent sores. They are domestic caregivers — they do not perform medical procedures, and they'll tell you plainly when something needs a doctor. You meet them before day one.",
+    "scopeIncluded": [
+      "Bed-to-chair and chair-to-bed transfers with safe posture and grips",
+      "Dignified bed baths, hair washing, oral care, skin moisturising",
+      "Commode and bedpan routines, adult diaper changes, thorough hygiene care",
+      "Two-hourly repositioning for bed-bound patients to prevent pressure sores",
+      "Doctor-prescribed diet served, spoon-feeding and fluid intake tracked",
+      "Medication reminders on schedule, with a simple log of food and water",
+      "Clean recovery space: bedsheets changed, bedside table disinfected, within reach",
+      "Reassuring company — and telling the family immediately if anything changes"
+    ],
+    "scopeExcluded": [
+      "IV lines, injections, wound dressing, catheters — nursing work, done by nurses",
+      "Medical decisions, prescriptions and physiotherapy plans — your doctors'",
+      "Hospital paperwork and arranging readmission — the family's task"
+    ],
+    "shiftHeading": "Day, night or live-in — choose the coverage",
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "4–8 hrs · day window",
+        "description": "The stretch you can't cover alone — baths, meals, mobility.",
+        "bestFor": "Families with one caregiver at home"
+      },
+      {
+        "type": "Full-time",
+        "hours": "12 hrs · day or night shift",
+        "description": "A full shift of bedside care — one 12-hour block, family covers the rest.",
+        "bestFor": "Post-operative first weeks"
+      },
+      {
+        "type": "Live-in",
+        "hours": "Stays in your home · structured rest",
+        "description": "Around-the-clock presence: night turns, late meds, 3am reassurance. Rest hours agreed.",
+        "bestFor": "Bed-bound patients, stroke recovery, family out of station"
+      }
+    ],
     "keyResponsibilities": [
       "Assisting patients with gentle bed-to-chair and chair-to-bed transfers using proper posture and safety grips.",
       "Providing dignified bed sponge baths, hair washing, oral hygiene, and skin moisturization.",
@@ -389,28 +885,68 @@
       "Maintaining a clean, sanitized patient environment: changing bedsheets, disinfecting bedside tables, and keeping items within easy reach.",
       "Warm emotional companionship, reassuring communication, and alerting family members immediately of any changes in condition."
     ],
-    "localCoverage": "Available throughout Okkiyam Thoraipakkam, OMR, Perungudi, Adyar, Velachery, Sholinganallur, Tambaram, Medavakkam, Chromepet, and throughout Chennai. 12-hour day/night shifts and 24-hour live-in options are available.",
-    "disclaimer": "CRITICAL MEDICAL NOTICE: Patient care workers provided by Colours Life Manpower Agency provide caregiving, non-clinical bedside support, and daily personal assistance. They DO NOT replace doctors, licensed professional nurses, or emergency medical services. They do not administer IV lines, prescribe medications, or perform medical surgical procedures.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "Residential background verification",
+      "Prior-work references spoken to, where available"
+    ],
+    "riskPolicies": [
+      "Replacement support if the attendant isn't right for the patient's needs",
+      "You meet the attendant before day one — often the patient meets them too",
+      "Shift type, night duties and dietary responsibilities agreed before start"
+    ],
+    "localCoverage": "Patient care across Okkiyam Thoraipakkam, OMR, Perungudi, Adyar, Velachery, Sholinganallur, Tambaram, Medavakkam, Chromepet and greater Chennai — 12-hour day and night shifts and live-in arrangements both placed regularly.",
+    "disclaimer": "CRITICAL MEDICAL NOTICE: Patient care workers provide caregiving, non-clinical bedside support, and daily personal assistance. They DO NOT replace doctors, licensed professional nurses, or emergency medical services. They do not administer IV lines, prescribe medications, or perform medical surgical procedures.",
+    "unaskedQAs": [
+      {
+        "question": "Attendant or nurse — which does my father actually need?",
+        "answer": "If he needs IV, injections or wound dressing, he needs a nurse. If he needs bathing, transfers, medicines reminded and someone through the night, he needs an attendant. Share the discharge summary and we'll say honestly which one the situation calls for."
+      },
+      {
+        "question": "Can she lift my uncle by herself?",
+        "answer": "Transfers are done with technique, not strength — posture, grips, and a transfer walk-through on day one. Where a patient genuinely needs two people, say so; some beds and some conditions need two."
+      },
+      {
+        "question": "Night shift and day shift — can one attendant do both?",
+        "answer": "No, and you shouldn't want that. Nights are a separate 12-hour arrangement or a live-in with rest hours. An exhausted attendant is a fall risk."
+      },
+      {
+        "question": "Will she stay awake all night?",
+        "answer": "In live-in arrangements she sleeps when the patient sleeps and is up for scheduled turns, medication and bathroom needs. Continuous clinical monitoring is a nurse's job, not an attendant's."
+      },
+      {
+        "question": "Male or female attendant for my mother?",
+        "answer": "Say it in the first message. Matching attendant gender to patient gender for personal care is normal and expected — a female patient gets a female attendant unless the family asks otherwise."
+      },
+      {
+        "question": "How soon after discharge can someone start?",
+        "answer": "Same-day or next-day is often possible when you message from the hospital ward with the date, condition and shift needed. The earlier you call, the calmer the first night at home."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "The patient's age, condition, mobility level, the discharge date, and day/night/live-in. If the doctor has left written instructions, a photo of those helps more than any description."
+      }
+    ],
     "faqs": [
       {
         "question": "What is the difference between a patient care attendant and a registered nurse?",
-        "answer": "A patient care attendant assists with non-medical daily living activities such as bathing, diaper changing, feeding, mobility, and bed positioning. A registered nurse performs clinical procedures like IV drips, injections, and surgical wound dressings. Our agency specializes in compassionate daily bedside caregiving attendants."
+        "answer": "An attendant handles non-medical daily living: bathing, feeding, mobility, diapers, positioning. A nurse performs clinical procedures — IV, injections, wound dressing. Placements here are attendants; nursing is arranged separately by the family if needed."
       },
       {
         "question": "Can we hire a 24-hour live-in patient care attendant in Chennai?",
-        "answer": "Yes, 24-hour live-in attendants reside at the patient's home and provide around-the-clock support for continuous monitoring and nighttime bathroom needs."
+        "answer": "Yes — live-in attendants reside at the home with structured rest hours, covering night turns, bathroom needs and medication reminders around the clock."
       },
       {
         "question": "Can the attendant assist a bed-ridden patient?",
-        "answer": "Yes. Our attendants are experienced with bed-bound care, including gentle bed baths, regular repositioning to prevent bed sores, and adult diaper changes."
+        "answer": "Yes — bed baths, two-hourly repositioning to prevent pressure sores, adult diaper care and feeding assistance are all part of bed-bound care."
       },
       {
         "question": "Do you provide female attendants for female patients and male attendants for male patients?",
-        "answer": "Yes, we prioritize matching male attendants for male patients and female attendants for female patients to ensure personal comfort and dignity."
+        "answer": "Yes — gender-matched attendants for personal care are the default. State the preference in your first message and the profiles you see will respect it."
       },
       {
         "question": "How do I request patient care support?",
-        "answer": "Contact Colours Life Manpower Agency on WhatsApp (9884555533) with the patient's age, medical condition, mobility level, and doctor's discharge instructions."
+        "answer": "Message on WhatsApp (9884555533) with the patient's age, condition, mobility level and discharge instructions. You'll hear back within the hour with available attendants."
       }
     ]
   },
@@ -421,23 +957,59 @@
     "navTitle": "Drivers",
     "shortName": "Drivers",
     "h1": "Driver Services in Chennai",
+    "h1Scope": "— commutes, school runs and outstation trips",
     "metaTitle": "Driver Services in Chennai & Thoraipakkam | Personal & Family Drivers | Colours Life Manpower Agency",
     "metaDescription": "Reliable personal and family driver services in Chennai, Okkiyam Thoraipakkam, and OMR. Professional drivers for daily office commutes, school runs, family travel, and errands.",
-    "heroSubtitle": "Safe, punctual, and reliable personal drivers navigating Chennai's traffic with calm composure, safety, and utmost respect for your family.",
-    "image": "/images/driver-service-chennai.jpg",
+    "eyebrowText": "Personal Driver · Daily, Full-time & Outstation · Chennai",
+    "heroSubtitle": "A licence-verified driver who knows the OMR-to-Guindy cut at 8:30 and gets your children to school calm. Message your route and hours; you'll hear back within the hour.",
+    "heroFactAreas": "OMR · Guindy · Pallavaram",
+    "image": "https://res.cloudinary.com/akjmqvws/image/upload/v1791351822/driver.png",
     "alt": "Professional personal driver standing beside a clean modern family car in Chennai",
     "badge": "Personal & Household Drivers",
-    "accentColor": "#0284c7",
-    "whatsappMessage": "Hello Colours Life Manpower Agency, I would like to book/enquire about Driver Service.",
+    "accentColor": "#2F6FC4",
+    "whatsappMessage": "Hi, I need a driver in [your area] — [daily office run / full-time / outstation]. Please share availability and next steps.",
     "shortDescription": "Dependable personal and family drivers: daily office commutes, school drops, elderly transport, weekend errands, and outstation trips.",
-    "intro": "Navigating Chennai's bustling roads, peak-hour OMR tech corridor traffic, and congested metropolitan intersections can be exhausting. Having a dedicated, calm, and punctual personal driver transforms daily travel from a stressful chore into relaxing, productive time. Colours Life Manpower Agency helps families and professionals in Okkiyam Thoraipakkam, OMR, Perungudi, Velachery, and Chennai hire trustworthy personal and family drivers.",
     "whoIsItFor": [
-      "Corporate executives, entrepreneurs, and IT professionals commuting along OMR, GST Road, and central business districts who want to work or rest during transit.",
-      "Families needing safe, dependable morning and afternoon transportation for school and tuition pick-ups and drop-offs.",
-      "Elderly family members who do not drive and require safe transit to hospitals, temples, banks, and social visits.",
-      "Households seeking a full-time family chauffeur for daily city travel, shopping errands, and weekend outstation trips."
+      "Your 8:20 drop and 9:30 stand-up can't both be driven by you.",
+      "The GST Road crawl is where your phone calls die — you want that hour back.",
+      "Your father shouldn't drive to T. Nagar anymore, but he still needs to get there.",
+      "Weekend Mahabalipuram trips with the family, driver included, sorted in advance."
     ],
-    "availableWorkers": "Our drivers are polite, punctual individuals familiar with Chennai's arterial roads, bypasses, OMR IT parks, and residential layouts. They operate both manual and automatic transmission personal cars (hatchbacks, sedans, SUVs, and luxury vehicles) with careful road sense.",
+    "availableWorkers": "The drivers you'll meet are licence-verified Chennai drivers — manual and automatic, hatchback to SUV — who know the arterial roads, the bypasses and the shortcuts Google doesn't. Polite with your family, careful with your car, punctual to the minute. You meet them before they drive your first trip.",
+    "scopeIncluded": [
+      "Punctual daily reporting for office commutes and family travel",
+      "School runs — children delivered safely, speed limits respected, no phone behind the wheel",
+      "Basic vehicle checks: engine oil, coolant, tyre pressure, interiors kept clean",
+      "Daily dusting and wiping so the car is comfortable when you get in",
+      "Household errands — parcels, groceries, the trip to the service centre",
+      "GPS-route planning that avoids the worst of Chennai's traffic"
+    ],
+    "scopeExcluded": [
+      "Fuel, tolls and parking — paid by the vehicle owner",
+      "Insurance, papers and legal responsibility for the vehicle — stay with you",
+      "Driving duties outside the agreed shift hours without prior arrangement"
+    ],
+    "shiftHeading": "Daily runs, full-time or outstation — choose the driving",
+    "shiftOptions": [
+      {
+        "type": "Part-time",
+        "hours": "2–4 hrs · fixed runs",
+        "description": "One or two routes a day — school drop, office drop, the evening return.",
+        "bestFor": "Schools on a route, single office commute"
+      },
+      {
+        "type": "Full-time",
+        "hours": "8–10 hrs · daily, typically 6 days",
+        "description": "The full day: office, errands, school pickups, evening family travel.",
+        "bestFor": "Families with multiple daily trips"
+      },
+      {
+        "type": "Outstation & travel",
+        "hours": "By the day · trips and functions",
+        "description": "Highway days and multi-day travel, with allowances agreed before the trip.",
+        "bestFor": "Family trips, temple tours, weekend getaways"
+      }
+    ],
     "keyResponsibilities": [
       "Punctual morning reporting and safe daily driving for office commutes and family travel.",
       "Safe school transportation for children, adhering strictly to speed limits and school safety guidelines.",
@@ -446,28 +1018,68 @@
       "Running household errands such as picking up groceries, delivering packages, and taking the vehicle for routine servicing.",
       "Familiarity with GPS navigation tools (Google Maps) to choose efficient, traffic-free routes across Chennai."
     ],
-    "localCoverage": "We serve Okkiyam Thoraipakkam, OMR, Perungudi, Sholinganallur, Karapakkam, Velachery, Adyar, Semmancheri, Navalur, Siruseri, Pallavaram, Guindy, and all of Chennai.",
+    "verificationFacts": [
+      "Aadhaar government identity check",
+      "LMV driving licence verified",
+      "Residential background verification"
+    ],
+    "riskPolicies": [
+      "Replacement support if the driver and your family don't click",
+      "You meet the driver before he drives your car",
+      "Shift hours, routes and outstation terms agreed before day one"
+    ],
+    "localCoverage": "Drivers across Okkiyam Thoraipakkam, OMR, Perungudi, Sholinganallur, Karapakkam, Velachery, Adyar, Semmancheri, Navalur, Siruseri, Pallavaram, Guindy and all of Chennai.",
     "disclaimer": "Drivers operate the client's privately owned vehicles. Vehicle insurance, fuel, toll charges, and vehicle roadworthiness remain the legal responsibility of the vehicle owner.",
+    "unaskedQAs": [
+      {
+        "question": "Manual or automatic — does it matter?",
+        "answer": "Yes, say it in the first message. A driver who's only driven hatchbacks shouldn't start with your SUV on a Saturday morning. The car's make and transmission go into the match."
+      },
+      {
+        "question": "Will he drive my wife and children?",
+        "answer": "That's the most common use. Polite conduct with family — especially women and children — is checked in references, and you meet him before he ever does the school run."
+      },
+      {
+        "question": "Does he wash the car?",
+        "answer": "Daily dusting and interior tidying are standard. A full wash is usually an evening routine agreed between you and him — say it if you want it included."
+      },
+      {
+        "question": "What if he's late one morning?",
+        "answer": "Shift hours and reporting time are agreed on day one. Chronic lateness is a replacement matter; a single bad OMR morning is a Chennai matter — you'll have his number to call ahead."
+      },
+      {
+        "question": "Outstation trips — how do allowances work?",
+        "answer": "Travel and food allowances for trips are agreed between your family and the driver before the trip, not after. Terms set in advance are the reason outstation drives stay easy."
+      },
+      {
+        "question": "Can he take the car for servicing?",
+        "answer": "Yes — dropping and collecting the car from the service centre is a common errand. Insurance and repair decisions remain yours; the logistics are his."
+      },
+      {
+        "question": "What do you need from us in the first message?",
+        "answer": "Your locality, the car's make and transmission, daily route or full-time, and the hours. For outstation, the destination and duration. That's enough to check who's free."
+      }
+    ],
     "faqs": [
       {
         "question": "Can I hire a monthly personal driver in Chennai?",
-        "answer": "Yes, we specialize in monthly full-time personal and family drivers (typically 8 to 10-hour daily shifts, 6 days a week)."
+        "answer": "Yes — full-time personal and family drivers, typically 8 to 10-hour daily shifts, are placed monthly. Message your route and timing; you'll hear back within the hour."
       },
       {
         "question": "Can the driver handle automatic luxury cars and SUVs?",
-        "answer": "Yes, our drivers are experienced with both manual and automatic transmissions across various car brands and vehicle sizes."
+        "answer": "Yes, manual and automatic across hatchbacks, sedans, SUVs and luxury vehicles. State your car's make and transmission in the first message so the match fits."
       },
       {
         "question": "Does the driver also wash the car?",
-        "answer": "Yes, daily exterior dusting and cleaning, as well as interior tidying, are standard parts of the driver's responsibilities."
+        "answer": "Daily dusting, wiping and interior tidying are standard. Full washing is an evening routine agreed directly with the driver."
       },
       {
         "question": "What documents do you verify for drivers?",
-        "answer": "We verify the driver's driving license (LMV), government identity proof (Aadhaar card), and residential background references."
+        "answer": "LMV driving licence, Aadhaar government identity, and residential background references — checked before a profile reaches you. You meet the driver before he drives."
       },
       {
         "question": "Can the driver go on occasional outstation trips outside Chennai?",
-        "answer": "Yes, with prior agreement and suitable travel/food allowances, drivers can accompany families on outstation trips across Tamil Nadu."
+        "answer": "Yes, with prior agreement and travel and food allowances settled before the trip. Weekend trips across Tamil Nadu are common."
       }
     ]
   }
