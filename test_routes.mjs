@@ -1,4 +1,8 @@
 import http from 'http';
+import fs from 'fs';
+
+const agency = JSON.parse(fs.readFileSync(new URL('./data/agency.json', import.meta.url), 'utf8'));
+const waDigits = String(agency.whatsappNumber ?? '').replace(/\D/g, '').replace(/^(\d{10})$/, '91$1');
 
 const routes = [
   '/',
@@ -51,7 +55,7 @@ async function runTests() {
         let h1Text = h1Match ? h1Match[1].replace(/<[^>]+>/g, '').trim() : 'N/A';
         
         // Check for WhatsApp links
-        let waCount = (res.data.match(/wa\.me\/919884555533/g) || []).length;
+        let waCount = (res.data.match(new RegExp(`wa\\.me\\/${waDigits}`, 'g')) || []).length;
         
         // Check for Schema
         let hasSchema = res.data.includes('application/ld+json');

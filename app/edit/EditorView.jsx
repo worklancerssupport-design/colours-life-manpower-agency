@@ -458,7 +458,7 @@ function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys }) {
   const updateChild = (index) => (updater) => {
     onChange((draft) => {
       const node = path.reduce((n, k) => (n == null ? n : n[k]), draft);
-      if (Array.isArray(node) && isPlainObject(node[index])) updater(node[index]);
+      if (Array.isArray(node) && isPlainObject(node[index])) updater(draft);
     });
   };
 
