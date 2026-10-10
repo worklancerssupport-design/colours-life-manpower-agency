@@ -10,11 +10,11 @@ export default function NotFound() {
       justifyContent: 'center',
       padding: '48px 24px',
       fontFamily: 'system-ui, -apple-system, sans-serif',
-      color: '#0B2A26',
+      color: 'var(--ink-on-light)',
       textAlign: 'center',
     }}>
       <h1 style={{ fontSize: '2rem', margin: '0 0 12px' }}>Page not found.</h1>
-      <p style={{ fontSize: '1rem', margin: '0 0 24px', maxWidth: '52ch', color: '#1A4A42' }}>
+      <p style={{ fontSize: '1rem', margin: '0 0 24px', maxWidth: '52ch', color: 'var(--ink-on-light-muted)' }}>
         The page you are looking for has moved or does not exist. Head back to the home page to find what you need.
       </p>
       <Link
@@ -22,8 +22,8 @@ export default function NotFound() {
         style={{
           padding: '12px 22px',
           borderRadius: '999px',
-          background: '#CCF26A',
-          color: '#0B2A26',
+          background: 'var(--blue-500)',
+          color: 'var(--ink-900)',
           fontSize: '0.95rem',
           fontWeight: 700,
           textDecoration: 'none',

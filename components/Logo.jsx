@@ -23,7 +23,7 @@ export default function Logo({ variant = 'default' }) {
             d="M12 6.5 L16.6 10.4 C16.6 13.6 14.8 16.6 12 18 C9.2 16.6 7.4 13.6 7.4 10.4 Z"
             fill="currentColor"
           />
-          <circle cx="12" cy="11.5" r="2.2" fill="#0B2A26" />
+          <circle cx="12" cy="11.5" r="2.2" fill="var(--ink-900)" />
         </svg>
       </span>
       <span className="brand-wordmark">

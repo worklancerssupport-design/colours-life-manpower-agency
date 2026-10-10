@@ -27,7 +27,7 @@ export default function FAQPage() {
   ];
 
   return (
-    <div className="svc-page faq-page" style={{ '--svc-accent': 'var(--lime-500)' }}>
+    <div className="svc-page faq-page" style={{ '--svc-accent': 'var(--blue-500)' }}>
       <BreadcrumbSchema items={breadcrumbs} />
       <FAQSchema faqs={faqs} />
 

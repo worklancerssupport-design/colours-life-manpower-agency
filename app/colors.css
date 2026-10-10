@@ -1,0 +1,67 @@
+/* =============================================================================
+   BRAND COLORS — SINGLE SOURCE OF TRUTH
+   -----------------------------------------------------------------------------
+   Every brand colour used anywhere in the app is defined HERE.
+   To re-skin the site, change values in this file only.
+
+   Current palette: NAVY + ELECTRIC BLUE
+     ink-*   → deep navy family (page chrome, text on light, dark sections)
+     blue-*  → electric blue accent (CTAs, focus, glow, accent button)
+     paper-* → warm off-white page background
+     sage-*  → pale blue-grey tertiary surface blocks
+     line-*  → dividers/borders derived from ink
+     on-*    → text colours on dark vs light surfaces
+     shadow  → drop shadows tinted with the new ink colour
+
+   Do not hardcode hex values in components or pages. Use these tokens.
+   If a new use case needs a colour, ADD A TOKEN HERE.
+   ============================================================================= */
+
+:root {
+  /* ---- Ink family: deep navy ---- */
+  --ink-900: #08152E;  /* deepest navy (page text, dark backgrounds) */
+  --ink-800: #0E2244;
+  --ink-700: #142D58;
+  --ink-600: #1B3A6E;
+  /* RGB triplet for shadows / alpha: rgba(var(--ink-rgb), 0.10) */
+  --ink-rgb: 8, 21, 46;
+
+  /* ---- Paper / surface ---- */
+  --paper-50:  #F4EFE6;  /* warm parchment (page bg) */
+  --paper-100: #FAF5EC;  /* raised surface */
+  --paper-200: #FFFFFF;  /* pure white card */
+
+  /* ---- Pale blue-grey tertiary surfaces (replaces old sage green) ---- */
+  --sage-50:  #E7EDF8;
+  --sage-100: #DDE5F4;
+
+  /* ---- Blue accent family: electric blue ---- */
+  --blue-500: #a1cbe3;  /* primary accent — CTAs, focus, links */
+  --blue-400: #a1cbe3;  /* hover / lighter glow */
+  --blue-600: #2563EB;  /* pressed / darker */
+  /* RGB triplet for use with alpha: rgba(var(--blue-rgb), 0.32) */
+  --blue-rgb: 59, 130, 246;
+
+  /* ---- Text on dark surfaces (white) ---- */
+  --ink-on-dark:        #FFFFFF;
+  --ink-on-dark-muted:  rgba(255, 255, 255, 0.62);
+  --ink-on-dark-subtle: rgba(255, 255, 255, 0.42);
+
+  /* ---- Text on light surfaces (navy) ---- */
+  --ink-on-light:        #08152E;
+  --ink-on-light-muted:  rgba(8, 21, 46, 0.66);
+  --ink-on-light-subtle: rgba(8, 21, 46, 0.40);
+
+  /* ---- Dividers / borders ---- */
+  --line-dark:        rgba(255, 255, 255, 0.10);
+  --line-dark-strong: rgba(255, 255, 255, 0.18);
+  --line-light:        rgba(8, 21, 46, 0.10);
+  --line-light-strong: rgba(8, 21, 46, 0.18);
+
+  /* ---- Shadows (tinted with the new ink) ---- */
+  --shadow-sm:      0 2px 8px rgba(var(--ink-rgb), 0.06);
+  --shadow-md:      0 12px 32px rgba(var(--ink-rgb), 0.10);
+  --shadow-lg:      0 24px 56px rgba(var(--ink-rgb), 0.16);
+  --shadow-xl:      0 40px 80px rgba(var(--ink-rgb), 0.22);
+  --shadow-on-dark: 0 24px 56px rgba(0, 0, 0, 0.32);
+}

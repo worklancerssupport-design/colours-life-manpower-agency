@@ -10,11 +10,11 @@ export default function Error({ error, reset }) {
       justifyContent: 'center',
       padding: '48px 24px',
       fontFamily: 'system-ui, -apple-system, sans-serif',
-      color: '#0B2A26',
+      color: 'var(--ink-on-light)',
       textAlign: 'center',
     }}>
       <h1 style={{ fontSize: '1.75rem', margin: '0 0 12px' }}>Something went wrong loading this page.</h1>
-      <p style={{ fontSize: '1rem', margin: '0 0 24px', maxWidth: '52ch', color: '#1A4A42' }}>
+      <p style={{ fontSize: '1rem', margin: '0 0 24px', maxWidth: '52ch', color: 'var(--ink-on-light-muted)' }}>
         A momentary resource failed to fetch. Reload to try again, or message us on WhatsApp for direct help.
       </p>
       <button
@@ -23,8 +23,8 @@ export default function Error({ error, reset }) {
           padding: '12px 22px',
           borderRadius: '999px',
           border: 'none',
-          background: '#CCF26A',
-          color: '#0B2A26',
+          background: 'var(--blue-500)',
+          color: 'var(--ink-900)',
           fontSize: '0.95rem',
           fontWeight: 700,
           cursor: 'pointer',

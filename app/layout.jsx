@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#0F3936" />
+        <meta name="theme-color" content="#08152E" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <LocalBusinessSchema />
       </head>

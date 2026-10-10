@@ -63,7 +63,7 @@ export default function ToughestCases() {
           alignItems: 'center',
           justifyContent: 'space-between',
         }}>
-          <div style={{ display: 'flex', gap: 4, color: 'var(--lime-600)' }} aria-label="5 stars">
+          <div style={{ display: 'flex', gap: 4, color: 'var(--blue-600)' }} aria-label="5 stars">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={18} />
             ))}

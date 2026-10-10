@@ -43,7 +43,7 @@ export default function ReviewsPage() {
   const [lead, ...rest] = reviewsData;
 
   return (
-    <div className="svc-page reviews-page" style={{ '--svc-accent': 'var(--lime-500)' }}>
+    <div className="svc-page reviews-page" style={{ '--svc-accent': 'var(--blue-500)' }}>
       <BreadcrumbSchema items={breadcrumbs} />
 
       {/* 1. Hero — value first, image fills the right half */}
