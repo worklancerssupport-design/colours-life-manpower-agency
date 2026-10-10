@@ -5,7 +5,7 @@ import Link from 'next/link';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl } from '@/lib/utils';
 import { getAllServices } from '@/lib/services';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 const whatsappUrl = getWhatsAppUrl(agencyInfo.defaultWhatsAppMessage);
 
@@ -58,9 +58,12 @@ export default function Hero() {
       <div className="logo-strip">
         <div className="container">
           <div className="logo-strip-row" aria-label="Services offered">
-            {getAllServices().map((svc) => (
-              <Link key={svc.id} href={svc.path}>{svc.tabLabel}</Link>
-            ))}
+              {getAllServices().map((svc) => (
+                <Link key={svc.id} href={svc.path} className="logo-strip-chip">
+                  <span className="logo-strip-chip-label">{svc.tabLabel}</span>
+                  <ArrowUpRight size={14} className="logo-strip-chip-arrow" aria-hidden="true" />
+                </Link>
+              ))}
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ export default function HomePage() {
       <HowItWorks />
       <AboutSection />
       <ToughestCases />
-      <ReviewSection limit={6} />
+      <ReviewSection limit={3} seeMoreHref="/reviews" />
       <FAQSection
         faqs={faqs}
         title="Questions? We have answers."

@@ -2,9 +2,9 @@ import Link from 'next/link';
 import SmartImage from '@/components/SmartImage';
 import { getAllServices, getServiceListText } from '@/lib/services';
 import agencyInfo from '@/data/agency.json';
-import { getWhatsAppUrl } from '@/lib/utils';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
+import EnquireWhatsAppButton from '@/components/EnquireWhatsAppButton';
 import { Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
@@ -75,14 +75,13 @@ export default function ServicesIndexPage() {
                     <Link href={svc.path} className="bento-explore-link">
                       View Service Details <ArrowRight size={15} />
                     </Link>
-                    <a
-                      href={getWhatsAppUrl(svc.whatsappMessage)}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <EnquireWhatsAppButton
+                      template={svc.whatsappMessage}
                       className="bento-whatsapp-btn"
+                      title={`Book ${svc.navTitle} via WhatsApp`}
                     >
-                      <MessageCircle size={15} /> Book
-                    </a>
+                      Book
+                    </EnquireWhatsAppButton>
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
 import { getAllServiceSlugs } from '@/lib/services';
 import { getServiceBySlug } from '@/lib/services-detail';
-import { getWhatsAppUrl, fillPlaceholders } from '@/lib/utils';
+import { fillPlaceholders } from '@/lib/utils';
 import agencyInfo from '@/data/agency.json';
 import pagesData from '@/data/pages.json';
 import OtherServices from '@/components/OtherServices';
@@ -11,6 +11,7 @@ import FAQSection from '@/components/FAQSection';
 import FAQSchema from '@/components/FAQSchema';
 import BreadcrumbSchema from '@/components/BreadcrumbSchema';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
+import EnquireWhatsAppButton from '@/components/EnquireWhatsAppButton';
 import ScopeSplit from '@/components/ScopeSplit';
 import ShiftCards from '@/components/ShiftCards';
 import BeforeYouDecide from '@/components/BeforeYouDecide';
@@ -74,7 +75,6 @@ export default async function ServicePage({ params }) {
     notFound();
   }
 
-  const whatsappUrl = getWhatsAppUrl(service.whatsappMessage);
   const ctaNoun = service.ctaNoun;
   const idCheckFact = service.slug === 'drivers' ? agencyInfo.claims.idCheckDrivers : agencyInfo.claims.idCheck;
 
@@ -123,14 +123,12 @@ export default async function ServicePage({ params }) {
           </div>
 
           <div className="hero-button-group">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <EnquireWhatsAppButton
+              template={service.whatsappMessage}
               className="whatsapp-btn-large"
             >
-              <MessageCircle size={20} /> Enquire on WhatsApp
-            </a>
+              Enquire on WhatsApp
+            </EnquireWhatsAppButton>
 
             <a
               href={`tel:${agencyInfo.phone1}`}

@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import reviewsData from '@/data/reviews.json';
 import agencyInfo from '@/data/agency.json';
 import { getServiceByReviewName } from '@/lib/services';
-import { Star } from 'lucide-react';
+import { Star, ArrowUpRight } from 'lucide-react';
 
 const palette = [
   { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
@@ -15,7 +16,7 @@ const palette = [
   { tag: 'rgba(204, 242, 106, 0.18)', tagColor: '#3F6212' },
 ];
 
-export default function ReviewSection({ limit = 6 }) {
+export default function ReviewSection({ limit = 6, seeMoreHref }) {
   const reviews = (reviewsData || []).slice(0, limit);
   if (reviews.length === 0) return null;
 
@@ -70,6 +71,14 @@ export default function ReviewSection({ limit = 6 }) {
             );
           })}
         </div>
+        {seeMoreHref && (
+          <div className="review-section-more-wrap">
+            <Link href={seeMoreHref} className="review-section-more">
+              See more reviews
+              <ArrowUpRight size={16} className="review-section-more-arrow" aria-hidden="true" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

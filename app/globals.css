@@ -530,26 +530,49 @@ button {
   border-top: 1px solid var(--line-dark);
 }
 .logo-strip-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
 }
-.logo-strip-row > * {
-  flex: 1 1 0;
-  min-width: 110px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.42);
+@media (max-width: 767px) {
+  .logo-strip-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.logo-strip-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
-  transition: color 0.18s var(--ease-snap);
-  filter: grayscale(1);
-  opacity: 0.7;
+  background-color: transparent;
+  transition: border-color 0.2s var(--ease-snap), color 0.2s var(--ease-snap),
+    background-color 0.2s var(--ease-snap);
 }
-.logo-strip-row > *:hover { color: rgba(255, 255, 255, 0.85); opacity: 1; }
+.logo-strip-chip-label { min-width: 0; }
+.logo-strip-chip:hover {
+  border-color: rgba(255, 255, 255, 0.48);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.logo-strip-chip:focus-visible {
+  outline: 2px solid var(--lime-500);
+  outline-offset: 2px;
+}
+.logo-strip-chip-arrow {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.70);
+  transition: color 0.2s var(--ease-snap);
+}
+.logo-strip-chip:hover .logo-strip-chip-arrow {
+  color: var(--lime-400);
+}
 
 /* ============================================================
    ABOUT BAND — light paper
@@ -645,13 +668,7 @@ button {
   }
 }
 
-.about-image-stack {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 18px;
-  align-items: stretch;
-}
-.about-image-primary {
+.about-image {
   position: relative;
   border-radius: var(--r-lg);
   overflow: hidden;
@@ -659,40 +676,11 @@ button {
   background: var(--ink-700);
   box-shadow: var(--shadow-md);
 }
-.about-image-secondary {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.about-image-secondary-img {
-  position: relative;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--ink-700);
-}
-.about-experience-card {
-  background: var(--ink-800);
-  color: var(--ink-on-dark);
-  border-radius: var(--r-lg);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: var(--shadow-md);
-}
-.about-experience-num {
-  font-family: var(--font-display);
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--lime-400);
-  line-height: 1;
-}
-.about-experience-label {
-  margin-top: 8px;
-  font-size: 0.92rem;
-  color: var(--ink-on-dark-muted);
+@media (min-width: 992px) {
+  .about-image {
+    aspect-ratio: auto;
+    height: 100%;
+  }
 }
 
 .about-lead {
@@ -1302,6 +1290,36 @@ button {
 }
 .testimonial-card-name { font-weight: 700; font-size: 0.92rem; }
 .testimonial-card-loc { color: var(--ink-on-light-muted); font-size: 0.78rem; }
+
+.review-section-more-wrap {
+  text-align: center;
+  margin-top: 44px;
+}
+.review-section-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 6px;
+  color: var(--ink-on-light);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-light-strong);
+  transition: gap 0.22s var(--ease-out), color 0.22s var(--ease-out),
+    border-color 0.22s var(--ease-out);
+}
+.review-section-more:hover {
+  gap: 14px;
+  color: var(--ink-700);
+  border-bottom-color: var(--ink-700);
+}
+.review-section-more:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 /* ============================================================
    DARK HELPERS BAND — "Helpers At Your Doorstep, Trust Included."
@@ -4088,4 +4106,168 @@ a.about-contact-row:hover strong { color: var(--ink-700); }
 /* ----- Edit console link in error / success messages ----- */
 .edit-error .edit-btn-secondary {
   margin-top: 6px;
+}
+
+/* ----- Enquire on WhatsApp modal (placeholder prefill) ----- */
+.enquire-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8, 18, 16, 0.62);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: enquire-fade 0.18s ease-out;
+}
+@keyframes enquire-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.enquire-modal {
+  position: relative;
+  background: var(--ink-on-dark, #fff);
+  color: var(--ink-900, #0d1612);
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--r-lg, 16px);
+  padding: 28px 28px 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  animation: enquire-pop 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes enquire-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.enquire-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid var(--line, #e6e6e6);
+  background: transparent;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.enquire-close:hover {
+  background: var(--ink-100, #f3f3f3);
+  border-color: var(--ink-300, #cfcfcf);
+}
+.enquire-close:focus-visible {
+  outline: 2px solid var(--lime-500, #c5e84a);
+  outline-offset: 2px;
+}
+.enquire-header {
+  margin-bottom: 18px;
+  padding-right: 36px;
+}
+.enquire-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-600, #5a6863);
+  margin-bottom: 6px;
+}
+.enquire-title {
+  font-family: var(--font-display, serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  color: var(--ink-900, #0d1612);
+}
+.enquire-sub {
+  font-size: 0.92rem;
+  color: var(--ink-600, #5a6863);
+  margin: 0;
+}
+.enquire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.enquire-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.enquire-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-800, #1c2a25);
+}
+.enquire-input {
+  font: inherit;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line, #d8d8d8);
+  background: #fff;
+  color: var(--ink-900, #0d1612);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.enquire-input:focus {
+  outline: none;
+  border-color: var(--lime-500, #c5e84a);
+  box-shadow: 0 0 0 3px rgba(197, 232, 74, 0.25);
+}
+.enquire-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.enquire-cancel {
+  font: inherit;
+  padding: 10px 18px;
+  border-radius: var(--r-pill, 999px);
+  border: 1px solid var(--line, #d8d8d8);
+  background: transparent;
+  color: var(--ink-800, #1c2a25);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.enquire-cancel:hover {
+  background: var(--ink-100, #f3f3f3);
+}
+.enquire-submit {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--r-pill, 999px);
+  border: none;
+  background: var(--lime-500, #c5e84a);
+  color: var(--ink-900, #0d1612);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+.enquire-submit:hover {
+  background: var(--lime-400, #d4f062);
+}
+.enquire-submit:active {
+  transform: translateY(1px);
+}
+@media (max-width: 480px) {
+  .enquire-modal {
+    padding: 22px 20px 20px;
+  }
+  .enquire-title {
+    font-size: 1.3rem;
+  }
 }

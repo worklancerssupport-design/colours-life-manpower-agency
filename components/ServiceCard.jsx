@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import SmartImage from '@/components/SmartImage';
-import { getWhatsAppUrl } from '@/lib/utils';
-import { MessageCircle, ArrowRight } from 'lucide-react';
+import EnquireWhatsAppButton from '@/components/EnquireWhatsAppButton';
+import { ArrowRight } from 'lucide-react';
 
 export default function ServiceCard({ service }) {
-  const whatsappUrl = getWhatsAppUrl(service.whatsappMessage);
-
   return (
     <div className="service-card">
       <div className="service-card-media">
@@ -35,15 +33,13 @@ export default function ServiceCard({ service }) {
           >
             View Service <ArrowRight size={14} />
           </Link>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <EnquireWhatsAppButton
+            template={service.whatsappMessage}
             className="btn btn-whatsapp btn-sm"
             title={`Book ${service.navTitle} via WhatsApp`}
           >
-            <MessageCircle size={14} /> Book Now
-          </a>
+            Book Now
+          </EnquireWhatsAppButton>
         </div>
       </div>
     </div>

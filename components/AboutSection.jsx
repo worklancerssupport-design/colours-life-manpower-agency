@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SmartImage from '@/components/SmartImage';
 import { Check, ArrowRight } from 'lucide-react';
 import { getWhatsAppUrl } from '@/lib/utils';
 import agencyInfo from '@/data/agency.json';
@@ -62,33 +62,14 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="about-image-stack">
-            <div className="about-image-primary">
-              <Image
-                src="/images/cooking-service-chennai.jpg"
-                alt={`A ${agencyInfo.name} home cook preparing a South Indian meal in a ${agencyInfo.address.city} kitchen`}
-                fill
-                sizes="(max-width: 992px) 100vw, 35vw"
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className="about-image-secondary">
-              <div className="about-image-secondary-img">
-                <Image
-                  src="/images/newborn-baby-care-chennai.jpg"
-                  alt="A newborn baby caretaker cradling a sleeping infant"
-                  fill
-                  sizes="(max-width: 992px) 100vw, 25vw"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div className="about-experience-card">
-                <div className="about-experience-num">{agencyInfo.stats.yearsOfExperience}</div>
-                <div className="about-experience-label">
-                  {agencyInfo.stats.yearsExperienceLabel}
-                </div>
-              </div>
-            </div>
+          <div className="about-image">
+            <SmartImage
+              src="https://res.cloudinary.com/akjmqvws/image/upload/v1791614084/house-maid.jpg"
+              alt={`A house maid working in a home in ${agencyInfo.address.city}`}
+              fill
+              sizes="(max-width: 992px) 100vw, 50vw"
+              style={{ objectFit: 'cover', objectPosition: '36% 50%' }}
+            />
           </div>
         </div>
       </div>

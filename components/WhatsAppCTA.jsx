@@ -1,5 +1,5 @@
 import agencyInfo from '@/data/agency.json';
-import { getWhatsAppUrl } from '@/lib/utils';
+import EnquireWhatsAppButton from '@/components/EnquireWhatsAppButton';
 import { MessageCircle, Phone, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function WhatsAppCTA({
@@ -9,7 +9,7 @@ export default function WhatsAppCTA({
   buttonText = 'Chat on WhatsApp',
   eyebrow = agencyInfo.claims.founderDirect,
 }) {
-  const whatsappUrl = getWhatsAppUrl(customMessage || agencyInfo.defaultWhatsAppMessage);
+  const template = customMessage || agencyInfo.defaultWhatsAppMessage;
   return (
     <div className="container">
       <div className="cta-block">
@@ -20,11 +20,13 @@ export default function WhatsAppCTA({
         <h3 className="cta-block-title">{title}</h3>
         <p className="cta-block-sub">{subtitle}</p>
         <div className="cta-block-actions">
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-lime">
-            <MessageCircle size={17} />
+          <EnquireWhatsAppButton
+            template={template}
+            className="btn-lime"
+          >
             {buttonText}
             <ArrowRight size={15} className="btn-lime-arrow" aria-hidden="true" />
-          </a>
+          </EnquireWhatsAppButton>
           <a
             href={`tel:${agencyInfo.phone1}`}
             className="btn-ghost-dark"
