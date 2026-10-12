@@ -7,6 +7,8 @@ import {
   fieldLabel,
   containsTokens,
   isPlainObject,
+  getByPath,
+  pathToArray,
 } from '@/lib/edit/sections';
 import { useEditSection } from '@/lib/edit/useEditSection';
 import { useAuth } from '@/lib/edit/useAuth';
@@ -191,6 +193,18 @@ function SectionBody({ editor }) {
         onChange={onChange}
         ownLabel={section?.label || 'Items'}
         readOnlyKeys={readOnlyKeys}
+        itemFields={section?.itemFields}
+      />
+    );
+  }
+
+  if (section?.groups) {
+    return (
+      <SectionSchemaRenderer
+        value={editData}
+        path={[]}
+        groups={section.groups}
+        onChange={onChange}
       />
     );
   }
@@ -264,7 +278,7 @@ function ActionBar({ editor, savedFlash }) {
 //   - readOnlyKeys: keys (leaf-level only) that must not be edited
 // ---------------------------------------------------------------------------
 
-function FieldRenderer({ kind, value, path, readOnlyKeys, onChange, label }) {
+function FieldRenderer({ kind, value, path, readOnlyKeys, onChange, label, itemFields }) {
   const ownLabel = label != null ? label : fieldLabel(path[path.length - 1] || 'value');
   const key = path[path.length - 1];
   const locked = (readOnlyKeys || []).includes(key);
@@ -282,7 +296,7 @@ function FieldRenderer({ kind, value, path, readOnlyKeys, onChange, label }) {
     return <StringArrayField value={value} path={path} onChange={onChange} ownLabel={ownLabel} locked={locked} />;
   }
   if (kind === 'objectList') {
-    return <ObjectListField value={value} path={path} onChange={onChange} ownLabel={ownLabel} readOnlyKeys={readOnlyKeys} locked={locked} />;
+    return <ObjectListField value={value} path={path} onChange={onChange} ownLabel={ownLabel} readOnlyKeys={readOnlyKeys} locked={locked} itemFields={itemFields} />;
   }
   if (kind === 'group') {
     return (
@@ -324,6 +338,106 @@ function GroupFields({ value, path, readOnlyKeys, onChange, title }) {
       </div>
     </div>
   );
+}
+
+// Renders a section's "groups" config: each group becomes a card with a
+// title, optional description, and a 2-column grid of declared fields.
+// Used for top-level "object" sections (agency, service detail, pages, cases).
+function SectionSchemaRenderer({ value, path, groups, onChange }) {
+  if (!isPlainObject(value)) return null;
+  return (
+    <div className="edit-schema">
+      {groups.map((group) => (
+        <section key={group.title} className="edit-schema-group">
+          <header className="edit-schema-group-head">
+            <h3 className="edit-schema-group-title">{group.title}</h3>
+            {group.description ? (
+              <p className="edit-schema-group-desc">{group.description}</p>
+            ) : null}
+          </header>
+          <div className="edit-schema-group-body">
+            {group.fields.map((field) => (
+              <SchemaField
+                key={field.key}
+                value={value}
+                parentPath={path}
+                field={field}
+                onChange={onChange}
+              />
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function SchemaField({ value, parentPath, field, onChange }) {
+  const segments = pathToArray(field.key);
+  const fieldPath = [...parentPath, ...segments];
+  const fieldValue = getByPath(value, field.key);
+  const leaf = segments[segments.length - 1] || field.key;
+  const kind = inferFieldKind(fieldValue);
+
+  return (
+    <div className={`edit-schema-field ${field.span ? 'edit-schema-field-wide' : ''} edit-field-wrap-${kind}`}>
+      <FieldRenderer
+        kind={kind}
+        value={fieldValue}
+        path={fieldPath}
+        readOnlyKeys={field.readOnly ? [leaf] : []}
+        onChange={onChange}
+        label={field.label || fieldLabel(leaf)}
+        itemFields={field.itemFields}
+      />
+      {field.hint && kind !== 'json' ? (
+        <p className="edit-field-hint edit-schema-field-hint">{field.hint}</p>
+      ) : null}
+    </div>
+  );
+}
+
+// Renders the fields of a single item in an array (e.g. one review, one FAQ,
+// one service entry) using the section's "itemFields" config. Dot-paths in
+// the config let us address nested values like "address.street" without
+// recursing through intermediate objects.
+function ItemFieldsRenderer({ value, path, readOnlyKeys, onChange, itemFields }) {
+  if (!isPlainObject(value)) return null;
+  const ro = readOnlyKeys || [];
+  return (
+    <div className="edit-item-fields">
+      {itemFields.map((field) => {
+        const segments = pathToArray(field.key);
+        const fieldPath = [...path, ...segments];
+        const fieldValue = getByPath(value, field.key);
+        const leaf = segments[segments.length - 1] || field.key;
+        const kind = inferFieldKind(fieldValue);
+        const locked = field.readOnly || ro.includes(leaf);
+        return (
+          <div
+            key={field.key}
+            className={`edit-item-field ${field.span || isWideKind(kind) ? 'edit-item-field-wide' : ''}`}
+          >
+            <FieldRenderer
+              kind={kind}
+              value={fieldValue}
+              path={fieldPath}
+              readOnlyKeys={locked ? [leaf] : []}
+              onChange={onChange}
+              label={field.label || fieldLabel(leaf)}
+            />
+            {field.hint && kind !== 'json' ? (
+              <p className="edit-field-hint edit-item-field-hint">{field.hint}</p>
+            ) : null}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function isWideKind(kind) {
+  return kind === 'textarea' || kind === 'json' || kind === 'objectList' || kind === 'stringArray';
 }
 
 function FieldFrame({ label, hint, locked, tokensHint, children, span }) {
@@ -479,7 +593,7 @@ function StringArrayField({ value, path, onChange, ownLabel, locked }) {
   );
 }
 
-function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys, locked }) {
+function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys, locked, itemFields }) {
   const list = Array.isArray(value) ? value : [];
 
   const updateChild = (index) => (updater) => {
@@ -523,10 +637,12 @@ function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys, locked
 
   return (
     <div className="edit-card">
-      <div className="edit-card-head">
-        <h3 className="edit-card-title">{ownLabel}</h3>
-        <span className="edit-card-count">{list.length}</span>
-      </div>
+      {path.length > 0 ? (
+        <div className="edit-card-head">
+          <h3 className="edit-card-title">{ownLabel}</h3>
+          <span className="edit-card-count">{list.length}</span>
+        </div>
+      ) : null}
 
       {list.length === 0 ? (
         <div className="edit-list-empty">Nothing here yet — add your first entry.</div>
@@ -542,6 +658,7 @@ function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys, locked
             path={[...path, String(index)]}
             readOnlyKeys={readOnlyKeys}
             locked={locked}
+            itemFields={itemFields}
             onMoveUp={() => move(index, index - 1)}
             onMoveDown={() => move(index, index + 1)}
             onRemove={() => removeAt(index)}
@@ -558,7 +675,7 @@ function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys, locked
   );
 }
 
-function ObjectCard({ index, total, item, path, readOnlyKeys, locked, onMoveUp, onMoveDown, onRemove, onChildChange }) {
+function ObjectCard({ index, total, item, path, readOnlyKeys, locked, itemFields, onMoveUp, onMoveDown, onRemove, onChildChange }) {
   const headline = objectHeadline(item, index);
   return (
     <article className="edit-object">
@@ -573,7 +690,17 @@ function ObjectCard({ index, total, item, path, readOnlyKeys, locked, onMoveUp, 
       </header>
 
       <div className="edit-object-body">
-        <GroupFields value={item} path={path} readOnlyKeys={readOnlyKeys || []} onChange={onChildChange} />
+        {itemFields ? (
+          <ItemFieldsRenderer
+            value={item}
+            path={path}
+            readOnlyKeys={readOnlyKeys}
+            onChange={onChildChange}
+            itemFields={itemFields}
+          />
+        ) : (
+          <GroupFields value={item} path={path} readOnlyKeys={readOnlyKeys || []} onChange={onChildChange} />
+        )}
       </div>
     </article>
   );

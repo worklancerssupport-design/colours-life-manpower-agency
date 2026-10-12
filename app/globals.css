@@ -4274,6 +4274,135 @@ a.about-contact-row:hover strong { color: var(--ink-700); }
   }
 }
 
+/* ----- Schema-driven section layout (mirrors live site sections) ----- */
+
+.edit-schema {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.edit-schema-group {
+  background: var(--paper-50);
+  border: 1px solid var(--line-light);
+  border-radius: var(--r-lg);
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+@media (min-width: 768px) {
+  .edit-schema-group { padding: 26px 28px 28px; }
+}
+
+.edit-schema-group-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid var(--line-light);
+  padding-bottom: 14px;
+}
+
+.edit-schema-group-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-on-light);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.edit-schema-group-title::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue-500);
+  flex-shrink: 0;
+}
+
+.edit-schema-group-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-on-light-muted);
+  margin: 0;
+  max-width: 64ch;
+}
+
+.edit-schema-group-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 20px;
+}
+@media (min-width: 720px) {
+  .edit-schema-group-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.edit-schema-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+.edit-schema-field-wide {
+  grid-column: 1 / -1;
+}
+
+.edit-schema-field-hint,
+.edit-item-field-hint {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--ink-on-light-subtle);
+}
+
+/* Item fields inside an array card (FAQ, review, service, area, etc.) */
+.edit-item-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 18px;
+}
+@media (min-width: 720px) {
+  .edit-item-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.edit-item-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+.edit-item-field-wide {
+  grid-column: 1 / -1;
+}
+
+/* When a field is a wide kind (textarea / objectList / json), let it span
+   the full grid row in both root and item contexts. */
+.edit-field-wrap-textarea,
+.edit-field-wrap-objectList,
+.edit-field-wrap-stringArray,
+.edit-field-wrap-json,
+.edit-field-wrap-group {
+  grid-column: 1 / -1;
+}
+
+/* Hide the redundant .edit-field border inside the schema cards — the card
+   itself provides the visual container. */
+.edit-schema-group .edit-field,
+.edit-item-fields .edit-field {
+  background: var(--paper-200);
+  border: 1px solid var(--line-light);
+  border-radius: var(--r-md);
+  padding: 14px 14px 12px;
+}
+
 /* ----- Edit console link in error / success messages ----- */
 .edit-error .edit-btn-secondary {
   margin-top: 6px;
