@@ -1,5 +1,6 @@
 import './globals.css';
 import { Plus_Jakarta_Sans, Spectral } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import SiteChrome from '@/components/SiteChrome';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
 import WebSiteSchema from '@/components/WebSiteSchema';
@@ -89,6 +90,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <SiteChrome>{children}</SiteChrome>
+        <Analytics />
       </body>
     </html>
   );
