@@ -81,7 +81,7 @@ export default function ServiceRows() {
             </div>
             <p className="service-rows-panel-desc">{active.shortDescription}</p>
             <Link href={active.path} className="service-rows-more">
-              See more in detail
+              {active.shortName} services in Chennai
               <span className="service-rows-more-arrow" aria-hidden="true">
                 <ArrowUpRight size={16} />
               </span>

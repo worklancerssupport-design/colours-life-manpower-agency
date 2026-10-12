@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "adyar",
+    "name": "Adyar",
+    "title": "Domestic Help Services in Adyar, Chennai",
+    "metaTitle": "Cook, Maid & Care Services in Adyar, Chennai",
+    "metaDescription": "Hire verified cooks, maids, nannies, and elderly care attendants in Adyar, Chennai. Background-checked domestic help for families in Adyar and surrounding areas.",
+    "h1": "Domestic help services in Adyar, Chennai",
+    "heroSubtitle": "Adyar families trust us for verified home cooks, maids, baby care, elderly care, and drivers. Every helper is background-checked and placed within days.",
+    "about": "Adyar is one of Chennai's most established residential neighbourhoods — home to families, professionals, and retirees who value reliable domestic support. Whether you need a part-time cook for daily meals, a full-time maid for a large home, or an elderly care attendant for a parent, we place verified helpers across Adyar, Besant Nagar, Kasturba Nagar, and Indira Nagar.",
+    "services": [
+      { "name": "Home Cooks", "link": "/services/cooking/", "desc": "Daily breakfast, lunch, and dinner — South Indian, North Indian, or custom. Part-time and live-in cooks for Adyar homes." },
+      { "name": "Maids & Domestic Help", "link": "/services/maid-work/", "desc": "Sweeping, mopping, dishwashing, laundry, and home upkeep. Morning and evening shifts available in Adyar." },
+      { "name": "Baby Care & Nannies", "link": "/services/baby-care/", "desc": "Experienced babysitters for toddlers, school pickup and drop, and daily childcare in Adyar." },
+      { "name": "Elderly Care", "link": "/services/elderly-care/", "desc": "Companionship, mobility support, and medication reminders for senior citizens in Adyar homes." },
+      { "name": "Patient Care", "link": "/services/patient-care/", "desc": "Post-operative and bedside care attendants for recovering patients in Adyar." },
+      { "name": "Drivers", "link": "/services/drivers/", "desc": "Personal and family drivers for office commutes, school runs, and errands in Adyar." }
+    ],
+    "nearby": ["Besant Nagar", "Kasturba Nagar", "Indira Nagar", "Raj Bhavan Colony", "Shastri Nagar", "Kottivakkam"]
+  },
+  {
+    "slug": "velachery",
+    "name": "Velachery",
+    "title": "Domestic Help Services in Velachery, Chennai",
+    "metaTitle": "Cook, Maid & Care Services in Velachery, Chennai",
+    "metaDescription": "Hire verified cooks, maids, nannies, and caregivers in Velachery, Chennai. Trusted domestic help for families in Velachery, Taramani, and surrounding areas.",
+    "h1": "Domestic help services in Velachery, Chennai",
+    "heroSubtitle": "Velachery families rely on us for background-checked home cooks, maids, baby care, and patient care attendants. Fast placement, transparent pricing.",
+    "about": "Velachery sits at the crossroads of south Chennai — close to IT corridors, schools, and hospitals. Families here need domestic help that keeps up with busy schedules. We place verified cooks, maids, nannies, and care attendants across Velachery, Taramani, Dhandeeswaram, and surrounding neighbourhoods.",
+    "services": [
+      { "name": "Home Cooks", "link": "/services/cooking/", "desc": "Part-time and full-time cooks for Velachery homes. Vegetarian, non-veg, and custom meal plans." },
+      { "name": "Maids & Domestic Help", "link": "/services/maid-work/", "desc": "Daily cleaning, utensil washing, laundry, and home upkeep for Velachery apartments and houses." },
+      { "name": "Baby Care & Nannies", "link": "/services/baby-care/", "desc": "Nannies for toddlers and young children in Velachery — playtime, feeding, and school pickup." },
+      { "name": "Elderly Care", "link": "/services/elderly-care/", "desc": "Attendants for senior citizens in Velachery — companionship, mobility support, and daily assistance." },
+      { "name": "Patient Care", "link": "/services/patient-care/", "desc": "Bedside and post-surgery care for patients recovering at home in Velachery." },
+      { "name": "Newborn Baby Care", "link": "/services/newborn-baby-care/", "desc": "Postnatal caretakers and japa maids for new mothers and babies in Velachery." }
+    ],
+    "nearby": ["Taramani", "Dhandeeswaram", "Madipakkam", "Guindy", "Pallikaranai", "Sholinganallur"]
+  },
+  {
+    "slug": "omr-thoraipakkam",
+    "name": "OMR & Thoraipakkam",
+    "title": "Domestic Help Services in OMR & Thoraipakkam, Chennai",
+    "metaTitle": "Cook, Maid & Care Services in OMR, Chennai",
+    "metaDescription": "Hire verified domestic help in OMR, Thoraipakkam, and Chennai's IT corridor. Home cooks, maids, nannies, and caregivers for OMR families.",
+    "h1": "Domestic help services in OMR & Thoraipakkam, Chennai",
+    "heroSubtitle": "OMR's IT professionals trust us for verified home cooks, maids, baby care, and care attendants. Serving Thoraipakkam, Sholinganallur, Navalur, and the entire corridor.",
+    "about": "The OMR (Old Mahabalipuram Road) corridor is Chennai's tech hub — full of young families, dual-income households, and busy professionals who need reliable domestic help. From Kottivakkam and Thoraipakkam to Sholinganallur, Navalur, and Siruseri, we place background-checked helpers who fit your schedule and household needs.",
+    "services": [
+      { "name": "Home Cooks", "link": "/services/cooking/", "desc": "Morning and evening cooks for OMR homes. South Indian breakfast, lunch, dinner, and custom menus." },
+      { "name": "Maids & Domestic Help", "link": "/services/maid-work/", "desc": "Part-time and full-time maids for OMR apartments — cleaning, dishwashing, and laundry." },
+      { "name": "Baby Care & Nannies", "link": "/services/baby-care/", "desc": "Nannies and babysitters for OMR families — school pickup, after-school care, and daily supervision." },
+      { "name": "Elderly Care", "link": "/services/elderly-care/", "desc": "Live-in and day-shift elderly care attendants for parents of NRI and IT professional families on OMR." },
+      { "name": "Patient Care", "link": "/services/patient-care/", "desc": "Post-operative and home nursing care for patients across the OMR corridor." },
+      { "name": "Drivers", "link": "/services/drivers/", "desc": "Personal drivers for OMR office commutes, school runs, and airport drops." }
+    ],
+    "nearby": ["Kottivakkam", "Thoraipakkam", "Perungudi", "Sholinganallur", "Karapakkam", "Navalur", "Siruseri", "Semmancheri"]
+  },
+  {
+    "slug": "thiruvanmiyur",
+    "name": "Thiruvanmiyur",
+    "title": "Domestic Help Services in Thiruvanmiyur, Chennai",
+    "metaTitle": "Cook, Maid & Care Services in Thiruvanmiyur, Chennai",
+    "metaDescription": "Hire verified cooks, maids, nannies, and care attendants in Thiruvanmiyur, Chennai. Background-checked domestic help for Thiruvanmiyur families.",
+    "h1": "Domestic help services in Thiruvanmiyur, Chennai",
+    "heroSubtitle": "Thiruvanmiyur families count on us for verified home cooks, maids, baby care, and elderly care. Trusted local agency with fast placement.",
+    "about": "Thiruvanmiyur is a vibrant south Chennai neighbourhood with a mix of traditional homes and modern apartments. Families here value trust and consistency in domestic help. We place verified cooks, maids, nannies, and care attendants across Thiruvanmiyur, Kottivakkam, and surrounding areas.",
+    "services": [
+      { "name": "Home Cooks", "link": "/services/cooking/", "desc": "Traditional South Indian cooking for Thiruvanmiyur homes. Part-time and full-time cooks available." },
+      { "name": "Maids & Domestic Help", "link": "/services/maid-work/", "desc": "Daily home upkeep for Thiruvanmiyur — sweeping, mopping, dishwashing, and laundry." },
+      { "name": "Baby Care & Nannies", "link": "/services/baby-care/", "desc": "Experienced babysitters and nannies for young families in Thiruvanmiyur." },
+      { "name": "Elderly Care", "link": "/services/elderly-care/", "desc": "Compassionate elderly care attendants for senior citizens in Thiruvanmiyur homes." },
+      { "name": "Brahmin Cook", "link": "/services/brahmin-cook/", "desc": "Traditional Brahmin cooks for satvik vegetarian meals in Thiruvanmiyur households." },
+      { "name": "Patient Care", "link": "/services/patient-care/", "desc": "Home nursing and bedside care for recovering patients in Thiruvanmiyur." }
+    ],
+    "nearby": ["Kottivakkam", "Besant Nagar", "Indira Nagar", "Raj Bhavan Colony", "Kasturba Nagar", "Adyar"]
+  }
+]

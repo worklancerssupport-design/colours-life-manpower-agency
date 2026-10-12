@@ -17,11 +17,26 @@ import {
 const { aboutPage } = pagesData;
 
 export const metadata = {
-  title: `About Us | ${agencyInfo.name} | ${agencyInfo.address.city} & ${agencyInfo.address.locality}`,
+  title: `About Us | Domestic Staff Agency`,
   description: `Learn about ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}. Dedicated to connecting ${agencyInfo.address.city} families with trusted domestic staff and care attendants.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/about/`,
-  }
+  },
+  openGraph: {
+    title: `About Us | Domestic Staff Agency`,
+    description: `Learn about ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}. Dedicated to connecting ${agencyInfo.address.city} families with trusted domestic staff and care attendants.`,
+    url: `${agencyInfo.siteUrl}/about/`,
+    siteName: agencyInfo.name,
+    images: [{ url: `${agencyInfo.siteUrl}/og-default.jpg`, width: 1200, height: 896, alt: agencyInfo.name }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `About Us | Domestic Staff Agency`,
+    description: `Learn about ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}.`,
+    images: [`${agencyInfo.siteUrl}/og-default.jpg`],
+  },
 };
 
 export default function AboutPage() {
@@ -43,7 +58,7 @@ export default function AboutPage() {
           </span>
 
           <h1 className="hero-headline-serif">
-            Domestic help, <em>minus the guesswork.</em>
+            Chennai&apos;s trusted domestic help agency, <em>minus the guesswork.</em>
           </h1>
 
           <p className="hero-body-text">

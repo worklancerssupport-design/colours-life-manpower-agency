@@ -40,10 +40,12 @@ export default function Header() {
 
   const isServicesActive = pathname?.startsWith('/services/');
   const isHomePage = pathname === '/';
+  const isBlogPage = pathname?.startsWith('/blog/');
+  const onDark = isHomePage || isBlogPage;
 
   return (
     <>
-      <header className={`site-header ${isHomePage ? 'site-header--on-dark' : ''}`} role="banner">
+      <header className={`site-header ${onDark ? 'site-header--on-dark' : ''}`} role="banner">
         <div className="container site-header-row">
           <Logo />
 
@@ -61,8 +63,8 @@ export default function Header() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button
-                type="button"
+              <Link
+                href="/services/"
                 className={`nav-link nav-dropdown-toggle ${isServicesActive ? 'is-active' : ''}`}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
@@ -70,7 +72,7 @@ export default function Header() {
               >
                 Services
                 <ChevronDown size={14} className="nav-caret" aria-hidden="true" />
-              </button>
+              </Link>
 
               <div
                 className={`nav-dropdown-panel ${servicesOpen ? 'is-open' : ''}`}
@@ -168,11 +170,10 @@ export default function Header() {
             </Link>
           ))}
 
-          <button
-            type="button"
+          <Link
+            href="/services/"
             className={`mobile-link ${isServicesActive ? 'is-active' : ''}`}
             onClick={() => setMobileServicesOpen(v => !v)}
-            aria-expanded={mobileServicesOpen}
           >
             <span>Services</span>
             <ChevronDown
@@ -180,7 +181,7 @@ export default function Header() {
               style={{ transform: mobileServicesOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}
               aria-hidden="true"
             />
-          </button>
+          </Link>
           {mobileServicesOpen && (
             <div className="mobile-subnav">
               {getAllServices().map((svc) => (

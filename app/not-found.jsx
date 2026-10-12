@@ -1,5 +1,11 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Page Not Found',
+  description: 'The page you are looking for does not exist. Browse our domestic help services in Chennai or contact us for assistance.',
+  robots: { index: false, follow: true },
+};
+
 export default function NotFound() {
   return (
     <div style={{

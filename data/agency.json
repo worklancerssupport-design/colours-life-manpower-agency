@@ -16,16 +16,17 @@
     "postalCode": "600041",
     "country": "India",
     "countryCode": "IN",
-    "landmark": "2K Car Care Center",
-    "fullAddress": "No.5, 486, Kottivakkam Kuppam Puram Rd, Venketeshapuram, Thiruvanmiyur, Chennai, Tamil Nadu 600041"
+    "landmark": "Inside 2K Car Care",
+    "fullAddress": "No.5, 486, Kottivakkam Kuppam Puram Rd, Venketeshapuram, Kottivakkam, Chennai, Tamil Nadu 600041"
   },
   "geo": {
-    "latitude": "12.9360",
-    "longitude": "80.2355"
+    "latitude": "12.9731928103028",
+    "longitude": "80.25358174052796"
   },
   "serviceAreas": [
     "All Over Chennai",
-    "Thoraipakkam",
+    "Kottivakkam",
+    "Thiruvanmiyur",
     "OMR (Old Mahabalipuram Road)",
     "Perungudi",
     "Sholinganallur",
@@ -52,7 +53,6 @@
     "Manali",
     "South Chennai",
     "Besant Nagar",
-    "Thiruvanmiyur",
     "Guindy",
     "Madipakkam",
     "Chromepet",
@@ -84,8 +84,7 @@
     "Ashok Nagar",
     "Kilpauk",
     "Teynampet",
-    "Royapettah",
-    "Kottivakkam"
+    "Royapettah"
   ],
   "priceRange": "$$",
   "siteUrl": "https://colourslifemanpower.com",
@@ -124,26 +123,25 @@
     "ratingLabel": "4.9/5"
   },
   "seo": {
-    "defaultTitle": "Home Help & Domestic Help Services in Thoraipakkam, Chennai | {{name}}",
+    "defaultTitle": "Home Help & Domestic Help Services in Kottivakkam, Chennai",
     "titleTemplate": "%s | {{name}}",
-    "defaultDescription": "{{name}} provides trusted cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks, and drivers in Okkiyam Thoraipakkam, OMR, and Chennai.",
-    "ogTitle": "Home Help & Domestic Help Services in Thoraipakkam, Chennai | {{name}}",
-    "ogDescription": "{{name}} provides cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks and drivers in Thoraipakkam and Chennai.",
+    "defaultDescription": "{{name}} provides trusted cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks, and drivers in Kottivakkam, OMR, and Chennai.",
+    "ogTitle": "Home Help & Domestic Help Services in Kottivakkam, Chennai",
+    "ogDescription": "{{name}} provides cooks, maids, baby care, newborn care, elderly care, patient care, Brahmin cooks and drivers in Kottivakkam and Chennai.",
     "twitterTitle": "{{name}} — Domestic Help in Chennai",
-    "twitterDescription": "Cooks, maids, baby care, newborn care, elderly caregivers, patient care, Brahmin cooks and drivers in Chennai & Thoraipakkam.",
-    "schemaDescription": "{{name}} provides reliable home cooks, newborn baby caretakers, baby care, elderly caregivers, maids, Brahmin cooks, patient care attendants, and personal drivers in Okkiyam Thoraipakkam, OMR, and Chennai.",
+    "twitterDescription": "Cooks, maids, baby care, newborn care, elderly caregivers, patient care, Brahmin cooks and drivers in Chennai & Kottivakkam.",
+    "schemaDescription": "{{name}} provides reliable home cooks, newborn baby caretakers, baby care, elderly caregivers, maids, Brahmin cooks, patient care attendants, and personal drivers in Kottivakkam, OMR, and Chennai.",
     "ogImageAlt": "{{name}} — domestic staff and caregivers in Chennai",
     "keywords": [
       "manpower agency near me",
-      "manpower agency in Thoraipakkam",
-      "manpower agency in Okkiyam Thoraipakkam",
+      "manpower agency in Kottivakkam",
       "manpower agency in Chennai",
       "manpower agency near OMR",
       "domestic help agency in Chennai",
-      "maid agency in Thoraipakkam",
-      "maid service in Thoraipakkam",
+      "maid agency in Kottivakkam",
+      "maid service in Kottivakkam",
       "cook agency in Chennai",
-      "cook service in Thoraipakkam",
+      "cook service in Kottivakkam",
       "Brahmin cook service in Chennai",
       "baby care service in Chennai",
       "newborn baby care in Chennai",
@@ -155,15 +153,15 @@
     ],
     "knowsAbout": [
       "Domestic help agency in Chennai",
-      "Cook service in Thoraipakkam",
+      "Cook service in Kottivakkam",
       "Newborn baby care in Chennai",
       "Baby care services in Chennai",
       "Elderly care services in Chennai",
-      "Maid service in Thoraipakkam",
+      "Maid service in Kottivakkam",
       "Brahmin cook service in Chennai",
       "Patient care service in Chennai",
       "Driver service in Chennai",
-      "Manpower agency in Okkiyam Thoraipakkam"
+      "Manpower agency in Kottivakkam"
     ]
   },
   "socials": {

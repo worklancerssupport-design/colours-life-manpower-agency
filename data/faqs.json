@@ -30,5 +30,85 @@
   {
     "question": "Where is {{name}} located?",
     "answer": "Our office is located at {{addressLine}} Our landmark is {{landmark}} on the OMR corridor."
+  },
+  {
+    "question": "How much does a home cook cost in Chennai?",
+    "answer": "Cook salary in Chennai depends on whether it's part-time (a few hours daily) or full-time, and whether it's a live-in arrangement. Rates vary by experience, cuisine type, and locality. Message us on WhatsApp at {{whatsapp}} or call {{phone1}} for a clear, no-obligation quotation based on your exact needs."
+  },
+  {
+    "question": "What are the monthly charges for a maid in Chennai?",
+    "answer": "Maid charges in Chennai depend on the shift type (morning, evening, or full-day), the size of your home, and the scope of work. We provide transparent pricing with no hidden fees. Reach out on WhatsApp at {{whatsapp}} or call {{phone1}} for a tailored quote."
+  },
+  {
+    "question": "What is the difference between part-time and full-time domestic help?",
+    "answer": "Part-time help typically works 2–5 hours a day (morning or evening shifts), while full-time help works 8–10 hours and may include cooking, cleaning, and childcare. Live-in help stays at your residence. We'll help you choose the right fit based on your household size and daily routine."
+  },
+  {
+    "question": "How do I hire a reliable maid in Chennai?",
+    "answer": "Start by messaging us on WhatsApp at {{whatsapp}} or calling {{phone1}}. Share your requirements — locality, timings, and tasks. We shortlist verified candidates, share their profiles, and arrange a meeting. Once you approve, the helper starts. The entire process usually takes a few days."
+  },
+  {
+    "question": "Do you provide a replacement if the helper doesn't work out?",
+    "answer": "Yes. If the placed helper isn't suitable for your household, we provide a replacement. Just let us know the issue and we'll arrange a new candidate promptly. Your satisfaction matters more than the placement."
+  },
+  {
+    "question": "Can I hire a cook who only makes vegetarian food?",
+    "answer": "Absolutely. We have cooks who specialize in pure vegetarian and satvik cooking, including traditional Brahmin cooks who prepare meals without onion and garlic. Share your dietary preferences when you enquire and we'll match accordingly."
+  },
+  {
+    "question": "Do you provide 24-hour live-in helpers?",
+    "answer": "Yes, live-in (24-hour) helpers are available for maids, elderly care, patient care, and newborn care. Live-in arrangements include food and accommodation at your home. Contact us on WhatsApp at {{whatsapp}} to discuss live-in options."
+  },
+  {
+    "question": "What is a japa maid and do you provide them?",
+    "answer": "A japa maid is a postnatal caretaker who helps new mothers and newborns in the first few weeks after delivery — including baby massage, bathing, feeding support, and night care. Yes, we provide experienced japa maids in Chennai. Message us at {{whatsapp}} for availability."
+  },
+  {
+    "question": "Do you provide nannies for school pickup and drop?",
+    "answer": "Yes. Our baby care and nanny services include school pickup and drop, after-school supervision, homework help, and meal preparation. You can hire part-time nannies for school runs or full-time nannies for all-day childcare."
+  },
+  {
+    "question": "How quickly can I get a helper placed?",
+    "answer": "Most placements happen within a few days of your enquiry, depending on the service and your specific requirements. For urgent needs, let us know your timeline and we'll prioritize accordingly. WhatsApp us at {{whatsapp}} or call {{phone1}} to get started."
+  },
+  {
+    "question": "Are the helpers experienced and trained?",
+    "answer": "Yes. We verify each helper's experience through prior-work references and match them to your specific needs. Whether you need a cook who knows South Indian cuisine or a patient care attendant with nursing experience, we share their background before you decide."
+  },
+  {
+    "question": "Can I speak to the helper before hiring?",
+    "answer": "Of course. We arrange a meeting or phone call so you can discuss your expectations, timings, and household rules before finalizing. This helps ensure a good fit from day one."
+  },
+  {
+    "question": "Do you provide drivers on a monthly basis?",
+    "answer": "Yes. We provide monthly and part-time personal drivers for office commutes, school runs, family travel, and daily errands. Our drivers have valid LMV licences and verified backgrounds. Call {{phone1}} or WhatsApp {{whatsapp}} for driver availability."
+  },
+  {
+    "question": "What areas of Chennai do you cover?",
+    "answer": "We cover all of Chennai — including Kottivakkam, Thiruvanmiyur, Adyar, Velachery, OMR (Old Mahabalipuram Road), Perungudi, Sholinganallur, Anna Nagar, T. Nagar, and surrounding areas. If you're unsure whether we cover your locality, just message us at {{whatsapp}}."
+  },
+  {
+    "question": "Is there a consultation or registration fee?",
+    "answer": "We believe in transparent pricing. Any agency charges are communicated upfront before you commit — no hidden costs, no surprise fees. Message us at {{whatsapp}} for a clear breakdown of charges for your required service."
+  },
+  {
+    "question": "Can I change the helper's timing or duties after placement?",
+    "answer": "Yes, adjustments can be made after placement. If your schedule changes or you need additional tasks covered, let us know and we'll coordinate with the helper or suggest a better match if needed."
+  },
+  {
+    "question": "Do you provide elderly care attendants for bedridden patients?",
+    "answer": "Yes. Our patient care and elderly care attendants are experienced in assisting bedridden and semi-bedridden patients — including mobility support, personal hygiene, medication reminders, and daily routine assistance. Contact us at {{whatsapp}} to discuss your specific care needs."
+  },
+  {
+    "question": "What if I need help only on weekends?",
+    "answer": "We can arrange weekend-only or flexible-schedule helpers depending on the service. Let us know your preferred days and timings when you enquire, and we'll find a suitable match."
+  },
+  {
+    "question": "Do you serve NRIs who need help for their parents in Chennai?",
+    "answer": "Yes. Many of our clients are NRIs who arrange elderly care, patient care, or domestic help for their parents in Chennai. We handle everything remotely — from shortlisting to placement — and keep you updated. WhatsApp us at {{whatsapp}} to get started."
+  },
+  {
+    "question": "How do I get started?",
+    "answer": "It's simple. Click any WhatsApp button on this site to message us at {{whatsapp}}, or call {{phone1}}. Tell us what you need — a cook, maid, nanny, caretaker, or driver — and your locality. We'll take it from there."
   }
 ]

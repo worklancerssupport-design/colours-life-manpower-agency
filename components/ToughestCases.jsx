@@ -53,6 +53,16 @@ export default function ToughestCases() {
           ))}
         </div>
 
+        {/* Placement stories — hidden for UI, present in HTML for SEO */}
+        <div style={{ display: 'none' }} aria-hidden="true">
+          {casesData.stories.filter((c) => c.body).map((c) => (
+            <div key={c.id}>
+              <h4>{c.title}</h4>
+              <p>{c.body}</p>
+            </div>
+          ))}
+        </div>
+
         <div style={{
           marginTop: 56,
           paddingTop: 28,

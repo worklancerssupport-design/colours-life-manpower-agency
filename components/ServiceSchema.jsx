@@ -9,7 +9,7 @@ export default function ServiceSchema({ service }) {
     name: service.h1,
     serviceType: service.shortName,
     description: service.metaDescription,
-    image: `${agencyInfo.siteUrl}${service.image}`,
+    image: service.image?.startsWith('http') ? service.image : `${agencyInfo.siteUrl}${service.image}`,
     areaServed: agencyInfo.serviceAreas,
     provider: {
       '@type': 'Organization',

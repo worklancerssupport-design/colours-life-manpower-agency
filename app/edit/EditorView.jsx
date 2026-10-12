@@ -266,18 +266,23 @@ function ActionBar({ editor, savedFlash }) {
 
 function FieldRenderer({ kind, value, path, readOnlyKeys, onChange, label }) {
   const ownLabel = label != null ? label : fieldLabel(path[path.length - 1] || 'value');
+  const key = path[path.length - 1];
+  const locked = (readOnlyKeys || []).includes(key);
 
   if (kind === 'text' || kind === 'textarea') {
-    return <StringField value={value} path={path} onChange={onChange} ownLabel={ownLabel} readOnlyKeys={readOnlyKeys} />;
+    return <StringField value={value} path={path} onChange={onChange} ownLabel={ownLabel} locked={locked} tokensHint={containsTokens(value)} />;
+  }
+  if (kind === 'number') {
+    return <NumberField value={value} path={path} onChange={onChange} ownLabel={ownLabel} locked={locked} />;
   }
   if (kind === 'boolean') {
-    return <BooleanField value={value} path={path} onChange={onChange} ownLabel={ownLabel} />;
+    return <BooleanField value={value} path={path} onChange={onChange} ownLabel={ownLabel} locked={locked} />;
   }
   if (kind === 'stringArray') {
-    return <StringArrayField value={value} path={path} onChange={onChange} ownLabel={ownLabel} />;
+    return <StringArrayField value={value} path={path} onChange={onChange} ownLabel={ownLabel} locked={locked} />;
   }
   if (kind === 'objectList') {
-    return <ObjectListField value={value} path={path} onChange={onChange} ownLabel={ownLabel} />;
+    return <ObjectListField value={value} path={path} onChange={onChange} ownLabel={ownLabel} readOnlyKeys={readOnlyKeys} locked={locked} />;
   }
   if (kind === 'group') {
     return (
@@ -290,7 +295,7 @@ function FieldRenderer({ kind, value, path, readOnlyKeys, onChange, label }) {
       />
     );
   }
-  return <JsonField value={value} path={path} onChange={onChange} ownLabel={ownLabel} />;
+  return <JsonField value={value} path={path} onChange={onChange} ownLabel={ownLabel} locked={locked} />;
 }
 
 function GroupFields({ value, path, readOnlyKeys, onChange, title }) {
@@ -337,16 +342,13 @@ function FieldFrame({ label, hint, locked, tokensHint, children, span }) {
   );
 }
 
-function StringField({ value, path, onChange, ownLabel, readOnlyKeys }) {
-  const key = path[path.length - 1];
-  const locked = readOnlyKeys.includes(key);
-  const hasTokens = containsTokens(value);
+function StringField({ value, path, onChange, ownLabel, locked, tokensHint }) {
   const isMultiline = typeof value === 'string' && (value.length > 80 || value.includes('\n'));
 
   const update = (next) => onChange((draft) => setAtPath(draft, path, next));
 
   return (
-    <FieldFrame label={ownLabel} locked={locked} tokensHint={hasTokens}>
+    <FieldFrame label={ownLabel} locked={locked} tokensHint={tokensHint}>
       {isMultiline ? (
         <textarea
           className="edit-input edit-textarea"
@@ -368,15 +370,38 @@ function StringField({ value, path, onChange, ownLabel, readOnlyKeys }) {
   );
 }
 
-function BooleanField({ value, path, onChange, ownLabel }) {
+function NumberField({ value, path, onChange, ownLabel, locked }) {
+  const update = (next) => onChange((draft) => setAtPath(draft, path, next));
+
+  return (
+    <FieldFrame label={ownLabel} locked={locked}>
+      <input
+        type="number"
+        className="edit-input"
+        value={value ?? ''}
+        disabled={locked}
+        step="any"
+        onChange={(event) => {
+          const raw = event.target.value;
+          if (raw === '') return;
+          const num = Number(raw);
+          if (!Number.isNaN(num)) update(num);
+        }}
+      />
+    </FieldFrame>
+  );
+}
+
+function BooleanField({ value, path, onChange, ownLabel, locked }) {
   const update = (next) => onChange((draft) => setAtPath(draft, path, next));
   return (
-    <FieldFrame label={ownLabel}>
+    <FieldFrame label={ownLabel} locked={locked}>
       <button
         type="button"
         className={`edit-toggle ${value ? 'is-on' : ''}`}
         onClick={() => update(!value)}
         aria-pressed={Boolean(value)}
+        disabled={locked}
       >
         <span className="edit-toggle-knob" />
         <span className="edit-toggle-text">{value ? 'On' : 'Off'}</span>
@@ -385,7 +410,7 @@ function BooleanField({ value, path, onChange, ownLabel }) {
   );
 }
 
-function StringArrayField({ value, path, onChange, ownLabel }) {
+function StringArrayField({ value, path, onChange, ownLabel, locked }) {
   const list = Array.isArray(value) ? value : [];
 
   const updateAt = (index, next) => {
@@ -421,7 +446,7 @@ function StringArrayField({ value, path, onChange, ownLabel }) {
   };
 
   return (
-    <FieldFrame label={ownLabel} hint="One entry per line.">
+    <FieldFrame label={ownLabel} locked={locked} hint="One entry per line.">
       <div className="edit-list">
         {list.length === 0 ? <div className="edit-list-empty">No entries yet.</div> : null}
         {list.map((item, index) => (
@@ -431,6 +456,7 @@ function StringArrayField({ value, path, onChange, ownLabel }) {
               type="text"
               className="edit-input"
               value={item || ''}
+              disabled={locked}
               onChange={(event) => updateAt(index, event.target.value)}
               placeholder="Entry text"
             />
@@ -438,13 +464,14 @@ function StringArrayField({ value, path, onChange, ownLabel }) {
               type="button"
               className="edit-row-remove"
               onClick={() => removeAt(index)}
+              disabled={locked}
               aria-label={`Remove entry ${index + 1}`}
             >
               ✕
             </button>
           </div>
         ))}
-        <button type="button" className="edit-add-btn" onClick={addOne}>
+        <button type="button" className="edit-add-btn" onClick={addOne} disabled={locked}>
           <span aria-hidden="true">+</span> Add entry
         </button>
       </div>
@@ -452,7 +479,7 @@ function StringArrayField({ value, path, onChange, ownLabel }) {
   );
 }
 
-function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys }) {
+function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys, locked }) {
   const list = Array.isArray(value) ? value : [];
 
   const updateChild = (index) => (updater) => {
@@ -514,6 +541,7 @@ function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys }) {
             item={item}
             path={[...path, String(index)]}
             readOnlyKeys={readOnlyKeys}
+            locked={locked}
             onMoveUp={() => move(index, index - 1)}
             onMoveDown={() => move(index, index + 1)}
             onRemove={() => removeAt(index)}
@@ -523,14 +551,14 @@ function ObjectListField({ value, path, onChange, ownLabel, readOnlyKeys }) {
         ))}
       </div>
 
-      <button type="button" className="edit-add-btn" onClick={addOne}>
+      <button type="button" className="edit-add-btn" onClick={addOne} disabled={locked}>
         <span aria-hidden="true">+</span> Add new
       </button>
     </div>
   );
 }
 
-function ObjectCard({ index, total, item, path, readOnlyKeys, onMoveUp, onMoveDown, onRemove, onChildChange }) {
+function ObjectCard({ index, total, item, path, readOnlyKeys, locked, onMoveUp, onMoveDown, onRemove, onChildChange }) {
   const headline = objectHeadline(item, index);
   return (
     <article className="edit-object">
@@ -538,9 +566,9 @@ function ObjectCard({ index, total, item, path, readOnlyKeys, onMoveUp, onMoveDo
         <span className="edit-object-idx">{String(index + 1).padStart(2, '0')}</span>
         <span className="edit-object-title">{headline}</span>
         <div className="edit-object-tools">
-          <button type="button" className="edit-tool" onClick={onMoveUp} disabled={index === 0} aria-label="Move up">↑</button>
-          <button type="button" className="edit-tool" onClick={onMoveDown} disabled={index === total - 1} aria-label="Move down">↓</button>
-          <button type="button" className="edit-tool edit-tool-danger" onClick={onRemove} aria-label="Remove">✕</button>
+          <button type="button" className="edit-tool" onClick={onMoveUp} disabled={locked || index === 0} aria-label="Move up">↑</button>
+          <button type="button" className="edit-tool" onClick={onMoveDown} disabled={locked || index === total - 1} aria-label="Move down">↓</button>
+          <button type="button" className="edit-tool edit-tool-danger" onClick={onRemove} disabled={locked} aria-label="Remove">✕</button>
         </div>
       </header>
 
@@ -551,7 +579,7 @@ function ObjectCard({ index, total, item, path, readOnlyKeys, onMoveUp, onMoveDo
   );
 }
 
-function JsonField({ value, path, onChange, ownLabel }) {
+function JsonField({ value, path, onChange, ownLabel, locked }) {
   const [draft, setDraft] = useState(() => JSON.stringify(value, null, 2));
   const [error, setError] = useState(null);
   const lastValue = useRef(value);
@@ -575,11 +603,12 @@ function JsonField({ value, path, onChange, ownLabel }) {
   };
 
   return (
-    <FieldFrame label={ownLabel} hint="Edit raw JSON. Commits only when valid.">
+    <FieldFrame label={ownLabel} locked={locked} hint="Edit raw JSON. Commits only when valid.">
       <textarea
         className={`edit-input edit-textarea edit-textarea-mono ${error ? 'has-error' : ''}`}
         value={draft}
         rows={10}
+        disabled={locked}
         onChange={(event) => {
           setDraft(event.target.value);
           commit(event.target.value);
@@ -606,7 +635,7 @@ function setAtPath(draft, path, value) {
 }
 
 function buildBlankItem(array) {
-  if (!array.length) return {};
+  if (!Array.isArray(array) || !array.length) return {};
   const template = array[0];
   if (Array.isArray(template)) return [];
   if (isPlainObject(template)) {

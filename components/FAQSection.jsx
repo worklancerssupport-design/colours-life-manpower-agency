@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import generalFaqs from '@/data/faqs.json';
 import agencyInfo from '@/data/agency.json';
 import { getWhatsAppUrl, fillPlaceholders } from '@/lib/utils';
@@ -10,6 +11,8 @@ export default function FAQSection({
   faqs = generalFaqs,
   title = 'Questions? We have answers.',
   subtitle = `Practical answers on hiring domestic help in ${agencyInfo.address.city}, background checks, live-in options, and agency policies.`,
+  seeMoreHref,
+  seeMoreText = 'See all FAQs',
 }) {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -62,13 +65,18 @@ export default function FAQSection({
                     <Plus size={14} />
                   </span>
                 </button>
-                {openIndex === idx && (
-                  <div className="faq-body">{fillPlaceholders(faq.answer)}</div>
-                )}
+                <div className="faq-body" style={{ display: openIndex === idx ? 'block' : 'none' }}>{fillPlaceholders(faq.answer)}</div>
               </div>
             ))}
           </div>
         </div>
+        {seeMoreHref && (
+          <div style={{ textAlign: 'center', marginTop: 24 }}>
+            <Link href={seeMoreHref} className="btn-ghost-dark" style={{ color: 'var(--ink-on-light)' }}>
+              {seeMoreText} <ArrowRight size={15} style={{ verticalAlign: '-2px', marginLeft: 4 }} />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

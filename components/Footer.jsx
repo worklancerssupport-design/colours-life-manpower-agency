@@ -68,8 +68,13 @@ export default function Footer() {
             <ul className="footer-link-list">
               <li><Link href="/" className="footer-link">Home</Link></li>
               <li><Link href="/about/" className="footer-link">About Us</Link></li>
+              <li><Link href="/services/" className="footer-link">All Services</Link></li>
               <li><Link href="/reviews/" className="footer-link">Family Reviews</Link></li>
               <li><Link href="/faq/" className="footer-link">FAQ</Link></li>
+              <li><Link href="/charges/" className="footer-link">Charges & Pricing</Link></li>
+              <li><Link href="/nri/" className="footer-link">NRI Services</Link></li>
+              <li><Link href="/areas/" className="footer-link">Areas We Serve</Link></li>
+              <li><Link href="/blog/" className="footer-link">Guides</Link></li>
               <li><Link href="/contact/" className="footer-link">Contact</Link></li>
             </ul>
           </div>

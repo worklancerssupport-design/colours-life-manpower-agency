@@ -1,5 +1,4 @@
 import agencyInfo from '@/data/agency.json';
-import FAQSchema from '@/components/FAQSchema';
 import generalFaqs from '@/data/faqs.json';
 import { fillPlaceholders, getServiceListText } from '@/lib/utils';
 import Hero from '@/components/Hero';
@@ -13,7 +12,9 @@ import FAQSection from '@/components/FAQSection';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 
 export const metadata = {
-  title: `Manpower Agency in ${agencyInfo.address.locality} | ${agencyInfo.name}`,
+  title: {
+    absolute: `Manpower Agency in ${agencyInfo.address.locality}, ${agencyInfo.address.city} | ${agencyInfo.name}`,
+  },
   description:
     `${agencyInfo.name} provides ${getServiceListText()} in ${agencyInfo.address.locality}, OMR, and ${agencyInfo.address.city}.`,
   alternates: {
@@ -26,7 +27,6 @@ export default function HomePage() {
 
   return (
     <>
-      <FAQSchema faqs={faqs} />
       <Hero />
       <TrustStrip />
       <ServiceRows />
@@ -35,10 +35,21 @@ export default function HomePage() {
       <ToughestCases />
       <ReviewSection limit={3} seeMoreHref="/reviews" />
       <FAQSection
-        faqs={faqs}
+        faqs={faqs.slice(0, 5)}
         title="Questions? We have answers."
         subtitle={`Practical answers on hiring domestic help in ${agencyInfo.address.city}, background checks, live-in options, and agency policies.`}
+        seeMoreHref="/faq/"
+        seeMoreText="See all FAQs"
       />
+      {/* Hidden FAQ content for SEO — not shown visually */}
+      <div style={{ display: 'none' }} aria-hidden="true">
+        {faqs.slice(5).map((faq, i) => (
+          <div key={i}>
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </div>
+        ))}
+      </div>
       <WhatsAppCTA
         title="Need a hand at home this week?"
         subtitle={`Tell us what you need. The owner replies ${agencyInfo.responseTime} on WhatsApp — direct, ${agencyInfo.claims.noIvr}.`}

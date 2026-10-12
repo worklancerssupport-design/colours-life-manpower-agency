@@ -1,11 +1,11 @@
 {
   "h1": "Elderly Care Services in Chennai",
   "h1Scope": "— mobility, medication and company at home",
-  "metaTitle": "Elderly Care Services in Chennai | Senior Home Care | {{name}}",
-  "metaDescription": "Compassionate elderly care services in Chennai, Thoraipakkam, and OMR. Dignified senior home assistance, companionship, mobility support, and daily routine care.",
+  "metaTitle": "Elderly Care Services in Chennai",
+  "metaDescription": "Compassionate elderly care services in Chennai, Kottivakkam, and OMR. Dignified senior home assistance, companionship, mobility support, and daily.",
   "eyebrowText": "Elderly Attendant · Day & Live-in · OMR & Chennai",
   "heroSubtitle": "A patient attendant so your parents keep their routines — their walk, their 8am tablet, their evening newspaper — safely at home. Message your parent's age and mobility level; you'll hear back {{responseTime}}.",
-  "heroFactAreas": "Thoraipakkam · OMR · Adyar",
+  "heroFactAreas": "Kottivakkam · OMR · Adyar",
   "whoIsItFor": [
     "Your father is 82, walks with a stick, and you're 800km away in Bangalore on weekdays.",
     "The knee surgery went well, but the three months of recovery at home need someone steady.",
@@ -57,16 +57,16 @@
     "Accompanying the elder on gentle evening veranda or garden walks and doctor clinic appointments if requested."
   ],
   "verificationFacts": [
-    "Aadhaar government identity check",
-    "Residential background verification",
-    "Prior-work references spoken to, where available"
+    "Aadhaar government identity check before the first visit",
+    "Residential background verification in their home locality",
+    "Prior elder care references spoken to, where available"
   ],
   "riskPolicies": [
     "Replacement support if the attendant and your parent don't click",
     "Your parents meet the attendant before day one — trust is built in their home",
     "Duties, night expectations and leave agreed in advance"
   ],
-  "localCoverage": "Elderly care across Okkiyam Thoraipakkam, Nehru Nagar, OMR, Perungudi, Velachery, Adyar, Sholinganallur, Semmancheri, Medavakkam and Chennai — day shifts and 24-hour live-in both placed regularly.",
+  "localCoverage": "Elderly care across Kottivakkam, Nehru Nagar, OMR, Perungudi, Velachery, Adyar, Sholinganallur, Semmancheri, Medavakkam and Chennai — day shifts and 24-hour live-in both placed regularly.",
   "disclaimer": "Elderly care workers provide non-medical personal assistance, home caregiving, and companionship. They are domestic attendants and do not provide medical nursing treatments, injections, IV administration, catheter insertion, or clinical diagnostics.",
   "unaskedQAs": [
     {

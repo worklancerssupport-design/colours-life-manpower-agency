@@ -8,7 +8,7 @@ import EnquireWhatsAppButton from '@/components/EnquireWhatsAppButton';
 import { Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: `Domestic Help & Manpower Services in ${agencyInfo.address.city} | ${agencyInfo.name}`,
+  title: `Domestic Help Services in ${agencyInfo.address.city}`,
   description: `Explore all domestic manpower services in ${agencyInfo.address.city}: ${getServiceListText().toLowerCase()}.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/services/`,
@@ -73,7 +73,7 @@ export default function ServicesIndexPage() {
                   </p>
                   <div className="bento-card-footer">
                     <Link href={svc.path} className="bento-explore-link">
-                      View Service Details <ArrowRight size={15} />
+                      {svc.shortName} services in Chennai <ArrowRight size={15} />
                     </Link>
                     <EnquireWhatsAppButton
                       template={svc.whatsappMessage}

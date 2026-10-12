@@ -13,11 +13,26 @@ import { MessageCircle, Phone, ArrowRight, Clock, ShieldCheck, User } from 'luci
 const faqs = fillPlaceholders(generalFaqs);
 
 export const metadata = {
-  title: `Frequently Asked Questions (FAQ) | ${agencyInfo.name} ${agencyInfo.address.city}`,
+  title: `FAQ | Hiring Domestic Help in ${agencyInfo.address.city}`,
   description: `Common questions and clear answers about hiring ${getServiceListText()} from ${agencyInfo.name} in ${agencyInfo.address.city}.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/faq/`,
-  }
+  },
+  openGraph: {
+    title: `FAQ | Hiring Domestic Help in ${agencyInfo.address.city}`,
+    description: `Common questions and clear answers about hiring ${getServiceListText()} from ${agencyInfo.name} in ${agencyInfo.address.city}.`,
+    url: `${agencyInfo.siteUrl}/faq/`,
+    siteName: agencyInfo.name,
+    images: [{ url: `${agencyInfo.siteUrl}/og-default.jpg`, width: 1200, height: 896, alt: agencyInfo.name }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `FAQ | Hiring Domestic Help in ${agencyInfo.address.city}`,
+    description: `Common questions and clear answers about hiring ${getServiceListText()} from ${agencyInfo.name} in ${agencyInfo.address.city}.`,
+    images: [`${agencyInfo.siteUrl}/og-default.jpg`],
+  },
 };
 
 export default function FAQPage() {
@@ -40,7 +55,7 @@ export default function FAQPage() {
           </span>
 
           <h1 className="hero-headline-serif">
-            Frequently asked <em>questions.</em>
+            Hiring domestic help in Chennai: <em>your questions answered.</em>
           </h1>
 
           <p className="hero-body-text">

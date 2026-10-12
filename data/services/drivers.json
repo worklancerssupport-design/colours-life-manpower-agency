@@ -1,8 +1,8 @@
 {
   "h1": "Driver Services in Chennai",
   "h1Scope": "— commutes, school runs and outstation trips",
-  "metaTitle": "Driver Services in Chennai & Thoraipakkam | Personal & Family Drivers | {{name}}",
-  "metaDescription": "Reliable personal and family driver services in Chennai, Okkiyam Thoraipakkam, and OMR. Professional drivers for daily office commutes, school runs, family travel, and errands.",
+  "metaTitle": "Driver Services in Chennai",
+  "metaDescription": "Reliable personal and family driver services in Chennai, Kottivakkam, and OMR. Professional drivers for daily office commutes, school runs, family.",
   "eyebrowText": "Personal Driver · Daily, Full-time & Outstation · Chennai",
   "heroSubtitle": "A licence-verified driver who knows the OMR-to-Guindy cut at 8:30 and gets your children to school calm. Message your route and hours; you'll hear back {{responseTime}}.",
   "heroFactAreas": "OMR · Guindy · Pallavaram",
@@ -55,16 +55,16 @@
     "Familiarity with GPS navigation tools (Google Maps) to choose efficient, traffic-free routes across Chennai."
   ],
   "verificationFacts": [
-    "Aadhaar government identity check",
-    "LMV driving licence verified",
-    "Residential background verification"
+    "Aadhaar government identity check before the first drive",
+    "LMV driving licence verified and valid",
+    "Residential background verification at their address"
   ],
   "riskPolicies": [
     "Replacement support if the driver and your family don't click",
     "You meet the driver before he drives your car",
     "Shift hours, routes and outstation terms agreed before day one"
   ],
-  "localCoverage": "Drivers across Okkiyam Thoraipakkam, OMR, Perungudi, Sholinganallur, Karapakkam, Velachery, Adyar, Semmancheri, Navalur, Siruseri, Pallavaram, Guindy and all of Chennai.",
+  "localCoverage": "Drivers across Kottivakkam, OMR, Perungudi, Sholinganallur, Karapakkam, Velachery, Adyar, Semmancheri, Navalur, Siruseri, Pallavaram, Guindy and all of Chennai.",
   "disclaimer": "Drivers operate the client's privately owned vehicles. Vehicle insurance, fuel, toll charges, and vehicle roadworthiness remain the legal responsibility of the vehicle owner.",
   "unaskedQAs": [
     {

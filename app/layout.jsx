@@ -1,8 +1,25 @@
 import './globals.css';
+import { Plus_Jakarta_Sans, Spectral } from 'next/font/google';
 import SiteChrome from '@/components/SiteChrome';
 import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import WebSiteSchema from '@/components/WebSiteSchema';
 import agencyInfo from '@/data/agency.json';
 import { fillPlaceholders } from '@/lib/utils';
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-plus-jakarta',
+  display: 'swap',
+});
+
+const spectral = Spectral({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-spectral',
+  display: 'swap',
+});
 
 export const metadata = {
   metadataBase: new URL(agencyInfo.siteUrl),
@@ -37,7 +54,7 @@ export const metadata = {
       {
         url: '/images/elderly-care-service-chennai.jpg',
         width: 1200,
-        height: 675,
+        height: 896,
         alt: fillPlaceholders(agencyInfo.seo.ogImageAlt),
       },
     ],
@@ -49,20 +66,26 @@ export const metadata = {
     images: ['/images/elderly-care-service-chennai.jpg'],
   },
   alternates: {
-    canonical: agencyInfo.siteUrl,
+    canonical: `${agencyInfo.siteUrl}/`,
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#08152E',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en-IN" className={`${plusJakarta.variable} ${spectral.variable}`}>
       <head>
         <link rel="preconnect" href="https://res.cloudinary.com" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#08152E" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="manifest" href="/manifest.json" />
         <LocalBusinessSchema />
+        <WebSiteSchema />
       </head>
       <body>
         <SiteChrome>{children}</SiteChrome>

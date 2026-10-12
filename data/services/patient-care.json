@@ -1,8 +1,8 @@
 {
   "h1": "Patient Care Services in Chennai",
   "h1Scope": "— bedside help after surgery or illness",
-  "metaTitle": "Patient Care Services in Chennai | Post-Operative & Bedside Home Care | {{name}}",
-  "metaDescription": "Reliable patient care services in Chennai, Okkiyam Thoraipakkam, and OMR. Bedside assistance, post-hospitalization home care, mobility support, and daily patient routine aid.",
+  "metaTitle": "Patient Care Services in Chennai",
+  "metaDescription": "Reliable patient care services in Chennai, Kottivakkam, and OMR. Bedside assistance, post-hospitalization home care, mobility support, and daily.",
   "eyebrowText": "Patient Attendant · Day, Night & Live-in · Chennai",
   "heroSubtitle": "A trained bedside attendant for the weeks after discharge — transfers, baths, medicines on time — so recovery happens at home, not in a corridor. Message the discharge date and condition; you'll hear back {{responseTime}}.",
   "heroFactAreas": "OMR · Tambaram · Medavakkam",
@@ -59,16 +59,16 @@
     "Warm emotional companionship, reassuring communication, and alerting family members immediately of any changes in condition."
   ],
   "verificationFacts": [
-    "Aadhaar government identity check",
-    "Residential background verification",
-    "Prior-work references spoken to, where available"
+    "Aadhaar government identity check before any patient care placement",
+    "Residential background verification at their address",
+    "Prior nursing or patient care references spoken to, where available"
   ],
   "riskPolicies": [
     "Replacement support if the attendant isn't right for the patient's needs",
     "You meet the attendant before day one — often the patient meets them too",
     "Shift type, night duties and dietary responsibilities agreed before start"
   ],
-  "localCoverage": "Patient care across Okkiyam Thoraipakkam, OMR, Perungudi, Adyar, Velachery, Sholinganallur, Tambaram, Medavakkam, Chromepet and greater Chennai — 12-hour day and night shifts and live-in arrangements both placed regularly.",
+  "localCoverage": "Patient care across Kottivakkam, OMR, Perungudi, Adyar, Velachery, Sholinganallur, Tambaram, Medavakkam, Chromepet and greater Chennai — 12-hour day and night shifts and live-in arrangements both placed regularly.",
   "disclaimer": "CRITICAL MEDICAL NOTICE: Patient care workers provide caregiving, non-clinical bedside support, and daily personal assistance. They DO NOT replace doctors, licensed professional nurses, or emergency medical services. They do not administer IV lines, prescribe medications, or perform medical surgical procedures.",
   "unaskedQAs": [
     {

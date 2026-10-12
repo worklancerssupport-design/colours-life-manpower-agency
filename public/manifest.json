@@ -1,0 +1,26 @@
+{
+  "name": "Colours Life Manpower Agency",
+  "short_name": "Colours Life",
+  "description": "Trusted domestic help agency in Chennai — cooks, maids, baby care, elderly care, patient care, and drivers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08152E",
+  "theme_color": "#08152E",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: `Contact Us | ${agencyInfo.name} | ${agencyInfo.address.locality}, ${agencyInfo.address.city}`,
+  title: `Contact Us | Domestic Help Chennai`,
   description: `Contact ${agencyInfo.name} directly. Phone: ${agencyInfo.phone1} / ${agencyInfo.phone2}, WhatsApp: ${agencyInfo.whatsappNumber}. Office: ${agencyInfo.address.street}, ${agencyInfo.address.locality}, ${agencyInfo.address.city} ${agencyInfo.address.postalCode} (${agencyInfo.address.landmark}).`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/contact/`,
@@ -42,7 +42,7 @@ export default function ContactPage() {
           </span>
 
           <h1 className="hero-headline-serif">
-            Find the right help. <em>Start with one message.</em>
+            Hire domestic help in Chennai. <em>Start with one message.</em>
           </h1>
 
           <p className="hero-body-text">

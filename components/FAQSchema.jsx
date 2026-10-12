@@ -4,6 +4,10 @@ export default function FAQSchema({ faqs }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".faq-question", ".faq-answer"]
+    },
     "mainEntity": faqs.map((faq) => ({
       "@type": "Question",
       "name": faq.question,

@@ -8,11 +8,26 @@ import WhatsAppCTA from '@/components/WhatsAppCTA';
 import { Star, MessageCircle, Info, Heart, MapPin, BadgeCheck, ShieldCheck, Phone } from 'lucide-react';
 
 export const metadata = {
-  title: `Customer Reviews & Testimonials | ${agencyInfo.name} ${agencyInfo.address.city}`,
+  title: `Customer Reviews & Testimonials`,
   description: `Read client reviews for ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}. Real feedback on home ${getServiceListText()}.`,
   alternates: {
     canonical: `${agencyInfo.siteUrl}/reviews/`,
-  }
+  },
+  openGraph: {
+    title: `Customer Reviews & Testimonials`,
+    description: `Read client reviews for ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}. Real feedback on home ${getServiceListText()}.`,
+    url: `${agencyInfo.siteUrl}/reviews/`,
+    siteName: agencyInfo.name,
+    images: [{ url: `${agencyInfo.siteUrl}/og-default.jpg`, width: 1200, height: 896, alt: agencyInfo.name }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Customer Reviews & Testimonials`,
+    description: `Read client reviews for ${agencyInfo.name} in ${agencyInfo.address.locality}, ${agencyInfo.address.city}.`,
+    images: [`${agencyInfo.siteUrl}/og-default.jpg`],
+  },
 };
 
 function serviceLabel(name) {
@@ -20,7 +35,7 @@ function serviceLabel(name) {
   return svc ? svc.shortName : name;
 }
 
-const areaList = agencyInfo.serviceAreas.slice(0, 1);
+const areaList = agencyInfo.serviceAreas.slice(1, 4);
 const areaPhrase = `${areaList.slice(0, -1).join(', ')} and ${areaList[areaList.length - 1]}`;
 
 function initials(name) {
@@ -55,7 +70,7 @@ export default function ReviewsPage() {
           </span>
 
           <h1 className="hero-headline-serif">
-            What families say after <em>the help arrives.</em>
+            What Chennai families say after <em>the help arrives.</em>
           </h1>
 
           <p className="hero-body-text">
@@ -135,6 +150,7 @@ export default function ReviewsPage() {
                   </div>
                   <div className="reviews-loc reviews-loc-dark">
                     <MapPin size={12} /> {lead.location}
+                    {lead.date && <span style={{ marginLeft: 8, opacity: 0.6 }}>· {lead.date}</span>}
                   </div>
                 </div>
               </div>
@@ -162,6 +178,7 @@ export default function ReviewsPage() {
                     </div>
                     <div className="reviews-loc">
                       <MapPin size={12} /> {rev.location}
+                      {rev.date && <span style={{ marginLeft: 8, opacity: 0.6 }}>· {rev.date}</span>}
                     </div>
                   </div>
                 </footer>

@@ -1,5 +1,6 @@
 import SmartImage from '@/components/SmartImage';
 import { Fragment } from 'react';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllServiceSlugs } from '@/lib/services';
 import { getServiceBySlug } from '@/lib/services-detail';
@@ -178,13 +179,51 @@ export default async function ServicePage({ params }) {
         </div>
       </section>
 
-      {/* 4. Shift Options */}
+      {/* 4. Key Responsibilities — unique per-service content */}
+      {service.keyResponsibilities && service.keyResponsibilities.length > 0 && (
+        <section className="section-light situations-section">
+          <div className="container">
+            <h2 className="section-heading">What {ctaNoun.toLowerCase()} <em>handles</em></h2>
+            <ul className="situations-list">
+              {service.keyResponsibilities.map((item, i) => (
+                <li key={i}>
+                  <span className="situations-check" aria-hidden="true"><Check size={14} strokeWidth={3} /></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      {/* Hidden availableWorkers text for SEO */}
+      {service.availableWorkers && (
+        <div style={{ display: 'none' }} aria-hidden="true">
+          <h2>Who we place</h2>
+          <p>{service.availableWorkers}</p>
+        </div>
+      )}
+
+      {/* 5. Shift Options */}
       <ShiftCards
         title={service.shiftHeading || 'Part-time, full-time or live-in — choose your shift'}
         options={service.shiftOptions}
       />
 
-      {/* 5. How Hiring Works */}
+      {/* 5b. Contextual cross-links */}
+      <section className="section-light" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <p className="section-subline" style={{ maxWidth: '720px', fontSize: '0.95rem' }}>
+            Looking for more than {ctaNoun.toLowerCase()}? Families in {agencyInfo.address.locality} also hire{' '}
+            <Link href="/services/cooking/" style={{ color: 'var(--svc-accent)', fontWeight: 600 }}>home cooks in Chennai</Link>,{' '}
+            <Link href="/services/maid-work/" style={{ color: 'var(--svc-accent)', fontWeight: 600 }}>maids &amp; domestic help</Link>, and{' '}
+            <Link href="/services/elderly-care/" style={{ color: 'var(--svc-accent)', fontWeight: 600 }}>elderly care attendants</Link>{' '}
+            through {agencyInfo.name}.
+          </p>
+        </div>
+      </section>
+
+      {/* 6. How Hiring Works */}
       <section className="section-light hiring-section">
         <div className="container">
           <h2 className="section-heading">How hiring <em>works</em></h2>
@@ -215,7 +254,7 @@ export default async function ServicePage({ params }) {
         </div>
       </section>
 
-      {/* 6. What's Checked & What If It Goes Wrong — dark band */}
+      {/* 7. What's Checked & What If It Goes Wrong — dark band */}
       <section className="section-dark verify-band">
         <div className="container">
           <h2 className="section-heading verify-heading">{pagesData.servicePage.verifyBand.heading}</h2>
@@ -257,16 +296,21 @@ export default async function ServicePage({ params }) {
         </div>
       </section>
 
-      {/* 7. Proof — real family reviews */}
+      {/* 8. Proof — real family reviews */}
       <ProofInline serviceSlug={service.slug} />
 
-      {/* 8. Before You Decide — unasked questions */}
+      {/* 9. Before You Decide — unasked questions */}
       <BeforeYouDecide qas={service.unaskedQAs} />
 
-      {/* 9. Coverage */}
+      {/* 10. Coverage */}
       <section className="section-light coverage-section">
         <div className="container">
           <h2 className="section-heading">Areas we <em>cover</em></h2>
+          {service.localCoverage && (
+            <p className="section-subline" style={{ maxWidth: '720px', marginBottom: '24px' }}>
+              {service.localCoverage}
+            </p>
+          )}
           <div className="local-tag-cloud coverage-tags">
             {agencyInfo.serviceAreas.map((area, idx) => (
               <span key={idx} className="local-locality-tag">{area}</span>
@@ -275,17 +319,17 @@ export default async function ServicePage({ params }) {
         </div>
       </section>
 
-      {/* 10. Service FAQ */}
+      {/* 11. Service FAQ */}
       <FAQSection
         faqs={service.faqs}
         title={`Questions about ${service.shortName.toLowerCase()} in ${agencyInfo.address.city}`}
         subtitle={pagesData.servicePage.faqSubtitle}
       />
 
-      {/* 11. Related Services */}
+      {/* 12. Related Services */}
       <OtherServices currentServiceSlug={service.slug} />
 
-      {/* 12. Final CTA */}
+      {/* 13. Final CTA */}
       <WhatsAppCTA
         eyebrow={fillPlaceholders(pagesData.servicePage.finalCta.eyebrow)}
         title={`${pagesData.servicePage.finalCta.titlePrefix} ${ctaNoun} ${pagesData.servicePage.finalCta.titleSuffix}`}

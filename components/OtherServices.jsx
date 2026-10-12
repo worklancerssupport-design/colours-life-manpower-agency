@@ -70,7 +70,7 @@ export default function OtherServices({ currentServiceSlug }) {
                     className="bento-explore-link"
                     style={{ fontSize: '0.88rem' }}
                   >
-                    View Details <ArrowRight size={14} />
+                    {service.shortName} in Chennai <ArrowRight size={14} />
                   </Link>
                 </div>
               </div>

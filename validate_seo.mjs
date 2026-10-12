@@ -40,7 +40,7 @@ async function validateSEO() {
   console.log('  - Phone 9884555533 tel link:', home.data.includes('tel:9884555533'));
   console.log('  - Email mailto link:', home.data.includes('mailto:colourslifemanpoweragency@gmail.com'));
   console.log('  - Owner name kept off homepage copy (expected: true):', !home.data.includes('Thomas R'));
-  console.log('  - Okkiyam Thoraipakkam mentioned:', home.data.includes('Okkiyam Thoraipakkam'));
+  console.log('  - Kottivakkam mentioned:', home.data.includes('Kottivakkam'));
   console.log('  - Landmark (Back Side Cognizant):', home.data.includes('Back Side Cognizant'));
 
   // 2. Audit All 8 Services
@@ -66,7 +66,7 @@ async function validateSEO() {
   const contact = await fetchRoute('/contact/');
   console.log('  - Has Google Maps Embed:', contact.data.includes('maps.google.com/maps'));
   console.log('  - Has Interactive Form:', contact.data.includes('form') && contact.data.includes('name="locality"'));
-  console.log('  - Address rendered in HTML:', contact.data.includes('Nehru Nagar, 13th Cross Street, Okkiyam Thoraipakkam'));
+  console.log('  - Address rendered in HTML:', contact.data.includes('Kottivakkam Kuppam Puram Rd'));
 
   console.log('\n=== In-Depth SEO Audit Completed Successfully ===');
 }
